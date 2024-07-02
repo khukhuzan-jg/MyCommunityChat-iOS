@@ -8,11 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		78671F282C33E914006E7DD6 /* Auth.h in Headers */ = {isa = PBXBuildFile; fileRef = 78671F272C33E914006E7DD6 /* Auth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78BB8A2D2C3479A800F3BA57 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A2B2C3479A800F3BA57 /* LoginController.swift */; };
+		78BB8A2E2C3479A800F3BA57 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A2C2C3479A800F3BA57 /* LoginController.xib */; };
+		78BB8A322C347AAC00F3BA57 /* CommonExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB8A302C347AAC00F3BA57 /* CommonExtension.framework */; };
+		78BB8A332C347AAC00F3BA57 /* CommonExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB8A302C347AAC00F3BA57 /* CommonExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		78BB8A342C347AAC00F3BA57 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB8A312C347AAC00F3BA57 /* CommonUI.framework */; };
+		78BB8A352C347AAC00F3BA57 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB8A312C347AAC00F3BA57 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		78BB8A412C347E1300F3BA57 /* AuthModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A402C347E1300F3BA57 /* AuthModule.swift */; };
+		78BB8A442C347F4A00F3BA57 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A432C347F4A00F3BA57 /* Icons.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		78BB8A362C347AAC00F3BA57 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				78BB8A332C347AAC00F3BA57 /* CommonExtension.framework in Embed Frameworks */,
+				78BB8A352C347AAC00F3BA57 /* CommonUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		78671F242C33E914006E7DD6 /* Auth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Auth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78671F272C33E914006E7DD6 /* Auth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Auth.h; sourceTree = "<group>"; };
+		78BB8A2B2C3479A800F3BA57 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		78BB8A2C2C3479A800F3BA57 /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		78BB8A302C347AAC00F3BA57 /* CommonExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78BB8A312C347AAC00F3BA57 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78BB8A402C347E1300F3BA57 /* AuthModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModule.swift; sourceTree = "<group>"; };
+		78BB8A432C347F4A00F3BA57 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78BB8A322C347AAC00F3BA57 /* CommonExtension.framework in Frameworks */,
+				78BB8A342C347AAC00F3BA57 /* CommonUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,6 +62,7 @@
 			children = (
 				78671F262C33E914006E7DD6 /* Auth */,
 				78671F252C33E914006E7DD6 /* Products */,
+				78BB8A2F2C347AAC00F3BA57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,9 +77,46 @@
 		78671F262C33E914006E7DD6 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				78BB8A422C347F3400F3BA57 /* Resource */,
+				78BB8A3F2C347DFA00F3BA57 /* Config */,
+				78BB8A2A2C34799600F3BA57 /* Login */,
 				78671F272C33E914006E7DD6 /* Auth.h */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		78BB8A2A2C34799600F3BA57 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				78BB8A2B2C3479A800F3BA57 /* LoginController.swift */,
+				78BB8A2C2C3479A800F3BA57 /* LoginController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		78BB8A2F2C347AAC00F3BA57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78BB8A302C347AAC00F3BA57 /* CommonExtension.framework */,
+				78BB8A312C347AAC00F3BA57 /* CommonUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78BB8A3F2C347DFA00F3BA57 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				78BB8A402C347E1300F3BA57 /* AuthModule.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		78BB8A422C347F3400F3BA57 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				78BB8A432C347F4A00F3BA57 /* Icons.xcassets */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +141,7 @@
 				78671F202C33E914006E7DD6 /* Sources */,
 				78671F212C33E914006E7DD6 /* Frameworks */,
 				78671F222C33E914006E7DD6 /* Resources */,
+				78BB8A362C347AAC00F3BA57 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -93,6 +163,7 @@
 				TargetAttributes = {
 					78671F232C33E914006E7DD6 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -119,6 +190,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78BB8A442C347F4A00F3BA57 /* Icons.xcassets in Resources */,
+				78BB8A2E2C3479A800F3BA57 /* LoginController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78BB8A2D2C3479A800F3BA57 /* LoginController.swift in Sources */,
+				78BB8A412C347E1300F3BA57 /* AuthModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -287,6 +363,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -296,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

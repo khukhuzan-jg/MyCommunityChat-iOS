@@ -49,6 +49,10 @@
 		78671FC02C33EA40006E7DD6 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671F972C33EA40006E7DD6 /* Number.swift */; };
 		78671FC12C33EA40006E7DD6 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671F982C33EA40006E7DD6 /* UIView.swift */; };
 		78671FC22C33EA40006E7DD6 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671F992C33EA40006E7DD6 /* UIFont.swift */; };
+		78BB8A392C347CAA00F3BA57 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A372C347CA900F3BA57 /* Data.swift */; };
+		78BB8A3A2C347CAA00F3BA57 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A382C347CAA00F3BA57 /* Date.swift */; };
+		78BB8A3C2C347CE900F3BA57 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A3B2C347CE900F3BA57 /* Character.swift */; };
+		78BB8A3E2C347D0D00F3BA57 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A3D2C347D0D00F3BA57 /* Collection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +99,10 @@
 		78671F972C33EA40006E7DD6 /* Number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		78671F982C33EA40006E7DD6 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		78671F992C33EA40006E7DD6 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		78BB8A372C347CA900F3BA57 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		78BB8A382C347CAA00F3BA57 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		78BB8A3B2C347CE900F3BA57 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		78BB8A3D2C347D0D00F3BA57 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +136,10 @@
 			isa = PBXGroup;
 			children = (
 				78671F6A2C33EA07006E7DD6 /* CommonExtension.h */,
+				78BB8A3D2C347D0D00F3BA57 /* Collection.swift */,
+				78BB8A3B2C347CE900F3BA57 /* Character.swift */,
+				78BB8A372C347CA900F3BA57 /* Data.swift */,
+				78BB8A382C347CAA00F3BA57 /* Date.swift */,
 				78671F822C33EA40006E7DD6 /* Dictionary.swift */,
 				78671F952C33EA40006E7DD6 /* DispatchQueue.swift */,
 				78671F772C33EA40006E7DD6 /* Double.swift */,
@@ -260,6 +272,7 @@
 				78671F9C2C33EA40006E7DD6 /* NSObject.swift in Sources */,
 				78671FA82C33EA40006E7DD6 /* UIApplication.swift in Sources */,
 				78671FA42C33EA40006E7DD6 /* UILabel.swift in Sources */,
+				78BB8A392C347CAA00F3BA57 /* Data.swift in Sources */,
 				78671FB12C33EA40006E7DD6 /* UITableView.swift in Sources */,
 				78671FAB2C33EA40006E7DD6 /* Dictionary.swift in Sources */,
 				78671FB62C33EA40006E7DD6 /* UITextField.swift in Sources */,
@@ -270,6 +283,7 @@
 				78671FBD2C33EA40006E7DD6 /* UIColor.swift in Sources */,
 				78671FBB2C33EA40006E7DD6 /* Notification.Name.swift in Sources */,
 				78671FAA2C33EA40006E7DD6 /* UIWindow.swift in Sources */,
+				78BB8A3A2C347CAA00F3BA57 /* Date.swift in Sources */,
 				78671FB72C33EA40006E7DD6 /* String.swift in Sources */,
 				78671FC22C33EA40006E7DD6 /* UIFont.swift in Sources */,
 				78671F9E2C33EA40006E7DD6 /* Result.swift in Sources */,
@@ -286,6 +300,8 @@
 				78671FB02C33EA40006E7DD6 /* UINavigationController.swift in Sources */,
 				78671F9A2C33EA40006E7DD6 /* UIViewController.swift in Sources */,
 				78671FA02C33EA40006E7DD6 /* Double.swift in Sources */,
+				78BB8A3C2C347CE900F3BA57 /* Character.swift in Sources */,
+				78BB8A3E2C347D0D00F3BA57 /* Collection.swift in Sources */,
 				78671FB32C33EA40006E7DD6 /* TimeInterval.swift in Sources */,
 				78671FC02C33EA40006E7DD6 /* Number.swift in Sources */,
 				78671FB52C33EA40006E7DD6 /* UIPageViewController.swift in Sources */,

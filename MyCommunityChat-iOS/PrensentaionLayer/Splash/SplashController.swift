@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import Auth
 
 class SplashController: UIViewController {
 
@@ -25,6 +26,9 @@ class SplashController: UIViewController {
         animationView.play { (finished) in
             // Animation finished
             print("Animation Completed")
+            let loginVC = LoginController()
+            loginVC.modalPresentationStyle = .fullScreen
+            self.present(loginVC, animated: true)
         }
     }
     

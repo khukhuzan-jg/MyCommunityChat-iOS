@@ -10,7 +10,6 @@
 		1484DC719DE9A429EA331677 /* Pods_MyCommunityChat_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */; };
 		78671E9D2C33DEB7006E7DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671E9C2C33DEB7006E7DD6 /* AppDelegate.swift */; };
 		78671E9F2C33DEB7006E7DD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671E9E2C33DEB7006E7DD6 /* SceneDelegate.swift */; };
-		78671EA12C33DEB7006E7DD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671EA02C33DEB7006E7DD6 /* ViewController.swift */; };
 		78671EA62C33DEB8006E7DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78671EA52C33DEB8006E7DD6 /* Assets.xcassets */; };
 		78671EB42C33DEB8006E7DD6 /* MyCommunityChat_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671EB32C33DEB8006E7DD6 /* MyCommunityChat_iOSTests.swift */; };
 		78671EBE2C33DEB8006E7DD6 /* MyCommunityChat_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671EBD2C33DEB8006E7DD6 /* MyCommunityChat_iOSUITests.swift */; };
@@ -78,7 +77,6 @@
 		78671E992C33DEB7006E7DD6 /* MyCommunityChat-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyCommunityChat-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78671E9C2C33DEB7006E7DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78671E9E2C33DEB7006E7DD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		78671EA02C33DEB7006E7DD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		78671EA52C33DEB8006E7DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78671EAA2C33DEB8006E7DD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78671EAF2C33DEB8006E7DD6 /* MyCommunityChat-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyCommunityChat-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +162,6 @@
 				78671FEB2C33F7D3006E7DD6 /* AppConfig */,
 				78671FEA2C33F71A006E7DD6 /* PrensentaionLayer */,
 				78671FE82C33F6EB006E7DD6 /* AppDelegate */,
-				78671EA02C33DEB7006E7DD6 /* ViewController.swift */,
 				78671FE92C33F6FA006E7DD6 /* Storyboards */,
 				78671FED2C33F86C006E7DD6 /* Resources */,
 			);
@@ -526,7 +523,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				78BB8A252C34762200F3BA57 /* SplashController.swift in Sources */,
-				78671EA12C33DEB7006E7DD6 /* ViewController.swift in Sources */,
 				78671E9D2C33DEB7006E7DD6 /* AppDelegate.swift in Sources */,
 				78671E9F2C33DEB7006E7DD6 /* SceneDelegate.swift in Sources */,
 			);
