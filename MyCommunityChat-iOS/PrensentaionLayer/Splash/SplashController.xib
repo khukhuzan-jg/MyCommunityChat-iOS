@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoSlab-Bold.ttf">
+            <string>RobotoSlab-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashController" customModule="MyCommunityChat_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="BIj-KV-NVj" id="WGd-dc-9SL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIj-KV-NVj" customClass="LottieAnimationView" customModule="Lottie">
+                    <rect key="frame" x="121.66666666666669" y="219" width="150" height="150"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="5JA-Je-VF8"/>
+                        <constraint firstAttribute="height" constant="150" id="UD3-YY-IyN"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Community Chat " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rh8-Vm-jMl">
+                    <rect key="frame" x="74.333333333333329" y="396" width="244.66666666666669" height="31.666666666666686"/>
+                    <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="primary"/>
+            <constraints>
+                <constraint firstItem="BIj-KV-NVj" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6GN-4m-P1F"/>
+                <constraint firstItem="Rh8-Vm-jMl" firstAttribute="centerX" secondItem="BIj-KV-NVj" secondAttribute="centerX" id="OUJ-wv-7hR"/>
+                <constraint firstItem="Rh8-Vm-jMl" firstAttribute="top" secondItem="BIj-KV-NVj" secondAttribute="bottom" constant="27" id="OWI-eF-Lzf"/>
+                <constraint firstItem="BIj-KV-NVj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="160" id="zLO-51-nLN"/>
+            </constraints>
+            <point key="canvasLocation" x="102" y="13"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="primary">
+            <color red="0.090000003576278687" green="0.29800000786781311" blue="0.35699999332427979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

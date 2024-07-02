@@ -15,6 +15,7 @@
 		78671FE52C33EB9E006E7DD6 /* NibBasedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671FDD2C33EB9E006E7DD6 /* NibBasedControl.swift */; };
 		78671FE62C33EB9E006E7DD6 /* NibBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671FDE2C33EB9E006E7DD6 /* NibBasedView.swift */; };
 		78671FE72C33EB9E006E7DD6 /* NibLoadableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671FDF2C33EB9E006E7DD6 /* NibLoadableViewProtocol.swift */; };
+		78BB8A212C34708100F3BA57 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A202C34708100F3BA57 /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		78671FDD2C33EB9E006E7DD6 /* NibBasedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibBasedControl.swift; sourceTree = "<group>"; };
 		78671FDE2C33EB9E006E7DD6 /* NibBasedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibBasedView.swift; sourceTree = "<group>"; };
 		78671FDF2C33EB9E006E7DD6 /* NibLoadableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableViewProtocol.swift; sourceTree = "<group>"; };
+		78BB8A202C34708100F3BA57 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		78671FCF2C33EB81006E7DD6 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				78BB8A1F2C34707A00F3BA57 /* Others */,
 				78671FE02C33EB9E006E7DD6 /* nib-loadable-view */,
 				78671FD02C33EB81006E7DD6 /* CommonUI.h */,
 			);
@@ -93,6 +96,14 @@
 				78671FDF2C33EB9E006E7DD6 /* NibLoadableViewProtocol.swift */,
 			);
 			path = "nib-loadable-view";
+			sourceTree = "<group>";
+		};
+		78BB8A1F2C34707A00F3BA57 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				78BB8A202C34708100F3BA57 /* Fonts.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78BB8A212C34708100F3BA57 /* Fonts.swift in Sources */,
 				78671FE42C33EB9E006E7DD6 /* NibBasedTableViewHeaderFooterView.swift in Sources */,
 				78671FE22C33EB9E006E7DD6 /* NibBasedCollectionViewReusableView.swift in Sources */,
 				78671FE62C33EB9E006E7DD6 /* NibBasedView.swift in Sources */,

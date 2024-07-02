@@ -19,6 +19,19 @@
 		78671F452C33E94F006E7DD6 /* Auth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78671F422C33E94F006E7DD6 /* Auth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		78671FF52C33FDD8006E7DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78671FF42C33FDD8006E7DD6 /* LaunchScreen.storyboard */; };
 		78671FF72C33FDDF006E7DD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78671FF62C33FDDF006E7DD6 /* Main.storyboard */; };
+		78671FFC2C345D92006E7DD6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78671FFB2C345D92006E7DD6 /* Colors.xcassets */; };
+		786720072C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78671FFE2C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf */; };
+		786720082C345F2B006E7DD6 /* RobotoSlab-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78671FFF2C345F2B006E7DD6 /* RobotoSlab-ExtraLight.ttf */; };
+		786720092C345F2B006E7DD6 /* RobotoSlab-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720002C345F2B006E7DD6 /* RobotoSlab-Thin.ttf */; };
+		7867200A2C345F2B006E7DD6 /* RobotoSlab-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720012C345F2B006E7DD6 /* RobotoSlab-ExtraBold.ttf */; };
+		7867200B2C345F2B006E7DD6 /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720022C345F2B006E7DD6 /* RobotoSlab-Bold.ttf */; };
+		7867200C2C345F2B006E7DD6 /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720032C345F2B006E7DD6 /* RobotoSlab-Regular.ttf */; };
+		7867200D2C345F2B006E7DD6 /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720042C345F2B006E7DD6 /* RobotoSlab-Light.ttf */; };
+		7867200E2C345F2B006E7DD6 /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720052C345F2B006E7DD6 /* RobotoSlab-Black.ttf */; };
+		7867200F2C345F2B006E7DD6 /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720062C345F2B006E7DD6 /* RobotoSlab-Medium.ttf */; };
+		78BB8A252C34762200F3BA57 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A232C34762200F3BA57 /* SplashController.swift */; };
+		78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A242C34762200F3BA57 /* SplashController.xib */; };
+		78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A282C3476BF00F3BA57 /* Animation.json */; };
 		81E5DBD6D3694588398A0C74 /* Pods_MyCommunityChat_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CD97001E15DECC4C6281AF /* Pods_MyCommunityChat_iOSTests.framework */; };
 		D542E05F03491B20CF7B8F45 /* Pods_MyCommunityChat_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C416CB71A449A805324131 /* Pods_MyCommunityChat_iOSUITests.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +90,19 @@
 		78671F432C33E94F006E7DD6 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78671FF42C33FDD8006E7DD6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78671FF62C33FDDF006E7DD6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		78671FFB2C345D92006E7DD6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		78671FFE2C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-SemiBold.ttf"; sourceTree = "<group>"; };
+		78671FFF2C345F2B006E7DD6 /* RobotoSlab-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-ExtraLight.ttf"; sourceTree = "<group>"; };
+		786720002C345F2B006E7DD6 /* RobotoSlab-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Thin.ttf"; sourceTree = "<group>"; };
+		786720012C345F2B006E7DD6 /* RobotoSlab-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-ExtraBold.ttf"; sourceTree = "<group>"; };
+		786720022C345F2B006E7DD6 /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
+		786720032C345F2B006E7DD6 /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
+		786720042C345F2B006E7DD6 /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Light.ttf"; sourceTree = "<group>"; };
+		786720052C345F2B006E7DD6 /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
+		786720062C345F2B006E7DD6 /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
+		78BB8A232C34762200F3BA57 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
+		78BB8A242C34762200F3BA57 /* SplashController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashController.xib; sourceTree = "<group>"; };
+		78BB8A282C3476BF00F3BA57 /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
 		BE505EF2DAA429E2DE4BD9D3 /* Pods-MyCommunityChat-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSTests/Pods-MyCommunityChat-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -183,6 +209,7 @@
 		78671FEA2C33F71A006E7DD6 /* PrensentaionLayer */ = {
 			isa = PBXGroup;
 			children = (
+				78BB8A222C34760900F3BA57 /* Splash */,
 			);
 			path = PrensentaionLayer;
 			sourceTree = "<group>";
@@ -198,9 +225,45 @@
 		78671FED2C33F86C006E7DD6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				78BB8A272C3476B000F3BA57 /* Animation */,
+				78671FFD2C345F1A006E7DD6 /* Fonts */,
 				78671EA52C33DEB8006E7DD6 /* Assets.xcassets */,
+				78671FFB2C345D92006E7DD6 /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		78671FFD2C345F1A006E7DD6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				786720052C345F2B006E7DD6 /* RobotoSlab-Black.ttf */,
+				786720022C345F2B006E7DD6 /* RobotoSlab-Bold.ttf */,
+				786720012C345F2B006E7DD6 /* RobotoSlab-ExtraBold.ttf */,
+				78671FFF2C345F2B006E7DD6 /* RobotoSlab-ExtraLight.ttf */,
+				786720042C345F2B006E7DD6 /* RobotoSlab-Light.ttf */,
+				786720062C345F2B006E7DD6 /* RobotoSlab-Medium.ttf */,
+				786720032C345F2B006E7DD6 /* RobotoSlab-Regular.ttf */,
+				78671FFE2C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf */,
+				786720002C345F2B006E7DD6 /* RobotoSlab-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		78BB8A222C34760900F3BA57 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				78BB8A232C34762200F3BA57 /* SplashController.swift */,
+				78BB8A242C34762200F3BA57 /* SplashController.xib */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		78BB8A272C3476B000F3BA57 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				78BB8A282C3476BF00F3BA57 /* Animation.json */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		AE7770F680BF3DED8EF459ED /* Frameworks */ = {
@@ -338,8 +401,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				78671FF52C33FDD8006E7DD6 /* LaunchScreen.storyboard in Resources */,
+				78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */,
+				7867200E2C345F2B006E7DD6 /* RobotoSlab-Black.ttf in Resources */,
+				78671FFC2C345D92006E7DD6 /* Colors.xcassets in Resources */,
+				7867200F2C345F2B006E7DD6 /* RobotoSlab-Medium.ttf in Resources */,
+				786720092C345F2B006E7DD6 /* RobotoSlab-Thin.ttf in Resources */,
 				78671EA62C33DEB8006E7DD6 /* Assets.xcassets in Resources */,
+				786720082C345F2B006E7DD6 /* RobotoSlab-ExtraLight.ttf in Resources */,
+				7867200D2C345F2B006E7DD6 /* RobotoSlab-Light.ttf in Resources */,
+				7867200B2C345F2B006E7DD6 /* RobotoSlab-Bold.ttf in Resources */,
+				7867200C2C345F2B006E7DD6 /* RobotoSlab-Regular.ttf in Resources */,
+				7867200A2C345F2B006E7DD6 /* RobotoSlab-ExtraBold.ttf in Resources */,
 				78671FF72C33FDDF006E7DD6 /* Main.storyboard in Resources */,
+				78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */,
+				786720072C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78BB8A252C34762200F3BA57 /* SplashController.swift in Sources */,
 				78671EA12C33DEB7006E7DD6 /* ViewController.swift in Sources */,
 				78671E9D2C33DEB7006E7DD6 /* AppDelegate.swift in Sources */,
 				78671E9F2C33DEB7006E7DD6 /* SceneDelegate.swift in Sources */,
@@ -622,7 +698,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MyCommunityChat-iOS/AppConfig/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashController.xib;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -653,7 +729,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MyCommunityChat-iOS/AppConfig/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashController.xib;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -5,6 +5,8 @@ def linkProject (name)
   project '#{name}/#{name}.project'
 end
 
+workspace 'MyCommunityChat-iOS'
+
 def rx_pods
   pod 'RxSwift', '6.5.0'
   # Reactive Extensions
@@ -22,6 +24,7 @@ end
 
 def ui_pods
   pod 'Kingfisher', '6.3.0'
+  pod 'lottie-ios', '4.3.4'
 end
 
 def firebase_pods
@@ -47,6 +50,7 @@ target 'MyCommunityChat-iOS' do
    networking_pods
    firebase_pods
    iqkeyboardmanager_pod
+   ui_pods
 end
 
 target 'MyCommunityChat-iOSTests' do
