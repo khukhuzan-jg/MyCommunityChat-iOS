@@ -15,8 +15,30 @@
 		78671FE52C33EB9E006E7DD6 /* NibBasedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671FDD2C33EB9E006E7DD6 /* NibBasedControl.swift */; };
 		78671FE62C33EB9E006E7DD6 /* NibBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671FDE2C33EB9E006E7DD6 /* NibBasedView.swift */; };
 		78671FE72C33EB9E006E7DD6 /* NibLoadableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671FDF2C33EB9E006E7DD6 /* NibLoadableViewProtocol.swift */; };
+		78A947C92C34F9830086F9A1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947C82C34F9830086F9A1 /* Colors.swift */; };
+		78A947CC2C3520140086F9A1 /* CommonExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A947CB2C3520140086F9A1 /* CommonExtension.framework */; };
+		78A947CD2C3520140086F9A1 /* CommonExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78A947CB2C3520140086F9A1 /* CommonExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		78A947D52C3521910086F9A1 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947D42C3521910086F9A1 /* Styles.swift */; };
+		78A947E72C352FA10086F9A1 /* AEOTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947E22C352FA10086F9A1 /* AEOTPTextField.swift */; };
+		78A947E82C352FA10086F9A1 /* AEOTPTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947E32C352FA10086F9A1 /* AEOTPTextFieldDelegate.swift */; };
+		78A947E92C352FA10086F9A1 /* AEOTPTextFieldImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947E42C352FA10086F9A1 /* AEOTPTextFieldImplementation.swift */; };
+		78A947EA2C352FA10086F9A1 /* AEOTPTextFieldImplementationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947E52C352FA10086F9A1 /* AEOTPTextFieldImplementationProtocol.swift */; };
 		78BB8A212C34708100F3BA57 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A202C34708100F3BA57 /* Fonts.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		78A947CE2C3520140086F9A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				78A947CD2C3520140086F9A1 /* CommonExtension.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		78671FCD2C33EB81006E7DD6 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +50,13 @@
 		78671FDD2C33EB9E006E7DD6 /* NibBasedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibBasedControl.swift; sourceTree = "<group>"; };
 		78671FDE2C33EB9E006E7DD6 /* NibBasedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibBasedView.swift; sourceTree = "<group>"; };
 		78671FDF2C33EB9E006E7DD6 /* NibLoadableViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableViewProtocol.swift; sourceTree = "<group>"; };
+		78A947C82C34F9830086F9A1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		78A947CB2C3520140086F9A1 /* CommonExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A947D42C3521910086F9A1 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		78A947E22C352FA10086F9A1 /* AEOTPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEOTPTextField.swift; sourceTree = "<group>"; };
+		78A947E32C352FA10086F9A1 /* AEOTPTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEOTPTextFieldDelegate.swift; sourceTree = "<group>"; };
+		78A947E42C352FA10086F9A1 /* AEOTPTextFieldImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEOTPTextFieldImplementation.swift; sourceTree = "<group>"; };
+		78A947E52C352FA10086F9A1 /* AEOTPTextFieldImplementationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEOTPTextFieldImplementationProtocol.swift; sourceTree = "<group>"; };
 		78BB8A202C34708100F3BA57 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -36,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78A947CC2C3520140086F9A1 /* CommonExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +77,7 @@
 			children = (
 				78671FCF2C33EB81006E7DD6 /* CommonUI */,
 				78671FCE2C33EB81006E7DD6 /* Products */,
+				78A947CA2C3520140086F9A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +92,7 @@
 		78671FCF2C33EB81006E7DD6 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				78A947E12C352F940086F9A1 /* Layouts */,
 				78BB8A1F2C34707A00F3BA57 /* Others */,
 				78671FE02C33EB9E006E7DD6 /* nib-loadable-view */,
 				78671FD02C33EB81006E7DD6 /* CommonUI.h */,
@@ -98,10 +130,39 @@
 			path = "nib-loadable-view";
 			sourceTree = "<group>";
 		};
+		78A947CA2C3520140086F9A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78A947CB2C3520140086F9A1 /* CommonExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78A947E12C352F940086F9A1 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				78A947E62C352FA10086F9A1 /* OTPTexField */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		78A947E62C352FA10086F9A1 /* OTPTexField */ = {
+			isa = PBXGroup;
+			children = (
+				78A947E22C352FA10086F9A1 /* AEOTPTextField.swift */,
+				78A947E32C352FA10086F9A1 /* AEOTPTextFieldDelegate.swift */,
+				78A947E42C352FA10086F9A1 /* AEOTPTextFieldImplementation.swift */,
+				78A947E52C352FA10086F9A1 /* AEOTPTextFieldImplementationProtocol.swift */,
+			);
+			path = OTPTexField;
+			sourceTree = "<group>";
+		};
 		78BB8A1F2C34707A00F3BA57 /* Others */ = {
 			isa = PBXGroup;
 			children = (
 				78BB8A202C34708100F3BA57 /* Fonts.swift */,
+				78A947C82C34F9830086F9A1 /* Colors.swift */,
+				78A947D42C3521910086F9A1 /* Styles.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -128,6 +189,7 @@
 				78671FC92C33EB81006E7DD6 /* Sources */,
 				78671FCA2C33EB81006E7DD6 /* Frameworks */,
 				78671FCB2C33EB81006E7DD6 /* Resources */,
+				78A947CE2C3520140086F9A1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,12 +247,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78A947E82C352FA10086F9A1 /* AEOTPTextFieldDelegate.swift in Sources */,
 				78BB8A212C34708100F3BA57 /* Fonts.swift in Sources */,
+				78A947D52C3521910086F9A1 /* Styles.swift in Sources */,
+				78A947C92C34F9830086F9A1 /* Colors.swift in Sources */,
 				78671FE42C33EB9E006E7DD6 /* NibBasedTableViewHeaderFooterView.swift in Sources */,
 				78671FE22C33EB9E006E7DD6 /* NibBasedCollectionViewReusableView.swift in Sources */,
 				78671FE62C33EB9E006E7DD6 /* NibBasedView.swift in Sources */,
+				78A947E72C352FA10086F9A1 /* AEOTPTextField.swift in Sources */,
 				78671FE72C33EB9E006E7DD6 /* NibLoadableViewProtocol.swift in Sources */,
 				78671FE32C33EB9E006E7DD6 /* NibBasedTableViewCell.swift in Sources */,
+				78A947E92C352FA10086F9A1 /* AEOTPTextFieldImplementation.swift in Sources */,
+				78A947EA2C352FA10086F9A1 /* AEOTPTextFieldImplementationProtocol.swift in Sources */,
 				78671FE12C33EB9E006E7DD6 /* NibBasedCollectionViewCell.swift in Sources */,
 				78671FE52C33EB9E006E7DD6 /* NibBasedControl.swift in Sources */,
 			);

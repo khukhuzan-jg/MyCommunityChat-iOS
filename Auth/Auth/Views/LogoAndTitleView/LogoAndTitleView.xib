@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogoAndTitleView" customModule="Auth" customModuleProvider="target">
+            <connections>
+                <outlet property="logoImage" destination="mhC-2V-KHv" id="JQf-Gz-Kym"/>
+                <outlet property="titleLabel" destination="8N9-E4-AcA" id="Opf-2v-gJL"/>
+                <outlet property="welcomeLabel" destination="vRU-9Q-2fY" id="PcT-9b-F9B"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="268"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic-chat" translatesAutoresizingMaskIntoConstraints="NO" id="mhC-2V-KHv">
+                    <rect key="frame" x="121.66666666666669" y="0.0" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="C7a-Mz-VUW"/>
+                        <constraint firstAttribute="height" constant="150" id="hw7-kR-t4L"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zAI-7A-0fV" userLabel="TitleStackView">
+                    <rect key="frame" x="90.333333333333329" y="158" width="212.33333333333337" height="57.333333333333343"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Welcome to " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRU-9Q-2fY">
+                            <rect key="frame" x="0.0" y="0.0" width="212.33333333333334" height="28.666666666666668"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <color key="textColor" red="0.99607843139999996" green="0.76078431369999999" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Community Chat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8N9-E4-AcA">
+                            <rect key="frame" x="0.0" y="28.666666666666657" width="212.33333333333334" height="28.666666666666671"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="mhC-2V-KHv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="AIZ-pf-l4F"/>
+                <constraint firstItem="zAI-7A-0fV" firstAttribute="centerX" secondItem="mhC-2V-KHv" secondAttribute="centerX" id="CF7-Pn-MMd"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zAI-7A-0fV" secondAttribute="bottom" id="LaQ-U0-fId"/>
+                <constraint firstItem="zAI-7A-0fV" firstAttribute="top" secondItem="mhC-2V-KHv" secondAttribute="bottom" constant="8" symbolic="YES" id="SBR-vg-YOr"/>
+                <constraint firstItem="mhC-2V-KHv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rWU-jf-6g4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="81.679389312977094" y="-154.22535211267606"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic-chat" width="150" height="150"/>
+    </resources>
+</document>

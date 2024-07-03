@@ -23,12 +23,11 @@ class SplashController: UIViewController {
         let animation = LottieAnimation.named("Animation")
         animationView.animation = animation
         animationView.contentMode = .scaleAspectFit
-        animationView.play { (finished) in
+        animationView.play { [weak self] (finished) in
             // Animation finished
             print("Animation Completed")
             let loginVC = LoginController()
-            loginVC.modalPresentationStyle = .fullScreen
-            self.present(loginVC, animated: true)
+            self?.navigationController?.pushViewController(loginVC, animated: true)
         }
     }
     

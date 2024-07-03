@@ -99,6 +99,7 @@
 		78671F972C33EA40006E7DD6 /* Number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		78671F982C33EA40006E7DD6 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		78671F992C33EA40006E7DD6 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		78A947D02C3520470086F9A1 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BB8A372C347CA900F3BA57 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		78BB8A382C347CAA00F3BA57 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		78BB8A3B2C347CE900F3BA57 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 			children = (
 				78671F692C33EA07006E7DD6 /* CommonExtension */,
 				78671F682C33EA07006E7DD6 /* Products */,
+				78A947CF2C3520470086F9A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +185,14 @@
 				78671F7E2C33EA40006E7DD6 /* UserDefault.swift */,
 			);
 			path = CommonExtension;
+			sourceTree = "<group>";
+		};
+		78A947CF2C3520470086F9A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78A947D02C3520470086F9A1 /* CommonUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

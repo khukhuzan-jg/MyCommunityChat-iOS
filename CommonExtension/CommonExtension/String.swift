@@ -113,10 +113,11 @@ public extension String {
         return attributeString
     }
     
-    func changeSubStringFont(subStr: String,font: UIFont) -> NSMutableAttributedString{
+    func changeSubStringFont(subStr: String, font: UIFont, color: UIColor) -> NSMutableAttributedString {
         let range = (self as NSString).range(of: subStr)
-        let attributedString = NSMutableAttributedString(string:self)
+        let attributedString = NSMutableAttributedString(string: self)
         attributedString.addAttribute(NSAttributedString.Key.font, value: font, range: range)
+        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
         return attributedString
     }
     

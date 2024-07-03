@@ -386,6 +386,10 @@ public func setTextFieldStyle(_ font: UIFont, _ color: UIColor, _ tint: UIColor)
     return { $0.font = font; $0.textColor = color; $0.tintColor = tint }
 }
 
+public func setTextFieldTextFont(_ font: UIFont) -> (UITextField) -> Void {
+    return { $0.font = font }
+}
+
 public func setTextViewFontColor(_ font: UIFont, _ color: UIColor) -> (UITextView) -> Void {
     return { $0.font = font; $0.textColor = color }
 }

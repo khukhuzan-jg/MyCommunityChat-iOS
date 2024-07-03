@@ -30,6 +30,7 @@ public extension UIFont {
     static var RoboR14: UIFont { FontFamily.regular.of(size: 14) }
     static var RoboR15: UIFont { FontFamily.regular.of(size: 15) }
     static var RoboR16: UIFont { FontFamily.regular.of(size: 16) }
+    static var RoboR18: UIFont { FontFamily.regular.of(size: 18) }
     
     static var RoboB8: UIFont { FontFamily.bold.of(size: 8) }
     static var RoboB10: UIFont { FontFamily.bold.of(size: 10) }
@@ -48,4 +49,5 @@ public extension UIFont {
     static var RoboM10: UIFont { FontFamily.medium.of(size: 10) }
     static var RoboM13: UIFont { FontFamily.medium.of(size: 13) }
     static var RoboM14: UIFont { FontFamily.medium.of(size: 14) }
+    static var RoboM18: UIFont { FontFamily.medium.of(size: 18) }
 }
