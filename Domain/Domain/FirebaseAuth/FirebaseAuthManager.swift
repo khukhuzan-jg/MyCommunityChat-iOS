@@ -49,9 +49,9 @@ public class FirebaseAuthManager {
             
             self?.auth.signIn(with: credential) { result, error in
                 if result != nil, error == nil {
-                    promise(.success(false))
-                } else {
                     promise(.success(true))
+                } else {
+                    promise(.success(false))
                 }
             }
         }

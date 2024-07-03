@@ -36,6 +36,7 @@ public class LoginController: UIViewController {
             continueButton |> setMainButtonStyle(isEnabled: isContinueButtonEnabled ? true : false)
         }
     }
+    private var viewModel = LoginVM()
     private var cancellables = Set<AnyCancellable>()
     
     public override func viewDidLoad() {
@@ -67,13 +68,11 @@ public class LoginController: UIViewController {
     
     private func bindAuth() {
         let number = "+95\(phoneNumberTextField.text ?? "")"
-        FirebaseAuthManager.shared.startAuth(phoneNumber: number)
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] success in
-                guard success else { return }
+        viewModel.transform(number) { [weak self] success in
+            if success {
                 self?.navigateToOTP(phoneNumber: number)
             }
-            .store(in: &cancellables)
+        }
     }
     
     @IBAction

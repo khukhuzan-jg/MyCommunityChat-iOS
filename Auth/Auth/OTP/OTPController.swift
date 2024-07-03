@@ -36,7 +36,7 @@ class OTPController: UIViewController {
     var phoneNumber: String
     var timer: Timer?
     var seconds = 60
-    private var cancellables = Set<AnyCancellable>()
+    private var viewModel = OTPVM()
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -103,13 +103,11 @@ class OTPController: UIViewController {
     
     private func bindOTPAuth() {
         let smsCode = otpTextField.text ?? ""
-        FirebaseAuthManager.shared.verifyCode(smsCode: smsCode)
-            .receive(on: DispatchQueue.main)
-            .sink { [weak self] success in
-                guard success else { return }
+        viewModel.transform(smsCode) { [weak self] success in
+            if success {
                 self?.navigateToProfile()
             }
-            .store(in: &cancellables)
+        }
     }
     
     private func navigateToProfile() {

@@ -16,6 +16,8 @@
 		78A947F22C3548E90086F9A1 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78A947F02C3548E90086F9A1 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		78A947F62C354F1B0086F9A1 /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A947F52C354F1B0086F9A1 /* ProfileController.xib */; };
 		78A947F72C354F1B0086F9A1 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947F42C354F1B0086F9A1 /* ProfileController.swift */; };
+		78A947F92C35559E0086F9A1 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947F82C35559E0086F9A1 /* LoginVM.swift */; };
+		78A947FB2C3555A90086F9A1 /* OTPVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947FA2C3555A90086F9A1 /* OTPVM.swift */; };
 		78BB8A2D2C3479A800F3BA57 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A2B2C3479A800F3BA57 /* LoginController.swift */; };
 		78BB8A2E2C3479A800F3BA57 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A2C2C3479A800F3BA57 /* LoginController.xib */; };
 		78BB8A322C347AAC00F3BA57 /* CommonExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB8A302C347AAC00F3BA57 /* CommonExtension.framework */; };
@@ -52,6 +54,8 @@
 		78A947F02C3548E90086F9A1 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A947F42C354F1B0086F9A1 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		78A947F52C354F1B0086F9A1 /* ProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
+		78A947F82C35559E0086F9A1 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		78A947FA2C3555A90086F9A1 /* OTPVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVM.swift; sourceTree = "<group>"; };
 		78BB8A2B2C3479A800F3BA57 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		78BB8A2C2C3479A800F3BA57 /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
 		78BB8A302C347AAC00F3BA57 /* CommonExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +114,7 @@
 			children = (
 				78A947D72C3528B80086F9A1 /* OTPController.swift */,
 				78A947D82C3528B80086F9A1 /* OTPController.xib */,
+				78A947FA2C3555A90086F9A1 /* OTPVM.swift */,
 			);
 			path = OTP;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			children = (
 				78BB8A2B2C3479A800F3BA57 /* LoginController.swift */,
 				78BB8A2C2C3479A800F3BA57 /* LoginController.xib */,
+				78A947F82C35559E0086F9A1 /* LoginVM.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -263,7 +269,9 @@
 			files = (
 				78A947F72C354F1B0086F9A1 /* ProfileController.swift in Sources */,
 				78A947D92C3528B80086F9A1 /* OTPController.swift in Sources */,
+				78A947F92C35559E0086F9A1 /* LoginVM.swift in Sources */,
 				78BB8A2D2C3479A800F3BA57 /* LoginController.swift in Sources */,
+				78A947FB2C3555A90086F9A1 /* OTPVM.swift in Sources */,
 				78A947DE2C3529420086F9A1 /* LogoAndTitleView.swift in Sources */,
 				78BB8A412C347E1300F3BA57 /* AuthModule.swift in Sources */,
 			);
