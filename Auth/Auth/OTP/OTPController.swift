@@ -8,6 +8,8 @@
 import UIKit
 import CommonUI
 import CommonExtension
+import Domain
+import Combine
 
 class OTPController: UIViewController {
     
@@ -19,11 +21,7 @@ class OTPController: UIViewController {
     @IBOutlet weak var continueButton: UIButton!
     
     @IBOutlet weak var resendOTPButton: UIButton!
-    
-    var phoneNumber: String
-    var timer: Timer?
-    var seconds = 60
-    
+ 
     public init(phoneNumber: String) {
         self.phoneNumber = phoneNumber
         super.init(nibName: "OTPController", bundle: .authBundle)
@@ -34,6 +32,11 @@ class OTPController: UIViewController {
             continueButton |> setMainButtonStyle(isEnabled: isContinueButtonEnabled ? true : false)
         }
     }
+    
+    var phoneNumber: String
+    var timer: Timer?
+    var seconds = 60
+    private var cancellables = Set<AnyCancellable>()
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -98,6 +101,26 @@ class OTPController: UIViewController {
         return isContinueButtonEnabled = true
     }
     
+    private func bindOTPAuth() {
+        let smsCode = otpTextField.text ?? ""
+        FirebaseAuthManager.shared.verifyCode(smsCode: smsCode)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] success in
+                guard success else { return }
+                self?.navigateToProfile()
+            }
+            .store(in: &cancellables)
+    }
+    
+    private func navigateToProfile() {
+        let profileVC = ProfileController()
+        navigationController?.pushViewController(profileVC, animated: true)
+    }
+    
+    @IBAction
+    private func didTapContinue(_ sender: UIButton) {
+        bindOTPAuth()
+    }
 }
 
 extension OTPController: AEOTPTextFieldDelegate {

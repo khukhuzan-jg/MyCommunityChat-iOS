@@ -12,6 +12,10 @@
 		78A947DA2C3528B80086F9A1 /* OTPController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A947D82C3528B80086F9A1 /* OTPController.xib */; };
 		78A947DE2C3529420086F9A1 /* LogoAndTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947DD2C3529420086F9A1 /* LogoAndTitleView.swift */; };
 		78A947E02C35295C0086F9A1 /* LogoAndTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A947DF2C35295C0086F9A1 /* LogoAndTitleView.xib */; };
+		78A947F12C3548E90086F9A1 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A947F02C3548E90086F9A1 /* Domain.framework */; };
+		78A947F22C3548E90086F9A1 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78A947F02C3548E90086F9A1 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		78A947F62C354F1B0086F9A1 /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A947F52C354F1B0086F9A1 /* ProfileController.xib */; };
+		78A947F72C354F1B0086F9A1 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947F42C354F1B0086F9A1 /* ProfileController.swift */; };
 		78BB8A2D2C3479A800F3BA57 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A2B2C3479A800F3BA57 /* LoginController.swift */; };
 		78BB8A2E2C3479A800F3BA57 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A2C2C3479A800F3BA57 /* LoginController.xib */; };
 		78BB8A322C347AAC00F3BA57 /* CommonExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB8A302C347AAC00F3BA57 /* CommonExtension.framework */; };
@@ -29,6 +33,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				78A947F22C3548E90086F9A1 /* Domain.framework in Embed Frameworks */,
 				78BB8A332C347AAC00F3BA57 /* CommonExtension.framework in Embed Frameworks */,
 				78BB8A352C347AAC00F3BA57 /* CommonUI.framework in Embed Frameworks */,
 			);
@@ -44,6 +49,9 @@
 		78A947D82C3528B80086F9A1 /* OTPController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OTPController.xib; sourceTree = "<group>"; };
 		78A947DD2C3529420086F9A1 /* LogoAndTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAndTitleView.swift; sourceTree = "<group>"; };
 		78A947DF2C35295C0086F9A1 /* LogoAndTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoAndTitleView.xib; sourceTree = "<group>"; };
+		78A947F02C3548E90086F9A1 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A947F42C354F1B0086F9A1 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		78A947F52C354F1B0086F9A1 /* ProfileController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
 		78BB8A2B2C3479A800F3BA57 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		78BB8A2C2C3479A800F3BA57 /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
 		78BB8A302C347AAC00F3BA57 /* CommonExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78A947F12C3548E90086F9A1 /* Domain.framework in Frameworks */,
 				78BB8A322C347AAC00F3BA57 /* CommonExtension.framework in Frameworks */,
 				78BB8A342C347AAC00F3BA57 /* CommonUI.framework in Frameworks */,
 			);
@@ -85,6 +94,7 @@
 		78671F262C33E914006E7DD6 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				78A947F32C354F080086F9A1 /* Profile */,
 				78A947DB2C3529200086F9A1 /* Views */,
 				78BB8A422C347F3400F3BA57 /* Resource */,
 				78BB8A3F2C347DFA00F3BA57 /* Config */,
@@ -121,6 +131,15 @@
 			path = LogoAndTitleView;
 			sourceTree = "<group>";
 		};
+		78A947F32C354F080086F9A1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				78A947F42C354F1B0086F9A1 /* ProfileController.swift */,
+				78A947F52C354F1B0086F9A1 /* ProfileController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		78BB8A2A2C34799600F3BA57 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +152,7 @@
 		78BB8A2F2C347AAC00F3BA57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				78A947F02C3548E90086F9A1 /* Domain.framework */,
 				78BB8A302C347AAC00F3BA57 /* CommonExtension.framework */,
 				78BB8A312C347AAC00F3BA57 /* CommonUI.framework */,
 			);
@@ -226,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78A947F62C354F1B0086F9A1 /* ProfileController.xib in Resources */,
 				78A947DA2C3528B80086F9A1 /* OTPController.xib in Resources */,
 				78BB8A442C347F4A00F3BA57 /* Icons.xcassets in Resources */,
 				78A947E02C35295C0086F9A1 /* LogoAndTitleView.xib in Resources */,
@@ -240,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78A947F72C354F1B0086F9A1 /* ProfileController.swift in Sources */,
 				78A947D92C3528B80086F9A1 /* OTPController.swift in Sources */,
 				78BB8A2D2C3479A800F3BA57 /* LoginController.swift in Sources */,
 				78A947DE2C3529420086F9A1 /* LogoAndTitleView.swift in Sources */,

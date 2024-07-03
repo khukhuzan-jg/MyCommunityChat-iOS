@@ -8,6 +8,8 @@
 import UIKit
 import CommonExtension
 import CommonUI
+import Domain
+import Combine
 
 public class LoginController: UIViewController {
     
@@ -34,6 +36,7 @@ public class LoginController: UIViewController {
             continueButton |> setMainButtonStyle(isEnabled: isContinueButtonEnabled ? true : false)
         }
     }
+    private var cancellables = Set<AnyCancellable>()
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,16 +61,28 @@ public class LoginController: UIViewController {
             isContinueButtonEnabled = false
             return
         }
+       
         return isContinueButtonEnabled = true
+    }
+    
+    private func bindAuth() {
+        let number = "+95\(phoneNumberTextField.text ?? "")"
+        FirebaseAuthManager.shared.startAuth(phoneNumber: number)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] success in
+                guard success else { return }
+                self?.navigateToOTP(phoneNumber: number)
+            }
+            .store(in: &cancellables)
     }
     
     @IBAction
     private func didTapContinue(_ sender: UIButton) {
-        navigateToOTP()
+       bindAuth()
     }
     
-    private func navigateToOTP() {
-        let otpVC = OTPController(phoneNumber: "+95 \(phoneNumberTextField.text ?? "")")
+    private func navigateToOTP(phoneNumber: String) {
+        let otpVC = OTPController(phoneNumber: phoneNumber)
         navigationController?.pushViewController(otpVC, animated: true)
     }
 }

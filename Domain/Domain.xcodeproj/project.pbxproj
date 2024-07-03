@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78671F572C33E9DB006E7DD6 /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 78671F562C33E9DB006E7DD6 /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78A947EF2C3545A20086F9A1 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947EE2C3545A20086F9A1 /* FirebaseAuthManager.swift */; };
 		F62474EC6B00BBC072A26A63 /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED424EAC13FB700426D106C /* Pods_Domain.framework */; };
 /* End PBXBuildFile section */
 
@@ -15,6 +16,7 @@
 		15B5CF39BB0A8651B5DC7834 /* Pods-Domain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.debug.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.debug.xcconfig"; sourceTree = "<group>"; };
 		78671F532C33E9DB006E7DD6 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78671F562C33E9DB006E7DD6 /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
+		78A947EE2C3545A20086F9A1 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		A574C5C75766EB19224BA628 /* Pods-Domain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Domain.release.xcconfig"; path = "Target Support Files/Pods-Domain/Pods-Domain.release.xcconfig"; sourceTree = "<group>"; };
 		BED424EAC13FB700426D106C /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,9 +72,18 @@
 		78671F552C33E9DB006E7DD6 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				78A947ED2C35457F0086F9A1 /* FirebaseAuth */,
 				78671F562C33E9DB006E7DD6 /* Domain.h */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		78A947ED2C35457F0086F9A1 /* FirebaseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				78A947EE2C3545A20086F9A1 /* FirebaseAuthManager.swift */,
+			);
+			path = FirebaseAuth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +130,7 @@
 				TargetAttributes = {
 					78671F522C33E9DB006E7DD6 = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 				};
 			};
@@ -180,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78A947EF2C3545A20086F9A1 /* FirebaseAuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +329,7 @@
 			baseConfigurationReference = 15B5CF39BB0A8651B5DC7834 /* Pods-Domain.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -339,6 +353,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -349,6 +364,7 @@
 			baseConfigurationReference = A574C5C75766EB19224BA628 /* Pods-Domain.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

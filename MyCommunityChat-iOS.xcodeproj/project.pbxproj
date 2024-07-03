@@ -28,6 +28,7 @@
 		7867200D2C345F2B006E7DD6 /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720042C345F2B006E7DD6 /* RobotoSlab-Light.ttf */; };
 		7867200E2C345F2B006E7DD6 /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720052C345F2B006E7DD6 /* RobotoSlab-Black.ttf */; };
 		7867200F2C345F2B006E7DD6 /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720062C345F2B006E7DD6 /* RobotoSlab-Medium.ttf */; };
+		78A947EC2C3544980086F9A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78A947EB2C3544980086F9A1 /* GoogleService-Info.plist */; };
 		78BB8A252C34762200F3BA57 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A232C34762200F3BA57 /* SplashController.swift */; };
 		78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A242C34762200F3BA57 /* SplashController.xib */; };
 		78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A282C3476BF00F3BA57 /* Animation.json */; };
@@ -98,6 +99,7 @@
 		786720042C345F2B006E7DD6 /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Light.ttf"; sourceTree = "<group>"; };
 		786720052C345F2B006E7DD6 /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
 		786720062C345F2B006E7DD6 /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
+		78A947EB2C3544980086F9A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78BB8A232C34762200F3BA57 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		78BB8A242C34762200F3BA57 /* SplashController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashController.xib; sourceTree = "<group>"; };
 		78BB8A282C3476BF00F3BA57 /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 		78671FEB2C33F7D3006E7DD6 /* AppConfig */ = {
 			isa = PBXGroup;
 			children = (
+				78A947EB2C3544980086F9A1 /* GoogleService-Info.plist */,
 				78671EAA2C33DEB8006E7DD6 /* Info.plist */,
 			);
 			path = AppConfig;
@@ -406,6 +409,7 @@
 				78671EA62C33DEB8006E7DD6 /* Assets.xcassets in Resources */,
 				786720082C345F2B006E7DD6 /* RobotoSlab-ExtraLight.ttf in Resources */,
 				7867200D2C345F2B006E7DD6 /* RobotoSlab-Light.ttf in Resources */,
+				78A947EC2C3544980086F9A1 /* GoogleService-Info.plist in Resources */,
 				7867200B2C345F2B006E7DD6 /* RobotoSlab-Bold.ttf in Resources */,
 				7867200C2C345F2B006E7DD6 /* RobotoSlab-Regular.ttf in Resources */,
 				7867200A2C345F2B006E7DD6 /* RobotoSlab-ExtraBold.ttf in Resources */,
@@ -689,7 +693,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XWPM63M4C4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MyCommunityChat-iOS/AppConfig/Info.plist";
@@ -702,7 +706,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kuku.MyCommunityChat-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jg.MyCommunityChat-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -720,7 +724,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = XWPM63M4C4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MyCommunityChat-iOS/AppConfig/Info.plist";
@@ -733,7 +737,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.kuku.MyCommunityChat-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jg.MyCommunityChat-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

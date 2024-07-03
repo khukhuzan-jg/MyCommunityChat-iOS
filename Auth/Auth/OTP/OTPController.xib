@@ -66,6 +66,9 @@
                                     <integer key="value" value="8"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didTapContinue:" destination="-1" eventType="touchUpInside" id="4xF-TX-0uy"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
