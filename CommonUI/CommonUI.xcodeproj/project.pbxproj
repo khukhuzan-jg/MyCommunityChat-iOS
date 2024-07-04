@@ -24,6 +24,7 @@
 		78A947E92C352FA10086F9A1 /* AEOTPTextFieldImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947E42C352FA10086F9A1 /* AEOTPTextFieldImplementation.swift */; };
 		78A947EA2C352FA10086F9A1 /* AEOTPTextFieldImplementationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947E52C352FA10086F9A1 /* AEOTPTextFieldImplementationProtocol.swift */; };
 		78BB8A212C34708100F3BA57 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A202C34708100F3BA57 /* Fonts.swift */; };
+		78D82F812C364D9000D70B25 /* AlertDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D82F802C364D9000D70B25 /* AlertDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,7 @@
 		78A947E42C352FA10086F9A1 /* AEOTPTextFieldImplementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEOTPTextFieldImplementation.swift; sourceTree = "<group>"; };
 		78A947E52C352FA10086F9A1 /* AEOTPTextFieldImplementationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEOTPTextFieldImplementationProtocol.swift; sourceTree = "<group>"; };
 		78BB8A202C34708100F3BA57 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		78D82F802C364D9000D70B25 /* AlertDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		78671FCF2C33EB81006E7DD6 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				78D82F7F2C364D7C00D70B25 /* AlertDialog */,
 				78A947E12C352F940086F9A1 /* Layouts */,
 				78BB8A1F2C34707A00F3BA57 /* Others */,
 				78671FE02C33EB9E006E7DD6 /* nib-loadable-view */,
@@ -165,6 +168,14 @@
 				78A947D42C3521910086F9A1 /* Styles.swift */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		78D82F7F2C364D7C00D70B25 /* AlertDialog */ = {
+			isa = PBXGroup;
+			children = (
+				78D82F802C364D9000D70B25 /* AlertDialog.swift */,
+			);
+			path = AlertDialog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +261,7 @@
 				78A947E82C352FA10086F9A1 /* AEOTPTextFieldDelegate.swift in Sources */,
 				78BB8A212C34708100F3BA57 /* Fonts.swift in Sources */,
 				78A947D52C3521910086F9A1 /* Styles.swift in Sources */,
+				78D82F812C364D9000D70B25 /* AlertDialog.swift in Sources */,
 				78A947C92C34F9830086F9A1 /* Colors.swift in Sources */,
 				78671FE42C33EB9E006E7DD6 /* NibBasedTableViewHeaderFooterView.swift in Sources */,
 				78671FE22C33EB9E006E7DD6 /* NibBasedCollectionViewReusableView.swift in Sources */,

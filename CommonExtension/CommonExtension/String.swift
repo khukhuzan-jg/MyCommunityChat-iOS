@@ -364,7 +364,13 @@ public extension String {
         }
         return false
     }
-    
+
+    func isValidPhoneNumber() -> Bool {
+        let phoneNumberPattern = "^\\d{1,9}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneNumberPattern)
+        return phoneTest.evaluate(with: self)
+    }
+
     func isValidTaxiNumber() -> Bool {
         
         // TST0728L

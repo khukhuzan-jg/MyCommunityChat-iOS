@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Auth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

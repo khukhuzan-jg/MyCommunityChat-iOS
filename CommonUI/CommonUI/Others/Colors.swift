@@ -17,6 +17,7 @@ public extension UIColor {
     static var quickSliver: UIColor {
         return black.blended(withFraction: 0.5, of: .white)
     }
+    static var silver: UIColor { UIColor(hex: "#D9D9D9") }
 }
 
 extension UIColor {

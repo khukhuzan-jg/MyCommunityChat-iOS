@@ -26,6 +26,10 @@
 		78BB8A352C347AAC00F3BA57 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB8A312C347AAC00F3BA57 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		78BB8A412C347E1300F3BA57 /* AuthModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A402C347E1300F3BA57 /* AuthModule.swift */; };
 		78BB8A442C347F4A00F3BA57 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A432C347F4A00F3BA57 /* Icons.xcassets */; };
+		78D82F902C367E8000D70B25 /* AvatarAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D82F8E2C367E8000D70B25 /* AvatarAlertView.xib */; };
+		78D82F912C367E8000D70B25 /* AvatarAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D82F8F2C367E8000D70B25 /* AvatarAlertView.swift */; };
+		78D82F952C367EAB00D70B25 /* AvatarItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D82F932C367EAB00D70B25 /* AvatarItemCell.swift */; };
+		78D82F962C367EAB00D70B25 /* AvatarItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D82F942C367EAB00D70B25 /* AvatarItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +66,10 @@
 		78BB8A312C347AAC00F3BA57 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BB8A402C347E1300F3BA57 /* AuthModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModule.swift; sourceTree = "<group>"; };
 		78BB8A432C347F4A00F3BA57 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		78D82F8E2C367E8000D70B25 /* AvatarAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AvatarAlertView.xib; path = Auth/Views/AvaterAlertView/AvatarAlertView.xib; sourceTree = SOURCE_ROOT; };
+		78D82F8F2C367E8000D70B25 /* AvatarAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvatarAlertView.swift; path = Auth/Views/AvaterAlertView/AvatarAlertView.swift; sourceTree = SOURCE_ROOT; };
+		78D82F932C367EAB00D70B25 /* AvatarItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvatarItemCell.swift; path = Auth/Views/CollectionCell/AvatarItemCell/AvatarItemCell.swift; sourceTree = SOURCE_ROOT; };
+		78D82F942C367EAB00D70B25 /* AvatarItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AvatarItemCell.xib; path = Auth/Views/CollectionCell/AvatarItemCell/AvatarItemCell.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,8 @@
 		78A947DB2C3529200086F9A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				78D82F922C367E9E00D70B25 /* AvatarItemCell */,
+				78D82F8D2C367E6C00D70B25 /* AvatarAlertView */,
 				78A947DC2C3529290086F9A1 /* LogoAndTitleView */,
 			);
 			path = Views;
@@ -179,6 +189,24 @@
 				78BB8A432C347F4A00F3BA57 /* Icons.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		78D82F8D2C367E6C00D70B25 /* AvatarAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				78D82F8F2C367E8000D70B25 /* AvatarAlertView.swift */,
+				78D82F8E2C367E8000D70B25 /* AvatarAlertView.xib */,
+			);
+			path = AvatarAlertView;
+			sourceTree = "<group>";
+		};
+		78D82F922C367E9E00D70B25 /* AvatarItemCell */ = {
+			isa = PBXGroup;
+			children = (
+				78D82F932C367EAB00D70B25 /* AvatarItemCell.swift */,
+				78D82F942C367EAB00D70B25 /* AvatarItemCell.xib */,
+			);
+			path = AvatarItemCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,11 +280,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D82F902C367E8000D70B25 /* AvatarAlertView.xib in Resources */,
 				78A947F62C354F1B0086F9A1 /* ProfileController.xib in Resources */,
 				78A947DA2C3528B80086F9A1 /* OTPController.xib in Resources */,
 				78BB8A442C347F4A00F3BA57 /* Icons.xcassets in Resources */,
 				78A947E02C35295C0086F9A1 /* LogoAndTitleView.xib in Resources */,
 				78BB8A2E2C3479A800F3BA57 /* LoginController.xib in Resources */,
+				78D82F962C367EAB00D70B25 /* AvatarItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +299,8 @@
 			files = (
 				78A947F72C354F1B0086F9A1 /* ProfileController.swift in Sources */,
 				78A947D92C3528B80086F9A1 /* OTPController.swift in Sources */,
+				78D82F952C367EAB00D70B25 /* AvatarItemCell.swift in Sources */,
+				78D82F912C367E8000D70B25 /* AvatarAlertView.swift in Sources */,
 				78A947F92C35559E0086F9A1 /* LoginVM.swift in Sources */,
 				78BB8A2D2C3479A800F3BA57 /* LoginController.swift in Sources */,
 				78A947FB2C3555A90086F9A1 /* OTPVM.swift in Sources */,

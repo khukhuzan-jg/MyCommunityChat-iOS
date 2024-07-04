@@ -325,6 +325,15 @@ public func setImageStyle(_ image: UIImage?) -> (UIImageView) -> Void {
     return { $0.image = image }
 }
 
+public func setImageBorderStyle(_ borderColor: UIColor,radius: CGFloat = 10, width: CGFloat) -> (UIImageView) -> Void {
+    return {
+        $0.layer.cornerRadius = radius
+        $0.layer.borderWidth = width
+        $0.layer.borderColor = borderColor.cgColor
+        $0.clipsToBounds = true
+    }
+}
+
 // UIButton Styles
 
 public func setButtonImageStyle(_ image: UIImage?) -> (UIButton) -> Void {

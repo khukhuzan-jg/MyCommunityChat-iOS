@@ -58,7 +58,9 @@ public class LoginController: UIViewController {
 
     @objc func onValidate() {
         guard let phoneNumber = phoneNumberTextField.text,
-              !phoneNumber.isEmpty else {
+              !phoneNumber.isEmpty,
+              phoneNumber.isValidPhoneNumber()
+        else {
             isContinueButtonEnabled = false
             return
         }
@@ -67,6 +69,7 @@ public class LoginController: UIViewController {
     }
     
     private func bindAuth() {
+        onValidate()
         let number = "+95\(phoneNumberTextField.text ?? "")"
         viewModel.transform(number) { [weak self] success in
             if success {
