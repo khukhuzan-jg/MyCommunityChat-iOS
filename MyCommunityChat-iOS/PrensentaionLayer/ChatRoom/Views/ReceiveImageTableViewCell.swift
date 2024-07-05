@@ -19,6 +19,7 @@ class ReceiveImageTableViewCell: UITableViewCell {
         self.imgProfile.image = .icPlaceholder
         self.bgView.backgroundColor = .primary
         self.imgReceive.cornerRadius  = 10
+        self.imgProfile.contentMode = .scaleAspectFill
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

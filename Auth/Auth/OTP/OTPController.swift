@@ -54,6 +54,7 @@ class OTPController: BaseVC {
         resendOTPButton |> setButtonTitleStyle(.RoboR16, .secondaryYellow, underline: true)
         phoneNumberLabel |> setLabelFontStyle(.RoboR15)
         let phoneNumberText = "Enter OTP Code. We have send to \(phoneNumber)"
+        phoneNumberLabel.numberOfLines = 0
         phoneNumberLabel.attributedText = phoneNumberText.changeSubStringFont(
             subStr: phoneNumber,
             font: .RoboR15,

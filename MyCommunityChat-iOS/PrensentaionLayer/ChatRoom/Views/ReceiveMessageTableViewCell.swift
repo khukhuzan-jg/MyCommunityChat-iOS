@@ -23,6 +23,7 @@ class ReceiveMessageTableViewCell: UITableViewCell {
         self.imgProfile.image = .icPlaceholder
         self.lblMessage.textColor = .white
         self.lblTime.textColor = .white
+        self.imgProfile.contentMode = .scaleAspectFill
         
     }
 

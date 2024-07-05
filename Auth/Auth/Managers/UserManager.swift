@@ -38,10 +38,12 @@ public class UserManager {
             if let usr = user {
                 self.isAlreadyLogin = true
                 self.currentUser = usr
+                self.completionSaved(true)
             }
             else {
                 self.isAlreadyLogin = false
                 self.currentUser = nil
+                self.completionSaved(false)
             }
         }
         
