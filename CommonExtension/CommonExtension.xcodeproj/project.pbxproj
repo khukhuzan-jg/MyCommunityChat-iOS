@@ -53,6 +53,7 @@
 		78BB8A3A2C347CAA00F3BA57 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A382C347CAA00F3BA57 /* Date.swift */; };
 		78BB8A3C2C347CE900F3BA57 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A3B2C347CE900F3BA57 /* Character.swift */; };
 		78BB8A3E2C347D0D00F3BA57 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A3D2C347D0D00F3BA57 /* Collection.swift */; };
+		F07CBEB12C3789E000A2DD8B /* UIGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBEB02C3789DF00A2DD8B /* UIGesture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		78BB8A382C347CAA00F3BA57 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		78BB8A3B2C347CE900F3BA57 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		78BB8A3D2C347D0D00F3BA57 /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		F07CBEB02C3789DF00A2DD8B /* UIGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGesture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				78671F812C33EA40006E7DD6 /* UIWindow.swift */,
 				78671F782C33EA40006E7DD6 /* URL.swift */,
 				78671F7E2C33EA40006E7DD6 /* UserDefault.swift */,
+				F07CBEB02C3789DF00A2DD8B /* UIGesture.swift */,
 			);
 			path = CommonExtension;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				78671F9D2C33EA40006E7DD6 /* UIEdgeInsets.swift in Sources */,
 				78671FBA2C33EA40006E7DD6 /* Optional.swift in Sources */,
 				78671FB02C33EA40006E7DD6 /* UINavigationController.swift in Sources */,
+				F07CBEB12C3789E000A2DD8B /* UIGesture.swift in Sources */,
 				78671F9A2C33EA40006E7DD6 /* UIViewController.swift in Sources */,
 				78671FA02C33EA40006E7DD6 /* Double.swift in Sources */,
 				78BB8A3C2C347CE900F3BA57 /* Character.swift in Sources */,

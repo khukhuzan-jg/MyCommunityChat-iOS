@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyABiqBREz7sJcF2MP9E1rwdjHNa2DE-UcU</string>
+	<string>AIzaSyDMuQjOXEvsmP6zm_DD6o2rz0JhCkIdV9I</string>
 	<key>GCM_SENDER_ID</key>
-	<string>489581601545</string>
+	<string>774612549287</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.jg.MyCommunityChat-iOS</string>
+	<string>com.joygroups.MyCommunityChat-iOS</string>
 	<key>PROJECT_ID</key>
-	<string>mycommunitychat-ios-phoneauth</string>
+	<string>mycommchattingapp-ios</string>
 	<key>STORAGE_BUCKET</key>
-	<string>mycommunitychat-ios-phoneauth.appspot.com</string>
+	<string>mycommchattingapp-ios.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:489581601545:ios:8444d5867e15b60796a9d8</string>
+	<string>1:774612549287:ios:937309e2a895355a6ea582</string>
+	<key>DATABASE_URL</key>
+	<string>https://mycommchattingapp-ios-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

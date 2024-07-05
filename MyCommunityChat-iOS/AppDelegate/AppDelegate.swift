@@ -8,7 +8,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 import FirebaseCore
-
+import OneSignalFramework
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         IQKeyboardManager.shared.enable = true
         FirebaseApp.configure()
+        
+//        // Remove this method to stop OneSignal Debugging
+//          OneSignal.Debug.setLogLevel(.LL_VERBOSE)
+//          
+//          // OneSignal initialization
+//        // oneSignal App ID : 17d50d67-f69e-443f-a5a0-b3f8e4b59dbf
+//          OneSignal.initialize("17d50d67-f69e-443f-a5a0-b3f8e4b59dbf", withLaunchOptions: launchOptions)
+//          
+//          // requestPermission will show the native iOS notification permission prompt.
+//          // We recommend removing the following code and instead using an In-App Message to prompt for notification permission
+//          OneSignal.Notifications.requestPermission({ accepted in
+//            print("User accepted notifications: \(accepted)")
+//          }, fallbackToSettings: true)
+//        
+        UINavigationBarAppearance().backgroundColor = .primary
         return true
     }
 

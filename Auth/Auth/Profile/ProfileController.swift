@@ -22,6 +22,9 @@ public class ProfileController: UIViewController {
     @IBOutlet weak var textFieldBorderView: UIView!
     @IBOutlet weak var nameTextField: UITextField!
     
+    
+    var userManager = UserManager.shared
+    
     public init() {
         super.init(nibName: "ProfileController", bundle: .authBundle)
     }
@@ -81,7 +84,20 @@ public class ProfileController: UIViewController {
     
     @IBAction
     private func didTapContinue(_ sender: UIButton) {
-       
+        let user = setupUser()
+        let _ = userManager.savedUser(user: user)
+        userManager.completionSaved(true)
+    }
+    
+    
+    func setupUser() -> UserInfo {
+        var imageStr = ""
+        
+        if let img = avatarImageView.image {
+            imageStr = img.jpegData(compressionQuality: 0.5)?.base64EncodedString() ?? ""
+        }
+        return UserInfo(name: nameTextField.text, image: imageStr, phone: "")
+        
     }
     
     @IBAction

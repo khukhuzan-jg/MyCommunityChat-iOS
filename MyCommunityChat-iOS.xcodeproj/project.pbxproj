@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,6 @@
 		78671F442C33E94F006E7DD6 /* Auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78671F422C33E94F006E7DD6 /* Auth.framework */; };
 		78671F452C33E94F006E7DD6 /* Auth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78671F422C33E94F006E7DD6 /* Auth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		78671FF52C33FDD8006E7DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78671FF42C33FDD8006E7DD6 /* LaunchScreen.storyboard */; };
-		78671FF72C33FDDF006E7DD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78671FF62C33FDDF006E7DD6 /* Main.storyboard */; };
 		78671FFC2C345D92006E7DD6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78671FFB2C345D92006E7DD6 /* Colors.xcassets */; };
 		786720072C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78671FFE2C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf */; };
 		786720082C345F2B006E7DD6 /* RobotoSlab-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78671FFF2C345F2B006E7DD6 /* RobotoSlab-ExtraLight.ttf */; };
@@ -28,12 +27,45 @@
 		7867200D2C345F2B006E7DD6 /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720042C345F2B006E7DD6 /* RobotoSlab-Light.ttf */; };
 		7867200E2C345F2B006E7DD6 /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720052C345F2B006E7DD6 /* RobotoSlab-Black.ttf */; };
 		7867200F2C345F2B006E7DD6 /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720062C345F2B006E7DD6 /* RobotoSlab-Medium.ttf */; };
-		78A947EC2C3544980086F9A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78A947EB2C3544980086F9A1 /* GoogleService-Info.plist */; };
 		78BB8A252C34762200F3BA57 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A232C34762200F3BA57 /* SplashController.swift */; };
 		78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A242C34762200F3BA57 /* SplashController.xib */; };
 		78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A282C3476BF00F3BA57 /* Animation.json */; };
 		81E5DBD6D3694588398A0C74 /* Pods_MyCommunityChat_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CD97001E15DECC4C6281AF /* Pods_MyCommunityChat_iOSTests.framework */; };
+		98598D837A019FA4F13C0A94 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79B62E427CA24033966E1B4 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 		D542E05F03491B20CF7B8F45 /* Pods_MyCommunityChat_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C416CB71A449A805324131 /* Pods_MyCommunityChat_iOSUITests.framework */; };
+		F07CBE762C369D6800A2DD8B /* ChatRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE5B2C369D6700A2DD8B /* ChatRoomModel.swift */; };
+		F07CBE772C369D6800A2DD8B /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE5D2C369D6700A2DD8B /* ChatRoomViewController.swift */; };
+		F07CBE782C369D6800A2DD8B /* ChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */; };
+		F07CBE792C369D6800A2DD8B /* ChatRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE602C369D6700A2DD8B /* ChatRoomViewModel.swift */; };
+		F07CBE7A2C369D6800A2DD8B /* ReceiveImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE622C369D6700A2DD8B /* ReceiveImageTableViewCell.swift */; };
+		F07CBE7B2C369D6800A2DD8B /* ReceiveImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07CBE632C369D6700A2DD8B /* ReceiveImageTableViewCell.xib */; };
+		F07CBE7C2C369D6800A2DD8B /* ReceiveMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE642C369D6700A2DD8B /* ReceiveMessageTableViewCell.swift */; };
+		F07CBE7D2C369D6800A2DD8B /* ReceiveMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07CBE652C369D6700A2DD8B /* ReceiveMessageTableViewCell.xib */; };
+		F07CBE7E2C369D6800A2DD8B /* SendImgeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE662C369D6700A2DD8B /* SendImgeTableViewCell.swift */; };
+		F07CBE7F2C369D6800A2DD8B /* SendImgeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07CBE672C369D6700A2DD8B /* SendImgeTableViewCell.xib */; };
+		F07CBE802C369D6800A2DD8B /* SendMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE682C369D6700A2DD8B /* SendMessageTableViewCell.swift */; };
+		F07CBE812C369D6800A2DD8B /* SendMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07CBE692C369D6700A2DD8B /* SendMessageTableViewCell.xib */; };
+		F07CBE822C369D6800A2DD8B /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE6C2C369D6700A2DD8B /* HomeModel.swift */; };
+		F07CBE832C369D6800A2DD8B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE6E2C369D6700A2DD8B /* HomeViewController.swift */; };
+		F07CBE842C369D6800A2DD8B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE702C369D6700A2DD8B /* HomeViewModel.swift */; };
+		F07CBE852C369D6800A2DD8B /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE722C369D6700A2DD8B /* UserTableViewCell.swift */; };
+		F07CBE862C369D6800A2DD8B /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07CBE732C369D6700A2DD8B /* UserTableViewCell.xib */; };
+		F07CBE8E2C369D8100A2DD8B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE872C369D8100A2DD8B /* BaseViewController.swift */; };
+		F07CBE8F2C369D8100A2DD8B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE882C369D8100A2DD8B /* BaseViewModel.swift */; };
+		F07CBE902C369D8100A2DD8B /* ChatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE8A2C369D8100A2DD8B /* ChatManager.swift */; };
+		F07CBE912C369D8100A2DD8B /* StringCosntants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE8C2C369D8100A2DD8B /* StringCosntants.swift */; };
+		F07CBE952C369DC500A2DD8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F07CBE942C369DC500A2DD8B /* Main.storyboard */; };
+		F07CBE9F2C36E49700A2DD8B /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE9E2C36E49700A2DD8B /* UserInfoManager.swift */; };
+		F07CBEA12C36EB5300A2DD8B /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA02C36EB5300A2DD8B /* Domain.framework */; };
+		F07CBEA22C36EB5300A2DD8B /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA02C36EB5300A2DD8B /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F07CBEA42C36EBC000A2DD8B /* CommonExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA32C36EBC000A2DD8B /* CommonExtension.framework */; };
+		F07CBEA52C36EBC000A2DD8B /* CommonExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA32C36EBC000A2DD8B /* CommonExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F07CBEA72C36EBCD00A2DD8B /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA62C36EBCD00A2DD8B /* CommonUI.framework */; };
+		F07CBEA82C36EBCD00A2DD8B /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA62C36EBCD00A2DD8B /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F07CBEAC2C37274400A2DD8B /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBEAB2C37274300A2DD8B /* ProfileImageView.swift */; };
+		F07CBECA2C379DA100A2DD8B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBEC92C379DA100A2DD8B /* NotificationService.swift */; };
+		F07CBECE2C379DA100A2DD8B /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F07CBEC72C379DA100A2DD8B /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F07CBED82C37A92E00A2DD8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F07CBED72C37A92E00A2DD8B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +83,13 @@
 			remoteGlobalIDString = 78671E982C33DEB7006E7DD6;
 			remoteInfo = "MyCommunityChat-iOS";
 		};
+		F07CBECC2C379DA100A2DD8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78671E912C33DEB7006E7DD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F07CBEC62C379DA100A2DD8B;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -60,9 +99,23 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F07CBEA22C36EB5300A2DD8B /* Domain.framework in Embed Frameworks */,
+				F07CBEA82C36EBCD00A2DD8B /* CommonUI.framework in Embed Frameworks */,
 				78671F452C33E94F006E7DD6 /* Auth.framework in Embed Frameworks */,
+				F07CBEA52C36EBC000A2DD8B /* CommonExtension.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F07CBED22C379DA100A2DD8B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F07CBECE2C379DA100A2DD8B /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -71,6 +124,7 @@
 		02CD97001E15DECC4C6281AF /* Pods_MyCommunityChat_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E8EFEB9A0C797F6AD6F0AF /* Pods-MyCommunityChat-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSUITests/Pods-MyCommunityChat-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		20E359DA71A46C20E9783211 /* Pods-MyCommunityChat-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOS.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		3D1F71AB8FC366C34D5475FA /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		4639CB9C176EBE7DC1ACB169 /* Pods-MyCommunityChat-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		4C7334774AA988B2B7D73DF2 /* Pods-MyCommunityChat-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSTests/Pods-MyCommunityChat-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		62F83546646CCFB9D8048EE0 /* Pods-MyCommunityChat-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSUITests/Pods-MyCommunityChat-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,7 +142,6 @@
 		78671F422C33E94F006E7DD6 /* Auth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Auth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78671F432C33E94F006E7DD6 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78671FF42C33FDD8006E7DD6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		78671FF62C33FDDF006E7DD6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		78671FFB2C345D92006E7DD6 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		78671FFE2C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-SemiBold.ttf"; sourceTree = "<group>"; };
 		78671FFF2C345F2B006E7DD6 /* RobotoSlab-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -99,12 +152,47 @@
 		786720042C345F2B006E7DD6 /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Light.ttf"; sourceTree = "<group>"; };
 		786720052C345F2B006E7DD6 /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
 		786720062C345F2B006E7DD6 /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
-		78A947EB2C3544980086F9A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		78BB8A232C34762200F3BA57 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		78BB8A242C34762200F3BA57 /* SplashController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashController.xib; sourceTree = "<group>"; };
 		78BB8A282C3476BF00F3BA57 /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
 		BE505EF2DAA429E2DE4BD9D3 /* Pods-MyCommunityChat-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSTests/Pods-MyCommunityChat-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		CCCD488345D2BEBAE417343C /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E79B62E427CA24033966E1B4 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F07CBE5B2C369D6700A2DD8B /* ChatRoomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomModel.swift; sourceTree = "<group>"; };
+		F07CBE5D2C369D6700A2DD8B /* ChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatRoomViewController.xib; sourceTree = "<group>"; };
+		F07CBE602C369D6700A2DD8B /* ChatRoomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewModel.swift; sourceTree = "<group>"; };
+		F07CBE622C369D6700A2DD8B /* ReceiveImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveImageTableViewCell.swift; sourceTree = "<group>"; };
+		F07CBE632C369D6700A2DD8B /* ReceiveImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiveImageTableViewCell.xib; sourceTree = "<group>"; };
+		F07CBE642C369D6700A2DD8B /* ReceiveMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiveMessageTableViewCell.swift; sourceTree = "<group>"; };
+		F07CBE652C369D6700A2DD8B /* ReceiveMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReceiveMessageTableViewCell.xib; sourceTree = "<group>"; };
+		F07CBE662C369D6700A2DD8B /* SendImgeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendImgeTableViewCell.swift; sourceTree = "<group>"; };
+		F07CBE672C369D6700A2DD8B /* SendImgeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendImgeTableViewCell.xib; sourceTree = "<group>"; };
+		F07CBE682C369D6700A2DD8B /* SendMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageTableViewCell.swift; sourceTree = "<group>"; };
+		F07CBE692C369D6700A2DD8B /* SendMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendMessageTableViewCell.xib; sourceTree = "<group>"; };
+		F07CBE6C2C369D6700A2DD8B /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		F07CBE6E2C369D6700A2DD8B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F07CBE702C369D6700A2DD8B /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F07CBE722C369D6700A2DD8B /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		F07CBE732C369D6700A2DD8B /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		F07CBE872C369D8100A2DD8B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F07CBE882C369D8100A2DD8B /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		F07CBE8A2C369D8100A2DD8B /* ChatManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
+		F07CBE8C2C369D8100A2DD8B /* StringCosntants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCosntants.swift; sourceTree = "<group>"; };
+		F07CBE942C369DC500A2DD8B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F07CBE9E2C36E49700A2DD8B /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		F07CBEA02C36EB5300A2DD8B /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F07CBEA32C36EBC000A2DD8B /* CommonExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F07CBEA62C36EBCD00A2DD8B /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F07CBEAB2C37274300A2DD8B /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		F07CBEB42C379B8B00A2DD8B /* MyCommunityChat-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MyCommunityChat-iOS.entitlements"; sourceTree = "<group>"; };
+		F07CBEC72C379DA100A2DD8B /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F07CBEC92C379DA100A2DD8B /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		F07CBECB2C379DA100A2DD8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F07CBED32C379DE200A2DD8B /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
+		F07CBED42C379E7500A2DD8B /* OneSignalFramework.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:J3J28YJX9L:OneSignal, Inc."; lastKnownFileType = wrapper.xcframework; name = OneSignalFramework.xcframework; path = Pods/OneSignal/iOS_SDK/OneSignalSDK/OneSignal_XCFramework/OneSignalFramework.xcframework; sourceTree = "<group>"; };
+		F07CBED72C37A92E00A2DD8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +200,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F07CBEA12C36EB5300A2DD8B /* Domain.framework in Frameworks */,
 				78671F442C33E94F006E7DD6 /* Auth.framework in Frameworks */,
+				F07CBEA72C36EBCD00A2DD8B /* CommonUI.framework in Frameworks */,
 				1484DC719DE9A429EA331677 /* Pods_MyCommunityChat_iOS.framework in Frameworks */,
+				F07CBEA42C36EBC000A2DD8B /* CommonExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +224,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F07CBEC42C379DA100A2DD8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98598D837A019FA4F13C0A94 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -142,6 +241,7 @@
 				78671E9B2C33DEB7006E7DD6 /* MyCommunityChat-iOS */,
 				78671EB22C33DEB8006E7DD6 /* MyCommunityChat-iOSTests */,
 				78671EBC2C33DEB8006E7DD6 /* MyCommunityChat-iOSUITests */,
+				F07CBEC82C379DA100A2DD8B /* OneSignalNotificationServiceExtension */,
 				78671E9A2C33DEB7006E7DD6 /* Products */,
 				DCBE0143DFEFA13BE18E1A17 /* Pods */,
 				AE7770F680BF3DED8EF459ED /* Frameworks */,
@@ -154,6 +254,7 @@
 				78671E992C33DEB7006E7DD6 /* MyCommunityChat-iOS.app */,
 				78671EAF2C33DEB8006E7DD6 /* MyCommunityChat-iOSTests.xctest */,
 				78671EB92C33DEB8006E7DD6 /* MyCommunityChat-iOSUITests.xctest */,
+				F07CBEC72C379DA100A2DD8B /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +262,10 @@
 		78671E9B2C33DEB7006E7DD6 /* MyCommunityChat-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F07CBEB42C379B8B00A2DD8B /* MyCommunityChat-iOS.entitlements */,
+				F07CBE892C369D8100A2DD8B /* Base */,
+				F07CBE8D2C369D8100A2DD8B /* Constants */,
+				F07CBE8B2C369D8100A2DD8B /* Managers */,
 				78671FEB2C33F7D3006E7DD6 /* AppConfig */,
 				78671FEA2C33F71A006E7DD6 /* PrensentaionLayer */,
 				78671FE82C33F6EB006E7DD6 /* AppDelegate */,
@@ -199,7 +304,7 @@
 		78671FE92C33F6FA006E7DD6 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				78671FF62C33FDDF006E7DD6 /* Main.storyboard */,
+				F07CBE942C369DC500A2DD8B /* Main.storyboard */,
 				78671FF42C33FDD8006E7DD6 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -208,6 +313,8 @@
 		78671FEA2C33F71A006E7DD6 /* PrensentaionLayer */ = {
 			isa = PBXGroup;
 			children = (
+				F07CBE6B2C369D6700A2DD8B /* ChatRoom */,
+				F07CBE752C369D6700A2DD8B /* Home */,
 				78BB8A222C34760900F3BA57 /* Splash */,
 			);
 			path = PrensentaionLayer;
@@ -216,7 +323,7 @@
 		78671FEB2C33F7D3006E7DD6 /* AppConfig */ = {
 			isa = PBXGroup;
 			children = (
-				78A947EB2C3544980086F9A1 /* GoogleService-Info.plist */,
+				F07CBED72C37A92E00A2DD8B /* GoogleService-Info.plist */,
 				78671EAA2C33DEB8006E7DD6 /* Info.plist */,
 			);
 			path = AppConfig;
@@ -269,11 +376,16 @@
 		AE7770F680BF3DED8EF459ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F07CBED42C379E7500A2DD8B /* OneSignalFramework.xcframework */,
+				F07CBEA62C36EBCD00A2DD8B /* CommonUI.framework */,
+				F07CBEA32C36EBC000A2DD8B /* CommonExtension.framework */,
+				F07CBEA02C36EB5300A2DD8B /* Domain.framework */,
 				78671F422C33E94F006E7DD6 /* Auth.framework */,
 				78671F432C33E94F006E7DD6 /* Data.framework */,
 				CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */,
 				02CD97001E15DECC4C6281AF /* Pods_MyCommunityChat_iOSTests.framework */,
 				70C416CB71A449A805324131 /* Pods_MyCommunityChat_iOSUITests.framework */,
+				E79B62E427CA24033966E1B4 /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -287,8 +399,142 @@
 				BE505EF2DAA429E2DE4BD9D3 /* Pods-MyCommunityChat-iOSTests.release.xcconfig */,
 				62F83546646CCFB9D8048EE0 /* Pods-MyCommunityChat-iOSUITests.debug.xcconfig */,
 				14E8EFEB9A0C797F6AD6F0AF /* Pods-MyCommunityChat-iOSUITests.release.xcconfig */,
+				3D1F71AB8FC366C34D5475FA /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				CCCD488345D2BEBAE417343C /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F07CBE5C2C369D6700A2DD8B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE5B2C369D6700A2DD8B /* ChatRoomModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F07CBE5F2C369D6700A2DD8B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE5D2C369D6700A2DD8B /* ChatRoomViewController.swift */,
+				F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F07CBE612C369D6700A2DD8B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE602C369D6700A2DD8B /* ChatRoomViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F07CBE6A2C369D6700A2DD8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE622C369D6700A2DD8B /* ReceiveImageTableViewCell.swift */,
+				F07CBE632C369D6700A2DD8B /* ReceiveImageTableViewCell.xib */,
+				F07CBE642C369D6700A2DD8B /* ReceiveMessageTableViewCell.swift */,
+				F07CBE652C369D6700A2DD8B /* ReceiveMessageTableViewCell.xib */,
+				F07CBE662C369D6700A2DD8B /* SendImgeTableViewCell.swift */,
+				F07CBE672C369D6700A2DD8B /* SendImgeTableViewCell.xib */,
+				F07CBE682C369D6700A2DD8B /* SendMessageTableViewCell.swift */,
+				F07CBE692C369D6700A2DD8B /* SendMessageTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F07CBE6B2C369D6700A2DD8B /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE5C2C369D6700A2DD8B /* Models */,
+				F07CBE5F2C369D6700A2DD8B /* ViewControllers */,
+				F07CBE612C369D6700A2DD8B /* ViewModels */,
+				F07CBE6A2C369D6700A2DD8B /* Views */,
+			);
+			path = ChatRoom;
+			sourceTree = "<group>";
+		};
+		F07CBE6D2C369D6700A2DD8B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE6C2C369D6700A2DD8B /* HomeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F07CBE6F2C369D6700A2DD8B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE6E2C369D6700A2DD8B /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F07CBE712C369D6700A2DD8B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE702C369D6700A2DD8B /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F07CBE742C369D6700A2DD8B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE722C369D6700A2DD8B /* UserTableViewCell.swift */,
+				F07CBE732C369D6700A2DD8B /* UserTableViewCell.xib */,
+				F07CBEAB2C37274300A2DD8B /* ProfileImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F07CBE752C369D6700A2DD8B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE6D2C369D6700A2DD8B /* Models */,
+				F07CBE6F2C369D6700A2DD8B /* ViewControllers */,
+				F07CBE712C369D6700A2DD8B /* ViewModels */,
+				F07CBE742C369D6700A2DD8B /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F07CBE892C369D8100A2DD8B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE872C369D8100A2DD8B /* BaseViewController.swift */,
+				F07CBE882C369D8100A2DD8B /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F07CBE8B2C369D8100A2DD8B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE8A2C369D8100A2DD8B /* ChatManager.swift */,
+				F07CBE9E2C36E49700A2DD8B /* UserInfoManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F07CBE8D2C369D8100A2DD8B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE8C2C369D8100A2DD8B /* StringCosntants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F07CBEC82C379DA100A2DD8B /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBED32C379DE200A2DD8B /* OneSignalNotificationServiceExtension.entitlements */,
+				F07CBEC92C379DA100A2DD8B /* NotificationService.swift */,
+				F07CBECB2C379DA100A2DD8B /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,10 +550,12 @@
 				78671E972C33DEB7006E7DD6 /* Resources */,
 				4DB9DB168ED2E7769A6F66AE /* [CP] Embed Pods Frameworks */,
 				78671F482C33E94F006E7DD6 /* Embed Frameworks */,
+				F07CBED22C379DA100A2DD8B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F07CBECD2C379DA100A2DD8B /* PBXTargetDependency */,
 			);
 			name = "MyCommunityChat-iOS";
 			productName = "MyCommunityChat-iOS";
@@ -352,6 +600,24 @@
 			productReference = 78671EB92C33DEB8006E7DD6 /* MyCommunityChat-iOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F07CBEC62C379DA100A2DD8B /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F07CBECF2C379DA100A2DD8B /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				943E2356F6F1983570E8FFFD /* [CP] Check Pods Manifest.lock */,
+				F07CBEC32C379DA100A2DD8B /* Sources */,
+				F07CBEC42C379DA100A2DD8B /* Frameworks */,
+				F07CBEC52C379DA100A2DD8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = F07CBEC72C379DA100A2DD8B /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -373,6 +639,9 @@
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 78671E982C33DEB7006E7DD6;
 					};
+					F07CBEC62C379DA100A2DD8B = {
+						CreatedOnToolsVersion = 15.4;
+					};
 				};
 			};
 			buildConfigurationList = 78671E942C33DEB7006E7DD6 /* Build configuration list for PBXProject "MyCommunityChat-iOS" */;
@@ -391,6 +660,7 @@
 				78671E982C33DEB7006E7DD6 /* MyCommunityChat-iOS */,
 				78671EAE2C33DEB8006E7DD6 /* MyCommunityChat-iOSTests */,
 				78671EB82C33DEB8006E7DD6 /* MyCommunityChat-iOSUITests */,
+				F07CBEC62C379DA100A2DD8B /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -401,19 +671,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				78671FF52C33FDD8006E7DD6 /* LaunchScreen.storyboard in Resources */,
+				F07CBE7F2C369D6800A2DD8B /* SendImgeTableViewCell.xib in Resources */,
+				F07CBED82C37A92E00A2DD8B /* GoogleService-Info.plist in Resources */,
+				F07CBE7B2C369D6800A2DD8B /* ReceiveImageTableViewCell.xib in Resources */,
 				78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */,
 				7867200E2C345F2B006E7DD6 /* RobotoSlab-Black.ttf in Resources */,
 				78671FFC2C345D92006E7DD6 /* Colors.xcassets in Resources */,
 				7867200F2C345F2B006E7DD6 /* RobotoSlab-Medium.ttf in Resources */,
 				786720092C345F2B006E7DD6 /* RobotoSlab-Thin.ttf in Resources */,
+				F07CBE7D2C369D6800A2DD8B /* ReceiveMessageTableViewCell.xib in Resources */,
 				78671EA62C33DEB8006E7DD6 /* Assets.xcassets in Resources */,
+				F07CBE862C369D6800A2DD8B /* UserTableViewCell.xib in Resources */,
 				786720082C345F2B006E7DD6 /* RobotoSlab-ExtraLight.ttf in Resources */,
+				F07CBE952C369DC500A2DD8B /* Main.storyboard in Resources */,
 				7867200D2C345F2B006E7DD6 /* RobotoSlab-Light.ttf in Resources */,
-				78A947EC2C3544980086F9A1 /* GoogleService-Info.plist in Resources */,
+				F07CBE782C369D6800A2DD8B /* ChatRoomViewController.xib in Resources */,
 				7867200B2C345F2B006E7DD6 /* RobotoSlab-Bold.ttf in Resources */,
+				F07CBE812C369D6800A2DD8B /* SendMessageTableViewCell.xib in Resources */,
 				7867200C2C345F2B006E7DD6 /* RobotoSlab-Regular.ttf in Resources */,
 				7867200A2C345F2B006E7DD6 /* RobotoSlab-ExtraBold.ttf in Resources */,
-				78671FF72C33FDDF006E7DD6 /* Main.storyboard in Resources */,
 				78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */,
 				786720072C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf in Resources */,
 			);
@@ -427,6 +703,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		78671EB72C33DEB8006E7DD6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F07CBEC52C379DA100A2DD8B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -519,6 +802,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		943E2356F6F1983570E8FFFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -526,9 +831,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F07CBE902C369D8100A2DD8B /* ChatManager.swift in Sources */,
+				F07CBE7A2C369D6800A2DD8B /* ReceiveImageTableViewCell.swift in Sources */,
+				F07CBE762C369D6800A2DD8B /* ChatRoomModel.swift in Sources */,
+				F07CBE852C369D6800A2DD8B /* UserTableViewCell.swift in Sources */,
+				F07CBE822C369D6800A2DD8B /* HomeModel.swift in Sources */,
+				F07CBE7E2C369D6800A2DD8B /* SendImgeTableViewCell.swift in Sources */,
+				F07CBE8F2C369D8100A2DD8B /* BaseViewModel.swift in Sources */,
+				F07CBE8E2C369D8100A2DD8B /* BaseViewController.swift in Sources */,
+				F07CBE792C369D6800A2DD8B /* ChatRoomViewModel.swift in Sources */,
 				78BB8A252C34762200F3BA57 /* SplashController.swift in Sources */,
+				F07CBE772C369D6800A2DD8B /* ChatRoomViewController.swift in Sources */,
+				F07CBE7C2C369D6800A2DD8B /* ReceiveMessageTableViewCell.swift in Sources */,
+				F07CBEAC2C37274400A2DD8B /* ProfileImageView.swift in Sources */,
+				F07CBE842C369D6800A2DD8B /* HomeViewModel.swift in Sources */,
+				F07CBE9F2C36E49700A2DD8B /* UserInfoManager.swift in Sources */,
 				78671E9D2C33DEB7006E7DD6 /* AppDelegate.swift in Sources */,
 				78671E9F2C33DEB7006E7DD6 /* SceneDelegate.swift in Sources */,
+				F07CBE802C369D6800A2DD8B /* SendMessageTableViewCell.swift in Sources */,
+				F07CBE912C369D8100A2DD8B /* StringCosntants.swift in Sources */,
+				F07CBE832C369D6800A2DD8B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +871,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F07CBEC32C379DA100A2DD8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F07CBECA2C379DA100A2DD8B /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -561,6 +891,11 @@
 			isa = PBXTargetDependency;
 			target = 78671E982C33DEB7006E7DD6 /* MyCommunityChat-iOS */;
 			targetProxy = 78671EBA2C33DEB8006E7DD6 /* PBXContainerItemProxy */;
+		};
+		F07CBECD2C379DA100A2DD8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F07CBEC62C379DA100A2DD8B /* OneSignalNotificationServiceExtension */;
+			targetProxy = F07CBECC2C379DA100A2DD8B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -688,8 +1023,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4639CB9C176EBE7DC1ACB169 /* Pods-MyCommunityChat-iOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MyCommunityChat-iOS/MyCommunityChat-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -697,16 +1034,20 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MyCommunityChat-iOS/AppConfig/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "MY Comm";
+				INFOPLIST_KEY_NSCameraUsageDescription = "MyCom want to access your Camera.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "MyCom want to access your Photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = SplashController.xib;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jg.MyCommunityChat-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joygroups.MyCommunityChat-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -719,8 +1060,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20E359DA71A46C20E9783211 /* Pods-MyCommunityChat-iOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "MyCommunityChat-iOS/MyCommunityChat-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -728,16 +1071,20 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MyCommunityChat-iOS/AppConfig/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "MY Comm";
+				INFOPLIST_KEY_NSCameraUsageDescription = "MyCom want to access your Camera.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "MyCom want to access your Photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = SplashController.xib;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jg.MyCommunityChat-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joygroups.MyCommunityChat-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -822,6 +1169,64 @@
 			};
 			name = Release;
 		};
+		F07CBED02C379DA100A2DD8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D1F71AB8FC366C34D5475FA /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XWPM63M4C4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joygroups.MyCommunityChat-iOS.OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F07CBED12C379DA100A2DD8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCCD488345D2BEBAE417343C /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XWPM63M4C4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joygroups.MyCommunityChat-iOS.OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -857,6 +1262,15 @@
 			buildConfigurations = (
 				78671ECA2C33DEB8006E7DD6 /* Debug */,
 				78671ECB2C33DEB8006E7DD6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F07CBECF2C379DA100A2DD8B /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F07CBED02C379DA100A2DD8B /* Debug */,
+				F07CBED12C379DA100A2DD8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

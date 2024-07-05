@@ -9,14 +9,31 @@ import UIKit
 import Lottie
 import Auth
 
-class SplashController: UIViewController {
+class SplashController: BaseViewController {
 
     @IBOutlet weak var animationView: LottieAnimationView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAnimation()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkLogin()
+    }
+    
+    private func checkLogin() {
+        userManager.completionSaved = { issaved -> Void in
+            if issaved {
+                self.navigateToHomeVC()
+            }
+            else {
+                self.navigateToLoginVC()
+            }
+        }
     }
 
     private func setupAnimation() {
@@ -26,9 +43,34 @@ class SplashController: UIViewController {
         animationView.play { [weak self] (finished) in
             // Animation finished
             print("Animation Completed")
-            let loginVC = LoginController()
-            self?.navigationController?.pushViewController(loginVC, animated: true)
+            if (self?.userManager.isAlreadyLogin ?? false) {
+                self?.navigateToHomeVC()
+            }
+            else {
+                self?.navigateToLoginVC()
+            }
+            
         }
+    }
+    
+    private func navigateToHomeVC() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as? HomeViewController
+        let homeNav = UINavigationController(rootViewController: vc!)
+        let appearance = UINavigationBarAppearance()
+           appearance.backgroundColor = .primary
+
+           UINavigationBar.appearance().standardAppearance = appearance // for scrolling bg color
+           UINavigationBar.appearance().compactAppearance = appearance // not sure why it's here, but u can remove it and still works
+           UINavigationBar.appearance().scrollEdgeAppearance = appearance // for large title bg color
+        let sceneDelegate = UIApplication.shared.connectedScenes
+                .first!.delegate as! SceneDelegate
+        sceneDelegate.window!.rootViewController = homeNav
+        
+    }
+    
+    private func navigateToLoginVC() {
+        let loginVC = LoginController()
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
 

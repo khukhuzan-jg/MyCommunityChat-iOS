@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SendMessageTableViewCell" customModule="MyCommunityChat_iOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n78-g4-LmO">
+                        <rect key="frame" x="248.66666666666666" y="10" width="61.333333333333343" height="70"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3n-0w-fcD">
+                                <rect key="frame" x="10.000000000000028" y="10" width="41.333333333333336" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzC-kc-6Kg">
+                                <rect key="frame" x="10.000000000000028" y="39.666666666666664" width="41.333333333333336" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r3n-0w-fcD" firstAttribute="top" secondItem="n78-g4-LmO" secondAttribute="top" constant="10" id="3od-6w-6Nb"/>
+                            <constraint firstAttribute="trailing" secondItem="r3n-0w-fcD" secondAttribute="trailing" constant="10" id="A2r-pM-BlF"/>
+                            <constraint firstItem="CzC-kc-6Kg" firstAttribute="leading" secondItem="n78-g4-LmO" secondAttribute="leading" constant="10" id="C0a-qu-sJT"/>
+                            <constraint firstItem="CzC-kc-6Kg" firstAttribute="top" secondItem="r3n-0w-fcD" secondAttribute="bottom" constant="8.6666666666666643" id="Dbe-vh-qhl"/>
+                            <constraint firstItem="r3n-0w-fcD" firstAttribute="leading" secondItem="n78-g4-LmO" secondAttribute="leading" constant="10" id="HPI-id-lYv"/>
+                            <constraint firstAttribute="trailing" secondItem="CzC-kc-6Kg" secondAttribute="trailing" constant="10" id="JRm-ua-Azk"/>
+                            <constraint firstAttribute="bottom" secondItem="CzC-kc-6Kg" secondAttribute="bottom" constant="10" id="b9w-VE-BWf"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="n78-g4-LmO" secondAttribute="trailing" constant="10" id="1sF-in-PGs"/>
+                    <constraint firstItem="n78-g4-LmO" firstAttribute="width" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="D0x-yG-FdU"/>
+                    <constraint firstAttribute="bottom" secondItem="n78-g4-LmO" secondAttribute="bottom" constant="10" id="VTc-ui-Iw0"/>
+                    <constraint firstItem="n78-g4-LmO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="gSA-Om-Bza"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgView" destination="n78-g4-LmO" id="1sb-JB-DKT"/>
+                <outlet property="lblMessage" destination="r3n-0w-fcD" id="Xx2-6T-BYW"/>
+                <outlet property="lblTime" destination="CzC-kc-6Kg" id="I5W-kt-xhu"/>
+            </connections>
+            <point key="canvasLocation" x="69" y="54"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

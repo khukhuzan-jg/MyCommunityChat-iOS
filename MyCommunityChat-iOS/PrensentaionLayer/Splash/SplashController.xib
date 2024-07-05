@@ -34,7 +34,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Community Chat " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rh8-Vm-jMl">
-                    <rect key="frame" x="74.333333333333329" y="396" width="244.66666666666669" height="31.666666666666686"/>
+                    <rect key="frame" x="82.666666666666671" y="396" width="227.66666666666663" height="28"/>
                     <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="24"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -51,6 +51,9 @@
             <point key="canvasLocation" x="102" y="13"/>
         </view>
     </objects>
+    <designables>
+        <designable name="BIj-KV-NVj"/>
+    </designables>
     <resources>
         <namedColor name="primary">
             <color red="0.090000003576278687" green="0.29800000786781311" blue="0.35699999332427979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

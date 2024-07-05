@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -22,7 +22,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-34"/>
+            <point key="canvasLocation" x="63" y="4"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="7eI-Pa-xcH">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="TnY-qQ-nXy" customClass="HomeViewController" customModule="MyCommunityChat_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q4b-Be-SSd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfx-SZ-VpI">
+                                <rect key="frame" x="10" y="428" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Je7-21-jnd">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EHF-dQ-FP4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Je7-21-jnd" secondAttribute="trailing" id="7wl-Ai-pyK"/>
+                            <constraint firstItem="Je7-21-jnd" firstAttribute="top" secondItem="q4b-Be-SSd" secondAttribute="top" id="ORC-14-4Ov"/>
+                            <constraint firstItem="Je7-21-jnd" firstAttribute="leading" secondItem="q4b-Be-SSd" secondAttribute="leading" id="UKD-BR-gvF"/>
+                            <constraint firstAttribute="bottom" secondItem="Je7-21-jnd" secondAttribute="bottom" id="X7j-nO-cMr"/>
+                            <constraint firstItem="EHF-dQ-FP4" firstAttribute="trailing" secondItem="Tfx-SZ-VpI" secondAttribute="trailing" constant="10" id="agN-cw-oCd"/>
+                            <constraint firstItem="Tfx-SZ-VpI" firstAttribute="centerY" secondItem="EHF-dQ-FP4" secondAttribute="centerY" id="gyZ-W8-SM2"/>
+                            <constraint firstItem="Tfx-SZ-VpI" firstAttribute="centerX" secondItem="EHF-dQ-FP4" secondAttribute="centerX" id="i9m-az-dRt"/>
+                            <constraint firstItem="Tfx-SZ-VpI" firstAttribute="leading" secondItem="EHF-dQ-FP4" secondAttribute="leading" constant="10" id="zDr-pA-kHM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="au9-sD-pcv"/>
+                    <connections>
+                        <outlet property="lblWelcome" destination="Tfx-SZ-VpI" id="UZw-9h-g6e"/>
+                        <outlet property="tblUsers" destination="Je7-21-jnd" id="x9T-vu-cNx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8kF-wN-Afs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1466.4122137404579" y="-700"/>
         </scene>
     </scenes>
     <resources>

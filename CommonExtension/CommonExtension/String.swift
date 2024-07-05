@@ -154,7 +154,7 @@ public extension String {
             let to16 = utf16.index(from16, offsetBy: nsRange.length, limitedBy: utf16.endIndex),
             let from = from16.samePosition(in: self),
             let to = to16.samePosition(in: self)
-            else { return nil }
+        else { return nil }
         return from ..< to
     }
     
@@ -319,7 +319,7 @@ public extension String {
         if let date = dateFormatter.date(from: self) {
             dateFormatter.timeZone = TimeZone.current
             dateFormatter.dateFormat = format.rawValue
-        
+            
             return dateFormatter.string(from: date)
         }
         return nil
@@ -364,13 +364,13 @@ public extension String {
         }
         return false
     }
-
+    
     func isValidPhoneNumber() -> Bool {
-        let phoneNumberPattern = "^\\d{1,9}$"
+        let phoneNumberPattern = "^\\d{1,10}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneNumberPattern)
         return phoneTest.evaluate(with: self)
     }
-
+    
     func isValidTaxiNumber() -> Bool {
         
         // TST0728L
@@ -436,17 +436,17 @@ public extension String {
     }
     
     /*func md5() -> String {
-        let messageData = self.data(using: .utf8)!
-        var digestData = Data(count: Int(CC_MD5_DIGEST_LENGTH))
-        
-        _ = digestData.withUnsafeMutableBytes {digestBytes in
-            messageData.withUnsafeBytes {messageBytes in
-                CC_MD5(messageBytes, CC_LONG(messageData.count), digestBytes)
-            }
-        }
-        
-        return digestData.map { String(format: "%02hhx", $0) }.joined()
-    } */
+     let messageData = self.data(using: .utf8)!
+     var digestData = Data(count: Int(CC_MD5_DIGEST_LENGTH))
+     
+     _ = digestData.withUnsafeMutableBytes {digestBytes in
+     messageData.withUnsafeBytes {messageBytes in
+     CC_MD5(messageBytes, CC_LONG(messageData.count), digestBytes)
+     }
+     }
+     
+     return digestData.map { String(format: "%02hhx", $0) }.joined()
+     } */
     
     func toDate(dateFormat: String, withoutTimeZone: Bool = false) -> Date? {
         let formatter = DateFormatter()
@@ -468,10 +468,10 @@ public extension String {
         return nil
     }
     
-//    func formatDate(from: String, to: String, withTimeZone: Bool = false) -> String? {
-//        let date = self.toDate(dateFormat: from, withoutTimeZone: !withTimeZone)
-//        return date?.toString(to, setLocalTimeZone: withTimeZone)
-//    }
+    //    func formatDate(from: String, to: String, withTimeZone: Bool = false) -> String? {
+    //        let date = self.toDate(dateFormat: from, withoutTimeZone: !withTimeZone)
+    //        return date?.toString(to, setLocalTimeZone: withTimeZone)
+    //    }
     
     func add(character: String, byOffset offset: Int) -> String {
         
@@ -508,15 +508,15 @@ public extension String {
     var isNumber: Bool { return Int(self) != nil }
     
     var isSingleEmoji: Bool { count == 1 && containsEmoji }
-
+    
     var containsEmoji: Bool { contains { $0.isEmoji } }
-
+    
     var containsOnlyEmoji: Bool { !isEmpty && !contains { !$0.isEmoji } }
-
+    
     var emojiString: String { emojis.map { String($0) }.reduce("", +) }
-
+    
     var emojis: [Character] { filter { $0.isEmoji } }
-
+    
     var emojiScalars: [UnicodeScalar] { filter { $0.isEmoji }.flatMap { $0.unicodeScalars } }
     
     func chunkFormatted(
@@ -535,7 +535,7 @@ public extension String {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "HH:mm:ss"
-
+        
         let date = dateFormatter.date(from: dateAsString)
         dateFormatter.dateFormat = "h:mm a"
         let dateStr = dateFormatter.string(from: date!)
@@ -561,7 +561,7 @@ public extension String {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.locale = Locale(identifier: "en_US_POSIX")
         dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-
+        
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = format.rawValue//"dd MMM yyy"
@@ -574,7 +574,7 @@ public extension String {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.locale = Locale(identifier: "en_US_POSIX")
         dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-
+        
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = "dd MMM yyyy hh:mm a"
@@ -589,12 +589,12 @@ public extension String {
     // https://sarunw.com/posts/how-to-compare-two-app-version-strings-in-swift/
     func versionCompare(_ otherVersion: String) -> ComparisonResult {
         let versionDelimiter = "."
-
+        
         var versionComponents = self.components(separatedBy: versionDelimiter) // <1>
         var otherVersionComponents = otherVersion.components(separatedBy: versionDelimiter)
-
+        
         let zeroDiff = versionComponents.count - otherVersionComponents.count // <2>
-
+        
         if zeroDiff == 0 { // <3>
             // Same format, compare normally
             return self.compare(otherVersion, options: .numeric)
@@ -615,4 +615,21 @@ public extension String {
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil);
         return Int(boundingBox.height/font.lineHeight);
     }
+    
+    func findPhoneNumber() -> String? {
+        let phoneRegex = #"\b\d{7,20}\b"#  // Regular expression to match 8 consecutive digits
+        
+        do {
+            let regex = try NSRegularExpression(pattern: phoneRegex)
+            let range = NSRange(self.startIndex..<self.endIndex, in: self)
+            if let match = regex.firstMatch(in: self, range: range) {
+                return String(self[Range(match.range, in: self)!])
+            }
+        } catch {
+            print("Error creating regex: \(error)")
+        }
+        
+        return nil
+    }
+    
 }

@@ -32,10 +32,16 @@ def firebase_pods
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'Firebase/Messaging'
+  pod 'Firebase/Database'
 end
 
 def iqkeyboardmanager_pod
   pod 'IQKeyboardManagerSwift', '6.5.6'
+end
+
+def one_signal_pods
+  pod 'OneSignal/OneSignal', '>= 5.0.0', '< 6.0'
+  pod 'OneSignal/OneSignalInAppMessages', '>= 5.0.0', '< 6.0'
 end
 
 target 'Domain' do
@@ -51,6 +57,11 @@ target 'MyCommunityChat-iOS' do
    firebase_pods
    iqkeyboardmanager_pod
    ui_pods
+   one_signal_pods
+end
+
+target 'OneSignalNotificationServiceExtension' do
+  one_signal_pods
 end
 
 target 'MyCommunityChat-iOSTests' do

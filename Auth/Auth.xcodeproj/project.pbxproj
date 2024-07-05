@@ -30,6 +30,7 @@
 		78D82F912C367E8000D70B25 /* AvatarAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D82F8F2C367E8000D70B25 /* AvatarAlertView.swift */; };
 		78D82F952C367EAB00D70B25 /* AvatarItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D82F932C367EAB00D70B25 /* AvatarItemCell.swift */; };
 		78D82F962C367EAB00D70B25 /* AvatarItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D82F942C367EAB00D70B25 /* AvatarItemCell.xib */; };
+		F07CBE9D2C36A70100A2DD8B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE9C2C36A70100A2DD8B /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,6 +71,9 @@
 		78D82F8F2C367E8000D70B25 /* AvatarAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvatarAlertView.swift; path = Auth/Views/AvaterAlertView/AvatarAlertView.swift; sourceTree = SOURCE_ROOT; };
 		78D82F932C367EAB00D70B25 /* AvatarItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AvatarItemCell.swift; path = Auth/Views/CollectionCell/AvatarItemCell/AvatarItemCell.swift; sourceTree = SOURCE_ROOT; };
 		78D82F942C367EAB00D70B25 /* AvatarItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AvatarItemCell.xib; path = Auth/Views/CollectionCell/AvatarItemCell/AvatarItemCell.xib; sourceTree = SOURCE_ROOT; };
+		F07CBE982C36A69E00A2DD8B /* Pods_MyCommunityChat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MyCommunityChat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F07CBE9C2C36A70100A2DD8B /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		F07CBEAD2C37844D00A2DD8B /* Pods_MyCommunityChat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MyCommunityChat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		78671F262C33E914006E7DD6 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				F07CBE9B2C36A6F800A2DD8B /* Managers */,
 				78A947F32C354F080086F9A1 /* Profile */,
 				78A947DB2C3529200086F9A1 /* Views */,
 				78BB8A422C347F3400F3BA57 /* Resource */,
@@ -168,6 +173,8 @@
 		78BB8A2F2C347AAC00F3BA57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F07CBEAD2C37844D00A2DD8B /* Pods_MyCommunityChat_iOS.framework */,
+				F07CBE982C36A69E00A2DD8B /* Pods_MyCommunityChat_iOS.framework */,
 				78A947F02C3548E90086F9A1 /* Domain.framework */,
 				78BB8A302C347AAC00F3BA57 /* CommonExtension.framework */,
 				78BB8A312C347AAC00F3BA57 /* CommonUI.framework */,
@@ -207,6 +214,14 @@
 				78D82F942C367EAB00D70B25 /* AvatarItemCell.xib */,
 			);
 			path = AvatarItemCell;
+			sourceTree = "<group>";
+		};
+		F07CBE9B2C36A6F800A2DD8B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE9C2C36A70100A2DD8B /* UserManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +320,7 @@
 				78BB8A2D2C3479A800F3BA57 /* LoginController.swift in Sources */,
 				78A947FB2C3555A90086F9A1 /* OTPVM.swift in Sources */,
 				78A947DE2C3529420086F9A1 /* LogoAndTitleView.swift in Sources */,
+				F07CBE9D2C36A70100A2DD8B /* UserManager.swift in Sources */,
 				78BB8A412C347E1300F3BA57 /* AuthModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
