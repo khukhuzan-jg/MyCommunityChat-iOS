@@ -11,7 +11,7 @@ import CommonExtension
 import Domain
 import Combine
 
-class OTPController: UIViewController {
+class OTPController: BaseVC {
     
     @IBOutlet weak var phoneNumberLabel: UILabel!
     
@@ -48,7 +48,6 @@ class OTPController: UIViewController {
     }
     
     private func setupUI() {
-        navigationController?.isNavigationBarHidden = true
         startTimer()
         desLabel |> setLabelFontStyle(.RoboR16)
         timerLabel |> setLabelFontStyle(.RoboR16)
@@ -73,11 +72,21 @@ class OTPController: UIViewController {
         otpTextField.autocorrectionType = .yes
         otpTextField.textContentType = .oneTimeCode
         otpTextField.configure(with: 6)
-        otpTextField.addTarget(self, action: #selector(onValidate), for: .editingChanged)
+        otpTextField.addTarget(
+            self,
+            action: #selector(onValidate),
+            for: .editingChanged
+        )
     }
     
     private func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(
+            timeInterval: 1.0,
+            target: self,
+            selector: #selector(updateTimer),
+            userInfo: nil,
+            repeats: true
+        )
     }
     
     @objc func updateTimer() {
@@ -106,6 +115,8 @@ class OTPController: UIViewController {
         viewModel.transform(smsCode) { [weak self] success in
             if success {
                 self?.navigateToProfile()
+            } else {
+                ToastView.error(message: "OTP code is invalid")
             }
         }
     }
@@ -129,6 +140,4 @@ extension OTPController: AEOTPTextFieldDelegate {
     func didUserBackEnter(the isBack: Bool) {
         print(isBack)
     }
-    
-    
 }

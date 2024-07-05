@@ -16,11 +16,15 @@ class OTPVM {
         FirebaseAuthManager.shared.verifyCode(smsCode: input)
             .receive(on: DispatchQueue.main)
             .sink { success in
-                guard success else {
+//                guard success else {
+//                    completion(false)
+//                    return
+//                }
+                if success {
+                    completion(true)
+                } else {
                     completion(false)
-                    return
                 }
-                completion(true)
             }
             .store(in: &cancellables)
     }
