@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7861EE862C37B2B80096D925 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7861EE852C37B2B80096D925 /* BaseVC.swift */; };
 		78671FD12C33EB81006E7DD6 /* CommonUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 78671FD02C33EB81006E7DD6 /* CommonUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78671FE12C33EB9E006E7DD6 /* NibBasedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671FD72C33EB9E006E7DD6 /* NibBasedCollectionViewCell.swift */; };
 		78671FE22C33EB9E006E7DD6 /* NibBasedCollectionViewReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671FD82C33EB9E006E7DD6 /* NibBasedCollectionViewReusableView.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7861EE852C37B2B80096D925 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		78671FCD2C33EB81006E7DD6 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78671FD02C33EB81006E7DD6 /* CommonUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUI.h; sourceTree = "<group>"; };
 		78671FD72C33EB9E006E7DD6 /* NibBasedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibBasedCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				78BB8A1F2C34707A00F3BA57 /* Others */,
 				78671FE02C33EB9E006E7DD6 /* nib-loadable-view */,
 				78671FD02C33EB81006E7DD6 /* CommonUI.h */,
+				7861EE852C37B2B80096D925 /* BaseVC.swift */,
 			);
 			path = CommonUI;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				78A947E72C352FA10086F9A1 /* AEOTPTextField.swift in Sources */,
 				78671FE72C33EB9E006E7DD6 /* NibLoadableViewProtocol.swift in Sources */,
 				78671FE32C33EB9E006E7DD6 /* NibBasedTableViewCell.swift in Sources */,
+				7861EE862C37B2B80096D925 /* BaseVC.swift in Sources */,
 				78A947E92C352FA10086F9A1 /* AEOTPTextFieldImplementation.swift in Sources */,
 				78A947EA2C352FA10086F9A1 /* AEOTPTextFieldImplementationProtocol.swift in Sources */,
 				78671FE12C33EB9E006E7DD6 /* NibBasedCollectionViewCell.swift in Sources */,

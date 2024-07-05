@@ -11,7 +11,7 @@ import CommonUI
 import Domain
 import Combine
 
-public class LoginController: UIViewController {
+public class LoginController: BaseVC {
     
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var codeLabel: UILabel!
@@ -45,7 +45,6 @@ public class LoginController: UIViewController {
     }
 
     private func setupUI() {
-        navigationController?.isNavigationBarHidden = true
         phoneNumberLabel |> setLabelFontStyle(.RoboR16)
         codeLabel |> setLabelFontStyle(.RoboR18)
         phoneNumberTextField |> setTextFieldTextFont(.RoboR18)
