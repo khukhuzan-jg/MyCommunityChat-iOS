@@ -14,18 +14,12 @@
 		78A947DA2C3528B80086F9A1 /* OTPController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A947D82C3528B80086F9A1 /* OTPController.xib */; };
 		78A947DE2C3529420086F9A1 /* LogoAndTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947DD2C3529420086F9A1 /* LogoAndTitleView.swift */; };
 		78A947E02C35295C0086F9A1 /* LogoAndTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A947DF2C35295C0086F9A1 /* LogoAndTitleView.xib */; };
-		78A947F12C3548E90086F9A1 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78A947F02C3548E90086F9A1 /* Domain.framework */; };
-		78A947F22C3548E90086F9A1 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78A947F02C3548E90086F9A1 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		78A947F62C354F1B0086F9A1 /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78A947F52C354F1B0086F9A1 /* ProfileController.xib */; };
 		78A947F72C354F1B0086F9A1 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947F42C354F1B0086F9A1 /* ProfileController.swift */; };
 		78A947F92C35559E0086F9A1 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947F82C35559E0086F9A1 /* LoginVM.swift */; };
 		78A947FB2C3555A90086F9A1 /* OTPVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A947FA2C3555A90086F9A1 /* OTPVM.swift */; };
 		78BB8A2D2C3479A800F3BA57 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A2B2C3479A800F3BA57 /* LoginController.swift */; };
 		78BB8A2E2C3479A800F3BA57 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A2C2C3479A800F3BA57 /* LoginController.xib */; };
-		78BB8A322C347AAC00F3BA57 /* CommonExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB8A302C347AAC00F3BA57 /* CommonExtension.framework */; };
-		78BB8A332C347AAC00F3BA57 /* CommonExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB8A302C347AAC00F3BA57 /* CommonExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		78BB8A342C347AAC00F3BA57 /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB8A312C347AAC00F3BA57 /* CommonUI.framework */; };
-		78BB8A352C347AAC00F3BA57 /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78BB8A312C347AAC00F3BA57 /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		78BB8A412C347E1300F3BA57 /* AuthModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A402C347E1300F3BA57 /* AuthModule.swift */; };
 		78BB8A442C347F4A00F3BA57 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A432C347F4A00F3BA57 /* Icons.xcassets */; };
 		78D82F902C367E8000D70B25 /* AvatarAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D82F8E2C367E8000D70B25 /* AvatarAlertView.xib */; };
@@ -33,18 +27,27 @@
 		78D82F952C367EAB00D70B25 /* AvatarItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D82F932C367EAB00D70B25 /* AvatarItemCell.swift */; };
 		78D82F962C367EAB00D70B25 /* AvatarItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D82F942C367EAB00D70B25 /* AvatarItemCell.xib */; };
 		F07CBE9D2C36A70100A2DD8B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE9C2C36A70100A2DD8B /* UserManager.swift */; };
+		F0F9D5422C37E5EC0061382F /* CommonExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D5412C37E5EC0061382F /* CommonExtension.framework */; };
+		F0F9D5432C37E5EC0061382F /* CommonExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D5412C37E5EC0061382F /* CommonExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F0F9D5462C37E5F10061382F /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D5452C37E5F10061382F /* CommonUI.framework */; };
+		F0F9D5472C37E5F10061382F /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D5452C37E5F10061382F /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F0F9D5492C37E5F80061382F /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D5482C37E5F80061382F /* Domain.framework */; };
+		F0F9D54A2C37E5F80061382F /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D5482C37E5F80061382F /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F0F9D54C2C37E5FD0061382F /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D54B2C37E5FD0061382F /* Pods_Domain.framework */; };
+		F0F9D54D2C37E5FD0061382F /* Pods_Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D54B2C37E5FD0061382F /* Pods_Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		78BB8A362C347AAC00F3BA57 /* Embed Frameworks */ = {
+		F0F9D5442C37E5EC0061382F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				78A947F22C3548E90086F9A1 /* Domain.framework in Embed Frameworks */,
-				78BB8A332C347AAC00F3BA57 /* CommonExtension.framework in Embed Frameworks */,
-				78BB8A352C347AAC00F3BA57 /* CommonUI.framework in Embed Frameworks */,
+				F0F9D54A2C37E5F80061382F /* Domain.framework in Embed Frameworks */,
+				F0F9D5432C37E5EC0061382F /* CommonExtension.framework in Embed Frameworks */,
+				F0F9D54D2C37E5FD0061382F /* Pods_Domain.framework in Embed Frameworks */,
+				F0F9D5472C37E5F10061382F /* CommonUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,6 +81,11 @@
 		F07CBE982C36A69E00A2DD8B /* Pods_MyCommunityChat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MyCommunityChat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F07CBE9C2C36A70100A2DD8B /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		F07CBEAD2C37844D00A2DD8B /* Pods_MyCommunityChat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MyCommunityChat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0F9D53E2C37E59E0061382F /* Pods_MyCommunityChat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_MyCommunityChat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0F9D5412C37E5EC0061382F /* CommonExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0F9D5452C37E5F10061382F /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0F9D5482C37E5F80061382F /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0F9D54B2C37E5FD0061382F /* Pods_Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +93,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78A947F12C3548E90086F9A1 /* Domain.framework in Frameworks */,
-				78BB8A322C347AAC00F3BA57 /* CommonExtension.framework in Frameworks */,
-				78BB8A342C347AAC00F3BA57 /* CommonUI.framework in Frameworks */,
+				F0F9D5492C37E5F80061382F /* Domain.framework in Frameworks */,
+				F0F9D5422C37E5EC0061382F /* CommonExtension.framework in Frameworks */,
+				F0F9D54C2C37E5FD0061382F /* Pods_Domain.framework in Frameworks */,
+				F0F9D5462C37E5F10061382F /* CommonUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +196,11 @@
 		78BB8A2F2C347AAC00F3BA57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0F9D54B2C37E5FD0061382F /* Pods_Domain.framework */,
+				F0F9D5482C37E5F80061382F /* Domain.framework */,
+				F0F9D5452C37E5F10061382F /* CommonUI.framework */,
+				F0F9D5412C37E5EC0061382F /* CommonExtension.framework */,
+				F0F9D53E2C37E59E0061382F /* Pods_MyCommunityChat_iOS.framework */,
 				F07CBEAD2C37844D00A2DD8B /* Pods_MyCommunityChat_iOS.framework */,
 				F07CBE982C36A69E00A2DD8B /* Pods_MyCommunityChat_iOS.framework */,
 				78A947F02C3548E90086F9A1 /* Domain.framework */,
@@ -260,7 +274,7 @@
 				78671F202C33E914006E7DD6 /* Sources */,
 				78671F212C33E914006E7DD6 /* Frameworks */,
 				78671F222C33E914006E7DD6 /* Resources */,
-				78BB8A362C347AAC00F3BA57 /* Embed Frameworks */,
+				F0F9D5442C37E5EC0061382F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -474,9 +488,11 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XWPM63M4C4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -492,7 +508,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kuku.Auth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joygroups.Auth;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -512,9 +528,11 @@
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = XWPM63M4C4;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -530,7 +548,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kuku.Auth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joygroups.Auth;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

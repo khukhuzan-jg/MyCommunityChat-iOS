@@ -110,16 +110,20 @@ class ChatRoomViewController: BaseViewController {
             self.lblInfo.isHidden = !self.messageList.isEmpty
             self.tblMessage.isHidden = self.messageList.isEmpty
             self.tblMessage.reloadData()
-            if !self.messageList.isEmpty ,
-               self.messageList.count > 0 {
-                
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                    self.tblMessage.beginUpdates()
-                    self.tblMessage.scrollToRow(at: IndexPath(row: self.messageList.count - 1, section: 0), at: .bottom, animated: true)
-                    self.tblMessage.endUpdates()
-                })
-                
-            }
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                self.scrollToBottom()
+            })
+//            if !self.messageList.isEmpty ,
+//               self.messageList.count > 0 {
+//                
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+//                    self.tblMessage.beginUpdates()
+//                    self.tblMessage.scrollToRow(at: IndexPath(row: self.messageList.count - 1, section: 0), at: .bottom, animated: true)
+//                    self.tblMessage.endUpdates()
+//                })
+//                
+//            }
         }
         .disposed(by: disposeBag)
         
@@ -127,6 +131,13 @@ class ChatRoomViewController: BaseViewController {
             self.setTextMode()
         }
         .disposed(by: disposeBag)
+    }
+    
+    func scrollToBottom()  {
+        let point = CGPoint(x: 0, y: self.tblMessage.contentSize.height + self.tblMessage.contentInset.bottom - self.tblMessage.frame.height)
+        if point.y >= 0{
+            self.tblMessage.setContentOffset(point, animated: true)
+        }
     }
     
     private func setTextMode() {

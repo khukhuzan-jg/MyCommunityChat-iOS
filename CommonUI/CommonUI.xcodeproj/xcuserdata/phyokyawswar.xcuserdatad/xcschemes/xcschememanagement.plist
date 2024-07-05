@@ -7,12 +7,12 @@
 		<key>CommonUI.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>37</integer>
+			<integer>0</integer>
 		</dict>
 		<key>OneSignalNotificationServiceExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>36</integer>
+			<integer>50</integer>
 		</dict>
 	</dict>
 </dict>

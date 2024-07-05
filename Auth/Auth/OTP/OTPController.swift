@@ -55,6 +55,7 @@ class OTPController: BaseVC {
         phoneNumberLabel |> setLabelFontStyle(.RoboR15)
         let phoneNumberText = "Enter OTP Code. We have send to \(phoneNumber)"
         phoneNumberLabel.numberOfLines = 0
+        phoneNumberLabel.textAlignment = .center
         phoneNumberLabel.attributedText = phoneNumberText.changeSubStringFont(
             subStr: phoneNumber,
             font: .RoboR15,

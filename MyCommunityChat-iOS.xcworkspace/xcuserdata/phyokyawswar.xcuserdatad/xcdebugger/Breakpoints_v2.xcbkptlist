@@ -34,36 +34,6 @@
             endingLineNumber = "28"
             landmarkName = "startAuth(phoneNumber:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F429D46A-0FB5-4FD2-8BEC-14B8D46A6585 - ebf1b663e60532b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 ((Swift.Result&lt;Swift.Bool, Swift.Never&gt;) -&gt; ()) -&gt; () in Domain.FirebaseAuthManager.startAuth(phoneNumber: Swift.String) -&gt; Combine.AnyPublisher&lt;Swift.Bool, Swift.Never&gt;"
-                  moduleName = "Domain"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phyokyawswar/Desktop/MyComChat/MyCommunityChat-iOS/Domain/Domain/FirebaseAuth/FirebaseAuthManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-               <Location
-                  uuid = "F429D46A-0FB5-4FD2-8BEC-14B8D46A6585 - ebf1b663e60532b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 ((Swift.Result&lt;Swift.Bool, Swift.Never&gt;) -&gt; ()) -&gt; () in Domain.FirebaseAuthManager.startAuth(phoneNumber: Swift.String) -&gt; Combine.AnyPublisher&lt;Swift.Bool, Swift.Never&gt;"
-                  moduleName = "Domain"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phyokyawswar/Desktop/MyComChat/MyCommunityChat-iOS/Domain/Domain/FirebaseAuth/FirebaseAuthManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
