@@ -25,6 +25,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>FirebaseAuth-FirebaseAuth_Privacy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>46</integer>
+		</dict>
 		<key>FirebaseAuth.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -39,12 +44,22 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>FirebaseCore-FirebaseCore_Privacy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>36</integer>
+		</dict>
 		<key>FirebaseCore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
+		</dict>
+		<key>FirebaseCoreExtension-FirebaseCoreExtension_Privacy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>45</integer>
 		</dict>
 		<key>FirebaseCoreExtension.xcscheme</key>
 		<dict>
@@ -53,12 +68,27 @@
 			<key>orderHint</key>
 			<integer>6</integer>
 		</dict>
+		<key>FirebaseCoreInternal-FirebaseCoreInternal_Privacy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>52</integer>
+		</dict>
 		<key>FirebaseCoreInternal.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>7</integer>
+		</dict>
+		<key>FirebaseDatabase.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>48</integer>
+		</dict>
+		<key>FirebaseInstallations-FirebaseInstallations_Privacy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>37</integer>
 		</dict>
 		<key>FirebaseInstallations.xcscheme</key>
 		<dict>
@@ -67,6 +97,11 @@
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
+		<key>FirebaseMessaging-FirebaseMessaging_Privacy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>41</integer>
+		</dict>
 		<key>FirebaseMessaging.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -74,12 +109,22 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>FirebaseSharedSwift.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>42</integer>
+		</dict>
 		<key>FirebaseStorage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>10</integer>
+		</dict>
+		<key>GTMSessionFetcher-GTMSessionFetcher_Core_Privacy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>53</integer>
 		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
@@ -95,12 +140,22 @@
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
+		<key>GoogleDataTransport-GoogleDataTransport_Privacy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>40</integer>
+		</dict>
 		<key>GoogleDataTransport.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>12</integer>
+		</dict>
+		<key>GoogleUtilities-GoogleUtilities_Privacy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>35</integer>
 		</dict>
 		<key>GoogleUtilities.xcscheme</key>
 		<dict>
@@ -130,6 +185,11 @@
 			<key>orderHint</key>
 			<integer>17</integer>
 		</dict>
+		<key>OneSignal.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>43</integer>
+		</dict>
 		<key>Pods-Domain.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -157,6 +217,16 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>24</integer>
+		</dict>
+		<key>Pods-OneSignalNotificationServiceExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>44</integer>
+		</dict>
+		<key>PromisesObjC-FBLPromises_Privacy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>50</integer>
 		</dict>
 		<key>PromisesObjC.xcscheme</key>
 		<dict>
@@ -207,12 +277,27 @@
 			<key>orderHint</key>
 			<integer>31</integer>
 		</dict>
+		<key>leveldb-library-leveldb_Privacy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>38</integer>
+		</dict>
+		<key>leveldb-library.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>34</integer>
+		</dict>
 		<key>lottie-ios.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>18</integer>
+		</dict>
+		<key>nanopb-nanopb_Privacy.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>51</integer>
 		</dict>
 		<key>nanopb.xcscheme</key>
 		<dict>

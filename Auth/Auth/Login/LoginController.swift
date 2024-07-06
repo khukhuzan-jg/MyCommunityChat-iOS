@@ -57,14 +57,12 @@ public class LoginController: BaseVC {
 
     @objc func onValidate() {
         guard let phoneNumber = phoneNumberTextField.text,
-              !phoneNumber.isEmpty,
               phoneNumber.isValidPhoneNumber()
         else {
             isContinueButtonEnabled = false
             return
         }
-       
-        return isContinueButtonEnabled = true
+        isContinueButtonEnabled = true
     }
     
     private func bindAuth() {

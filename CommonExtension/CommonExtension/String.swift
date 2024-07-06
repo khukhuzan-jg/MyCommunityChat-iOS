@@ -366,7 +366,7 @@ public extension String {
     }
     
     func isValidPhoneNumber() -> Bool {
-        let phoneNumberPattern = "^\\d{1,10}$"
+        let phoneNumberPattern = "^\\d{10,10}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneNumberPattern)
         return phoneTest.evaluate(with: self)
     }
