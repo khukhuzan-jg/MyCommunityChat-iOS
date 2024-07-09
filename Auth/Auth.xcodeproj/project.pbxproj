@@ -28,31 +28,10 @@
 		78D82F962C367EAB00D70B25 /* AvatarItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D82F942C367EAB00D70B25 /* AvatarItemCell.xib */; };
 		F07CBE9D2C36A70100A2DD8B /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE9C2C36A70100A2DD8B /* UserManager.swift */; };
 		F0F9D5422C37E5EC0061382F /* CommonExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D5412C37E5EC0061382F /* CommonExtension.framework */; };
-		F0F9D5432C37E5EC0061382F /* CommonExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D5412C37E5EC0061382F /* CommonExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0F9D5462C37E5F10061382F /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D5452C37E5F10061382F /* CommonUI.framework */; };
-		F0F9D5472C37E5F10061382F /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D5452C37E5F10061382F /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0F9D5492C37E5F80061382F /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D5482C37E5F80061382F /* Domain.framework */; };
-		F0F9D54A2C37E5F80061382F /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D5482C37E5F80061382F /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0F9D54C2C37E5FD0061382F /* Pods_Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D54B2C37E5FD0061382F /* Pods_Domain.framework */; };
-		F0F9D54D2C37E5FD0061382F /* Pods_Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F0F9D54B2C37E5FD0061382F /* Pods_Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		F0F9D5442C37E5EC0061382F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F0F9D54A2C37E5F80061382F /* Domain.framework in Embed Frameworks */,
-				F0F9D5432C37E5EC0061382F /* CommonExtension.framework in Embed Frameworks */,
-				F0F9D54D2C37E5FD0061382F /* Pods_Domain.framework in Embed Frameworks */,
-				F0F9D5472C37E5F10061382F /* CommonUI.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7861EE802C37AFEF0096D925 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
@@ -274,7 +253,6 @@
 				78671F202C33E914006E7DD6 /* Sources */,
 				78671F212C33E914006E7DD6 /* Frameworks */,
 				78671F222C33E914006E7DD6 /* Resources */,
-				F0F9D5442C37E5EC0061382F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -489,10 +467,10 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XWPM63M4C4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -510,6 +488,7 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joygroups.Auth;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -529,10 +508,10 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = XWPM63M4C4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -550,6 +529,7 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.joygroups.Auth;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

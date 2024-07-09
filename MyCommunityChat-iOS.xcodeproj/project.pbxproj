@@ -7,15 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1484DC719DE9A429EA331677 /* Pods_MyCommunityChat_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */; };
 		78671E9D2C33DEB7006E7DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671E9C2C33DEB7006E7DD6 /* AppDelegate.swift */; };
 		78671E9F2C33DEB7006E7DD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671E9E2C33DEB7006E7DD6 /* SceneDelegate.swift */; };
 		78671EA62C33DEB8006E7DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78671EA52C33DEB8006E7DD6 /* Assets.xcassets */; };
 		78671EB42C33DEB8006E7DD6 /* MyCommunityChat_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671EB32C33DEB8006E7DD6 /* MyCommunityChat_iOSTests.swift */; };
 		78671EBE2C33DEB8006E7DD6 /* MyCommunityChat_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671EBD2C33DEB8006E7DD6 /* MyCommunityChat_iOSUITests.swift */; };
 		78671EC02C33DEB8006E7DD6 /* MyCommunityChat_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671EBF2C33DEB8006E7DD6 /* MyCommunityChat_iOSUITestsLaunchTests.swift */; };
-		78671F442C33E94F006E7DD6 /* Auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78671F422C33E94F006E7DD6 /* Auth.framework */; };
-		78671F452C33E94F006E7DD6 /* Auth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78671F422C33E94F006E7DD6 /* Auth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		78671FF52C33FDD8006E7DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78671FF42C33FDD8006E7DD6 /* LaunchScreen.storyboard */; };
 		78671FFC2C345D92006E7DD6 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78671FFB2C345D92006E7DD6 /* Colors.xcassets */; };
 		786720072C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 78671FFE2C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf */; };
@@ -55,19 +52,21 @@
 		F07CBE912C369D8100A2DD8B /* StringCosntants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE8C2C369D8100A2DD8B /* StringCosntants.swift */; };
 		F07CBE952C369DC500A2DD8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F07CBE942C369DC500A2DD8B /* Main.storyboard */; };
 		F07CBE9F2C36E49700A2DD8B /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE9E2C36E49700A2DD8B /* UserInfoManager.swift */; };
-		F07CBEA12C36EB5300A2DD8B /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA02C36EB5300A2DD8B /* Domain.framework */; };
-		F07CBEA22C36EB5300A2DD8B /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA02C36EB5300A2DD8B /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F07CBEA42C36EBC000A2DD8B /* CommonExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA32C36EBC000A2DD8B /* CommonExtension.framework */; };
-		F07CBEA52C36EBC000A2DD8B /* CommonExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA32C36EBC000A2DD8B /* CommonExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F07CBEA72C36EBCD00A2DD8B /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA62C36EBCD00A2DD8B /* CommonUI.framework */; };
-		F07CBEA82C36EBCD00A2DD8B /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA62C36EBCD00A2DD8B /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F07CBEAC2C37274400A2DD8B /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBEAB2C37274300A2DD8B /* ProfileImageView.swift */; };
 		F07CBECA2C379DA100A2DD8B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBEC92C379DA100A2DD8B /* NotificationService.swift */; };
 		F07CBED82C37A92E00A2DD8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F07CBED72C37A92E00A2DD8B /* GoogleService-Info.plist */; };
-		F0F9D54E2C37E8AB0061382F /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F07CBEC72C379DA100A2DD8B /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F0F9D5522C37E9160061382F /* OneSignalFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBED42C379E7500A2DD8B /* OneSignalFramework.xcframework */; };
-		F0F9D5532C37E9160061382F /* OneSignalFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBED42C379E7500A2DD8B /* OneSignalFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0F9D5552C37E93A0061382F /* OneSignalFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBED42C379E7500A2DD8B /* OneSignalFramework.xcframework */; };
+		F0F9D5572C37F67C0061382F /* Auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78671F422C33E94F006E7DD6 /* Auth.framework */; };
+		F0F9D5582C37F67C0061382F /* Auth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78671F422C33E94F006E7DD6 /* Auth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F0F9D55A2C37F6A80061382F /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA02C36EB5300A2DD8B /* Domain.framework */; };
+		F0F9D55B2C37F6A80061382F /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA02C36EB5300A2DD8B /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F0F9D55C2C37F6CD0061382F /* CommonUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA62C36EBCD00A2DD8B /* CommonUI.framework */; };
+		F0F9D55D2C37F6CD0061382F /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA62C36EBCD00A2DD8B /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F0F9D55E2C37F6D10061382F /* CommonExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA32C36EBC000A2DD8B /* CommonExtension.framework */; };
+		F0F9D55F2C37F6D10061382F /* CommonExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA32C36EBC000A2DD8B /* CommonExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F0F9D5602C37F6D60061382F /* Pods_MyCommunityChat_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */; };
+		F0F9D5612C37F6D60061382F /* Pods_MyCommunityChat_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,48 +84,20 @@
 			remoteGlobalIDString = 78671E982C33DEB7006E7DD6;
 			remoteInfo = "MyCommunityChat-iOS";
 		};
-		F0F9D54F2C37E8AB0061382F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 78671E912C33DEB7006E7DD6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F07CBEC62C379DA100A2DD8B;
-			remoteInfo = OneSignalNotificationServiceExtension;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		78671F482C33E94F006E7DD6 /* Embed Frameworks */ = {
+		F0F9D5592C37F67C0061382F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F07CBEA22C36EB5300A2DD8B /* Domain.framework in Embed Frameworks */,
-				F07CBEA82C36EBCD00A2DD8B /* CommonUI.framework in Embed Frameworks */,
-				78671F452C33E94F006E7DD6 /* Auth.framework in Embed Frameworks */,
-				F07CBEA52C36EBC000A2DD8B /* CommonExtension.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F0F9D5512C37E8AB0061382F /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				F0F9D54E2C37E8AB0061382F /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F0F9D5542C37E9160061382F /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F0F9D5532C37E9160061382F /* OneSignalFramework.xcframework in Embed Frameworks */,
+				F0F9D5612C37F6D60061382F /* Pods_MyCommunityChat_iOS.framework in Embed Frameworks */,
+				F0F9D55D2C37F6CD0061382F /* CommonUI.framework in Embed Frameworks */,
+				F0F9D55B2C37F6A80061382F /* Domain.framework in Embed Frameworks */,
+				F0F9D5582C37F67C0061382F /* Auth.framework in Embed Frameworks */,
+				F0F9D55F2C37F6D10061382F /* CommonExtension.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,12 +184,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F07CBEA12C36EB5300A2DD8B /* Domain.framework in Frameworks */,
-				78671F442C33E94F006E7DD6 /* Auth.framework in Frameworks */,
-				F07CBEA72C36EBCD00A2DD8B /* CommonUI.framework in Frameworks */,
+				F0F9D5602C37F6D60061382F /* Pods_MyCommunityChat_iOS.framework in Frameworks */,
+				F0F9D55A2C37F6A80061382F /* Domain.framework in Frameworks */,
 				F0F9D5552C37E93A0061382F /* OneSignalFramework.xcframework in Frameworks */,
-				1484DC719DE9A429EA331677 /* Pods_MyCommunityChat_iOS.framework in Frameworks */,
-				F07CBEA42C36EBC000A2DD8B /* CommonExtension.framework in Frameworks */,
+				F0F9D55C2C37F6CD0061382F /* CommonUI.framework in Frameworks */,
+				F0F9D5572C37F67C0061382F /* Auth.framework in Frameworks */,
+				F0F9D55E2C37F6D10061382F /* CommonExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,13 +534,11 @@
 				78671E962C33DEB7006E7DD6 /* Frameworks */,
 				78671E972C33DEB7006E7DD6 /* Resources */,
 				4DB9DB168ED2E7769A6F66AE /* [CP] Embed Pods Frameworks */,
-				78671F482C33E94F006E7DD6 /* Embed Frameworks */,
-				F0F9D5512C37E8AB0061382F /* Embed Foundation Extensions */,
+				F0F9D5592C37F67C0061382F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F0F9D5502C37E8AB0061382F /* PBXTargetDependency */,
 			);
 			name = "MyCommunityChat-iOS";
 			productName = "MyCommunityChat-iOS";
@@ -622,7 +591,6 @@
 				F07CBEC32C379DA100A2DD8B /* Sources */,
 				F07CBEC42C379DA100A2DD8B /* Frameworks */,
 				F07CBEC52C379DA100A2DD8B /* Resources */,
-				F0F9D5542C37E9160061382F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -906,11 +874,6 @@
 			isa = PBXTargetDependency;
 			target = 78671E982C33DEB7006E7DD6 /* MyCommunityChat-iOS */;
 			targetProxy = 78671EBA2C33DEB8006E7DD6 /* PBXContainerItemProxy */;
-		};
-		F0F9D5502C37E8AB0061382F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F07CBEC62C379DA100A2DD8B /* OneSignalNotificationServiceExtension */;
-			targetProxy = F0F9D54F2C37E8AB0061382F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
