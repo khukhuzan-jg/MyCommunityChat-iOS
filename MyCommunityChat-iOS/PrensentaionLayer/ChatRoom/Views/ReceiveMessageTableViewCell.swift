@@ -14,6 +14,10 @@ class ReceiveMessageTableViewCell: UITableViewCell {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var lblMessage: UILabel!
     @IBOutlet weak var lblTime: UILabel!
+    @IBOutlet weak var reactionLabel: UILabel!
+    
+    var didTapReaction = {}
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +29,12 @@ class ReceiveMessageTableViewCell: UITableViewCell {
         self.lblTime.textColor = .white
         self.imgProfile.contentMode = .scaleAspectFill
         
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+        self.addGestureRecognizer(longPressGesture)
+        
+        let removeTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleRemovePress(_:)))
+        reactionLabel.isUserInteractionEnabled = true
+        reactionLabel.addGestureRecognizer(removeTapGesture)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -63,8 +73,14 @@ class ReceiveMessageTableViewCell: UITableViewCell {
         else {
             self.lblMessage.text = msgStr
         }
-        
-        
     }
     
+    @objc func handleLongPress(_ gesture: UILongPressGestureRecognizer) {
+        guard gesture.state == .began else { return }
+        didTapReaction()
+    }
+    
+    @objc func handleRemovePress(_ gesture: UITapGestureRecognizer) {
+        reactionLabel.text = ""
+    }
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+
 class ChatRoomViewController: BaseViewController {
 
     @IBOutlet weak var btnSend: UIButton!
@@ -25,6 +26,7 @@ class ChatRoomViewController: BaseViewController {
     var selectedUser : UserData?
     var currentUser : UserData?
     var selectedImageStr = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,6 +47,12 @@ class ChatRoomViewController: BaseViewController {
         txtMessage.textColor = UIColor.lightGray
         
         txtMessage.delegate = self
+    }
+    
+    @objc func addReaction(_ sender: UIMenuItem) {
+        guard let indexPath = tblMessage.indexPathForSelectedRow else { return }
+        messageList[indexPath.row].reaction = sender.title
+        tblMessage.reloadRows(at: [indexPath], with: .automatic)
     }
     
     override func bindData() {
@@ -79,7 +87,7 @@ class ChatRoomViewController: BaseViewController {
         
         btnSend.rx.tap.bind { _ in
             if let text = self.txtMessage.text {
-                var type : MessageType = self.selectedImageStr.isEmpty ? .text : .image
+                let type : MessageType = self.selectedImageStr.isEmpty ? .text : .image
                 
                 let message = Message(messageText: text, messageImage: self.selectedImageStr, messageType: type, createdAt: "", lastMessage: "", senderId: self.currentUser?.id ?? "")
                 self.chatRoomViewModel.sendMessage(message: message)
@@ -224,6 +232,13 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
             if (message.senderId ?? "") == (self.currentUser?.id ?? "") {
                 guard let senderCell = tableView.dequeueReusableCell(withIdentifier: String(describing: SendMessageTableViewCell.self), for: indexPath) as? SendMessageTableViewCell else {return UITableViewCell()}
                 senderCell.setupCellData(message: message)
+                senderCell.didTapReaction = { [weak self] in
+                    self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
+                        senderCell.reactionLabel.text = reaction
+                        self?.tblMessage.reloadData()
+                    })
+                }
+            
                 return senderCell
             }
             else {
@@ -235,6 +250,12 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                     
                 }
                 receiverCell.setupCellData(message: message , profile: img)
+                receiverCell.didTapReaction = { [weak self] in
+                    self?.presentReactionPopup(cell: receiverCell, selectedReaction: { [weak self] reaction in
+                        receiverCell.reactionLabel.text = reaction
+                        self?.tblMessage.reloadData()
+                    })
+                }
                 return receiverCell
             }
         }
@@ -242,6 +263,12 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
             if (message.senderId ?? "") == (self.currentUser?.id ?? "") {
                 guard let senderCell = tableView.dequeueReusableCell(withIdentifier: String(describing: SendImgeTableViewCell.self), for: indexPath) as? SendImgeTableViewCell else {return UITableViewCell()}
                 senderCell.setupcell(message: message)
+                senderCell.didTapReaction = { [weak self] in
+                    self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
+                        senderCell.reactionLabel.text = reaction
+                        self?.tblMessage.reloadData()
+                    })
+                }
                 return senderCell
             }
             else {
@@ -253,6 +280,12 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                     
                 }
                 receiverCell.setupcell(message: message, profile: img)
+                receiverCell.didTapReaction = { [weak self] in
+                    self?.presentReactionPopup(cell: receiverCell, selectedReaction: { [weak self] reaction in
+                        receiverCell.reactionLabel.text = reaction
+                        self?.tblMessage.reloadData()
+                    })
+                }
                 return receiverCell
             }
         }
@@ -298,6 +331,6 @@ extension ChatRoomViewController : UITextViewDelegate {
             textView.textColor = UIColor.lightGray
         }
     }
-    
-    
+
 }
+

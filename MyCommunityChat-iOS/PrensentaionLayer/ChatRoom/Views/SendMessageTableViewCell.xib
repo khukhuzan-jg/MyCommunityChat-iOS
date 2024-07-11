@@ -50,10 +50,18 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Etf-sq-Fdp" userLabel="Lbl Reaction">
+                        <rect key="frame" x="310" y="90" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="n78-g4-LmO" secondAttribute="trailing" constant="10" id="1sF-in-PGs"/>
+                    <constraint firstAttribute="trailing" secondItem="Etf-sq-Fdp" secondAttribute="trailing" constant="10" id="8MS-fw-5Ff"/>
                     <constraint firstItem="n78-g4-LmO" firstAttribute="width" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="D0x-yG-FdU"/>
+                    <constraint firstAttribute="bottom" secondItem="Etf-sq-Fdp" secondAttribute="bottom" id="Mqr-jl-1gI"/>
                     <constraint firstAttribute="bottom" secondItem="n78-g4-LmO" secondAttribute="bottom" constant="10" id="VTc-ui-Iw0"/>
                     <constraint firstItem="n78-g4-LmO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="gSA-Om-Bza"/>
                 </constraints>
@@ -63,8 +71,9 @@
                 <outlet property="bgView" destination="n78-g4-LmO" id="1sb-JB-DKT"/>
                 <outlet property="lblMessage" destination="r3n-0w-fcD" id="Xx2-6T-BYW"/>
                 <outlet property="lblTime" destination="CzC-kc-6Kg" id="I5W-kt-xhu"/>
+                <outlet property="reactionLabel" destination="Etf-sq-Fdp" id="Paw-Ju-LK1"/>
             </connections>
-            <point key="canvasLocation" x="69" y="54"/>
+            <point key="canvasLocation" x="96" y="-28"/>
         </tableViewCell>
     </objects>
     <resources>

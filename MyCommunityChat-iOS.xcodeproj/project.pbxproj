@@ -24,6 +24,8 @@
 		7867200D2C345F2B006E7DD6 /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720042C345F2B006E7DD6 /* RobotoSlab-Light.ttf */; };
 		7867200E2C345F2B006E7DD6 /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720052C345F2B006E7DD6 /* RobotoSlab-Black.ttf */; };
 		7867200F2C345F2B006E7DD6 /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720062C345F2B006E7DD6 /* RobotoSlab-Medium.ttf */; };
+		78AC9E882C3FB8EF001A7B4C /* ReactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AC9E872C3FB8EF001A7B4C /* ReactionCell.swift */; };
+		78AC9E8A2C3FB917001A7B4C /* ReactionPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AC9E892C3FB917001A7B4C /* ReactionPopupController.swift */; };
 		78BB8A252C34762200F3BA57 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A232C34762200F3BA57 /* SplashController.swift */; };
 		78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A242C34762200F3BA57 /* SplashController.xib */; };
 		78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A282C3476BF00F3BA57 /* Animation.json */; };
@@ -135,6 +137,8 @@
 		786720042C345F2B006E7DD6 /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Light.ttf"; sourceTree = "<group>"; };
 		786720052C345F2B006E7DD6 /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
 		786720062C345F2B006E7DD6 /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
+		78AC9E872C3FB8EF001A7B4C /* ReactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionCell.swift; sourceTree = "<group>"; };
+		78AC9E892C3FB917001A7B4C /* ReactionPopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionPopupController.swift; sourceTree = "<group>"; };
 		78BB8A232C34762200F3BA57 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		78BB8A242C34762200F3BA57 /* SplashController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashController.xib; sourceTree = "<group>"; };
 		78BB8A282C3476BF00F3BA57 /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
@@ -401,6 +405,7 @@
 		F07CBE5F2C369D6700A2DD8B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				78AC9E892C3FB917001A7B4C /* ReactionPopupController.swift */,
 				F07CBE5D2C369D6700A2DD8B /* ChatRoomViewController.swift */,
 				F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */,
 			);
@@ -426,6 +431,7 @@
 				F07CBE672C369D6700A2DD8B /* SendImgeTableViewCell.xib */,
 				F07CBE682C369D6700A2DD8B /* SendMessageTableViewCell.swift */,
 				F07CBE692C369D6700A2DD8B /* SendMessageTableViewCell.xib */,
+				78AC9E872C3FB8EF001A7B4C /* ReactionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -831,7 +837,9 @@
 				F07CBE9F2C36E49700A2DD8B /* UserInfoManager.swift in Sources */,
 				78671E9D2C33DEB7006E7DD6 /* AppDelegate.swift in Sources */,
 				78671E9F2C33DEB7006E7DD6 /* SceneDelegate.swift in Sources */,
+				78AC9E8A2C3FB917001A7B4C /* ReactionPopupController.swift in Sources */,
 				F07CBE802C369D6800A2DD8B /* SendMessageTableViewCell.swift in Sources */,
+				78AC9E882C3FB8EF001A7B4C /* ReactionCell.swift in Sources */,
 				F07CBE912C369D8100A2DD8B /* StringCosntants.swift in Sources */,
 				F07CBE832C369D6800A2DD8B /* HomeViewController.swift in Sources */,
 			);

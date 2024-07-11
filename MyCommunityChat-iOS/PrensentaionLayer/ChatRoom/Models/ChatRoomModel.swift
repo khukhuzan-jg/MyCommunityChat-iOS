@@ -22,6 +22,7 @@ public struct Message {
     public var createdAt : String?
     public var lastMessage : String?
     public var senderId : String?
+    public var reaction: String?
     
 }
 class ChatRoomModel {

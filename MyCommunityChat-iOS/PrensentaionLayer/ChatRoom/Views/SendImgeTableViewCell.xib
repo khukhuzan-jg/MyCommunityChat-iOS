@@ -39,9 +39,17 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4UN-Lt-xds">
+                        <rect key="frame" x="310" y="220" width="0.0" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="4UN-Lt-xds" secondAttribute="bottom" id="3Nq-pQ-VgB"/>
                     <constraint firstAttribute="bottom" secondItem="FAA-ML-DHy" secondAttribute="bottom" constant="10" id="Bir-xV-Dwx"/>
+                    <constraint firstAttribute="trailing" secondItem="4UN-Lt-xds" secondAttribute="trailing" constant="10" id="DfG-vi-IBQ"/>
                     <constraint firstAttribute="trailing" secondItem="FAA-ML-DHy" secondAttribute="trailing" constant="10" id="U7a-yu-CLi"/>
                     <constraint firstItem="FAA-ML-DHy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="rW3-oA-bDt"/>
                     <constraint firstItem="FAA-ML-DHy" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="vyi-CW-w1z"/>
@@ -51,8 +59,9 @@
             <connections>
                 <outlet property="bgView" destination="FAA-ML-DHy" id="Vh6-1J-4vn"/>
                 <outlet property="imgSend" destination="uQa-08-CG1" id="8a8-Sz-hCo"/>
+                <outlet property="reactionLabel" destination="4UN-Lt-xds" id="njE-Zl-vyr"/>
             </connections>
-            <point key="canvasLocation" x="138.93129770992365" y="79.577464788732399"/>
+            <point key="canvasLocation" x="6" y="-135"/>
         </tableViewCell>
     </objects>
     <resources>

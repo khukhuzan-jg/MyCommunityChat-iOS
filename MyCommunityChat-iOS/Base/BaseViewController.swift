@@ -26,4 +26,30 @@ class BaseViewController : UIViewController {
     func bindObserver() {
         
     }
+    
+    func presentReactionPopup(cell: UITableViewCell, selectedReaction: @escaping(String) -> Void) {
+        let popupVC = ReactionPopupController()
+        // Customize your reaction options
+        popupVC.options = ["👍", "❤️", "😂", "😮", "😢", "😡"]
+        popupVC.modalPresentationStyle = .popover
+        popupVC.selectionHandler = { [weak self] selectedOption in
+            print(selectedOption)
+            selectedReaction(selectedOption)
+        }
+        if let ppc = popupVC.popoverPresentationController {
+            ppc.delegate = self
+            ppc.sourceView = cell
+            ppc.sourceRect = cell.bounds
+        }
+        self.present(popupVC, animated: true, completion: nil)
+    }
 }
+
+extension BaseViewController: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(
+        for controller: UIPresentationController
+    ) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
+    }
+}
+

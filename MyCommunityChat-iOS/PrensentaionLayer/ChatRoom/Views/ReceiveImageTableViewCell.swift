@@ -12,6 +12,10 @@ class ReceiveImageTableViewCell: UITableViewCell {
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var imgReceive: UIImageView!
+    @IBOutlet weak var reactionLabel: UILabel!
+    
+    var didTapReaction = {}
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,6 +24,12 @@ class ReceiveImageTableViewCell: UITableViewCell {
         self.bgView.backgroundColor = .primary
         self.imgReceive.cornerRadius  = 10
         self.imgProfile.contentMode = .scaleAspectFill
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+        self.addGestureRecognizer(longPressGesture)
+        
+        let removeTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleRemovePress(_:)))
+        reactionLabel.isUserInteractionEnabled = true
+        reactionLabel.addGestureRecognizer(removeTapGesture)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -36,7 +46,14 @@ class ReceiveImageTableViewCell: UITableViewCell {
         }
         self.imgProfile.image = profile
         
-        
     }
     
+    @objc func handleLongPress(_ gesture: UILongPressGestureRecognizer) {
+        guard gesture.state == .began else { return }
+        didTapReaction()
+    }
+    
+    @objc func handleRemovePress(_ gesture: UITapGestureRecognizer) {
+        reactionLabel.text = ""
+    }
 }

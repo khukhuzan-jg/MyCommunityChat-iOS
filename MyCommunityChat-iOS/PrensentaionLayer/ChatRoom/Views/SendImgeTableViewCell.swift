@@ -10,6 +10,9 @@ import UIKit
 class SendImgeTableViewCell: UITableViewCell {
     @IBOutlet weak var imgSend: UIImageView!
     @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var reactionLabel: UILabel!
+    
+    var didTapReaction = {}
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,6 +20,12 @@ class SendImgeTableViewCell: UITableViewCell {
         self.selectionStyle = .none
         self.bgView.backgroundColor = .senderChat
         self.imgSend.cornerRadius = 10
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+        self.addGestureRecognizer(longPressGesture)
+        
+        let removeTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleRemovePress(_:)))
+        reactionLabel.isUserInteractionEnabled = true
+        reactionLabel.addGestureRecognizer(removeTapGesture)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,4 +42,12 @@ class SendImgeTableViewCell: UITableViewCell {
         }
     }
     
+    @objc func handleLongPress(_ gesture: UILongPressGestureRecognizer) {
+        guard gesture.state == .began else { return }
+        didTapReaction()
+    }
+    
+    @objc func handleRemovePress(_ gesture: UITapGestureRecognizer) {
+        reactionLabel.text = ""
+    }
 }
