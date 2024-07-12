@@ -39,7 +39,8 @@ class ReceiveImageTableViewCell: UITableViewCell {
     }
     
     func setupcell(message : Message , profile : UIImage ) {
-        
+        self.reactionLabel.text = message.reaction ?? ""
+       
         if let msgType = message.messageType {
             self.bgView.backgroundColor = msgType == .sticker ? .clear : .senderChat
             if msgType == .image {

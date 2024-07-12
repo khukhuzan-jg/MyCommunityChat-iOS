@@ -17,12 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         FirebaseApp.configure()
         
-        
         // Remove this method to stop OneSignal Debugging
           OneSignal.Debug.setLogLevel(.LL_VERBOSE)
           
           // OneSignal initialization
-        // oneSignal App ID : 17d50d67-f69e-443f-a5a0-b3f8e4b59dbf
           OneSignal.initialize("17d50d67-f69e-443f-a5a0-b3f8e4b59dbf", withLaunchOptions: launchOptions)
           
           // requestPermission will show the native iOS notification permission prompt.
@@ -30,8 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           OneSignal.Notifications.requestPermission({ accepted in
             print("User accepted notifications: \(accepted)")
           }, fallbackToSettings: true)
-        
+          
+          // Login your customer with externalId
+          // OneSignal.login("EXTERNAL_ID")
         UINavigationBarAppearance().backgroundColor = .primary
+        
         return true
     }
 

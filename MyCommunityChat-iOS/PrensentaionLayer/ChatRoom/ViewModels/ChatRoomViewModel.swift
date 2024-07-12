@@ -12,6 +12,7 @@ protocol ChatRoomViewModelProtocol {
     func tapCameraIcon() 
     func sendMessage(message : Message)
     func getMessage()
+    func updateMessage(message : Message)
     
     /// Note: db methods for noti mute / unmute
     func savedNotiSetting(settingType : ChatRoomMoreSetting)
@@ -182,5 +183,11 @@ extension ChatRoomViewModel : ChatRoomViewModelProtocol {
             }
         }
         
+    }
+    func updateMessage(message: Message) {
+        chatManager.updateMessage(senderId: self.senderId, receiverId: self.receiverId, message: message, messageId: message.messageId ?? "") {
+            print("Update Done")
+            self.getMessage()
+        }
     }
 }

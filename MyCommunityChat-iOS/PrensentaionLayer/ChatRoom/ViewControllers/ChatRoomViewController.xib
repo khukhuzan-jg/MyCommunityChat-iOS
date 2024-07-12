@@ -15,6 +15,7 @@
                 <outlet property="bottomViewHeight" destination="7P3-N3-NG3" id="XqU-jl-fyS"/>
                 <outlet property="btnCamera" destination="dye-is-ZHr" id="Xo8-Do-pdf"/>
                 <outlet property="btnClose" destination="NGy-mA-VWR" id="NsG-Ze-CNu"/>
+                <outlet property="btnDownArrow" destination="RDR-g5-QLh" id="Hm4-aI-NED"/>
                 <outlet property="btnSend" destination="aEs-ag-DXa" id="i1r-IG-f13"/>
                 <outlet property="btnSticker" destination="fQG-la-s9v" id="5x2-uW-ohO"/>
                 <outlet property="imageBGView" destination="ryf-37-8aC" id="1M7-Yb-vox"/>
@@ -182,14 +183,15 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="523"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDR-g5-QLh">
-                    <rect key="frame" x="343" y="552" width="30" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDR-g5-QLh">
+                    <rect key="frame" x="343" y="553" width="30" height="28.666666666666742"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="3Ty-t7-Cjt"/>
                         <constraint firstAttribute="width" constant="30" id="67c-cd-47b"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" backgroundImage="arrow.down.circle" catalog="system"/>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -213,6 +215,7 @@
         </view>
     </objects>
     <resources>
+        <image name="arrow.down.circle" catalog="system" width="128" height="123"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
         <image name="ic_send_button" width="40" height="40"/>
         <image name="smiley" catalog="system" width="128" height="123"/>
