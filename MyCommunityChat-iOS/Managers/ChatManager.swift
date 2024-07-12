@@ -53,6 +53,7 @@ extension ChatManager : ChatManagerProtocol {
                     message.createdAt =  childSnapshot.childSnapshot(forPath:"createdAt").value as? String
                     message.lastMessage =  ""
                     message.senderId =  childSnapshot.childSnapshot(forPath:"senderId").value as? String
+                    message.sticker = childSnapshot.childSnapshot(forPath: "sticker").value as? String
                     
                     //
                     self.messageList.append(message)
@@ -68,7 +69,8 @@ extension ChatManager : ChatManagerProtocol {
             "messageType" : message.messageType?.getValue() ?? "",
             "createdAt" : Date().toString(.type13, timeZone: "MM"),
             "updatedAt" : Date().toString(.type13, timeZone: "MM"),
-            "senderId" : message.senderId ?? ""
+            "senderId" : message.senderId ?? "",
+            "sticker" : message.sticker ?? ""
         ]
         self.ref.child(Conversation.conversations.getValue()).child(senderId + "__" + receiverId).child(Conversation.conversationMessage.getValue()).childByAutoId()
             .setValue(sendMessage)

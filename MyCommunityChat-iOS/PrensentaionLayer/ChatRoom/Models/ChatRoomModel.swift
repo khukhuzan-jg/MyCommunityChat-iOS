@@ -10,6 +10,7 @@ import Foundation
 public enum MessageType : String{
     case text
     case image
+    case sticker
     
     func getValue() -> String {
         return self.rawValue
@@ -23,8 +24,27 @@ public struct Message {
     public var lastMessage : String?
     public var senderId : String?
     public var reaction: String?
+    public var sticker : String?
     
+}
+
+protocol ChatroomModelProtocol {
+    func savedNotiSetting(converstaionId : String , settingType : ChatRoomMoreSetting)
+    func getNotiSetting(converstaionId : String)
 }
 class ChatRoomModel {
+    let dbManager = DataBaseManager.shared
+}
+
+extension ChatRoomModel : ChatroomModelProtocol {
+    func savedNotiSetting(converstaionId: String, settingType: ChatRoomMoreSetting) {
+        
+    }
+    
+    func getNotiSetting(converstaionId: String) {
+        
+    }
+    
     
 }
+

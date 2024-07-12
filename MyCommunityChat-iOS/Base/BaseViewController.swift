@@ -17,6 +17,8 @@ class BaseViewController : UIViewController {
     override func viewDidLoad() {
         self.bindData()
         self.bindObserver()
+        self.bindViewModel()
+        self.setupUI()
     }
     
     func bindData() {
@@ -24,6 +26,14 @@ class BaseViewController : UIViewController {
     }
     
     func bindObserver() {
+        
+    }
+    
+    func bindViewModel() {
+        
+    }
+    
+    func setupUI() {
         
     }
     

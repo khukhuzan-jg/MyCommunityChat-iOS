@@ -18,7 +18,7 @@ class SendImgeTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.selectionStyle = .none
-        self.bgView.backgroundColor = .senderChat
+        
         self.imgSend.cornerRadius = 10
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
         self.addGestureRecognizer(longPressGesture)
@@ -35,10 +35,23 @@ class SendImgeTableViewCell: UITableViewCell {
     }
     
     func setupcell(message : Message) {
-        if let imgData = NSData(base64Encoded: message.messageImage ?? "") {
-           let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
-            self.imgSend.image = img
-            self.imgSend.contentMode = .scaleAspectFill
+        
+        if let msgType = message.messageType {
+            self.bgView.backgroundColor = msgType == .sticker ? .clear : .senderChat
+            if msgType == .image {
+                if let imgData = NSData(base64Encoded: message.messageImage ?? "") {
+                   let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
+                    self.imgSend.image = img
+                    self.imgSend.contentMode = .scaleAspectFill
+                }
+            }
+            else {
+                if let imgData = NSData(base64Encoded: message.sticker ?? "") {
+                   let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
+                    self.imgSend.image = img
+                    self.imgSend.contentMode = .scaleAspectFit
+                }
+            }
         }
     }
     

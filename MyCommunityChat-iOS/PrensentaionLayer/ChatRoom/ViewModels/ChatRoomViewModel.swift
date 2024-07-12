@@ -12,6 +12,11 @@ protocol ChatRoomViewModelProtocol {
     func tapCameraIcon() 
     func sendMessage(message : Message)
     func getMessage()
+    
+    /// Note: db methods for noti mute / unmute
+    func savedNotiSetting(settingType : ChatRoomMoreSetting)
+    func getNotiSetting()
+    func deleteNotiSetting()
 }
 class ChatRoomViewModel : BaseViewModel {
     static let shared = ChatRoomViewModel()
@@ -22,10 +27,19 @@ class ChatRoomViewModel : BaseViewModel {
     var currentUser =  BehaviorRelay<UserData?>(value: nil)
     var selectedUser = BehaviorRelay<UserData?>(value: nil)
     var successfullySendMessage = BehaviorRelay<Bool>(value: false)
+    var selectedMoreSetting = BehaviorRelay<ChatRoomMoreSetting>(value: .notiUnMute)
+    var selectedSticker = BehaviorRelay<UIImage>(value: UIImage())
     
     var senderId : String = ""
     var receiverId : String = ""
     
+    var startDateBehaviorRelay = BehaviorRelay<String>(value : "")
+    var endDateBehaviorRelay = BehaviorRelay<String>(value : "")
+    
+    var dbManager = DataBaseManager.shared
+    
+    var isSuccessfullySavedBehaviorRelay = BehaviorRelay(value: false)
+    var isActiveSaveButtonBehaviorRelay = BehaviorRelay(value: false)
     override init() {
         super.init()
     }
@@ -37,6 +51,15 @@ class ChatRoomViewModel : BaseViewModel {
             self.chatManager.changesMessage(senderId: self.senderId, receiverId: self.receiverId) {
                 self.getMessage()
             }
+        }
+        .disposed(by: disposeBag)
+        
+        Observable.combineLatest(startDateBehaviorRelay, endDateBehaviorRelay).bind { (startDate , endDate) in
+            let start = startDate.toDate(format: .type12) ?? Date()
+            let end = endDate.toDate(format: .type12) ?? Date()
+            
+            let isActve = start < end && !startDate.isEmpty && !endDate.isEmpty
+            self.isActiveSaveButtonBehaviorRelay.accept(isActve)
         }
         .disposed(by: disposeBag)
     }
@@ -59,9 +82,83 @@ class ChatRoomViewModel : BaseViewModel {
         }
         
     }
+    
+    func getCurrentDate() -> String {
+        return Date().toString(.type12)
+    }
+    
+    func getStartDate(settingType : ChatRoomMoreSetting) -> String {
+        switch settingType {
+        case .notiUnMute:
+            return ""
+        case .notiMuteOneDay:
+            return getCurrentDate()
+        case .notiMuteOneWeek:
+            return getCurrentDate()
+        case .notiMuteOneMonth:
+            return getCurrentDate()
+        case .notiMutePermanently:
+            return getCurrentDate()
+        case .notiMuteCustom:
+            return startDateBehaviorRelay.value
+        case .leaveGroup:
+            return ""
+        }
+    }
+    
+    func getEndDate(settingType : ChatRoomMoreSetting) -> String {
+        switch settingType {
+        case .notiUnMute:
+            return ""
+        case .notiMuteOneDay:
+            let today = Date()
+            let modifiedDate = Calendar.current.date(byAdding: .day, value: 1, to: today)!
+            return modifiedDate.toString(.type12)
+        case .notiMuteOneWeek:
+            let today = Date()
+            let modifiedDate = Calendar.current.date(byAdding: .day, value: 7, to: today)!
+            return modifiedDate.toString(.type12)
+        case .notiMuteOneMonth:
+            let today = Date()
+            let modifiedDate = Calendar.current.date(byAdding: .day, value: 30, to: today)!
+            return modifiedDate.toString(.type12)
+        case .notiMutePermanently:
+            let today = Date()
+            let modifiedDate = Calendar.current.date(byAdding: .year, value: 1, to: today)!
+            return modifiedDate.toString(.type12)
+        case .notiMuteCustom:
+            return endDateBehaviorRelay.value
+        case .leaveGroup:
+            return ""
+        }
+    }
 }
 
 extension ChatRoomViewModel : ChatRoomViewModelProtocol {
+    func savedNotiSetting(settingType: ChatRoomMoreSetting) {
+        self.checkUserCreatedDate()
+        let conversationId = self.senderId + "__" + self.receiverId
+        let dbObj = NotiDBRealmObject()
+        dbObj.conversationId = conversationId
+        dbObj.startTime = getStartDate(settingType: self.selectedMoreSetting.value)
+        dbObj.endTime = getEndDate(settingType: self.selectedMoreSetting.value)
+        dbObj.settingType = selectedMoreSetting.value.rawValue
+        
+        dbManager.saveNotiSettingById(dbObj) { isSuccess in
+            self.isSuccessfullySavedBehaviorRelay.accept(isSuccess)
+        }
+        
+        
+    }
+    
+    func getNotiSetting() {
+        
+    }
+    
+    func deleteNotiSetting() {
+        
+    }
+    
     func tapCameraIcon() {
         
     }

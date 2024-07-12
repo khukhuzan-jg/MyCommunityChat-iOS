@@ -39,13 +39,24 @@ class ReceiveImageTableViewCell: UITableViewCell {
     }
     
     func setupcell(message : Message , profile : UIImage ) {
-        if let imgData = NSData(base64Encoded: message.messageImage ?? "") {
-           let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
-            self.imgReceive.image = img
-            self.imgReceive.contentMode = .scaleAspectFill
-        }
-        self.imgProfile.image = profile
         
+        if let msgType = message.messageType {
+            self.bgView.backgroundColor = msgType == .sticker ? .clear : .senderChat
+            if msgType == .image {
+                if let imgData = NSData(base64Encoded: message.messageImage ?? "") {
+                   let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
+                    self.imgReceive.image = img
+                    self.imgReceive.contentMode = .scaleAspectFill
+                }
+            }
+            else {
+                if let imgData = NSData(base64Encoded: message.sticker ?? "") {
+                   let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
+                    self.imgReceive.image = img
+                    self.imgReceive.contentMode = .scaleAspectFit
+                }
+            }
+        }
     }
     
     @objc func handleLongPress(_ gesture: UILongPressGestureRecognizer) {

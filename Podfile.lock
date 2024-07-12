@@ -180,6 +180,11 @@ PODS:
     - OneSignal/OneSignalOutcomes
   - PromisesObjC (2.4.0)
   - ReachabilitySwift (5.0.0)
+  - Realm (10.52.1):
+    - Realm/Headers (= 10.52.1)
+  - Realm/Headers (10.52.1)
+  - RealmSwift (10.52.1):
+    - Realm (= 10.52.1)
   - RecaptchaInterop (100.0.0)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
@@ -210,6 +215,7 @@ DEPENDENCIES:
   - OneSignal/OneSignal (< 6.0, >= 5.0.0)
   - OneSignal/OneSignalInAppMessages (< 6.0, >= 5.0.0)
   - ReachabilitySwift
+  - RealmSwift
   - RxSwift (= 6.5.0)
   - RxSwiftExt (= 6.2.1)
 
@@ -242,6 +248,8 @@ SPEC REPOS:
     - OneSignal
     - PromisesObjC
     - ReachabilitySwift
+    - Realm
+    - RealmSwift
     - RecaptchaInterop
     - RxCocoa
     - RxRelay
@@ -276,12 +284,14 @@ SPEC CHECKSUMS:
   OneSignal: b68709ab497caf2557413d805a47ba39ad47cf49
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  Realm: 5b0f6fe519911831fff94e6e6fba8fd404fa20ed
+  RealmSwift: 6963a458f4f5f3f0df5cca69dece5c802c7b7cad
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxSwiftExt: 43aaacb6a4d3c69c55e9d1cf4f79920043d13583
 
-PODFILE CHECKSUM: 7b2c3f182b85605d6b1130a70723084c75c6cc8c
+PODFILE CHECKSUM: c39787efb108dc56ea5863e1ca9b676f24ae12f6
 
 COCOAPODS: 1.15.2

@@ -30,7 +30,11 @@
 		78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A242C34762200F3BA57 /* SplashController.xib */; };
 		78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A282C3476BF00F3BA57 /* Animation.json */; };
 		81E5DBD6D3694588398A0C74 /* Pods_MyCommunityChat_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CD97001E15DECC4C6281AF /* Pods_MyCommunityChat_iOSTests.framework */; };
+		8412C16D3BC6686CC2523819 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79B62E427CA24033966E1B4 /* Pods_OneSignalNotificationServiceExtension.framework */; };
 		D542E05F03491B20CF7B8F45 /* Pods_MyCommunityChat_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C416CB71A449A805324131 /* Pods_MyCommunityChat_iOSUITests.framework */; };
+		F05B2A012C3D2B630037B3C3 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F07CBEC72C379DA100A2DD8B /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F06C3D142C404F50004F5379 /* DateTimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C3D122C404F50004F5379 /* DateTimePickerViewController.swift */; };
+		F06C3D152C404F50004F5379 /* DateTimePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06C3D132C404F50004F5379 /* DateTimePickerViewController.xib */; };
 		F07CBE762C369D6800A2DD8B /* ChatRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE5B2C369D6700A2DD8B /* ChatRoomModel.swift */; };
 		F07CBE772C369D6800A2DD8B /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE5D2C369D6700A2DD8B /* ChatRoomViewController.swift */; };
 		F07CBE782C369D6800A2DD8B /* ChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */; };
@@ -57,6 +61,9 @@
 		F07CBEAC2C37274400A2DD8B /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBEAB2C37274300A2DD8B /* ProfileImageView.swift */; };
 		F07CBECA2C379DA100A2DD8B /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBEC92C379DA100A2DD8B /* NotificationService.swift */; };
 		F07CBED82C37A92E00A2DD8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F07CBED72C37A92E00A2DD8B /* GoogleService-Info.plist */; };
+		F086AA1F2C40C3C100442AF4 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F086AA1E2C40C3C100442AF4 /* DataBaseManager.swift */; };
+		F086AA222C40C43F00442AF4 /* NotiDbObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F086AA212C40C43E00442AF4 /* NotiDbObject.swift */; };
+		F086AA242C40C45200442AF4 /* NotiDBRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F086AA232C40C45200442AF4 /* NotiDBRealmObject.swift */; };
 		F0F9D5522C37E9160061382F /* OneSignalFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBED42C379E7500A2DD8B /* OneSignalFramework.xcframework */; };
 		F0F9D5552C37E93A0061382F /* OneSignalFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBED42C379E7500A2DD8B /* OneSignalFramework.xcframework */; };
 		F0F9D5572C37F67C0061382F /* Auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78671F422C33E94F006E7DD6 /* Auth.framework */; };
@@ -69,6 +76,13 @@
 		F0F9D55F2C37F6D10061382F /* CommonExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA32C36EBC000A2DD8B /* CommonExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0F9D5602C37F6D60061382F /* Pods_MyCommunityChat_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */; };
 		F0F9D5612C37F6D60061382F /* Pods_MyCommunityChat_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F0FCCA002C3FCE7A002BC1B0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FCC9FF2C3FCE7A002BC1B0 /* BaseView.swift */; };
+		F0FCCA022C3FCE90002BC1B0 /* MorePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FCCA012C3FCE90002BC1B0 /* MorePopupView.swift */; };
+		F0FCCA042C3FCE9F002BC1B0 /* MorePopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FCCA032C3FCE9F002BC1B0 /* MorePopupView.xib */; };
+		F0FCCA072C3FD3BC002BC1B0 /* MorePopupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FCCA062C3FD3BC002BC1B0 /* MorePopupTableViewCell.xib */; };
+		F0FCCA082C3FD3BC002BC1B0 /* MorePopupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FCCA052C3FD3BC002BC1B0 /* MorePopupTableViewCell.swift */; };
+		F0FCCA0B2C402274002BC1B0 /* StickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FCCA0A2C402274002BC1B0 /* StickerCollectionViewCell.xib */; };
+		F0FCCA0C2C402274002BC1B0 /* StickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FCCA092C402274002BC1B0 /* StickerCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,9 +100,27 @@
 			remoteGlobalIDString = 78671E982C33DEB7006E7DD6;
 			remoteInfo = "MyCommunityChat-iOS";
 		};
+		F05B2A022C3D2B630037B3C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78671E912C33DEB7006E7DD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F07CBEC62C379DA100A2DD8B;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		F05B2A042C3D2B630037B3C3 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F05B2A012C3D2B630037B3C3 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F0F9D5592C37F67C0061382F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +179,8 @@
 		CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14428D31967DC41117D2B27 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		E79B62E427CA24033966E1B4 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F06C3D122C404F50004F5379 /* DateTimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimePickerViewController.swift; sourceTree = "<group>"; };
+		F06C3D132C404F50004F5379 /* DateTimePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTimePickerViewController.xib; sourceTree = "<group>"; };
 		F07CBE5B2C369D6700A2DD8B /* ChatRoomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomModel.swift; sourceTree = "<group>"; };
 		F07CBE5D2C369D6700A2DD8B /* ChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatRoomViewController.xib; sourceTree = "<group>"; };
@@ -181,6 +215,16 @@
 		F07CBED32C379DE200A2DD8B /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		F07CBED42C379E7500A2DD8B /* OneSignalFramework.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:J3J28YJX9L:OneSignal, Inc."; lastKnownFileType = wrapper.xcframework; name = OneSignalFramework.xcframework; path = Pods/OneSignal/iOS_SDK/OneSignalSDK/OneSignal_XCFramework/OneSignalFramework.xcframework; sourceTree = "<group>"; };
 		F07CBED72C37A92E00A2DD8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F086AA1E2C40C3C100442AF4 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		F086AA212C40C43E00442AF4 /* NotiDbObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiDbObject.swift; sourceTree = "<group>"; };
+		F086AA232C40C45200442AF4 /* NotiDBRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiDBRealmObject.swift; sourceTree = "<group>"; };
+		F0FCC9FF2C3FCE7A002BC1B0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		F0FCCA012C3FCE90002BC1B0 /* MorePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorePopupView.swift; sourceTree = "<group>"; };
+		F0FCCA032C3FCE9F002BC1B0 /* MorePopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorePopupView.xib; sourceTree = "<group>"; };
+		F0FCCA052C3FD3BC002BC1B0 /* MorePopupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorePopupTableViewCell.swift; sourceTree = "<group>"; };
+		F0FCCA062C3FD3BC002BC1B0 /* MorePopupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorePopupTableViewCell.xib; sourceTree = "<group>"; };
+		F0FCCA092C402274002BC1B0 /* StickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		F0FCCA0A2C402274002BC1B0 /* StickerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0F9D5522C37E9160061382F /* OneSignalFramework.xcframework in Frameworks */,
+				8412C16D3BC6686CC2523819 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				F07CBEB42C379B8B00A2DD8B /* MyCommunityChat-iOS.entitlements */,
+				F086AA202C40C42A00442AF4 /* Objects */,
 				F07CBE892C369D8100A2DD8B /* Base */,
 				F07CBE8D2C369D8100A2DD8B /* Constants */,
 				F07CBE8B2C369D8100A2DD8B /* Managers */,
@@ -408,6 +454,8 @@
 				78AC9E892C3FB917001A7B4C /* ReactionPopupController.swift */,
 				F07CBE5D2C369D6700A2DD8B /* ChatRoomViewController.swift */,
 				F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */,
+				F06C3D122C404F50004F5379 /* DateTimePickerViewController.swift */,
+				F06C3D132C404F50004F5379 /* DateTimePickerViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -432,6 +480,12 @@
 				F07CBE682C369D6700A2DD8B /* SendMessageTableViewCell.swift */,
 				F07CBE692C369D6700A2DD8B /* SendMessageTableViewCell.xib */,
 				78AC9E872C3FB8EF001A7B4C /* ReactionCell.swift */,
+				F0FCCA012C3FCE90002BC1B0 /* MorePopupView.swift */,
+				F0FCCA032C3FCE9F002BC1B0 /* MorePopupView.xib */,
+				F0FCCA052C3FD3BC002BC1B0 /* MorePopupTableViewCell.swift */,
+				F0FCCA062C3FD3BC002BC1B0 /* MorePopupTableViewCell.xib */,
+				F0FCCA092C402274002BC1B0 /* StickerCollectionViewCell.swift */,
+				F0FCCA0A2C402274002BC1B0 /* StickerCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -497,6 +551,7 @@
 			children = (
 				F07CBE872C369D8100A2DD8B /* BaseViewController.swift */,
 				F07CBE882C369D8100A2DD8B /* BaseViewModel.swift */,
+				F0FCC9FF2C3FCE7A002BC1B0 /* BaseView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -506,6 +561,7 @@
 			children = (
 				F07CBE8A2C369D8100A2DD8B /* ChatManager.swift */,
 				F07CBE9E2C36E49700A2DD8B /* UserInfoManager.swift */,
+				F086AA1E2C40C3C100442AF4 /* DataBaseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -528,6 +584,15 @@
 			path = OneSignalNotificationServiceExtension;
 			sourceTree = "<group>";
 		};
+		F086AA202C40C42A00442AF4 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				F086AA212C40C43E00442AF4 /* NotiDbObject.swift */,
+				F086AA232C40C45200442AF4 /* NotiDBRealmObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -541,10 +606,12 @@
 				78671E972C33DEB7006E7DD6 /* Resources */,
 				4DB9DB168ED2E7769A6F66AE /* [CP] Embed Pods Frameworks */,
 				F0F9D5592C37F67C0061382F /* Embed Frameworks */,
+				F05B2A042C3D2B630037B3C3 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F05B2A032C3D2B630037B3C3 /* PBXTargetDependency */,
 			);
 			name = "MyCommunityChat-iOS";
 			productName = "MyCommunityChat-iOS";
@@ -663,7 +730,9 @@
 				F07CBE7F2C369D6800A2DD8B /* SendImgeTableViewCell.xib in Resources */,
 				F07CBED82C37A92E00A2DD8B /* GoogleService-Info.plist in Resources */,
 				F07CBE7B2C369D6800A2DD8B /* ReceiveImageTableViewCell.xib in Resources */,
+				F06C3D152C404F50004F5379 /* DateTimePickerViewController.xib in Resources */,
 				78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */,
+				F0FCCA042C3FCE9F002BC1B0 /* MorePopupView.xib in Resources */,
 				7867200E2C345F2B006E7DD6 /* RobotoSlab-Black.ttf in Resources */,
 				78671FFC2C345D92006E7DD6 /* Colors.xcassets in Resources */,
 				7867200F2C345F2B006E7DD6 /* RobotoSlab-Medium.ttf in Resources */,
@@ -674,11 +743,13 @@
 				786720082C345F2B006E7DD6 /* RobotoSlab-ExtraLight.ttf in Resources */,
 				F07CBE952C369DC500A2DD8B /* Main.storyboard in Resources */,
 				7867200D2C345F2B006E7DD6 /* RobotoSlab-Light.ttf in Resources */,
+				F0FCCA0B2C402274002BC1B0 /* StickerCollectionViewCell.xib in Resources */,
 				F07CBE782C369D6800A2DD8B /* ChatRoomViewController.xib in Resources */,
 				7867200B2C345F2B006E7DD6 /* RobotoSlab-Bold.ttf in Resources */,
 				F07CBE812C369D6800A2DD8B /* SendMessageTableViewCell.xib in Resources */,
 				7867200C2C345F2B006E7DD6 /* RobotoSlab-Regular.ttf in Resources */,
 				7867200A2C345F2B006E7DD6 /* RobotoSlab-ExtraBold.ttf in Resources */,
+				F0FCCA072C3FD3BC002BC1B0 /* MorePopupTableViewCell.xib in Resources */,
 				78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */,
 				786720072C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf in Resources */,
 			);
@@ -826,12 +897,19 @@
 				F07CBE852C369D6800A2DD8B /* UserTableViewCell.swift in Sources */,
 				F07CBE822C369D6800A2DD8B /* HomeModel.swift in Sources */,
 				F07CBE7E2C369D6800A2DD8B /* SendImgeTableViewCell.swift in Sources */,
+				F0FCCA0C2C402274002BC1B0 /* StickerCollectionViewCell.swift in Sources */,
+				F0FCCA022C3FCE90002BC1B0 /* MorePopupView.swift in Sources */,
 				F07CBE8F2C369D8100A2DD8B /* BaseViewModel.swift in Sources */,
+				F06C3D142C404F50004F5379 /* DateTimePickerViewController.swift in Sources */,
 				F07CBE8E2C369D8100A2DD8B /* BaseViewController.swift in Sources */,
 				F07CBE792C369D6800A2DD8B /* ChatRoomViewModel.swift in Sources */,
+				F086AA1F2C40C3C100442AF4 /* DataBaseManager.swift in Sources */,
 				78BB8A252C34762200F3BA57 /* SplashController.swift in Sources */,
+				F086AA242C40C45200442AF4 /* NotiDBRealmObject.swift in Sources */,
+				F086AA222C40C43F00442AF4 /* NotiDbObject.swift in Sources */,
 				F07CBE772C369D6800A2DD8B /* ChatRoomViewController.swift in Sources */,
 				F07CBE7C2C369D6800A2DD8B /* ReceiveMessageTableViewCell.swift in Sources */,
+				F0FCCA082C3FD3BC002BC1B0 /* MorePopupTableViewCell.swift in Sources */,
 				F07CBEAC2C37274400A2DD8B /* ProfileImageView.swift in Sources */,
 				F07CBE842C369D6800A2DD8B /* HomeViewModel.swift in Sources */,
 				F07CBE9F2C36E49700A2DD8B /* UserInfoManager.swift in Sources */,
@@ -840,6 +918,7 @@
 				78AC9E8A2C3FB917001A7B4C /* ReactionPopupController.swift in Sources */,
 				F07CBE802C369D6800A2DD8B /* SendMessageTableViewCell.swift in Sources */,
 				78AC9E882C3FB8EF001A7B4C /* ReactionCell.swift in Sources */,
+				F0FCCA002C3FCE7A002BC1B0 /* BaseView.swift in Sources */,
 				F07CBE912C369D8100A2DD8B /* StringCosntants.swift in Sources */,
 				F07CBE832C369D6800A2DD8B /* HomeViewController.swift in Sources */,
 			);
@@ -882,6 +961,11 @@
 			isa = PBXTargetDependency;
 			target = 78671E982C33DEB7006E7DD6 /* MyCommunityChat-iOS */;
 			targetProxy = 78671EBA2C33DEB8006E7DD6 /* PBXContainerItemProxy */;
+		};
+		F05B2A032C3D2B630037B3C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F07CBEC62C379DA100A2DD8B /* OneSignalNotificationServiceExtension */;
+			targetProxy = F05B2A022C3D2B630037B3C3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

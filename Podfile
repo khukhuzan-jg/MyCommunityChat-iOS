@@ -50,6 +50,10 @@ target 'Domain' do
   firebase_pods
 end
 
+def db_pod
+  pod 'RealmSwift'
+end
+
 target 'MyCommunityChat-iOS' do
    project 'MyCommunityChat-iOS'
    rx_pods
@@ -58,6 +62,7 @@ target 'MyCommunityChat-iOS' do
    iqkeyboardmanager_pod
    ui_pods
    one_signal_pods
+   db_pod
 end
 
 target 'OneSignalNotificationServiceExtension' do

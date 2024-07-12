@@ -25,11 +25,18 @@ enum UserDB : String {
     }
 }
 
-//enum TestIds : String {
-//    case senderId = "User-001"
-//    case receiverId = "User-002"
-//    
-//    func getValue() -> String {
-//        return self.rawValue
-//    }
-//}
+enum ChatRoomMoreSetting : String {
+    case notiUnMute = "Unmute"
+    case notiMuteOneDay = "Mute for 1 day"
+    case notiMuteOneWeek = "Mute for 1 week"
+    case notiMuteOneMonth = "Mute for 1 month"
+    case notiMutePermanently = "Mute permanently"
+    case notiMuteCustom = "Mute custom"
+    case leaveGroup = "Leave group"
+    
+    
+    func getTitle() -> String {
+        return self.rawValue
+    }
+    
+}

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DateTimePickerViewController" customModule="MyCommunityChat_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="btnSave" destination="zVz-VM-5vS" id="Ntd-gD-Hb1"/>
+                <outlet property="endDatePicker" destination="le2-Kd-DZG" id="7fa-dk-lhG"/>
+                <outlet property="lblEndDate" destination="BQ6-ot-ova" id="uYA-Yv-poR"/>
+                <outlet property="lblStartDate" destination="1vM-vc-ZQy" id="63i-Wk-Byp"/>
+                <outlet property="lblTitle" destination="qij-gS-g0U" id="tSo-li-Fmr"/>
+                <outlet property="startDatePicker" destination="G8B-fL-Dkb" id="WQ6-n6-fv6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qij-gS-g0U">
+                    <rect key="frame" x="20" y="79" width="353" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="egp-Kq-veZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V3k-1U-IkX">
+                    <rect key="frame" x="20" y="149" width="353" height="100.33333333333331"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vM-vc-ZQy">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="G8B-fL-Dkb">
+                            <rect key="frame" x="0.0" y="20" width="353" height="80"/>
+                        </datePicker>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Grc-He-Ssc">
+                    <rect key="frame" x="20" y="269.33333333333331" width="353" height="70.333333333333314"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQ6-ot-ova">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="le2-Kd-DZG">
+                            <rect key="frame" x="0.0" y="21" width="353" height="50"/>
+                        </datePicker>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVz-VM-5vS">
+                    <rect key="frame" x="20" y="369.66666666666669" width="353" height="50"/>
+                    <color key="backgroundColor" name="primary"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="64D-iM-xyT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Save"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" name="secondary"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Grc-He-Ssc" firstAttribute="top" secondItem="V3k-1U-IkX" secondAttribute="bottom" constant="20" id="7uT-4E-5sh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zVz-VM-5vS" secondAttribute="trailing" constant="20" id="91k-pv-3f3"/>
+                <constraint firstItem="qij-gS-g0U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Nt2-pO-3SC"/>
+                <constraint firstItem="V3k-1U-IkX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="OEc-fD-9Bc"/>
+                <constraint firstItem="zVz-VM-5vS" firstAttribute="top" secondItem="Grc-He-Ssc" secondAttribute="bottom" constant="30" id="UbR-58-ngh"/>
+                <constraint firstItem="Grc-He-Ssc" firstAttribute="trailing" secondItem="V3k-1U-IkX" secondAttribute="trailing" id="WCK-eF-Hwd"/>
+                <constraint firstItem="Grc-He-Ssc" firstAttribute="leading" secondItem="V3k-1U-IkX" secondAttribute="leading" id="fXI-vN-eQc"/>
+                <constraint firstItem="zVz-VM-5vS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="geA-7j-K2z"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V3k-1U-IkX" secondAttribute="trailing" constant="20" id="k2w-V6-cCV"/>
+                <constraint firstItem="qij-gS-g0U" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="r1D-uA-Eqy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qij-gS-g0U" secondAttribute="trailing" constant="20" id="rSG-6z-PSm"/>
+                <constraint firstItem="V3k-1U-IkX" firstAttribute="top" secondItem="qij-gS-g0U" secondAttribute="bottom" constant="30" id="vnz-P9-YIG"/>
+            </constraints>
+            <point key="canvasLocation" x="-1" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="primary">
+            <color red="0.086274509803921567" green="0.29411764705882354" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="secondary">
+            <color red="0.99599999189376831" green="0.76099997758865356" blue="0.40400001406669617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

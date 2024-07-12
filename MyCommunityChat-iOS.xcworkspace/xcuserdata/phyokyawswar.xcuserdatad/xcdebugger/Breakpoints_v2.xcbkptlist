@@ -7,32 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "98E1B8A9-5EEC-43B2-91E3-09562D1A6CF7"
+            uuid = "491263E1-792C-4A36-8C7B-0FDF7692BB46"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Domain/Domain/FirebaseAuth/FirebaseAuthManager.swift"
+            filePath = "MyCommunityChat-iOS/Managers/DataBaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "startAuth(phoneNumber:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "saveNotiSettingById(_:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D7B129FB-D799-4850-90A3-F69F6D51650E"
+            uuid = "06366CE5-08EF-4BF7-BB02-DEB1C8CA0C93"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Domain/Domain/FirebaseAuth/FirebaseAuthManager.swift"
+            filePath = "MyCommunityChat-iOS/Managers/DataBaseManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "startAuth(phoneNumber:)"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "saveNotiSettingById(_:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

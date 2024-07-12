@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 
+import CommonUI
 class ChatRoomViewController: BaseViewController {
 
     @IBOutlet weak var btnSend: UIButton!
@@ -19,20 +20,29 @@ class ChatRoomViewController: BaseViewController {
     @IBOutlet weak var imageBGView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var btnClose: UIButton!
-    
+    @IBOutlet weak var stickerBGView: UIView!
+    @IBOutlet weak var stickerCollectionView: UICollectionView!
+    @IBOutlet weak var btnSticker: UIButton!
+   
     let chatRoomViewModel = ChatRoomViewModel.shared
     
     var messageList = [Message]()
     var selectedUser : UserData?
     var currentUser : UserData?
     var selectedImageStr = String()
-    
+    var isShowMorePopup = false
+    let morePopupView = MorePopupView()
+    let stickerList : [UIImage] = [.sticker1 , .sticker2 , .sticker3 , .sticker4 , .sticker5 , .sticker6]
+    var isShowStickerView = false
+    var selectedSticker = UIImage()
+    var selectedStickerString = String()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setupTableView()
         setNavigationBar()
+        setupCollectionView()
         bottomViewHeight.constant = 120.0
         self.btnClose.isHidden = true
     }
@@ -87,20 +97,24 @@ class ChatRoomViewController: BaseViewController {
         
         btnSend.rx.tap.bind { _ in
             if let text = self.txtMessage.text {
-                let type : MessageType = self.selectedImageStr.isEmpty ? .text : .image
+                var type : MessageType = .image
+                if !self.selectedImageStr.isEmpty {
+                    type = .image
+                }
+                else if !self.selectedStickerString.isEmpty {
+                    type = .sticker
+                }
+                else {
+                    type = .text
+                }
                 
-                let message = Message(messageText: text, messageImage: self.selectedImageStr, messageType: type, createdAt: "", lastMessage: "", senderId: self.currentUser?.id ?? "")
+                let message = Message(messageText: text, messageImage: self.selectedImageStr, messageType: type, createdAt: "", lastMessage: "", senderId: self.currentUser?.id ?? "" , sticker: self.selectedStickerString)
                 self.chatRoomViewModel.sendMessage(message: message)
                 self.txtMessage.text = ""
+                self.selectedStickerString = ""
+                self.selectedSticker = UIImage()
                 self.bottomViewHeight.constant = 120.0
                 self.btnClose.isHidden = true
-//                self.messageList.append(message)
-//                self.tblMessage.reloadData()
-//                if !self.messageList.isEmpty {
-//                    self.tblMessage.beginUpdates()
-//                    self.tblMessage.scrollToRow(at: IndexPath(row: self.messageList.count - 1, section: 0), at: .bottom, animated: true)
-//                    self.tblMessage.endUpdates()
-//                }
             }
         }
         .disposed(by: disposeBag)
@@ -122,16 +136,6 @@ class ChatRoomViewController: BaseViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
                 self.scrollToBottom()
             })
-//            if !self.messageList.isEmpty ,
-//               self.messageList.count > 0 {
-//                
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
-//                    self.tblMessage.beginUpdates()
-//                    self.tblMessage.scrollToRow(at: IndexPath(row: self.messageList.count - 1, section: 0), at: .bottom, animated: true)
-//                    self.tblMessage.endUpdates()
-//                })
-//                
-//            }
         }
         .disposed(by: disposeBag)
         
@@ -139,6 +143,42 @@ class ChatRoomViewController: BaseViewController {
             self.setTextMode()
         }
         .disposed(by: disposeBag)
+        
+        chatRoomViewModel.selectedMoreSetting.bind { type in
+           
+            switch type {
+            case .notiMuteOneDay , .notiMuteOneWeek , .notiMuteOneMonth , .notiMutePermanently:
+                self.chatRoomViewModel.savedNotiSetting(settingType: type)
+            case .notiMuteCustom:
+                let vc = DateTimePickerViewController()
+                vc.viewModel = self.chatRoomViewModel
+                self.navigationController?.present(vc, animated: true)
+            default :
+                break
+                
+            }
+            self.morePopupView.reloadView()
+            self.morePopupView.dismiss()
+        }
+        .disposed(by: disposeBag)
+        
+        btnSticker.rx.tap.bind { _ in
+            self.isShowStickerView.toggle()
+            self.bottomViewHeight.constant = self.isShowStickerView ? 250 : 120
+        }
+        .disposed(by: disposeBag)
+        
+        chatRoomViewModel.selectedSticker.bind {
+            self.selectedStickerString = $0.jpegData(compressionQuality: 0.5)?.base64EncodedString() ?? ""
+            self.selectedSticker = $0
+            self.stickerCollectionView.reloadData()
+        }
+        .disposed(by: disposeBag)
+    }
+    
+    override func bindViewModel() {
+        super.bindViewModel()
+        self.morePopupView.bindViewModel(viewModel: chatRoomViewModel)
     }
     
     func scrollToBottom()  {
@@ -168,6 +208,14 @@ class ChatRoomViewController: BaseViewController {
         tblMessage.showsVerticalScrollIndicator = false
         tblMessage.showsHorizontalScrollIndicator = false
         tblMessage.reloadData()
+    }
+    
+    private func setupCollectionView() {
+        stickerCollectionView.register(cell: StickerCollectionViewCell.self)
+        stickerCollectionView.backgroundColor = .clear
+        stickerCollectionView.delegate = self
+        stickerCollectionView.dataSource = self
+        stickerCollectionView.reloadData()
     }
     
     
@@ -204,6 +252,14 @@ class ChatRoomViewController: BaseViewController {
         // Set it as the left or right bar button item based on your needs
         navigationItem.leftBarButtonItems = [back , profileBarButtonItem]
         
+        
+        let moreBtn = UIBarButtonItem(image: .icMore.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(self.moreAction))
+        navigationItem.rightBarButtonItem = moreBtn
+    }
+    
+    @objc func moreAction() {
+        isShowMorePopup.toggle()
+        showMoreView(isShow: isShowMorePopup)
     }
     
     @objc func backAction() {
@@ -216,6 +272,16 @@ class ChatRoomViewController: BaseViewController {
         imagePickerController.delegate = self
         imagePickerController.allowsEditing = true
         present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    
+    private func showMoreView(isShow : Bool) {
+        if isShow {
+            morePopupView.present()
+        }
+        else {
+            morePopupView.dismiss()
+        }
     }
 
 }
@@ -334,3 +400,40 @@ extension ChatRoomViewController : UITextViewDelegate {
 
 }
 
+
+// MARK: - UICollectionView Delegate & Datasource
+extension ChatRoomViewController : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width/3 - 5
+        return CGSize(width: width, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return stickerList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.deque(StickerCollectionViewCell.self, index: indexPath) as? StickerCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.setupCell(stickerImage: stickerList[indexPath.item] , selectedSticker : chatRoomViewModel.selectedSticker.value)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        chatRoomViewModel.selectedSticker.accept(stickerList[indexPath.item])
+    }
+    
+    
+}
