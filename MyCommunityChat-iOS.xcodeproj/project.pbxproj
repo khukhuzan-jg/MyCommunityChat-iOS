@@ -29,9 +29,10 @@
 		78BB8A252C34762200F3BA57 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A232C34762200F3BA57 /* SplashController.swift */; };
 		78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A242C34762200F3BA57 /* SplashController.xib */; };
 		78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A282C3476BF00F3BA57 /* Animation.json */; };
-		81E5DBD6D3694588398A0C74 /* Pods_MyCommunityChat_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CD97001E15DECC4C6281AF /* Pods_MyCommunityChat_iOSTests.framework */; };
-		C34635D88BB6FA477A39FE9C /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B407065A710ACFCD675140 /* Pods_OneSignalNotificationServiceExtension.framework */; };
-		D542E05F03491B20CF7B8F45 /* Pods_MyCommunityChat_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C416CB71A449A805324131 /* Pods_MyCommunityChat_iOSUITests.framework */; };
+		81E8055BB82443DB50160639 /* Pods_MyCommunityChat_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6057D1E2203D8783C2A4528 /* Pods_MyCommunityChat_iOSTests.framework */; };
+		91BC70DFD0C79A237973CC6D /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2A262AACFD1DED021A5D0C /* Pods_OneSignalNotificationServiceExtension.framework */; };
+		A8ED4B085B1121C71C39C6C2 /* Pods_MyCommunityChat_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663FE77F4D97B28E5205CBF1 /* Pods_MyCommunityChat_iOSUITests.framework */; };
+		B571B169F2121B7FCEE7080B /* Pods_MyCommunityChat_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5A0EE4C66FD212F9B9EDA6 /* Pods_MyCommunityChat_iOS.framework */; };
 		F05107CC2C4104CD003A7823 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05107CB2C4104CD003A7823 /* NotificationService.swift */; };
 		F05107D02C4104CD003A7823 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F05107C92C4104CD003A7823 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F06C3D142C404F50004F5379 /* DateTimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C3D122C404F50004F5379 /* DateTimePickerViewController.swift */; };
@@ -72,8 +73,6 @@
 		F0F9D55D2C37F6CD0061382F /* CommonUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA62C36EBCD00A2DD8B /* CommonUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0F9D55E2C37F6D10061382F /* CommonExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA32C36EBC000A2DD8B /* CommonExtension.framework */; };
 		F0F9D55F2C37F6D10061382F /* CommonExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA32C36EBC000A2DD8B /* CommonExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F0F9D5602C37F6D60061382F /* Pods_MyCommunityChat_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */; };
-		F0F9D5612C37F6D60061382F /* Pods_MyCommunityChat_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0FCCA002C3FCE7A002BC1B0 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FCC9FF2C3FCE7A002BC1B0 /* BaseView.swift */; };
 		F0FCCA022C3FCE90002BC1B0 /* MorePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0FCCA012C3FCE90002BC1B0 /* MorePopupView.swift */; };
 		F0FCCA042C3FCE9F002BC1B0 /* MorePopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0FCCA032C3FCE9F002BC1B0 /* MorePopupView.xib */; };
@@ -125,7 +124,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F0F9D5612C37F6D60061382F /* Pods_MyCommunityChat_iOS.framework in Embed Frameworks */,
 				F0F9D55D2C37F6CD0061382F /* CommonUI.framework in Embed Frameworks */,
 				F0F9D55B2C37F6A80061382F /* Domain.framework in Embed Frameworks */,
 				F0F9D5582C37F67C0061382F /* Auth.framework in Embed Frameworks */,
@@ -137,13 +135,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		02CD97001E15DECC4C6281AF /* Pods_MyCommunityChat_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		14E8EFEB9A0C797F6AD6F0AF /* Pods-MyCommunityChat-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSUITests/Pods-MyCommunityChat-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
-		20E359DA71A46C20E9783211 /* Pods-MyCommunityChat-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOS.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		4639CB9C176EBE7DC1ACB169 /* Pods-MyCommunityChat-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		4C7334774AA988B2B7D73DF2 /* Pods-MyCommunityChat-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSTests/Pods-MyCommunityChat-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		62F83546646CCFB9D8048EE0 /* Pods-MyCommunityChat-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSUITests/Pods-MyCommunityChat-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		70C416CB71A449A805324131 /* Pods_MyCommunityChat_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		487F0ACE53C385CF723C9745 /* Pods-MyCommunityChat-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSUITests/Pods-MyCommunityChat-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		50B39DB6E89EB582DFA60FC9 /* Pods-MyCommunityChat-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSTests/Pods-MyCommunityChat-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		565E49CCF3606F9BA374ECD8 /* Pods-MyCommunityChat-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSUITests/Pods-MyCommunityChat-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5713A2433D32BAA98B5AB4EB /* Pods-MyCommunityChat-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5B08E00D65573BDF5653B2EE /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		663FE77F4D97B28E5205CBF1 /* Pods_MyCommunityChat_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78671E992C33DEB7006E7DD6 /* MyCommunityChat-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyCommunityChat-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78671E9C2C33DEB7006E7DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78671E9E2C33DEB7006E7DD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,10 +169,10 @@
 		78BB8A232C34762200F3BA57 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		78BB8A242C34762200F3BA57 /* SplashController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashController.xib; sourceTree = "<group>"; };
 		78BB8A282C3476BF00F3BA57 /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
-		AE267792531D4AF0E9F24B8D /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
-		BE505EF2DAA429E2DE4BD9D3 /* Pods-MyCommunityChat-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSTests/Pods-MyCommunityChat-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3C626F09B244C1BDE86CD07 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		999216BD89321ADCAC3DDB45 /* Pods-MyCommunityChat-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOS.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		AE5A0EE4C66FD212F9B9EDA6 /* Pods_MyCommunityChat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6057D1E2203D8783C2A4528 /* Pods_MyCommunityChat_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD2A262AACFD1DED021A5D0C /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05107C92C4104CD003A7823 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05107CB2C4104CD003A7823 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		F05107CD2C4104CD003A7823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -223,7 +220,8 @@
 		F0FCCA062C3FD3BC002BC1B0 /* MorePopupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorePopupTableViewCell.xib; sourceTree = "<group>"; };
 		F0FCCA092C402274002BC1B0 /* StickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0FCCA0A2C402274002BC1B0 /* StickerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerCollectionViewCell.xib; sourceTree = "<group>"; };
-		F5B407065A710ACFCD675140 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5CEC5611CDF72A497CF6402 /* Pods-MyCommunityChat-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSTests/Pods-MyCommunityChat-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		FB79559B5BE00E2F92C10C0C /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,11 +229,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0F9D5602C37F6D60061382F /* Pods_MyCommunityChat_iOS.framework in Frameworks */,
 				F0F9D55A2C37F6A80061382F /* Domain.framework in Frameworks */,
 				F0F9D55C2C37F6CD0061382F /* CommonUI.framework in Frameworks */,
 				F0F9D5572C37F67C0061382F /* Auth.framework in Frameworks */,
 				F0F9D55E2C37F6D10061382F /* CommonExtension.framework in Frameworks */,
+				B571B169F2121B7FCEE7080B /* Pods_MyCommunityChat_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81E5DBD6D3694588398A0C74 /* Pods_MyCommunityChat_iOSTests.framework in Frameworks */,
+				81E8055BB82443DB50160639 /* Pods_MyCommunityChat_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +249,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D542E05F03491B20CF7B8F45 /* Pods_MyCommunityChat_iOSUITests.framework in Frameworks */,
+				A8ED4B085B1121C71C39C6C2 /* Pods_MyCommunityChat_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +257,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C34635D88BB6FA477A39FE9C /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+				91BC70DFD0C79A237973CC6D /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,10 +413,10 @@
 				F07CBEA02C36EB5300A2DD8B /* Domain.framework */,
 				78671F422C33E94F006E7DD6 /* Auth.framework */,
 				78671F432C33E94F006E7DD6 /* Data.framework */,
-				CE9B57D6D260234C9B3FD2B7 /* Pods_MyCommunityChat_iOS.framework */,
-				02CD97001E15DECC4C6281AF /* Pods_MyCommunityChat_iOSTests.framework */,
-				70C416CB71A449A805324131 /* Pods_MyCommunityChat_iOSUITests.framework */,
-				F5B407065A710ACFCD675140 /* Pods_OneSignalNotificationServiceExtension.framework */,
+				AE5A0EE4C66FD212F9B9EDA6 /* Pods_MyCommunityChat_iOS.framework */,
+				B6057D1E2203D8783C2A4528 /* Pods_MyCommunityChat_iOSTests.framework */,
+				663FE77F4D97B28E5205CBF1 /* Pods_MyCommunityChat_iOSUITests.framework */,
+				CD2A262AACFD1DED021A5D0C /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -426,14 +424,14 @@
 		DCBE0143DFEFA13BE18E1A17 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4639CB9C176EBE7DC1ACB169 /* Pods-MyCommunityChat-iOS.debug.xcconfig */,
-				20E359DA71A46C20E9783211 /* Pods-MyCommunityChat-iOS.release.xcconfig */,
-				4C7334774AA988B2B7D73DF2 /* Pods-MyCommunityChat-iOSTests.debug.xcconfig */,
-				BE505EF2DAA429E2DE4BD9D3 /* Pods-MyCommunityChat-iOSTests.release.xcconfig */,
-				62F83546646CCFB9D8048EE0 /* Pods-MyCommunityChat-iOSUITests.debug.xcconfig */,
-				14E8EFEB9A0C797F6AD6F0AF /* Pods-MyCommunityChat-iOSUITests.release.xcconfig */,
-				D3C626F09B244C1BDE86CD07 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
-				AE267792531D4AF0E9F24B8D /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				5713A2433D32BAA98B5AB4EB /* Pods-MyCommunityChat-iOS.debug.xcconfig */,
+				999216BD89321ADCAC3DDB45 /* Pods-MyCommunityChat-iOS.release.xcconfig */,
+				50B39DB6E89EB582DFA60FC9 /* Pods-MyCommunityChat-iOSTests.debug.xcconfig */,
+				F5CEC5611CDF72A497CF6402 /* Pods-MyCommunityChat-iOSTests.release.xcconfig */,
+				487F0ACE53C385CF723C9745 /* Pods-MyCommunityChat-iOSUITests.debug.xcconfig */,
+				565E49CCF3606F9BA374ECD8 /* Pods-MyCommunityChat-iOSUITests.release.xcconfig */,
+				5B08E00D65573BDF5653B2EE /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				FB79559B5BE00E2F92C10C0C /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -606,13 +604,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78671EC32C33DEB8006E7DD6 /* Build configuration list for PBXNativeTarget "MyCommunityChat-iOS" */;
 			buildPhases = (
-				73A05726FDE22165E4AEF5C2 /* [CP] Check Pods Manifest.lock */,
+				2A7495550F0B31D7AD538C4B /* [CP] Check Pods Manifest.lock */,
 				78671E952C33DEB7006E7DD6 /* Sources */,
 				78671E962C33DEB7006E7DD6 /* Frameworks */,
 				78671E972C33DEB7006E7DD6 /* Resources */,
-				4DB9DB168ED2E7769A6F66AE /* [CP] Embed Pods Frameworks */,
 				F0F9D5592C37F67C0061382F /* Embed Frameworks */,
 				F05B2A042C3D2B630037B3C3 /* Embed Foundation Extensions */,
+				6EDC91A1B308B0507AF0B165 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -628,7 +626,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78671EC62C33DEB8006E7DD6 /* Build configuration list for PBXNativeTarget "MyCommunityChat-iOSTests" */;
 			buildPhases = (
-				933815B39DE77B7C35256062 /* [CP] Check Pods Manifest.lock */,
+				B4A6BCF54BDF3D02F5AD23D2 /* [CP] Check Pods Manifest.lock */,
 				78671EAB2C33DEB8006E7DD6 /* Sources */,
 				78671EAC2C33DEB8006E7DD6 /* Frameworks */,
 				78671EAD2C33DEB8006E7DD6 /* Resources */,
@@ -647,7 +645,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78671EC92C33DEB8006E7DD6 /* Build configuration list for PBXNativeTarget "MyCommunityChat-iOSUITests" */;
 			buildPhases = (
-				40050A641803AB6284BA659E /* [CP] Check Pods Manifest.lock */,
+				29DA039282453075DC63C7B5 /* [CP] Check Pods Manifest.lock */,
 				78671EB52C33DEB8006E7DD6 /* Sources */,
 				78671EB62C33DEB8006E7DD6 /* Frameworks */,
 				78671EB72C33DEB8006E7DD6 /* Resources */,
@@ -666,7 +664,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F05107D12C4104CD003A7823 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
 			buildPhases = (
-				7F3DDDF756F00F98497ADE31 /* [CP] Check Pods Manifest.lock */,
+				6718C21CE73D7AA207205DB1 /* [CP] Check Pods Manifest.lock */,
 				F05107C52C4104CD003A7823 /* Sources */,
 				F05107C62C4104CD003A7823 /* Frameworks */,
 				F05107C72C4104CD003A7823 /* Resources */,
@@ -785,7 +783,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		40050A641803AB6284BA659E /* [CP] Check Pods Manifest.lock */ = {
+		29DA039282453075DC63C7B5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -807,24 +805,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4DB9DB168ED2E7769A6F66AE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		73A05726FDE22165E4AEF5C2 /* [CP] Check Pods Manifest.lock */ = {
+		2A7495550F0B31D7AD538C4B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -846,7 +827,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7F3DDDF756F00F98497ADE31 /* [CP] Check Pods Manifest.lock */ = {
+		6718C21CE73D7AA207205DB1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -868,7 +849,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		933815B39DE77B7C35256062 /* [CP] Check Pods Manifest.lock */ = {
+		6EDC91A1B308B0507AF0B165 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4A6BCF54BDF3D02F5AD23D2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1097,7 +1095,7 @@
 		};
 		78671EC42C33DEB8006E7DD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4639CB9C176EBE7DC1ACB169 /* Pods-MyCommunityChat-iOS.debug.xcconfig */;
+			baseConfigurationReference = 5713A2433D32BAA98B5AB4EB /* Pods-MyCommunityChat-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1105,7 +1103,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MyCommunityChat-iOS/MyCommunityChat-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = XWPM63M4C4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1138,7 +1136,7 @@
 		};
 		78671EC52C33DEB8006E7DD6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20E359DA71A46C20E9783211 /* Pods-MyCommunityChat-iOS.release.xcconfig */;
+			baseConfigurationReference = 999216BD89321ADCAC3DDB45 /* Pods-MyCommunityChat-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1146,7 +1144,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MyCommunityChat-iOS/MyCommunityChat-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = XWPM63M4C4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1179,7 +1177,7 @@
 		};
 		78671EC72C33DEB8006E7DD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C7334774AA988B2B7D73DF2 /* Pods-MyCommunityChat-iOSTests.debug.xcconfig */;
+			baseConfigurationReference = 50B39DB6E89EB582DFA60FC9 /* Pods-MyCommunityChat-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1199,7 +1197,7 @@
 		};
 		78671EC82C33DEB8006E7DD6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE505EF2DAA429E2DE4BD9D3 /* Pods-MyCommunityChat-iOSTests.release.xcconfig */;
+			baseConfigurationReference = F5CEC5611CDF72A497CF6402 /* Pods-MyCommunityChat-iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1219,7 +1217,7 @@
 		};
 		78671ECA2C33DEB8006E7DD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62F83546646CCFB9D8048EE0 /* Pods-MyCommunityChat-iOSUITests.debug.xcconfig */;
+			baseConfigurationReference = 487F0ACE53C385CF723C9745 /* Pods-MyCommunityChat-iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1237,7 +1235,7 @@
 		};
 		78671ECB2C33DEB8006E7DD6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14E8EFEB9A0C797F6AD6F0AF /* Pods-MyCommunityChat-iOSUITests.release.xcconfig */;
+			baseConfigurationReference = 565E49CCF3606F9BA374ECD8 /* Pods-MyCommunityChat-iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1255,7 +1253,7 @@
 		};
 		F05107D22C4104CD003A7823 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3C626F09B244C1BDE86CD07 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			baseConfigurationReference = 5B08E00D65573BDF5653B2EE /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -1284,7 +1282,7 @@
 		};
 		F05107D32C4104CD003A7823 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE267792531D4AF0E9F24B8D /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			baseConfigurationReference = FB79559B5BE00E2F92C10C0C /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";

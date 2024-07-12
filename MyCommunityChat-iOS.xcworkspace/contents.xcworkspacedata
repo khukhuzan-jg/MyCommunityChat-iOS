@@ -8,10 +8,10 @@
       location = "group:CommonExtension/CommonExtension.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Domain/Domain.xcodeproj">
+      location = "group:Auth/Auth.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Auth/Auth.xcodeproj">
+      location = "group:Domain/Domain.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:MyCommunityChat-iOS.xcodeproj">
