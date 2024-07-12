@@ -82,59 +82,13 @@
             endingLineNumber = "115"
             landmarkName = "updateMessage(senderId:receiverId:message:messageId:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E47B1D88-CED3-491A-9152-958E51722CB7 - 57852950c0129a29"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyCommunityChat_iOS.ChatManager.updateMessage(senderId: Swift.String, receiverId: Swift.String, message: MyCommunityChat_iOS.Message, messageId: Swift.String, completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "MyCommunityChat-iOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phyokyawswar/Desktop/MyComChat/MyCommunityChat-iOS/MyCommunityChat-iOS/Managers/ChatManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115">
-               </Location>
-               <Location
-                  uuid = "E47B1D88-CED3-491A-9152-958E51722CB7 - 1ce042efc3be47bb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in MyCommunityChat_iOS.ChatManager.updateMessage(senderId: Swift.String, receiverId: Swift.String, message: MyCommunityChat_iOS.Message, messageId: Swift.String, completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "MyCommunityChat-iOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phyokyawswar/Desktop/MyComChat/MyCommunityChat-iOS/MyCommunityChat-iOS/Managers/ChatManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "116"
-                  endingLineNumber = "116">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BCA468DD-8299-4CD6-9577-F5BCE6C9060E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoomViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "391"
-            endingLineNumber = "391"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6215FC70-E825-40EA-8C15-240607D752B0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoomViewController.swift"
@@ -150,7 +104,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "182E41D1-20C1-45DB-9EBE-2D06315DEFC2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoomViewController.swift"
@@ -255,6 +209,166 @@
             startingLineNumber = "23"
             endingLineNumber = "23"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED1A1851-6582-4128-9C27-F53A348394ED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoomViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "429"
+            endingLineNumber = "429"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "691CDECC-15B0-4B5B-B547-46E2960EFCD2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoomViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "400"
+            endingLineNumber = "400"
+            landmarkName = "ChatRoomViewController"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0AC116E-B805-4438-9595-31C57CFCB731"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoomViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "410"
+            endingLineNumber = "410"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DEB192A3-8C30-40BC-8156-CA4BC02453F3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoomViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04F773F7-4D3D-48A9-B15E-32917D1540D0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoomViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "432"
+            endingLineNumber = "432"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA09F949-CAD9-4110-B396-1D40C2A63687"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoomViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "465"
+            endingLineNumber = "465"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8894CC8C-4224-4916-88B4-928614BA267B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoomViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "bindObserver()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F7D7AAF-28AA-4691-B9C7-70CBA8DC7B18"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoomViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "192"
+            endingLineNumber = "192"
+            landmarkName = "bindObserver()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF67DDB4-DEB4-4CB7-A4B6-BA92AC81FE26"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoomViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "bindObserver()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1BC92FF5-AA24-4B50-B0ED-5E59C5AC221D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoomViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "bindObserver()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
