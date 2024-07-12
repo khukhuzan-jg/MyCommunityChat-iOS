@@ -82,6 +82,36 @@
             endingLineNumber = "115"
             landmarkName = "updateMessage(senderId:receiverId:message:messageId:completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E47B1D88-CED3-491A-9152-958E51722CB7 - 57852950c0129a29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyCommunityChat_iOS.ChatManager.updateMessage(senderId: Swift.String, receiverId: Swift.String, message: MyCommunityChat_iOS.Message, messageId: Swift.String, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "MyCommunityChat-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phyokyawswar/Desktop/MyComChat/MyCommunityChat-iOS/MyCommunityChat-iOS/Managers/ChatManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115">
+               </Location>
+               <Location
+                  uuid = "E47B1D88-CED3-491A-9152-958E51722CB7 - 1ce042efc3be47bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in MyCommunityChat_iOS.ChatManager.updateMessage(senderId: Swift.String, receiverId: Swift.String, message: MyCommunityChat_iOS.Message, messageId: Swift.String, completion: () -&gt; ()) -&gt; ()"
+                  moduleName = "MyCommunityChat-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phyokyawswar/Desktop/MyComChat/MyCommunityChat-iOS/MyCommunityChat-iOS/Managers/ChatManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -193,6 +223,38 @@
             startingLineNumber = "107"
             endingLineNumber = "107"
             landmarkName = "bindObserver()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A83D2973-192B-4034-A5AA-8A4DA94AFF4A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OneSignalNotificationServiceExtension/NotificationService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "didReceive(_:withContentHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C5B0DA8-0CFA-4897-9687-A60C82D34E9E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/AppDelegate/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
