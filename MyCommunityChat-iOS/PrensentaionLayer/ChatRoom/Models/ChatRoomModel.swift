@@ -17,6 +17,7 @@ public enum MessageType : String{
     }
 }
 public struct Message {
+    public var messageId : String?
     public var messageText : String?
     public var messageImage : String?
     public var messageType : MessageType?

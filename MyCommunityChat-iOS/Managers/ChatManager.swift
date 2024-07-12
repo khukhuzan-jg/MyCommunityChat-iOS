@@ -14,6 +14,8 @@ protocol ChatManagerProtocol {
     func getMessage(senderId : String , receiverId : String , completion : @escaping(_ messages : [Message]) -> Void)
     func sendMessage(senderId : String , receiverId : String,  message : Message , completion : (_ message : Message) -> Void)
     func changesMessage(senderId : String , receiverId : String, completion : @escaping() -> Void)
+    
+    func updateMessage(senderId : String , receiverId : String, message : Message , messageId : String,  completion : @escaping() -> Void)
 }
 
 class ChatManager {
@@ -47,12 +49,14 @@ extension ChatManager : ChatManagerProtocol {
                 for childSnapshot in snapshot.children.allObjects as! [DataSnapshot] {
                   
                 var message = Message()
+                    message.messageId = childSnapshot.key
                     message.messageText =  childSnapshot.childSnapshot(forPath:"text").value as? String
                     message.messageImage = childSnapshot.childSnapshot(forPath:"image").value as? String
                     message.messageType =  MessageType(rawValue: childSnapshot.childSnapshot(forPath:"messageType").value as? String ?? "" )
                     message.createdAt =  childSnapshot.childSnapshot(forPath:"createdAt").value as? String
                     message.lastMessage =  ""
                     message.senderId =  childSnapshot.childSnapshot(forPath:"senderId").value as? String
+                    message.reaction = childSnapshot.childSnapshot(forPath: "reaction").value as? String
                     message.sticker = childSnapshot.childSnapshot(forPath: "sticker").value as? String
                     
                     //
@@ -70,6 +74,7 @@ extension ChatManager : ChatManagerProtocol {
             "createdAt" : Date().toString(.type13, timeZone: "MM"),
             "updatedAt" : Date().toString(.type13, timeZone: "MM"),
             "senderId" : message.senderId ?? "",
+            "reaction" : message.reaction ?? "",
             "sticker" : message.sticker ?? ""
         ]
         self.ref.child(Conversation.conversations.getValue()).child(senderId + "__" + receiverId).child(Conversation.conversationMessage.getValue()).childByAutoId()
@@ -88,6 +93,32 @@ extension ChatManager : ChatManagerProtocol {
             .child(Conversation.conversationMessage.getValue())
             .observe(.childAdded) { _ in
                 completion()
+            }
+    }
+    
+    func updateMessage(senderId: String, receiverId: String, message : Message, messageId: String, completion: @escaping () -> Void) {
+        let sendMessage = [
+            "text" : message.messageText ?? "",
+            "image" : message.messageImage ?? "",
+            "messageType" : message.messageType?.getValue() ?? "",
+            "createdAt" : Date().toString(.type13, timeZone: "MM"),
+            "updatedAt" : Date().toString(.type13, timeZone: "MM"),
+            "senderId" : message.senderId ?? "",
+            "reaction" : message.reaction ?? "",
+            "sticker" : message.sticker ?? ""
+        ]
+        
+        self.ref.child(Conversation.conversations.getValue())
+            .child(senderId + "__" + receiverId)
+            .child(Conversation.conversationMessage.getValue())
+            .child(messageId)
+            .updateChildValues(sendMessage) { error, db in
+                if let err = error {
+                    print("Error :::::: \(err.localizedDescription)")
+                }
+                else {
+                    completion()
+                }
             }
     }
 }

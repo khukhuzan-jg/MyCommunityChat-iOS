@@ -54,6 +54,8 @@ class ReceiveMessageTableViewCell: UITableViewCell {
         
         self.imgProfile.image = profile
         
+        self.reactionLabel.text = message.reaction ?? ""
+       
         if let phone = msgStr.findPhoneNumber(),
            let range = msgStr.range(of: phone) {
             let attributedString = NSMutableAttributedString(string: msgStr)

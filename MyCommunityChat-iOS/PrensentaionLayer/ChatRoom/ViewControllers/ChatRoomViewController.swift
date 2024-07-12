@@ -23,7 +23,8 @@ class ChatRoomViewController: BaseViewController {
     @IBOutlet weak var stickerBGView: UIView!
     @IBOutlet weak var stickerCollectionView: UICollectionView!
     @IBOutlet weak var btnSticker: UIButton!
-   
+    @IBOutlet weak var btnDownArrow: UIButton!
+    
     let chatRoomViewModel = ChatRoomViewModel.shared
     
     var messageList = [Message]()
@@ -36,6 +37,8 @@ class ChatRoomViewController: BaseViewController {
     var isShowStickerView = false
     var selectedSticker = UIImage()
     var selectedStickerString = String()
+    
+    var reactionScrollIdx = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -93,7 +96,27 @@ class ChatRoomViewController: BaseViewController {
         }
         .disposed(by: disposeBag)
         
-        
+        btnDownArrow.rx.tap.bind { _ in
+             let reactionMsg = self.messageList.filter({!($0.reaction ?? "").isEmpty})
+            if !reactionMsg.isEmpty ,
+               self.reactionScrollIdx < reactionMsg.count{
+                let messageId = reactionMsg[self.reactionScrollIdx].messageId ?? ""
+                if let idx = self.messageList.firstIndex(where: {$0.messageId ?? "" == messageId}) ,
+                   idx < self.messageList.count {
+                    self.reactionScrollIdx += 1
+                    self.tblMessage.scrollToRow(at: IndexPath(row: idx, section: 0), at: .bottom, animated: true)
+                    if self.reactionScrollIdx >= reactionMsg.count {
+                        self.btnDownArrow.isHidden = true
+                    }
+                }
+                else {
+                    self.scrollToBottom()
+                    self.btnDownArrow.isHidden = true
+                }
+            }
+            
+        }
+        .disposed(by: disposeBag)
         
         btnSend.rx.tap.bind { _ in
             if let text = self.txtMessage.text {
@@ -129,13 +152,18 @@ class ChatRoomViewController: BaseViewController {
        
         chatRoomViewModel.messageListBehaviorRelay.bind { messages in
             self.messageList = messages
+            self.btnDownArrow.isHidden = self.messageList.count < 7
             self.lblInfo.isHidden = !self.messageList.isEmpty
             self.tblMessage.isHidden = self.messageList.isEmpty
             self.tblMessage.reloadData()
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                self.scrollToBottom()
-            })
+            let reaction = self.messageList.filter({!($0.reaction ?? "").isEmpty})
+            if !reaction.isEmpty {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                    self.scrollToBottom()
+                })
+            }
+            
         }
         .disposed(by: disposeBag)
         
@@ -283,6 +311,10 @@ class ChatRoomViewController: BaseViewController {
             morePopupView.dismiss()
         }
     }
+    
+    private func updateMessage(msg : Message) {
+        self.chatRoomViewModel.updateMessage(message: msg)
+    }
 
 }
 
@@ -292,7 +324,7 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let message = self.messageList[indexPath.row]
+        var message = self.messageList[indexPath.row]
         
         if (message.messageType ?? .text) == .text {
             if (message.senderId ?? "") == (self.currentUser?.id ?? "") {
@@ -301,7 +333,9 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                 senderCell.didTapReaction = { [weak self] in
                     self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
                         senderCell.reactionLabel.text = reaction
-                        self?.tblMessage.reloadData()
+                        message.reaction = reaction
+                        self?.updateMessage(msg: message)
+//                        self?.tblMessage.reloadData()
                     })
                 }
             
@@ -319,7 +353,9 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                 receiverCell.didTapReaction = { [weak self] in
                     self?.presentReactionPopup(cell: receiverCell, selectedReaction: { [weak self] reaction in
                         receiverCell.reactionLabel.text = reaction
-                        self?.tblMessage.reloadData()
+                        message.reaction = reaction
+                        self?.updateMessage(msg: message)
+//                        self?.tblMessage.reloadData()
                     })
                 }
                 return receiverCell
@@ -332,7 +368,9 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                 senderCell.didTapReaction = { [weak self] in
                     self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
                         senderCell.reactionLabel.text = reaction
-                        self?.tblMessage.reloadData()
+                        message.reaction = reaction
+                        self?.updateMessage(msg: message)
+//                        self?.tblMessage.reloadData()
                     })
                 }
                 return senderCell
@@ -349,7 +387,9 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                 receiverCell.didTapReaction = { [weak self] in
                     self?.presentReactionPopup(cell: receiverCell, selectedReaction: { [weak self] reaction in
                         receiverCell.reactionLabel.text = reaction
-                        self?.tblMessage.reloadData()
+                        message.reaction = reaction
+                        self?.updateMessage(msg: message)
+//                        self?.tblMessage.reloadData()
                     })
                 }
                 return receiverCell

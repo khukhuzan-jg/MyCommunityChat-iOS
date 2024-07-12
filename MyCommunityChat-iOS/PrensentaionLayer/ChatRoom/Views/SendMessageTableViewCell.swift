@@ -47,6 +47,8 @@ class SendMessageTableViewCell: UITableViewCell {
         self.lblMessage.font = .RoboR16
         self.lblMessage.textColor = .black
         
+        self.reactionLabel.text = message.reaction ?? ""
+        
         if let phone = msgStr.findPhoneNumber(),
            let range = msgStr.range(of: phone) {
             let attributedString = NSMutableAttributedString(string: msgStr)
