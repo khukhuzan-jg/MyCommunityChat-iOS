@@ -25,6 +25,7 @@ end
 def ui_pods
   pod 'Kingfisher', '6.3.0'
   pod 'lottie-ios', '4.3.4'
+  pod 'iOSPhotoEditor'
 end
 
 def firebase_pods
