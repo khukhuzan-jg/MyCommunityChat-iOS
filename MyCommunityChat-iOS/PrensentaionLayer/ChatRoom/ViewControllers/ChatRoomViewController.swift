@@ -85,10 +85,10 @@ class ChatRoomViewController: BaseViewController {
         .disposed(by: disposeBag)
         
         txtMessage.rx.text.bind {
-            if let txt = $0 {
+            if let txt = $0 ,
+               !self.selectedStickerString.isEmpty ,
+               !self.selectedImageStr.isEmpty {
                 self.setTextMode()
-//                self.btnSend.alpha = txt.isEmpty ? 0.5 : 1.0
-//                self.btnSend.isUserInteractionEnabled = !txt.isEmpty
             }
         }
         .disposed(by: disposeBag)
@@ -378,6 +378,8 @@ extension ChatRoomViewController : UIImagePickerControllerDelegate, UINavigation
         self.btnClose.isHidden = false
          */
         
+        self.stickerCollectionView.isHidden = true
+        
         // Local variable inserted by Swift 4.2 migrator.
         let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
         let photoEditor = PhotoEditorViewController(nibName:"PhotoEditorViewController",bundle: Bundle(for: PhotoEditorViewController.self))
@@ -392,10 +394,15 @@ extension ChatRoomViewController : UIImagePickerControllerDelegate, UINavigation
         
         
         
-        if let image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.originalImage)] as? UIImage {
+        if let image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.editedImage)] as? UIImage {
             
             
             photoEditor.image = image
+            
+            imageView.image = image
+            selectedImageStr = image.jpegData(compressionQuality: 0.5)?.base64EncodedString() ?? ""
+            bottomViewHeight.constant = 250.0
+            self.btnClose.isHidden = false
             
             
         } else  {
@@ -403,7 +410,11 @@ extension ChatRoomViewController : UIImagePickerControllerDelegate, UINavigation
             guard let url = info[UIImagePickerController.InfoKey.mediaURL.rawValue] as? URL else {
                 return
             }
-
+            let image = UIImage(contentsOfFile: url.absoluteString)
+            imageView.image = image
+            selectedImageStr = image?.jpegData(compressionQuality: 0.5)?.base64EncodedString() ?? ""
+            bottomViewHeight.constant = 250.0
+            self.btnClose.isHidden = false
             //photoEditor.video = url
         }
         
@@ -414,7 +425,9 @@ extension ChatRoomViewController : UIImagePickerControllerDelegate, UINavigation
         
         
         
-        picker.dismiss(animated: true, completion: nil)
+        picker.dismiss(animated: true) {
+            self.bottomViewHeight.constant = 250.0
+        }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime(uptimeNanoseconds: UInt64(0.2))) {
             self.present(photoEditor, animated: true, completion: nil)
         }
@@ -424,6 +437,17 @@ extension ChatRoomViewController : UIImagePickerControllerDelegate, UINavigation
     
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
+    }
+    
+    // Helper function inserted by Swift 4.2 migrator.
+    fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
+
+        return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
+    }
+
+    // Helper function inserted by Swift 4.2 migrator.
+    fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
+        return input.rawValue
     }
 
 }
@@ -502,12 +526,4 @@ extension ChatRoomViewController : UICollectionViewDelegate , UICollectionViewDa
     
 }
 
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
-    return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
-}
 
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
-    return input.rawValue
-}
