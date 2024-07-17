@@ -46,7 +46,7 @@ class SendImgeTableViewCell: UITableViewCell {
             self.bgView.backgroundColor = msgType == .sticker ? .clear : .senderChat
             if msgType == .forward {
                 print("Forward ::::: \(message.forwardMessage)")
-                lblForward.text = "Forward via \(message.senderName ?? "")"
+                lblForward.text = "Forward Message"
                 self.bgView.backgroundColor = .senderChat
                 
                 if let msgType = message.forwardMessage?["messageType"],
@@ -85,6 +85,9 @@ class SendImgeTableViewCell: UITableViewCell {
             }
             
         }
+        
+        layoutIfNeeded()
+        setNeedsLayout()
     }
     
     @objc func handleLongPress(_ gesture: UILongPressGestureRecognizer) {

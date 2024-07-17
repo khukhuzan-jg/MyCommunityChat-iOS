@@ -50,7 +50,7 @@ class ReceiveMessageTableViewCell: UITableViewCell {
     
     func setupCellData(message : Message , profile : UIImage) {
         let msgStr = (message.messageType ?? .text) == .forward ? (message.forwardMessage?["text"] ?? "") : message.messageText ?? ""
-        lblForward.text = (message.messageType ?? .text) == .forward ? "Forward via \(message.senderName ?? "")" : ""
+        lblForward.text = (message.messageType ?? .text) == .forward ? "Forward Message" : ""
         
         lblTime.text = message.createdAt ?? ""
         lblTime.font = .RoboB10
@@ -82,6 +82,9 @@ class ReceiveMessageTableViewCell: UITableViewCell {
         else {
             self.lblMessage.text = msgStr
         }
+        
+        layoutIfNeeded()
+        setNeedsLayout()
     }
     
     @objc func handleLongPress(_ gesture: UILongPressGestureRecognizer) {
