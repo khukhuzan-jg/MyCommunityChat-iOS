@@ -11,6 +11,7 @@ public enum MessageType : String{
     case text
     case image
     case sticker
+    case forward
     
     func getValue() -> String {
         return self.rawValue
@@ -26,8 +27,36 @@ public struct Message {
     public var senderId : String?
     public var reaction: String?
     public var sticker : String?
-    
+    public var forwardMessage : [String : String]?
+    public var senderName : String?
 }
+
+//public struct ForwardMessage {
+//    public var messageId : String?
+//    public var messageText : String?
+//    public var messageImage : String?
+//    public var messageType : MessageType?
+//    public var createdAt : String?
+//    public var lastMessage : String?
+//    public var senderId : String?
+//    public var reaction: String?
+//    public var sticker : String?
+//    
+//    public func convertMessageToForwardMessage(message : Message) -> ForwardMessage {
+//        return ForwardMessage(
+//            messageId: message.messageId,
+//            messageText: message.messageText,
+//            messageImage: message.messageImage,
+//            messageType: message.messageType,
+//            createdAt: message.createdAt,
+//            lastMessage: message.lastMessage,
+//            senderId: message.senderId,
+//            reaction: message.reaction,
+//            sticker: message.sticker
+//        )
+//    }
+//    
+//}
 
 protocol ChatroomModelProtocol {
     func savedNotiSetting(converstaionId : String , settingType : ChatRoomMoreSetting)

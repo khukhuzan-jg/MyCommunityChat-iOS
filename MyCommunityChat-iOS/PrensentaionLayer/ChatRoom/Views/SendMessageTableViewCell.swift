@@ -10,6 +10,7 @@ import CommonExtension
 
 class SendMessageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblForward: UILabel!
     @IBOutlet weak var lblMessage: UILabel!
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var reactionLabel: UILabel!
@@ -30,6 +31,10 @@ class SendMessageTableViewCell: UITableViewCell {
         let removeTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleRemovePress(_:)))
         reactionLabel.isUserInteractionEnabled = true
         reactionLabel.addGestureRecognizer(removeTapGesture)
+        
+        lblForward.font = .RoboB12
+        lblForward.text = ""
+        lblForward.textColor = .lightGray
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,7 +44,10 @@ class SendMessageTableViewCell: UITableViewCell {
     }
     
     func setupCellData(message : Message) {
-        let msgStr = message.messageText ?? ""
+        let msgStr = (message.messageType ?? .text) == .forward ? (message.forwardMessage?["text"] ?? "") : message.messageText ?? ""
+        
+        lblForward.text = (message.messageType ?? .text) == .forward ? "Forward via \(message.senderName ?? "")" : ""
+        
         lblTime.text = message.createdAt ?? ""
         lblTime.font = .RoboB10
         lblTime.textColor = .lightGray

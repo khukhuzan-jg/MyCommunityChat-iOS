@@ -131,7 +131,7 @@ class ChatRoomViewController: BaseViewController {
                     type = .text
                 }
                 
-                let message = Message(messageText: text, messageImage: self.selectedImageStr, messageType: type, createdAt: "", lastMessage: "", senderId: self.currentUser?.id ?? "" , sticker: self.selectedStickerString)
+                let message = Message(messageText: text, messageImage: self.selectedImageStr, messageType: type, createdAt: "", lastMessage: "", senderId: self.currentUser?.id ?? "" , sticker: self.selectedStickerString , senderName: self.currentUser?.name)
                 self.chatRoomViewModel.sendMessage(message: message)
                 self.txtMessage.text = ""
                 self.selectedStickerString = ""
@@ -326,23 +326,29 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var message = self.messageList[indexPath.row]
         
+        /// note : Text message
         if (message.messageType ?? .text) == .text {
             if (message.senderId ?? "") == (self.currentUser?.id ?? "") {
-                guard let senderCell = tableView.dequeueReusableCell(withIdentifier: String(describing: SendMessageTableViewCell.self), for: indexPath) as? SendMessageTableViewCell else {return UITableViewCell()}
+                let senderCell = tableView.deque(SendMessageTableViewCell.self)
                 senderCell.setupCellData(message: message)
                 senderCell.didTapReaction = { [weak self] in
                     self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
                         senderCell.reactionLabel.text = reaction
                         message.reaction = reaction
                         self?.updateMessage(msg: message)
-//                        self?.tblMessage.reloadData()
+                    }, forwardMessage: {
+                        let forwardVC = ForwardViewController()
+                        forwardVC.currentUser = self?.currentUser
+                        forwardVC.selectedessage = message
+                        forwardVC.modalPresentationStyle = .pageSheet
+                        self?.present(forwardVC, animated: true)
                     })
                 }
             
                 return senderCell
             }
             else {
-                guard let receiverCell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReceiveMessageTableViewCell.self), for: indexPath) as? ReceiveMessageTableViewCell else {return UITableViewCell()}
+                let receiverCell = tableView.deque(ReceiveMessageTableViewCell.self)
                 
                 var img : UIImage = .icPlaceholder
                 if let imgData = NSData(base64Encoded: self.selectedUser?.image ?? "") {
@@ -355,28 +361,137 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                         receiverCell.reactionLabel.text = reaction
                         message.reaction = reaction
                         self?.updateMessage(msg: message)
-//                        self?.tblMessage.reloadData()
+                    }, forwardMessage: {
+                        let forwardVC = ForwardViewController()
+                        forwardVC.currentUser = self?.currentUser
+                        forwardVC.selectedessage = message
+                        forwardVC.modalPresentationStyle = .pageSheet
+                        self?.present(forwardVC, animated: true)
                     })
                 }
                 return receiverCell
             }
         }
+        /// note : forward message
+        else if (message.messageType ?? .text) == .forward {
+            if let  messageType = message.forwardMessage?["messageType"] ,
+               let msgType = MessageType(rawValue: messageType) {
+                switch msgType {
+                case .text:
+                    
+                        if (message.senderId ?? "") == (self.currentUser?.id ?? "") {
+                            let senderCell = tableView.deque(SendMessageTableViewCell.self)
+                            senderCell.setupCellData(message: message)
+                            senderCell.didTapReaction = { [weak self] in
+                                self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
+                                    senderCell.reactionLabel.text = reaction
+                                    message.reaction = reaction
+                                    self?.updateMessage(msg: message)
+                                }, forwardMessage: {
+                                    let forwardVC = ForwardViewController()
+                                    forwardVC.currentUser = self?.currentUser
+                                    forwardVC.selectedessage = message
+                                    forwardVC.modalPresentationStyle = .pageSheet
+                                    self?.present(forwardVC, animated: true)
+                                })
+                            }
+                        
+                            return senderCell
+                        }
+                        else {
+                            let receiverCell = tableView.deque(ReceiveMessageTableViewCell.self)
+                            
+                            var img : UIImage = .icPlaceholder
+                            if let imgData = NSData(base64Encoded: self.selectedUser?.image ?? "") {
+                                img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
+                                
+                            }
+                            receiverCell.setupCellData(message: message , profile: img)
+                            receiverCell.didTapReaction = { [weak self] in
+                                self?.presentReactionPopup(cell: receiverCell, selectedReaction: { [weak self] reaction in
+                                    receiverCell.reactionLabel.text = reaction
+                                    message.reaction = reaction
+                                    self?.updateMessage(msg: message)
+                                }, forwardMessage: {
+                                    let forwardVC = ForwardViewController()
+                                    forwardVC.currentUser = self?.currentUser
+                                    forwardVC.selectedessage = message
+                                    forwardVC.modalPresentationStyle = .pageSheet
+                                    self?.present(forwardVC, animated: true)
+                                })
+                            }
+                            return receiverCell
+                        }
+                default :
+                    
+                        if (message.senderId ?? "") == (self.currentUser?.id ?? "") {
+                            let senderCell = tableView.deque(SendImgeTableViewCell.self)
+                            senderCell.setupcell(message: message)
+                            senderCell.didTapReaction = { [weak self] in
+                                self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
+                                    senderCell.reactionLabel.text = reaction
+                                    message.reaction = reaction
+                                    self?.updateMessage(msg: message)
+                                }, forwardMessage: {
+                                    let forwardVC = ForwardViewController()
+                                    forwardVC.currentUser = self?.currentUser
+                                    forwardVC.selectedessage = message
+                                    forwardVC.modalPresentationStyle = .pageSheet
+                                    self?.present(forwardVC, animated: true)
+                                })
+                            }
+                            return senderCell
+                        }
+                        else {
+                            let receiverCell = tableView.deque(ReceiveImageTableViewCell.self)
+                            
+                            var img : UIImage = .icPlaceholder
+                            if let imgData = NSData(base64Encoded: self.selectedUser?.image ?? "") {
+                                img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
+                                
+                            }
+                            receiverCell.setupcell(message: message, profile: img)
+                            receiverCell.didTapReaction = { [weak self] in
+                                self?.presentReactionPopup(cell: receiverCell, selectedReaction: { [weak self] reaction in
+                                    receiverCell.reactionLabel.text = reaction
+                                    message.reaction = reaction
+                                    self?.updateMessage(msg: message)
+                                }, forwardMessage: {
+                                    let forwardVC = ForwardViewController()
+                                    forwardVC.currentUser = self?.currentUser
+                                    forwardVC.selectedessage = message
+                                    forwardVC.modalPresentationStyle = .pageSheet
+                                    self?.present(forwardVC, animated: true)
+                                })
+                            }
+                            return receiverCell
+                        }
+                    
+                }
+            }
+        }
+        /// note : image or sticker message
         else {
             if (message.senderId ?? "") == (self.currentUser?.id ?? "") {
-                guard let senderCell = tableView.dequeueReusableCell(withIdentifier: String(describing: SendImgeTableViewCell.self), for: indexPath) as? SendImgeTableViewCell else {return UITableViewCell()}
+                let senderCell = tableView.deque(SendImgeTableViewCell.self)
                 senderCell.setupcell(message: message)
                 senderCell.didTapReaction = { [weak self] in
                     self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
                         senderCell.reactionLabel.text = reaction
                         message.reaction = reaction
                         self?.updateMessage(msg: message)
-//                        self?.tblMessage.reloadData()
+                    }, forwardMessage: {
+                        let forwardVC = ForwardViewController()
+                        forwardVC.currentUser = self?.currentUser
+                        forwardVC.selectedessage = message
+                        forwardVC.modalPresentationStyle = .pageSheet
+                        self?.present(forwardVC, animated: true)
                     })
                 }
                 return senderCell
             }
             else {
-                guard let receiverCell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReceiveImageTableViewCell.self), for: indexPath) as? ReceiveImageTableViewCell else {return UITableViewCell()}
+                let receiverCell = tableView.deque(ReceiveImageTableViewCell.self)
                 
                 var img : UIImage = .icPlaceholder
                 if let imgData = NSData(base64Encoded: self.selectedUser?.image ?? "") {
@@ -389,13 +504,18 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                         receiverCell.reactionLabel.text = reaction
                         message.reaction = reaction
                         self?.updateMessage(msg: message)
-//                        self?.tblMessage.reloadData()
+                    }, forwardMessage: {
+                        let forwardVC = ForwardViewController()
+                        forwardVC.currentUser = self?.currentUser
+                        forwardVC.selectedessage = message
+                        forwardVC.modalPresentationStyle = .pageSheet
+                        self?.present(forwardVC, animated: true)
                     })
                 }
                 return receiverCell
             }
         }
-        
+        return UITableViewCell()
     }
 }
 
@@ -404,19 +524,7 @@ extension ChatRoomViewController : UIImagePickerControllerDelegate, UINavigation
         _ picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]
     ) {
-        /*
-         //Tempo block for using photo Edit
-        picker.dismiss(animated: true, completion: nil)
-        
-        guard let image = info[.editedImage] as? UIImage ?? info[.originalImage] as? UIImage else {
-            return
-        }
-        
-        imageView.image = image
-        selectedImageStr = image.jpegData(compressionQuality: 0.5)?.base64EncodedString() ?? ""
-        bottomViewHeight.constant = 250.0
-        self.btnClose.isHidden = false
-         */
+
         
         self.stickerCollectionView.isHidden = true
         
@@ -552,9 +660,7 @@ extension ChatRoomViewController : UICollectionViewDelegate , UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.deque(StickerCollectionViewCell.self, index: indexPath) as? StickerCollectionViewCell else {
-            return UICollectionViewCell()
-        }
+        let cell = collectionView.deque(StickerCollectionViewCell.self, index: indexPath) 
         cell.setupCell(stickerImage: stickerList[indexPath.item] , selectedSticker : chatRoomViewModel.selectedSticker.value)
         return cell
     }

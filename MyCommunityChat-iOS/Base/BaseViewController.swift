@@ -37,14 +37,20 @@ class BaseViewController : UIViewController {
         
     }
     
-    func presentReactionPopup(cell: UITableViewCell, selectedReaction: @escaping(String) -> Void) {
+    func presentReactionPopup(cell: UITableViewCell , selectedReaction: @escaping(String) -> Void , forwardMessage : @escaping () -> Void) {
         let popupVC = ReactionPopupController()
         // Customize your reaction options
         popupVC.options = ["👍", "❤️", "😂", "😮", "😢", "😡"]
         popupVC.modalPresentationStyle = .popover
-        popupVC.selectionHandler = { [weak self] selectedOption in
+        popupVC.selectionHandler = { selectedOption in
             print(selectedOption)
             selectedReaction(selectedOption)
+        }
+        
+        popupVC.forwardMessageHandler = {
+            print("Forward message Tap")
+            popupVC.dismissVC()
+            forwardMessage()
         }
         if let ppc = popupVC.popoverPresentationController {
             ppc.delegate = self

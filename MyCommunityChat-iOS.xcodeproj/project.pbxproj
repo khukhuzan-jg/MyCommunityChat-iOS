@@ -30,13 +30,21 @@
 		78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A242C34762200F3BA57 /* SplashController.xib */; };
 		78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A282C3476BF00F3BA57 /* Animation.json */; };
 		81E8055BB82443DB50160639 /* Pods_MyCommunityChat_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6057D1E2203D8783C2A4528 /* Pods_MyCommunityChat_iOSTests.framework */; };
-		91BC70DFD0C79A237973CC6D /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2A262AACFD1DED021A5D0C /* Pods_OneSignalNotificationServiceExtension.framework */; };
 		A8ED4B085B1121C71C39C6C2 /* Pods_MyCommunityChat_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663FE77F4D97B28E5205CBF1 /* Pods_MyCommunityChat_iOSUITests.framework */; };
 		B571B169F2121B7FCEE7080B /* Pods_MyCommunityChat_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5A0EE4C66FD212F9B9EDA6 /* Pods_MyCommunityChat_iOS.framework */; };
+		B6937959EE40A81E16B8A288 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE112819BFE0B5693AF9E60 /* Pods_OneSignalNotificationServiceExtension.framework */; };
+		F01926A62C466D3400F71D98 /* MessageSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01926A52C466D3400F71D98 /* MessageSettingTableViewCell.xib */; };
+		F01926A72C466D3400F71D98 /* MessageSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01926A42C466D3400F71D98 /* MessageSettingTableViewCell.swift */; };
 		F05107CC2C4104CD003A7823 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05107CB2C4104CD003A7823 /* NotificationService.swift */; };
 		F05107D02C4104CD003A7823 /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F05107C92C4104CD003A7823 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F06C3D142C404F50004F5379 /* DateTimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06C3D122C404F50004F5379 /* DateTimePickerViewController.swift */; };
 		F06C3D152C404F50004F5379 /* DateTimePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06C3D132C404F50004F5379 /* DateTimePickerViewController.xib */; };
+		F072C5852C4610A80069045A /* ForwardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F072C5842C4610A80069045A /* ForwardTableViewCell.xib */; };
+		F072C5862C4610A80069045A /* ForwardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F072C5832C4610A80069045A /* ForwardTableViewCell.swift */; };
+		F072C5892C4611560069045A /* ForwardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F072C5882C4611560069045A /* ForwardViewController.xib */; };
+		F072C58A2C4611560069045A /* ForwardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F072C5872C4611560069045A /* ForwardViewController.swift */; };
+		F072C58C2C4614010069045A /* ForwardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F072C58B2C4614010069045A /* ForwardModel.swift */; };
+		F072C58E2C4629470069045A /* ForwardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F072C58D2C4629470069045A /* ForwardViewModel.swift */; };
 		F07CBE762C369D6800A2DD8B /* ChatRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE5B2C369D6700A2DD8B /* ChatRoomModel.swift */; };
 		F07CBE772C369D6800A2DD8B /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F07CBE5D2C369D6700A2DD8B /* ChatRoomViewController.swift */; };
 		F07CBE782C369D6800A2DD8B /* ChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */; };
@@ -135,11 +143,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		024848DAAB223B76D1958E15 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		4268578DE28D57B67DF45F00 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		487F0ACE53C385CF723C9745 /* Pods-MyCommunityChat-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSUITests/Pods-MyCommunityChat-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		50B39DB6E89EB582DFA60FC9 /* Pods-MyCommunityChat-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSTests/Pods-MyCommunityChat-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		565E49CCF3606F9BA374ECD8 /* Pods-MyCommunityChat-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSUITests/Pods-MyCommunityChat-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5713A2433D32BAA98B5AB4EB /* Pods-MyCommunityChat-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		5B08E00D65573BDF5653B2EE /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		663FE77F4D97B28E5205CBF1 /* Pods_MyCommunityChat_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78671E992C33DEB7006E7DD6 /* MyCommunityChat-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyCommunityChat-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78671E9C2C33DEB7006E7DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,13 +181,21 @@
 		999216BD89321ADCAC3DDB45 /* Pods-MyCommunityChat-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOS.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		AE5A0EE4C66FD212F9B9EDA6 /* Pods_MyCommunityChat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6057D1E2203D8783C2A4528 /* Pods_MyCommunityChat_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD2A262AACFD1DED021A5D0C /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE112819BFE0B5693AF9E60 /* Pods_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01926A42C466D3400F71D98 /* MessageSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSettingTableViewCell.swift; sourceTree = "<group>"; };
+		F01926A52C466D3400F71D98 /* MessageSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageSettingTableViewCell.xib; sourceTree = "<group>"; };
 		F05107C92C4104CD003A7823 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05107CB2C4104CD003A7823 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		F05107CD2C4104CD003A7823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F05107D42C410508003A7823 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		F06C3D122C404F50004F5379 /* DateTimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimePickerViewController.swift; sourceTree = "<group>"; };
 		F06C3D132C404F50004F5379 /* DateTimePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTimePickerViewController.xib; sourceTree = "<group>"; };
+		F072C5832C4610A80069045A /* ForwardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardTableViewCell.swift; sourceTree = "<group>"; };
+		F072C5842C4610A80069045A /* ForwardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForwardTableViewCell.xib; sourceTree = "<group>"; };
+		F072C5872C4611560069045A /* ForwardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardViewController.swift; sourceTree = "<group>"; };
+		F072C5882C4611560069045A /* ForwardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForwardViewController.xib; sourceTree = "<group>"; };
+		F072C58B2C4614010069045A /* ForwardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardModel.swift; sourceTree = "<group>"; };
+		F072C58D2C4629470069045A /* ForwardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForwardViewModel.swift; sourceTree = "<group>"; };
 		F07CBE5B2C369D6700A2DD8B /* ChatRoomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomModel.swift; sourceTree = "<group>"; };
 		F07CBE5D2C369D6700A2DD8B /* ChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatRoomViewController.xib; sourceTree = "<group>"; };
@@ -221,7 +238,6 @@
 		F0FCCA092C402274002BC1B0 /* StickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCollectionViewCell.swift; sourceTree = "<group>"; };
 		F0FCCA0A2C402274002BC1B0 /* StickerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerCollectionViewCell.xib; sourceTree = "<group>"; };
 		F5CEC5611CDF72A497CF6402 /* Pods-MyCommunityChat-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSTests/Pods-MyCommunityChat-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		FB79559B5BE00E2F92C10C0C /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-OneSignalNotificationServiceExtension/Pods-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,7 +273,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91BC70DFD0C79A237973CC6D /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
+				B6937959EE40A81E16B8A288 /* Pods_OneSignalNotificationServiceExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +432,7 @@
 				AE5A0EE4C66FD212F9B9EDA6 /* Pods_MyCommunityChat_iOS.framework */,
 				B6057D1E2203D8783C2A4528 /* Pods_MyCommunityChat_iOSTests.framework */,
 				663FE77F4D97B28E5205CBF1 /* Pods_MyCommunityChat_iOSUITests.framework */,
-				CD2A262AACFD1DED021A5D0C /* Pods_OneSignalNotificationServiceExtension.framework */,
+				EDE112819BFE0B5693AF9E60 /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -430,8 +446,8 @@
 				F5CEC5611CDF72A497CF6402 /* Pods-MyCommunityChat-iOSTests.release.xcconfig */,
 				487F0ACE53C385CF723C9745 /* Pods-MyCommunityChat-iOSUITests.debug.xcconfig */,
 				565E49CCF3606F9BA374ECD8 /* Pods-MyCommunityChat-iOSUITests.release.xcconfig */,
-				5B08E00D65573BDF5653B2EE /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
-				FB79559B5BE00E2F92C10C0C /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
+				024848DAAB223B76D1958E15 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				4268578DE28D57B67DF45F00 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -449,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				F07CBE5B2C369D6700A2DD8B /* ChatRoomModel.swift */,
+				F072C58B2C4614010069045A /* ForwardModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -461,6 +478,8 @@
 				F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */,
 				F06C3D122C404F50004F5379 /* DateTimePickerViewController.swift */,
 				F06C3D132C404F50004F5379 /* DateTimePickerViewController.xib */,
+				F072C5872C4611560069045A /* ForwardViewController.swift */,
+				F072C5882C4611560069045A /* ForwardViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -469,6 +488,7 @@
 			isa = PBXGroup;
 			children = (
 				F07CBE602C369D6700A2DD8B /* ChatRoomViewModel.swift */,
+				F072C58D2C4629470069045A /* ForwardViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -491,6 +511,10 @@
 				F0FCCA062C3FD3BC002BC1B0 /* MorePopupTableViewCell.xib */,
 				F0FCCA092C402274002BC1B0 /* StickerCollectionViewCell.swift */,
 				F0FCCA0A2C402274002BC1B0 /* StickerCollectionViewCell.xib */,
+				F072C5832C4610A80069045A /* ForwardTableViewCell.swift */,
+				F072C5842C4610A80069045A /* ForwardTableViewCell.xib */,
+				F01926A42C466D3400F71D98 /* MessageSettingTableViewCell.swift */,
+				F01926A52C466D3400F71D98 /* MessageSettingTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -664,7 +688,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F05107D12C4104CD003A7823 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
 			buildPhases = (
-				6718C21CE73D7AA207205DB1 /* [CP] Check Pods Manifest.lock */,
+				E0F6AF13D217D987041949BC /* [CP] Check Pods Manifest.lock */,
 				F05107C52C4104CD003A7823 /* Sources */,
 				F05107C62C4104CD003A7823 /* Frameworks */,
 				F05107C72C4104CD003A7823 /* Resources */,
@@ -732,10 +756,12 @@
 			files = (
 				78671FF52C33FDD8006E7DD6 /* LaunchScreen.storyboard in Resources */,
 				F07CBE7F2C369D6800A2DD8B /* SendImgeTableViewCell.xib in Resources */,
+				F01926A62C466D3400F71D98 /* MessageSettingTableViewCell.xib in Resources */,
 				F07CBED82C37A92E00A2DD8B /* GoogleService-Info.plist in Resources */,
 				F07CBE7B2C369D6800A2DD8B /* ReceiveImageTableViewCell.xib in Resources */,
 				F06C3D152C404F50004F5379 /* DateTimePickerViewController.xib in Resources */,
 				78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */,
+				F072C5852C4610A80069045A /* ForwardTableViewCell.xib in Resources */,
 				F0FCCA042C3FCE9F002BC1B0 /* MorePopupView.xib in Resources */,
 				7867200E2C345F2B006E7DD6 /* RobotoSlab-Black.ttf in Resources */,
 				78671FFC2C345D92006E7DD6 /* Colors.xcassets in Resources */,
@@ -755,6 +781,7 @@
 				7867200A2C345F2B006E7DD6 /* RobotoSlab-ExtraBold.ttf in Resources */,
 				F0FCCA072C3FD3BC002BC1B0 /* MorePopupTableViewCell.xib in Resources */,
 				78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */,
+				F072C5892C4611560069045A /* ForwardViewController.xib in Resources */,
 				786720072C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -827,28 +854,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6718C21CE73D7AA207205DB1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6EDC91A1B308B0507AF0B165 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -888,6 +893,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E0F6AF13D217D987041949BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -895,7 +922,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F072C58C2C4614010069045A /* ForwardModel.swift in Sources */,
 				F07CBE902C369D8100A2DD8B /* ChatManager.swift in Sources */,
+				F072C58E2C4629470069045A /* ForwardViewModel.swift in Sources */,
 				F07CBE7A2C369D6800A2DD8B /* ReceiveImageTableViewCell.swift in Sources */,
 				F07CBE762C369D6800A2DD8B /* ChatRoomModel.swift in Sources */,
 				F07CBE852C369D6800A2DD8B /* UserTableViewCell.swift in Sources */,
@@ -905,6 +934,7 @@
 				F0FCCA022C3FCE90002BC1B0 /* MorePopupView.swift in Sources */,
 				F07CBE8F2C369D8100A2DD8B /* BaseViewModel.swift in Sources */,
 				F06C3D142C404F50004F5379 /* DateTimePickerViewController.swift in Sources */,
+				F072C58A2C4611560069045A /* ForwardViewController.swift in Sources */,
 				F07CBE8E2C369D8100A2DD8B /* BaseViewController.swift in Sources */,
 				F07CBE792C369D6800A2DD8B /* ChatRoomViewModel.swift in Sources */,
 				F086AA1F2C40C3C100442AF4 /* DataBaseManager.swift in Sources */,
@@ -916,6 +946,8 @@
 				F0FCCA082C3FD3BC002BC1B0 /* MorePopupTableViewCell.swift in Sources */,
 				F07CBEAC2C37274400A2DD8B /* ProfileImageView.swift in Sources */,
 				F07CBE842C369D6800A2DD8B /* HomeViewModel.swift in Sources */,
+				F072C5862C4610A80069045A /* ForwardTableViewCell.swift in Sources */,
+				F01926A72C466D3400F71D98 /* MessageSettingTableViewCell.swift in Sources */,
 				F07CBE9F2C36E49700A2DD8B /* UserInfoManager.swift in Sources */,
 				78671E9D2C33DEB7006E7DD6 /* AppDelegate.swift in Sources */,
 				78671E9F2C33DEB7006E7DD6 /* SceneDelegate.swift in Sources */,
@@ -1253,7 +1285,7 @@
 		};
 		F05107D22C4104CD003A7823 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B08E00D65573BDF5653B2EE /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			baseConfigurationReference = 024848DAAB223B76D1958E15 /* Pods-OneSignalNotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -1264,7 +1296,7 @@
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1282,7 +1314,7 @@
 		};
 		F05107D32C4104CD003A7823 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB79559B5BE00E2F92C10C0C /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
+			baseConfigurationReference = 4268578DE28D57B67DF45F00 /* Pods-OneSignalNotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -1293,7 +1325,7 @@
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = OneSignalNotificationServiceExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -58,8 +58,9 @@ extension ChatManager : ChatManagerProtocol {
                     message.senderId =  childSnapshot.childSnapshot(forPath:"senderId").value as? String
                     message.reaction = childSnapshot.childSnapshot(forPath: "reaction").value as? String
                     message.sticker = childSnapshot.childSnapshot(forPath: "sticker").value as? String
+                    message.senderName = childSnapshot.childSnapshot(forPath: "senderName").value as? String
+                    message.forwardMessage = childSnapshot.childSnapshot(forPath: "forwardMessage").value as? [String : String]
                     
-                    //
                     self.messageList.append(message)
                 }
                 completion(self.messageList)
@@ -67,6 +68,7 @@ extension ChatManager : ChatManagerProtocol {
     }
     
     func sendMessage(senderId : String , receiverId : String,  message : Message , completion : (_ message : Message) -> Void) {
+        
         let sendMessage = [
             "text" : message.messageText ?? "",
             "image" : message.messageImage ?? "",
@@ -75,8 +77,11 @@ extension ChatManager : ChatManagerProtocol {
             "updatedAt" : Date().toString(.type13, timeZone: "MM"),
             "senderId" : message.senderId ?? "",
             "reaction" : message.reaction ?? "",
-            "sticker" : message.sticker ?? ""
-        ]
+            "sticker" : message.sticker ?? "",
+            "forwardMessage" : message.forwardMessage,
+            "senderName" : message.senderName ?? ""
+        ] as [String : Any]
+        
         self.ref.child(Conversation.conversations.getValue()).child(senderId + "__" + receiverId).child(Conversation.conversationMessage.getValue()).childByAutoId()
             .setValue(sendMessage)
         
@@ -97,7 +102,7 @@ extension ChatManager : ChatManagerProtocol {
     }
     
     func updateMessage(senderId: String, receiverId: String, message : Message, messageId: String, completion: @escaping () -> Void) {
-        let sendMessage = [
+        guard let sendMessage = [
             "text" : message.messageText ?? "",
             "image" : message.messageImage ?? "",
             "messageType" : message.messageType?.getValue() ?? "",
@@ -105,8 +110,10 @@ extension ChatManager : ChatManagerProtocol {
             "updatedAt" : Date().toString(.type13, timeZone: "MM"),
             "senderId" : message.senderId ?? "",
             "reaction" : message.reaction ?? "",
-            "sticker" : message.sticker ?? ""
-        ]
+            "sticker" : message.sticker ?? "",
+            "senderName" : message.senderName ?? ""
+//            "forwardMessage" : message.forwardMessage ?? ForwardMessage()
+        ] as? [String : Any] else { return  }
         
         self.ref.child(Conversation.conversations.getValue())
             .child(senderId + "__" + receiverId)

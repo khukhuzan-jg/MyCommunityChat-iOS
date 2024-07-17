@@ -8,6 +8,14 @@
 import Foundation
 import UIKit
 
+enum MessageSettingType : String {
+    case forward = "Forward"
+    
+    func getTitle() -> String {
+        return self.rawValue
+    }
+}
+
 protocol ReactionHandling {
     var didTapReaction: ((String) -> Void)? { get set }
 }
@@ -25,8 +33,18 @@ class ReactionPopupController: UIViewController {
         return collectionView
     }()
     
+    let tableView : UITableView = {
+        let tblview = UITableView(frame: .zero)
+        tblview.register(UINib(nibName: String(describing: MessageSettingTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MessageSettingTableViewCell.self))
+        tblview.separatorStyle = .none
+        return tblview
+    }()
+    
+    var messageSettingTypes : [MessageSettingType] = [.forward]
+    
     var options: [String] = []
     var selectionHandler: ((String) -> Void)?
+    var forwardMessageHandler : (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,27 +63,40 @@ class ReactionPopupController: UIViewController {
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.widthAnchor.constraint(equalToConstant: 200),
             // Adjust height as needed
-            containerView.heightAnchor.constraint(equalToConstant: 50)
+            containerView.heightAnchor.constraint(equalToConstant: 100)
         ])
         
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.showsHorizontalScrollIndicator = false
-        containerView.addSubview(collectionView)
+        self.view.addSubview(collectionView)
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: containerView.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+//            collectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
+            collectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: 50)
+        ])
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.view.addSubview(tableView)
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: collectionView.bottomAnchor),
+            tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
         ])
     }
     
     override var preferredContentSize: CGSize {
         get {
             // Adjust as needed
-            return CGSize(width: 200, height: 50)
+            return CGSize(width: 200, height: 100)
         }
         set {
             super.preferredContentSize = newValue
@@ -111,5 +142,21 @@ extension ReactionPopupController: UICollectionViewDelegateFlowLayout, UICollect
             width: collectionView.frame.width / 4,
             height: 50
         )
+    }
+}
+
+extension ReactionPopupController : UITableViewDelegate , UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messageSettingTypes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.deque(MessageSettingTableViewCell.self)
+        cell.setupCell(type: messageSettingTypes[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        forwardMessageHandler?()
     }
 }

@@ -18,8 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         // Remove this method to stop OneSignal Debugging
-          OneSignal.Debug.setLogLevel(.LL_VERBOSE)
-          
+        print("DEBUG ::::::::")
+        
+        OneSignal.Debug.setLogLevel(.LL_VERBOSE)
+        
+        OneSignal.Debug.setAlertLevel(.LL_NONE)
+//        OneSignal.initialize("17d50d67-f69e-443f-a5a0-b3f8e4b59dbf")
+//        OneSignal.setLaunchOptions(launchOptions)
           // OneSignal initialization
           OneSignal.initialize("17d50d67-f69e-443f-a5a0-b3f8e4b59dbf", withLaunchOptions: launchOptions)
           
@@ -36,9 +41,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        print("Remote Noti ::::: \(userInfo)")
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        print("Remote noti ::::: \(userInfo)")
+        
+        
     }
+    
 
     // MARK: UISceneSession Lifecycle
 

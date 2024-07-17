@@ -9,6 +9,7 @@ import UIKit
 
 class ReceiveImageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblForwardMessage: UILabel!
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var imgReceive: UIImageView!
@@ -30,6 +31,10 @@ class ReceiveImageTableViewCell: UITableViewCell {
         let removeTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleRemovePress(_:)))
         reactionLabel.isUserInteractionEnabled = true
         reactionLabel.addGestureRecognizer(removeTapGesture)
+        
+        lblForwardMessage.text = ""
+        lblForwardMessage.font = .RoboB12
+        lblForwardMessage.textColor = .lightGray
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,21 +47,49 @@ class ReceiveImageTableViewCell: UITableViewCell {
         self.reactionLabel.text = message.reaction ?? ""
        
         if let msgType = message.messageType {
-            self.bgView.backgroundColor = msgType == .sticker ? .clear : .senderChat
-            if msgType == .image {
-                if let imgData = NSData(base64Encoded: message.messageImage ?? "") {
-                   let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
-                    self.imgReceive.image = img
-                    self.imgReceive.contentMode = .scaleAspectFill
+            self.bgView.backgroundColor = msgType == .sticker ? .clear : .primary
+            
+            if msgType == .forward {
+                print("Forward ::::: \(message.forwardMessage)")
+                lblForwardMessage.text = "Forward via \(message.senderName ?? "")"
+                self.bgView.backgroundColor = .primary
+                
+                if let msgType = message.forwardMessage?["messageType"],
+                   let messagegType = MessageType(rawValue: msgType) {
+                    if messagegType == .image {
+                        if let imgData = NSData(base64Encoded: message.forwardMessage?["image"] ?? "") {
+                           let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
+                            self.imgReceive.image = img
+                            self.imgReceive.contentMode = .scaleAspectFill
+                        }
+                    }
+                    else {
+                        if let imgData = NSData(base64Encoded: message.forwardMessage?["sticker"] ?? "") {
+                           let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
+                            self.imgReceive.image = img
+                            self.imgReceive.contentMode = .scaleAspectFit
+                        }
+                    }
                 }
             }
             else {
-                if let imgData = NSData(base64Encoded: message.sticker ?? "") {
-                   let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
-                    self.imgReceive.image = img
-                    self.imgReceive.contentMode = .scaleAspectFit
+                lblForwardMessage.text = ""
+                if msgType == .image {
+                    if let imgData = NSData(base64Encoded: message.messageImage ?? "") {
+                       let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
+                        self.imgReceive.image = img
+                        self.imgReceive.contentMode = .scaleAspectFill
+                    }
+                }
+                else {
+                    if let imgData = NSData(base64Encoded: message.sticker ?? "") {
+                       let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
+                        self.imgReceive.image = img
+                        self.imgReceive.contentMode = .scaleAspectFit
+                    }
                 }
             }
+
         }
     }
     
