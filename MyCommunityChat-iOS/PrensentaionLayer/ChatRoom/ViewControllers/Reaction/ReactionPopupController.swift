@@ -36,7 +36,7 @@ class ReactionPopupController: UIViewController {
     
     let tableView : UITableView = {
         let tblview = UITableView(frame: .zero)
-        tblview.register(UINib(nibName: String(describing: MessageSettingTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MessageSettingTableViewCell.self))
+        tblview.register(MessageSettingTableViewCell.self)
         tblview.separatorStyle = .none
         return tblview
     }()

@@ -24,11 +24,7 @@ public extension UITableView {
     }
     
     func register<cell: UITableViewCell>(_ cell: cell.Type) {
-        register(cell, forCellReuseIdentifier: cell.className)
-    }
-    
-    func register(nib nibName: String, bundle: Bundle? = nil) {
-        self.register(UINib(nibName: nibName , bundle: bundle), forCellReuseIdentifier: nibName)
+        self.register(.init(nibName: cell.identifier, bundle: nil), forCellReuseIdentifier: cell.identifier)
     }
     
     func registerHeaderFooter(nib nibName: String, bundle: Bundle? = nil) {
@@ -87,5 +83,9 @@ public extension UITableViewCell {
         separator.frame = CGRect(x: padding, y: frame.height - height, width: frame.width - (2 * padding), height: height)
         separator.backgroundColor = color.cgColor
         self.contentView.layer.addSublayer(separator)
+    }
+    
+    class var identifier: String {
+        return String(describing: self)
     }
 }
