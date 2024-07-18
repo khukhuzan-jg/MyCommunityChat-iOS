@@ -43,7 +43,7 @@ class SendMessageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setupCellData(message : Message) {
+    func setupCellData(message : Message, isFilter: Bool) {
         let msgStr = (message.messageType ?? .text) == .forward ? (message.forwardMessage?["text"] ?? "") : message.messageText ?? ""
         
         lblForward.text = (message.messageType ?? .text) == .forward ? "Forward Message" : ""
@@ -54,6 +54,7 @@ class SendMessageTableViewCell: UITableViewCell {
         
         self.lblMessage.font = .RoboR16
         self.lblMessage.textColor = .black
+        self.lblMessage.backgroundColor = isFilter ? .yellow : .clear
         
         self.reactionLabel.text = message.reaction ?? ""
         
