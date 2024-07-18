@@ -25,8 +25,18 @@ class MessageSettingTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setupCell(type : MessageSettingType) {
-        lblTitle.text = type.getTitle()
+    func setupCell(type : MessageSettingType, isPinned : Bool) {
+        if type == .pinnedMessage {
+            if isPinned {
+                lblTitle.text = "Unpin"
+            }else{
+                lblTitle.text = "Pin"
+            }
+            
+        }else{
+            lblTitle.text = type.getTitle()
+        }
+        
     }
     
 }

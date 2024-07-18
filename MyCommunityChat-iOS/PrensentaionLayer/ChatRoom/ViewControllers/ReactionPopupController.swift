@@ -10,6 +10,7 @@ import UIKit
 
 enum MessageSettingType : String {
     case forward = "Forward"
+    case pinnedMessage = "Pin"
     
     func getTitle() -> String {
         return self.rawValue
@@ -40,11 +41,13 @@ class ReactionPopupController: UIViewController {
         return tblview
     }()
     
-    var messageSettingTypes : [MessageSettingType] = [.forward]
+    var messageSettingTypes : [MessageSettingType] = [.forward,.pinnedMessage]
     
     var options: [String] = []
     var selectionHandler: ((String) -> Void)?
     var forwardMessageHandler : (() -> Void)?
+    var pinnedMessageHandler : (() -> Void)?
+    var isPinned : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +66,7 @@ class ReactionPopupController: UIViewController {
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.widthAnchor.constraint(equalToConstant: 200),
             // Adjust height as needed
-            containerView.heightAnchor.constraint(equalToConstant: 100)
+            containerView.heightAnchor.constraint(equalToConstant: 150)
         ])
         
         collectionView.delegate = self
@@ -96,7 +99,7 @@ class ReactionPopupController: UIViewController {
     override var preferredContentSize: CGSize {
         get {
             // Adjust as needed
-            return CGSize(width: 200, height: 100)
+            return CGSize(width: 200, height: 150)
         }
         set {
             super.preferredContentSize = newValue
@@ -152,11 +155,16 @@ extension ReactionPopupController : UITableViewDelegate , UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.deque(MessageSettingTableViewCell.self)
-        cell.setupCell(type: messageSettingTypes[indexPath.row])
+        cell.setupCell(type: messageSettingTypes[indexPath.row], isPinned: self.isPinned)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        forwardMessageHandler?()
+        if indexPath.row == 0 {
+            forwardMessageHandler?()
+        }else{
+            pinnedMessageHandler?()
+        }
+        
     }
 }

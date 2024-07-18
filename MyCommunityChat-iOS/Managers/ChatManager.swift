@@ -59,6 +59,7 @@ extension ChatManager : ChatManagerProtocol {
                     message.reaction = childSnapshot.childSnapshot(forPath: "reaction").value as? String
                     message.sticker = childSnapshot.childSnapshot(forPath: "sticker").value as? String
                     message.senderName = childSnapshot.childSnapshot(forPath: "senderName").value as? String
+                    message.isPinned = childSnapshot.childSnapshot(forPath: "isPinned").value as? Bool
                     message.forwardMessage = childSnapshot.childSnapshot(forPath: "forwardMessage").value as? [String : String]
                     
                     self.messageList.append(message)
@@ -79,7 +80,8 @@ extension ChatManager : ChatManagerProtocol {
             "reaction" : message.reaction ?? "",
             "sticker" : message.sticker ?? "",
             "forwardMessage" : message.forwardMessage,
-            "senderName" : message.senderName ?? ""
+            "senderName" : message.senderName ?? "",
+            "isPinned" : message.isPinned ?? false
         ] as [String : Any]
         
         self.ref.child(Conversation.conversations.getValue()).child(senderId + "__" + receiverId).child(Conversation.conversationMessage.getValue()).childByAutoId()
@@ -111,7 +113,8 @@ extension ChatManager : ChatManagerProtocol {
             "senderId" : message.senderId ?? "",
             "reaction" : message.reaction ?? "",
             "sticker" : message.sticker ?? "",
-            "senderName" : message.senderName ?? ""
+            "senderName" : message.senderName ?? "",
+            "isPinned" : message.isPinned ?? false
 //            "forwardMessage" : message.forwardMessage ?? ForwardMessage()
         ] as? [String : Any] else { return  }
         

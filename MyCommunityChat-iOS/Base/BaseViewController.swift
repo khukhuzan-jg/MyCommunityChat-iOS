@@ -37,7 +37,7 @@ class BaseViewController : UIViewController {
         
     }
     
-    func presentReactionPopup(cell: UITableViewCell , selectedReaction: @escaping(String) -> Void , forwardMessage : @escaping () -> Void) {
+    func presentReactionPopup(cell: UITableViewCell , selectedReaction: @escaping(String) -> Void , forwardMessage : @escaping () -> Void,isPinned : Bool,pinnedMessage : @escaping () -> Void) {
         let popupVC = ReactionPopupController()
         // Customize your reaction options
         popupVC.options = ["👍", "❤️", "😂", "😮", "😢", "😡"]
@@ -51,6 +51,12 @@ class BaseViewController : UIViewController {
             print("Forward message Tap")
             popupVC.dismissVC()
             forwardMessage()
+        }
+        
+        popupVC.isPinned = isPinned
+        popupVC.pinnedMessageHandler = {
+            popupVC.dismissVC()
+            pinnedMessage()
         }
         if let ppc = popupVC.popoverPresentationController {
             ppc.delegate = self

@@ -29,6 +29,7 @@ public struct Message {
     public var sticker : String?
     public var forwardMessage : [String : String]?
     public var senderName : String?
+    public var isPinned : Bool?
 }
 
 //public struct ForwardMessage {

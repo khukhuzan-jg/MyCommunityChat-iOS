@@ -11,6 +11,11 @@ import iOSPhotoEditor
 import CommonUI
 class ChatRoomViewController: BaseViewController {
 
+    @IBOutlet weak var btnPin: UIButton!
+    @IBOutlet weak var lblPinMessage: UILabel!
+    @IBOutlet weak var lblPin: UILabel!
+    @IBOutlet weak var imgPinThumb: UIImageView!
+    @IBOutlet weak var pinnedView: UIView!
     @IBOutlet weak var btnSend: UIButton!
     @IBOutlet weak var txtMessage: UITextView!
     @IBOutlet weak var tblMessage: UITableView!
@@ -37,6 +42,7 @@ class ChatRoomViewController: BaseViewController {
     var isShowStickerView = false
     var selectedSticker = UIImage()
     var selectedStickerString = String()
+    var pinnedMessageList = [Message]()
     
     var reactionScrollIdx = 0
     override func viewDidLoad() {
@@ -48,6 +54,7 @@ class ChatRoomViewController: BaseViewController {
         setupCollectionView()
         bottomViewHeight.constant = 120.0
         self.btnClose.isHidden = true
+        self.pinnedView.isHidden = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -117,6 +124,11 @@ class ChatRoomViewController: BaseViewController {
             
         }
         .disposed(by: disposeBag)
+        btnPin.rx.tap.bind { _ in
+            print("Click Pin ...")
+            
+        }
+        .disposed(by: disposeBag)
         
         btnSend.rx.tap.bind { _ in
             if let text = self.txtMessage.text {
@@ -163,6 +175,15 @@ class ChatRoomViewController: BaseViewController {
                     self.scrollToBottom()
                 })
             }
+            
+            let pinnedMessages = self.messageList.filter{ $0.isPinned == true }
+            if pinnedMessages.isEmpty {
+                self.pinnedView.isHidden = true
+            }else{
+                self.pinnedMessageList = pinnedMessages
+                self.pinnedMessageShow(isHidden: false)
+            }
+            
             
         }
         .disposed(by: disposeBag)
@@ -315,6 +336,28 @@ class ChatRoomViewController: BaseViewController {
     private func updateMessage(msg : Message) {
         self.chatRoomViewModel.updateMessage(message: msg)
     }
+    
+    private func pinnedMessageShow(isHidden : Bool){
+        
+        self.pinnedView.isHidden = isHidden
+        
+        if let lastPinMessage = self.pinnedMessageList.first{
+            if (lastPinMessage.messageType ?? .text) == .text {
+                self.imgPinThumb.isHidden = true
+                self.lblPinMessage.text = lastPinMessage.messageText
+            }else{
+                
+                self.imgPinThumb.isHidden = false
+                self.lblPinMessage.text = "Photo"
+                
+            }
+        } else {
+            self.pinnedView.isHidden = true
+        }
+        
+        
+        
+    }
 
 }
 
@@ -342,6 +385,15 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                         forwardVC.selectedessage = message
                         forwardVC.modalPresentationStyle = .pageSheet
                         self?.present(forwardVC, animated: true)
+                    }, isPinned: message.isPinned ?? false, pinnedMessage: {
+                        if let pinned = message.isPinned {
+                            message.isPinned = !pinned
+                            
+                        }else{
+                            message.isPinned = true
+                        }
+                        
+                        self?.updateMessage(msg: message)
                     })
                 }
             
@@ -367,6 +419,15 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                         forwardVC.selectedessage = message
                         forwardVC.modalPresentationStyle = .pageSheet
                         self?.present(forwardVC, animated: true)
+                    }, isPinned: message.isPinned ?? false, pinnedMessage: {
+                        if let pinned = message.isPinned {
+                            message.isPinned = !pinned
+                            
+                        }else{
+                            message.isPinned = true
+                        }
+                        
+                        self?.updateMessage(msg: message)
                     })
                 }
                 return receiverCell
@@ -393,6 +454,15 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                                     forwardVC.selectedessage = message
                                     forwardVC.modalPresentationStyle = .pageSheet
                                     self?.present(forwardVC, animated: true)
+                                }, isPinned: message.isPinned ?? false, pinnedMessage: {
+                                    if let pinned = message.isPinned {
+                                        message.isPinned = !pinned
+                                        
+                                    }else{
+                                        message.isPinned = true
+                                    }
+                                    
+                                    self?.updateMessage(msg: message)
                                 })
                             }
                         
@@ -418,6 +488,15 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                                     forwardVC.selectedessage = message
                                     forwardVC.modalPresentationStyle = .pageSheet
                                     self?.present(forwardVC, animated: true)
+                                }, isPinned: message.isPinned ?? false, pinnedMessage: {
+                                    if let pinned = message.isPinned {
+                                        message.isPinned = !pinned
+                                        
+                                    }else{
+                                        message.isPinned = true
+                                    }
+                                    
+                                    self?.updateMessage(msg: message)
                                 })
                             }
                             return receiverCell
@@ -438,6 +517,15 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                                     forwardVC.selectedessage = message
                                     forwardVC.modalPresentationStyle = .pageSheet
                                     self?.present(forwardVC, animated: true)
+                                }, isPinned: message.isPinned ?? false, pinnedMessage: {
+                                    if let pinned = message.isPinned {
+                                        message.isPinned = !pinned
+                                        
+                                    }else{
+                                        message.isPinned = true
+                                    }
+                                    
+                                    self?.updateMessage(msg: message)
                                 })
                             }
                             return senderCell
@@ -462,6 +550,15 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                                     forwardVC.selectedessage = message
                                     forwardVC.modalPresentationStyle = .pageSheet
                                     self?.present(forwardVC, animated: true)
+                                }, isPinned: message.isPinned ?? false, pinnedMessage: {
+                                    if let pinned = message.isPinned {
+                                        message.isPinned = !pinned
+                                        
+                                    }else{
+                                        message.isPinned = true
+                                    }
+                                    
+                                    self?.updateMessage(msg: message)
                                 })
                             }
                             return receiverCell
@@ -486,6 +583,8 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                         forwardVC.selectedessage = message
                         forwardVC.modalPresentationStyle = .pageSheet
                         self?.present(forwardVC, animated: true)
+                    }, isPinned: message.isPinned ?? false, pinnedMessage: {
+                        print("Pin Mess....")
                     })
                 }
                 return senderCell
@@ -510,6 +609,8 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                         forwardVC.selectedessage = message
                         forwardVC.modalPresentationStyle = .pageSheet
                         self?.present(forwardVC, animated: true)
+                    }, isPinned: message.isPinned ?? false, pinnedMessage: {
+                        print("Pin Mess....")
                     })
                 }
                 return receiverCell
