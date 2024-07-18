@@ -10,7 +10,7 @@ import RxSwift
 import iOSPhotoEditor
 import CommonUI
 class ChatRoomViewController: BaseViewController {
-
+    
     @IBOutlet weak var btnPin: UIButton!
     @IBOutlet weak var lblPinMessage: UILabel!
     @IBOutlet weak var lblPin: UILabel!
@@ -33,6 +33,7 @@ class ChatRoomViewController: BaseViewController {
     let chatRoomViewModel = ChatRoomViewModel.shared
     
     var messageList = [Message]()
+    var filterMessageList: [Message] = []
     var selectedUser : UserData?
     var currentUser : UserData?
     var selectedImageStr = String()
@@ -43,11 +44,13 @@ class ChatRoomViewController: BaseViewController {
     var selectedSticker = UIImage()
     var selectedStickerString = String()
     var pinnedMessageList = [Message]()
+    let searchBar = UISearchBar()
+    var isFilter = false
     
     var reactionScrollIdx = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         setupTableView()
         setNavigationBar()
@@ -104,7 +107,7 @@ class ChatRoomViewController: BaseViewController {
         .disposed(by: disposeBag)
         
         btnDownArrow.rx.tap.bind { _ in
-             let reactionMsg = self.messageList.filter({!($0.reaction ?? "").isEmpty})
+            let reactionMsg = self.messageList.filter({!($0.reaction ?? "").isEmpty})
             if !reactionMsg.isEmpty ,
                self.reactionScrollIdx < reactionMsg.count{
                 let messageId = reactionMsg[self.reactionScrollIdx].messageId ?? ""
@@ -157,13 +160,14 @@ class ChatRoomViewController: BaseViewController {
         chatRoomViewModel.successfullySendMessage.bind { isSuccess in
             if isSuccess {
                 self.chatRoomViewModel.getMessage()
-//                self.chatRoomViewModel.successfullySendMessage.accept(false)
+                //                self.chatRoomViewModel.successfullySendMessage.accept(false)
             }
         }
         .disposed(by: disposeBag)
-       
+        
         chatRoomViewModel.messageListBehaviorRelay.bind { messages in
             self.messageList = messages
+            self.filterMessageList = self.messageList
             self.btnDownArrow.isHidden = self.messageList.count < 7
             self.lblInfo.isHidden = !self.messageList.isEmpty
             self.tblMessage.isHidden = self.messageList.isEmpty
@@ -194,7 +198,7 @@ class ChatRoomViewController: BaseViewController {
         .disposed(by: disposeBag)
         
         chatRoomViewModel.selectedMoreSetting.bind { type in
-           
+            
             switch type {
             case .notiMuteOneDay , .notiMuteOneWeek , .notiMuteOneMonth , .notiMutePermanently:
                 self.chatRoomViewModel.savedNotiSetting(settingType: type)
@@ -243,7 +247,7 @@ class ChatRoomViewController: BaseViewController {
         self.selectedImageStr = ""
         self.btnClose.isHidden = true
     }
-
+    
     private func setupTableView() {
         tblMessage.register(UINib(nibName: String(describing: SendMessageTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: SendMessageTableViewCell.self))
         tblMessage.register(UINib(nibName: String(describing: ReceiveMessageTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ReceiveMessageTableViewCell.self))
@@ -267,7 +271,6 @@ class ChatRoomViewController: BaseViewController {
         stickerCollectionView.reloadData()
     }
     
-    
     private func showBottomSheet() {
         let alert = UIAlertController(title: "Choose image", message: "", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
@@ -284,7 +287,12 @@ class ChatRoomViewController: BaseViewController {
     
     private func setNavigationBar() {
         
-        let back = UIBarButtonItem(image: .icBackButton.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(self.backAction))
+        let back = UIBarButtonItem(
+            image: .icBackButton.withRenderingMode(.alwaysOriginal),
+            style: .plain,
+            target: self,
+            action: #selector(self.backAction)
+        )
         
         var img : UIImage = .icDemo6
         if let imgData = NSData(base64Encoded: self.selectedUser?.image ?? "") {
@@ -293,17 +301,41 @@ class ChatRoomViewController: BaseViewController {
         }
         
         // Create a custom profile view
-        let profileView = ProfileView(frame: CGRect(x: 10, y: 0, width: 200, height: 44))
-        profileView.setupData(image: img, name: self.selectedUser?.name ?? "")
+        let profileView = ProfileView(
+            frame: CGRect(x: 10, y: 0, width: 200, height: 44)
+        )
+        profileView.setupData(
+            image: img,
+            name: self.selectedUser?.name ?? ""
+        )
         // Wrap it in a UIBarButtonItem
         let profileBarButtonItem = UIBarButtonItem(customView: profileView)
         
         // Set it as the left or right bar button item based on your needs
-        navigationItem.leftBarButtonItems = [back , profileBarButtonItem]
+        navigationItem.leftBarButtonItems = [back, profileBarButtonItem]
         
-        
-        let moreBtn = UIBarButtonItem(image: .icMore.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(self.moreAction))
-        navigationItem.rightBarButtonItem = moreBtn
+        let searchBtn = UIBarButtonItem(
+            image: UIImage(
+                systemName: "magnifyingglass"
+            )?.withTintColor(.white, renderingMode: .alwaysOriginal),
+            style: .plain,
+            target: self,
+            action: #selector(searchAction)
+        )
+        let moreBtn = UIBarButtonItem(
+            image: .icMore.withRenderingMode(.alwaysOriginal),
+            style: .plain,
+            target: self,
+            action: #selector(self.moreAction)
+        )
+        navigationItem.rightBarButtonItems = [moreBtn, searchBtn]
+        searchBar.sizeToFit()
+        searchBar.delegate = self
+        searchBar.becomeFirstResponder()
+    }
+    
+    @objc func searchAction() {
+        search(shouldShow: true)
     }
     
     @objc func moreAction() {
@@ -313,6 +345,22 @@ class ChatRoomViewController: BaseViewController {
     
     @objc func backAction() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    private func showSearchBarButton(shouldShow: Bool) {
+        if shouldShow {
+            self.setNavigationBar()
+        } else {
+            navigationItem.rightBarButtonItems = nil
+            navigationItem.leftBarButtonItems = nil
+            navigationItem.hidesBackButton = true
+        }
+    }
+    
+    private func search(shouldShow: Bool) {
+        showSearchBarButton(shouldShow: !shouldShow)
+        searchBar.showsCancelButton = shouldShow
+        navigationItem.titleView = shouldShow ? searchBar : nil
     }
     
     private func chooseImage(sourceType : UIImagePickerController.SourceType) {
@@ -355,25 +403,30 @@ class ChatRoomViewController: BaseViewController {
             self.pinnedView.isHidden = true
         }
         
-        
-        
     }
-
+    func updateSearchResults(text: String?) {
+        guard let searchText = text else { return }
+        filterMessageList = messageList.filter { message in
+            return message.messageText?.contains(searchText) ?? false
+        }
+        isFilter = true
+        tblMessage.reloadData()
+    }
 }
 
 extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.messageList.count
+        return self.filterMessageList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var message = self.messageList[indexPath.row]
+        var message = self.filterMessageList[indexPath.row]
         
         /// note : Text message
         if (message.messageType ?? .text) == .text {
             if (message.senderId ?? "") == (self.currentUser?.id ?? "") {
                 let senderCell = tableView.deque(SendMessageTableViewCell.self)
-                senderCell.setupCellData(message: message)
+                senderCell.setupCellData(message: message, isFilter: isFilter)
                 senderCell.didTapReaction = { [weak self] in
                     self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
                         senderCell.reactionLabel.text = reaction
@@ -442,7 +495,7 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                     
                         if (message.senderId ?? "") == (self.currentUser?.id ?? "") {
                             let senderCell = tableView.deque(SendMessageTableViewCell.self)
-                            senderCell.setupCellData(message: message)
+                            senderCell.setupCellData(message: message, isFilter: isFilter)
                             senderCell.didTapReaction = { [weak self] in
                                 self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
                                     senderCell.reactionLabel.text = reaction
@@ -773,4 +826,20 @@ extension ChatRoomViewController : UICollectionViewDelegate , UICollectionViewDa
     
 }
 
+extension ChatRoomViewController: UISearchControllerDelegate, UISearchBarDelegate {
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.search(shouldShow: false)
+        searchBar.endEditing(true)
+        searchBar.text = ""
+        filterMessageList = messageList
+        isFilter = false
+        tblMessage.reloadData()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        updateSearchResults(text: searchText)
+    }
+    
+}
 

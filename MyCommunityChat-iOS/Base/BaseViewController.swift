@@ -43,7 +43,6 @@ class BaseViewController : UIViewController {
         popupVC.options = ["👍", "❤️", "😂", "😮", "😢", "😡"]
         popupVC.modalPresentationStyle = .popover
         popupVC.selectionHandler = { selectedOption in
-            print(selectedOption)
             selectedReaction(selectedOption)
         }
         
