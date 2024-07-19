@@ -132,6 +132,12 @@ class OTPController: BaseVC {
     private func didTapContinue(_ sender: UIButton) {
         bindOTPAuth()
     }
+    
+    
+    @IBAction 
+    private func didTapBack(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 extension OTPController: AEOTPTextFieldDelegate {
