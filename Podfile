@@ -26,6 +26,8 @@ def ui_pods
   pod 'Kingfisher', '6.3.0'
   pod 'lottie-ios', '4.3.4'
   pod 'iOSPhotoEditor'
+  pod 'CHIPageControl', '~> 0.1.3'
+
 end
 
 def firebase_pods
@@ -77,4 +79,14 @@ end
 
 target 'MyCommunityChat-iOSUITests' do
     # Pods for testing
+end
+
+post_install do |installer|
+    installer.generated_projects.each do |project|
+        project.targets.each do |target|
+            target.build_configurations.each do |config|
+                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+            end
+        end
+    end
 end
