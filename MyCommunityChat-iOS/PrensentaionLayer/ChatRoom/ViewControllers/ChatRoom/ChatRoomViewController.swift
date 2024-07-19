@@ -10,6 +10,7 @@ import RxSwift
 import iOSPhotoEditor
 import CommonUI
 import CHIPageControl
+
 class ChatRoomViewController: BaseViewController {
     
     @IBOutlet weak var pinPageControll: CHIPageControlAji!
@@ -274,30 +275,7 @@ class ChatRoomViewController: BaseViewController {
         self.selectedImageStr = ""
         self.btnClose.isHidden = true
     }
-    /*
-    private func setupTableView() {
-        tblMessage.register(UINib(nibName: String(describing: SendMessageTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: SendMessageTableViewCell.self))
-        tblMessage.register(UINib(nibName: String(describing: ReceiveMessageTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ReceiveMessageTableViewCell.self))
-        
-        tblMessage.register(UINib(nibName: String(describing: SendImgeTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: SendImgeTableViewCell.self))
-        tblMessage.register(UINib(nibName: String(describing: ReceiveImageTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ReceiveImageTableViewCell.self))
-        
-        tblMessage.delegate = self
-        tblMessage.dataSource = self
-        tblMessage.separatorStyle = .none
-        tblMessage.showsVerticalScrollIndicator = false
-        tblMessage.showsHorizontalScrollIndicator = false
-        tblMessage.reloadData()
-    }
-    
-    private func setupCollectionView() {
-        stickerCollectionView.register(cell: StickerCollectionViewCell.self)
-        stickerCollectionView.backgroundColor = .clear
-        stickerCollectionView.delegate = self
-        stickerCollectionView.dataSource = self
-        stickerCollectionView.reloadData()
-    }
-    */
+   
     private func showBottomSheet() {
         let alert = UIAlertController(title: "Choose image", message: "", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
@@ -407,11 +385,7 @@ class ChatRoomViewController: BaseViewController {
             morePopupView.dismiss()
         }
     }
-    /*
-    private func updateMessage(msg : Message) {
-        self.chatRoomViewModel.updateMessage(message: msg)
-    }
-    */
+   
     private func pinnedMessageShow(isHidden : Bool, isPinClick : Bool){
         
         self.pinnedView.isHidden = isHidden
@@ -466,281 +440,7 @@ class ChatRoomViewController: BaseViewController {
         tblMessage.reloadData()
     }
 }
-/*
 
-extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.filterMessageList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var message = self.filterMessageList[indexPath.row]
-        
-        /// note : Text message
-        if (message.messageType ?? .text) == .text {
-            if (message.senderId ?? "") == (self.currentUser?.id ?? "") {
-                let senderCell = tableView.deque(SendMessageTableViewCell.self)
-                senderCell.setupCellData(message: message, isFilter: isFilter)
-                senderCell.didTapReaction = { [weak self] in
-                    self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
-                        senderCell.reactionLabel.text = reaction
-                        message.reaction = reaction
-                        self?.updateMessage(msg: message)
-                    }, forwardMessage: {
-                        let forwardVC = ForwardViewController()
-                        forwardVC.currentUser = self?.currentUser
-                        forwardVC.selectedessage = message
-                        forwardVC.modalPresentationStyle = .pageSheet
-                        self?.present(forwardVC, animated: true)
-                    }, isPinned: message.isPinned ?? false, pinnedMessage: {
-                        if let pinned = message.isPinned {
-                            message.isPinned = !pinned
-                            
-                        }else{
-                            message.isPinned = true
-                        }
-                        
-                        self?.updateMessage(msg: message)
-                    })
-                }
-            
-                return senderCell
-            }
-            else {
-                let receiverCell = tableView.deque(ReceiveMessageTableViewCell.self)
-                
-                var img : UIImage = .icPlaceholder
-                if let imgData = NSData(base64Encoded: self.selectedUser?.image ?? "") {
-                    img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
-                    
-                }
-                receiverCell.setupCellData(message: message , profile: img)
-                receiverCell.didTapReaction = { [weak self] in
-                    self?.presentReactionPopup(cell: receiverCell, selectedReaction: { [weak self] reaction in
-                        receiverCell.reactionLabel.text = reaction
-                        message.reaction = reaction
-                        self?.updateMessage(msg: message)
-                    }, forwardMessage: {
-                        let forwardVC = ForwardViewController()
-                        forwardVC.currentUser = self?.currentUser
-                        forwardVC.selectedessage = message
-                        forwardVC.modalPresentationStyle = .pageSheet
-                        self?.present(forwardVC, animated: true)
-                    }, isPinned: message.isPinned ?? false, pinnedMessage: {
-                        if let pinned = message.isPinned {
-                            message.isPinned = !pinned
-                            
-                        }else{
-                            message.isPinned = true
-                        }
-                        
-                        self?.updateMessage(msg: message)
-                    })
-                }
-                return receiverCell
-            }
-        }
-        /// note : forward message
-        else if (message.messageType ?? .text) == .forward {
-            if let  messageType = message.forwardMessage?["messageType"] ,
-               let msgType = MessageType(rawValue: messageType) {
-                switch msgType {
-                case .text:
-                    
-                        if (message.senderId ?? "") == (self.currentUser?.id ?? "") {
-                            let senderCell = tableView.deque(SendMessageTableViewCell.self)
-                            senderCell.setupCellData(message: message, isFilter: isFilter)
-                            senderCell.didTapReaction = { [weak self] in
-                                self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
-                                    senderCell.reactionLabel.text = reaction
-                                    message.reaction = reaction
-                                    self?.updateMessage(msg: message)
-                                }, forwardMessage: {
-                                    let forwardVC = ForwardViewController()
-                                    forwardVC.currentUser = self?.currentUser
-                                    forwardVC.selectedessage = message
-                                    forwardVC.modalPresentationStyle = .pageSheet
-                                    self?.present(forwardVC, animated: true)
-                                }, isPinned: message.isPinned ?? false, pinnedMessage: {
-                                    if let pinned = message.isPinned {
-                                        message.isPinned = !pinned
-                                        
-                                    }else{
-                                        message.isPinned = true
-                                    }
-                                    
-                                    self?.updateMessage(msg: message)
-                                })
-                            }
-                        
-                            return senderCell
-                        }
-                        else {
-                            let receiverCell = tableView.deque(ReceiveMessageTableViewCell.self)
-                            
-                            var img : UIImage = .icPlaceholder
-                            if let imgData = NSData(base64Encoded: self.selectedUser?.image ?? "") {
-                                img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
-                                
-                            }
-                            receiverCell.setupCellData(message: message , profile: img)
-                            receiverCell.didTapReaction = { [weak self] in
-                                self?.presentReactionPopup(cell: receiverCell, selectedReaction: { [weak self] reaction in
-                                    receiverCell.reactionLabel.text = reaction
-                                    message.reaction = reaction
-                                    self?.updateMessage(msg: message)
-                                }, forwardMessage: {
-                                    let forwardVC = ForwardViewController()
-                                    forwardVC.currentUser = self?.currentUser
-                                    forwardVC.selectedessage = message
-                                    forwardVC.modalPresentationStyle = .pageSheet
-                                    self?.present(forwardVC, animated: true)
-                                }, isPinned: message.isPinned ?? false, pinnedMessage: {
-                                    if let pinned = message.isPinned {
-                                        message.isPinned = !pinned
-                                        
-                                    }else{
-                                        message.isPinned = true
-                                    }
-                                    
-                                    self?.updateMessage(msg: message)
-                                })
-                            }
-                            return receiverCell
-                        }
-                default :
-                    
-                        if (message.senderId ?? "") == (self.currentUser?.id ?? "") {
-                            let senderCell = tableView.deque(SendImgeTableViewCell.self)
-                            senderCell.setupcell(message: message)
-                            senderCell.didTapReaction = { [weak self] in
-                                self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
-                                    senderCell.reactionLabel.text = reaction
-                                    message.reaction = reaction
-                                    self?.updateMessage(msg: message)
-                                }, forwardMessage: {
-                                    let forwardVC = ForwardViewController()
-                                    forwardVC.currentUser = self?.currentUser
-                                    forwardVC.selectedessage = message
-                                    forwardVC.modalPresentationStyle = .pageSheet
-                                    self?.present(forwardVC, animated: true)
-                                }, isPinned: message.isPinned ?? false, pinnedMessage: {
-                                    if let pinned = message.isPinned {
-                                        message.isPinned = !pinned
-                                        
-                                    }else{
-                                        message.isPinned = true
-                                    }
-                                    
-                                    self?.updateMessage(msg: message)
-                                })
-                            }
-                            return senderCell
-                        }
-                        else {
-                            let receiverCell = tableView.deque(ReceiveImageTableViewCell.self)
-                            
-                            var img : UIImage = .icPlaceholder
-                            if let imgData = NSData(base64Encoded: self.selectedUser?.image ?? "") {
-                                img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
-                                
-                            }
-                            receiverCell.setupcell(message: message, profile: img)
-                            receiverCell.didTapReaction = { [weak self] in
-                                self?.presentReactionPopup(cell: receiverCell, selectedReaction: { [weak self] reaction in
-                                    receiverCell.reactionLabel.text = reaction
-                                    message.reaction = reaction
-                                    self?.updateMessage(msg: message)
-                                }, forwardMessage: {
-                                    let forwardVC = ForwardViewController()
-                                    forwardVC.currentUser = self?.currentUser
-                                    forwardVC.selectedessage = message
-                                    forwardVC.modalPresentationStyle = .pageSheet
-                                    self?.present(forwardVC, animated: true)
-                                }, isPinned: message.isPinned ?? false, pinnedMessage: {
-                                    if let pinned = message.isPinned {
-                                        message.isPinned = !pinned
-                                        
-                                    }else{
-                                        message.isPinned = true
-                                    }
-                                    
-                                    self?.updateMessage(msg: message)
-                                })
-                            }
-                            return receiverCell
-                        }
-                    
-                }
-            }
-        }
-        /// note : image or sticker message
-        else {
-            if (message.senderId ?? "") == (self.currentUser?.id ?? "") {
-                let senderCell = tableView.deque(SendImgeTableViewCell.self)
-                senderCell.setupcell(message: message)
-                senderCell.didTapReaction = { [weak self] in
-                    self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
-                        senderCell.reactionLabel.text = reaction
-                        message.reaction = reaction
-                        self?.updateMessage(msg: message)
-                    }, forwardMessage: {
-                        let forwardVC = ForwardViewController()
-                        forwardVC.currentUser = self?.currentUser
-                        forwardVC.selectedessage = message
-                        forwardVC.modalPresentationStyle = .pageSheet
-                        self?.present(forwardVC, animated: true)
-                    }, isPinned: message.isPinned ?? false, pinnedMessage: {
-                        if let pinned = message.isPinned {
-                            message.isPinned = !pinned
-                            
-                        }else{
-                            message.isPinned = true
-                        }
-                        
-                        self?.updateMessage(msg: message)
-                    })
-                }
-                return senderCell
-            }
-            else {
-                let receiverCell = tableView.deque(ReceiveImageTableViewCell.self)
-                
-                var img : UIImage = .icPlaceholder
-                if let imgData = NSData(base64Encoded: self.selectedUser?.image ?? "") {
-                    img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
-                    
-                }
-                receiverCell.setupcell(message: message, profile: img)
-                receiverCell.didTapReaction = { [weak self] in
-                    self?.presentReactionPopup(cell: receiverCell, selectedReaction: { [weak self] reaction in
-                        receiverCell.reactionLabel.text = reaction
-                        message.reaction = reaction
-                        self?.updateMessage(msg: message)
-                    }, forwardMessage: {
-                        let forwardVC = ForwardViewController()
-                        forwardVC.currentUser = self?.currentUser
-                        forwardVC.selectedessage = message
-                        forwardVC.modalPresentationStyle = .pageSheet
-                        self?.present(forwardVC, animated: true)
-                    }, isPinned: message.isPinned ?? false, pinnedMessage: {
-                        if let pinned = message.isPinned {
-                            message.isPinned = !pinned
-                            
-                        }else{
-                            message.isPinned = true
-                        }
-                        
-                        self?.updateMessage(msg: message)
-                    })
-                }
-                return receiverCell
-            }
-        }
-        return UITableViewCell()
-    }
-}
-*/
 extension ChatRoomViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     public func imagePickerController(
         _ picker: UIImagePickerController,
@@ -857,44 +557,6 @@ extension ChatRoomViewController : UITextViewDelegate {
     }
 
 }
-
-
-// MARK: - UICollectionView Delegate & Datasource
-/*
-extension ChatRoomViewController : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.bounds.width/3 - 5
-        return CGSize(width: width, height: 100)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return stickerList.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.deque(StickerCollectionViewCell.self, index: indexPath)
-        cell.setupCell(stickerImage: stickerList[indexPath.item] , selectedSticker : chatRoomViewModel.selectedSticker.value)
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        chatRoomViewModel.selectedSticker.accept(stickerList[indexPath.item])
-    }
-    
-    
-}
-*/
 
 extension ChatRoomViewController: UISearchControllerDelegate, UISearchBarDelegate {
     
