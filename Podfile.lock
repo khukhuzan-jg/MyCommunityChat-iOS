@@ -1,4 +1,21 @@
 PODS:
+  - CHIPageControl (0.1.8):
+    - CHIPageControl/Aji (= 0.1.8)
+    - CHIPageControl/Aleppo (= 0.1.8)
+    - CHIPageControl/Chimayo (= 0.1.8)
+    - CHIPageControl/Fresno (= 0.1.8)
+    - CHIPageControl/Jalapeno (= 0.1.8)
+    - CHIPageControl/Jaloro (= 0.1.8)
+    - CHIPageControl/Paprika (= 0.1.8)
+    - CHIPageControl/Puya (= 0.1.8)
+  - CHIPageControl/Aji (0.1.8)
+  - CHIPageControl/Aleppo (0.1.8)
+  - CHIPageControl/Chimayo (0.1.8)
+  - CHIPageControl/Fresno (0.1.8)
+  - CHIPageControl/Jalapeno (0.1.8)
+  - CHIPageControl/Jaloro (0.1.8)
+  - CHIPageControl/Paprika (0.1.8)
+  - CHIPageControl/Puya (0.1.8)
   - Firebase/Auth (10.29.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 10.29.0)
@@ -187,6 +204,7 @@ PODS:
     - RxSwiftExt/Core
 
 DEPENDENCIES:
+  - CHIPageControl (~> 0.1.3)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -206,6 +224,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - CHIPageControl
     - Firebase
     - FirebaseAnalytics
     - FirebaseAppCheckInterop
@@ -241,6 +260,7 @@ SPEC REPOS:
     - RxSwiftExt
 
 SPEC CHECKSUMS:
+  CHIPageControl: 76b35c8309d8dd155e869c109cc6ffc0aaa465ff
   Firebase: cec914dab6fd7b1bd8ab56ea07ce4e03dd251c2d
   FirebaseAnalytics: 23717de130b779aa506e757edb9713d24b6ffeda
   FirebaseAppCheckInterop: 6a1757cfd4067d8e00fccd14fcc1b8fd78cfac07
@@ -275,6 +295,6 @@ SPEC CHECKSUMS:
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxSwiftExt: 43aaacb6a4d3c69c55e9d1cf4f79920043d13583
 
-PODFILE CHECKSUM: b7e4a27600b034be5a448f8ba1365cf15aeee42f
+PODFILE CHECKSUM: e6a4f08328e42bcaefe4ba8a3478a7bd1ef9ba8e
 
 COCOAPODS: 1.15.2

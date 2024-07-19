@@ -25,6 +25,7 @@
                 <outlet property="lblInfo" destination="HLN-HV-uXk" id="2tT-BF-ib8"/>
                 <outlet property="lblPin" destination="1ue-br-gLI" id="SOJ-G4-UDy"/>
                 <outlet property="lblPinMessage" destination="FF9-gx-YFL" id="cMv-ci-vRj"/>
+                <outlet property="pinPageControll" destination="04h-sy-ns6" id="NMk-8U-j6B"/>
                 <outlet property="pinnedView" destination="hYb-jX-mHr" id="KMd-E3-KBG"/>
                 <outlet property="stickerBGView" destination="Bvg-jr-GGq" id="hXa-cj-TxV"/>
                 <outlet property="stickerCollectionView" destination="cdq-E3-26z" id="RCZ-AW-cMt"/>
@@ -202,25 +203,73 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="60"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7cy-Kl-uJu">
-                            <rect key="frame" x="16" y="4" width="361" height="52"/>
+                            <rect key="frame" x="8" y="4" width="377" height="52"/>
                             <subviews>
+                                <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="8UF-ss-1UD">
+                                    <rect key="frame" x="0.0" y="0.0" width="20" height="52"/>
+                                    <subviews>
+                                        <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="04h-sy-ns6" customClass="CHIPageControlAji" customModule="CHIPageControl">
+                                            <rect key="frame" x="0.0" y="0.0" width="20" height="52"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="CH4-JY-hRa"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="currentPageTintColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                    <real key="value" value="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="inactiveTransparency">
+                                                    <real key="value" value="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="hidesForSinglePage" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="04h-sy-ns6" firstAttribute="top" secondItem="8UF-ss-1UD" secondAttribute="top" id="2XW-i4-6Xn"/>
+                                        <constraint firstAttribute="bottom" secondItem="04h-sy-ns6" secondAttribute="bottom" id="4oR-Y9-nOD"/>
+                                        <constraint firstItem="04h-sy-ns6" firstAttribute="leading" secondItem="8UF-ss-1UD" secondAttribute="leading" id="Gb9-wM-WvK"/>
+                                        <constraint firstAttribute="width" constant="20" id="Va3-i9-3m3"/>
+                                        <constraint firstAttribute="height" constant="52" id="eSx-fq-XJJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="04h-sy-ns6" secondAttribute="trailing" id="qy1-h7-536"/>
+                                    </constraints>
+                                </view>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZnJ-rS-T76">
-                                    <rect key="frame" x="0.0" y="0.0" width="60" height="52"/>
+                                    <rect key="frame" x="28" y="0.0" width="60" height="52"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="60" id="Zhb-vr-cgZ"/>
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="mDq-gf-R1o">
-                                    <rect key="frame" x="68" y="0.0" width="293" height="52"/>
+                                    <rect key="frame" x="96" y="0.0" width="281" height="52"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ue-br-gLI">
-                                            <rect key="frame" x="0.0" y="0.0" width="293" height="25"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="281" height="25"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF9-gx-YFL">
-                                            <rect key="frame" x="0.0" y="27" width="293" height="25"/>
+                                            <rect key="frame" x="0.0" y="27" width="281" height="25"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -228,6 +277,10 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
+                            <constraints>
+                                <constraint firstItem="8UF-ss-1UD" firstAttribute="top" secondItem="7cy-Kl-uJu" secondAttribute="top" id="OfH-Cz-4St"/>
+                                <constraint firstAttribute="bottom" secondItem="8UF-ss-1UD" secondAttribute="bottom" id="Sqi-Hf-weO"/>
+                            </constraints>
                         </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vd-Ra-djC" userLabel="PinButton">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
@@ -236,7 +289,7 @@
                     </subviews>
                     <color key="backgroundColor" name="primary"/>
                     <constraints>
-                        <constraint firstItem="7cy-Kl-uJu" firstAttribute="leading" secondItem="hYb-jX-mHr" secondAttribute="leading" constant="16" id="7UC-Ef-pvZ"/>
+                        <constraint firstItem="7cy-Kl-uJu" firstAttribute="leading" secondItem="hYb-jX-mHr" secondAttribute="leading" constant="8" id="7UC-Ef-pvZ"/>
                         <constraint firstAttribute="height" constant="60" id="CWl-JL-Z4K"/>
                         <constraint firstItem="7cy-Kl-uJu" firstAttribute="top" secondItem="hYb-jX-mHr" secondAttribute="top" constant="4" id="a2o-fn-Xga"/>
                         <constraint firstItem="5vd-Ra-djC" firstAttribute="top" secondItem="hYb-jX-mHr" secondAttribute="top" id="are-EZ-zUs"/>
@@ -244,7 +297,7 @@
                         <constraint firstAttribute="trailing" secondItem="5vd-Ra-djC" secondAttribute="trailing" id="cU1-1j-a8P"/>
                         <constraint firstAttribute="bottom" secondItem="7cy-Kl-uJu" secondAttribute="bottom" constant="4" id="kbu-VP-kmX"/>
                         <constraint firstAttribute="bottom" secondItem="5vd-Ra-djC" secondAttribute="bottom" id="lUw-nY-bQV"/>
-                        <constraint firstAttribute="trailing" secondItem="7cy-Kl-uJu" secondAttribute="trailing" constant="16" id="v3x-P9-MqY"/>
+                        <constraint firstAttribute="trailing" secondItem="7cy-Kl-uJu" secondAttribute="trailing" constant="8" id="v3x-P9-MqY"/>
                     </constraints>
                 </view>
             </subviews>
@@ -271,6 +324,11 @@
             <point key="canvasLocation" x="61.832061068702288" y="19.718309859154932"/>
         </view>
     </objects>
+    <designables>
+        <designable name="04h-sy-ns6">
+            <size key="intrinsicContentSize" width="39" height="6"/>
+        </designable>
+    </designables>
     <resources>
         <image name="arrow.down.circle" catalog="system" width="128" height="123"/>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
