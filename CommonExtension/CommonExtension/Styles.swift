@@ -152,14 +152,6 @@ private func tableViewConfiguration(dataSource: UITableViewDataSource, delegate:
         <> setDataSourceAndDelegate(source: dataSource, delegate: delegate)
 }
 */
-public func register(nib: String) -> (UITableView) -> Void {
-    return { $0.register(nib: nib) }
-}
-
-public func register(nibs: String...) -> (UITableView) -> Void {
-    return { tbl in nibs.forEach { tbl.register(nib: $0) } }
-}
-
 public func registerHeaderFooter(nib: String) -> (UITableView) -> Void {
     return { $0.registerHeaderFooter(nib: nib) }
 }

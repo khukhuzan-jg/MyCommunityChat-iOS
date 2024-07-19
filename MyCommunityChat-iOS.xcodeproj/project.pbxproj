@@ -29,6 +29,8 @@
 		78BB8A252C34762200F3BA57 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A232C34762200F3BA57 /* SplashController.swift */; };
 		78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A242C34762200F3BA57 /* SplashController.xib */; };
 		78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A282C3476BF00F3BA57 /* Animation.json */; };
+		78F785AC2C495FE100ABCEB9 /* ChatRoomViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F785AB2C495FE100ABCEB9 /* ChatRoomViewController+TableView.swift */; };
+		78F785AE2C4972B300ABCEB9 /* ChatRoomViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F785AD2C4972B300ABCEB9 /* ChatRoomViewController+CollectionView.swift */; };
 		81E8055BB82443DB50160639 /* Pods_MyCommunityChat_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6057D1E2203D8783C2A4528 /* Pods_MyCommunityChat_iOSTests.framework */; };
 		A8ED4B085B1121C71C39C6C2 /* Pods_MyCommunityChat_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663FE77F4D97B28E5205CBF1 /* Pods_MyCommunityChat_iOSUITests.framework */; };
 		B571B169F2121B7FCEE7080B /* Pods_MyCommunityChat_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5A0EE4C66FD212F9B9EDA6 /* Pods_MyCommunityChat_iOS.framework */; };
@@ -178,6 +180,8 @@
 		78BB8A232C34762200F3BA57 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		78BB8A242C34762200F3BA57 /* SplashController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashController.xib; sourceTree = "<group>"; };
 		78BB8A282C3476BF00F3BA57 /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
+		78F785AB2C495FE100ABCEB9 /* ChatRoomViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatRoomViewController+TableView.swift"; sourceTree = "<group>"; };
+		78F785AD2C4972B300ABCEB9 /* ChatRoomViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatRoomViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		999216BD89321ADCAC3DDB45 /* Pods-MyCommunityChat-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOS.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		AE5A0EE4C66FD212F9B9EDA6 /* Pods_MyCommunityChat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6057D1E2203D8783C2A4528 /* Pods_MyCommunityChat_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -420,6 +424,43 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
+		78F785A72C495F5800ABCEB9 /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				F07CBE5D2C369D6700A2DD8B /* ChatRoomViewController.swift */,
+				F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */,
+				78F785AB2C495FE100ABCEB9 /* ChatRoomViewController+TableView.swift */,
+				78F785AD2C4972B300ABCEB9 /* ChatRoomViewController+CollectionView.swift */,
+			);
+			path = ChatRoom;
+			sourceTree = "<group>";
+		};
+		78F785A82C495F7100ABCEB9 /* Forward */ = {
+			isa = PBXGroup;
+			children = (
+				F072C5872C4611560069045A /* ForwardViewController.swift */,
+				F072C5882C4611560069045A /* ForwardViewController.xib */,
+			);
+			path = Forward;
+			sourceTree = "<group>";
+		};
+		78F785A92C495F8200ABCEB9 /* DateTimePicker */ = {
+			isa = PBXGroup;
+			children = (
+				F06C3D122C404F50004F5379 /* DateTimePickerViewController.swift */,
+				F06C3D132C404F50004F5379 /* DateTimePickerViewController.xib */,
+			);
+			path = DateTimePicker;
+			sourceTree = "<group>";
+		};
+		78F785AA2C495FC000ABCEB9 /* Reaction */ = {
+			isa = PBXGroup;
+			children = (
+				78AC9E892C3FB917001A7B4C /* ReactionPopupController.swift */,
+			);
+			path = Reaction;
+			sourceTree = "<group>";
+		};
 		AE7770F680BF3DED8EF459ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,13 +514,10 @@
 		F07CBE5F2C369D6700A2DD8B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				78AC9E892C3FB917001A7B4C /* ReactionPopupController.swift */,
-				F07CBE5D2C369D6700A2DD8B /* ChatRoomViewController.swift */,
-				F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */,
-				F06C3D122C404F50004F5379 /* DateTimePickerViewController.swift */,
-				F06C3D132C404F50004F5379 /* DateTimePickerViewController.xib */,
-				F072C5872C4611560069045A /* ForwardViewController.swift */,
-				F072C5882C4611560069045A /* ForwardViewController.xib */,
+				78F785AA2C495FC000ABCEB9 /* Reaction */,
+				78F785A72C495F5800ABCEB9 /* ChatRoom */,
+				78F785A92C495F8200ABCEB9 /* DateTimePicker */,
+				78F785A82C495F7100ABCEB9 /* Forward */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -929,9 +967,11 @@
 				F07CBE762C369D6800A2DD8B /* ChatRoomModel.swift in Sources */,
 				F07CBE852C369D6800A2DD8B /* UserTableViewCell.swift in Sources */,
 				F07CBE822C369D6800A2DD8B /* HomeModel.swift in Sources */,
+				78F785AC2C495FE100ABCEB9 /* ChatRoomViewController+TableView.swift in Sources */,
 				F07CBE7E2C369D6800A2DD8B /* SendImgeTableViewCell.swift in Sources */,
 				F0FCCA0C2C402274002BC1B0 /* StickerCollectionViewCell.swift in Sources */,
 				F0FCCA022C3FCE90002BC1B0 /* MorePopupView.swift in Sources */,
+				78F785AE2C4972B300ABCEB9 /* ChatRoomViewController+CollectionView.swift in Sources */,
 				F07CBE8F2C369D8100A2DD8B /* BaseViewModel.swift in Sources */,
 				F06C3D142C404F50004F5379 /* DateTimePickerViewController.swift in Sources */,
 				F072C58A2C4611560069045A /* ForwardViewController.swift in Sources */,
