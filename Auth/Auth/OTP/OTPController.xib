@@ -98,27 +98,43 @@
                         </button>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-rT-jFg">
+                    <rect key="frame" x="24" y="59" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="IJf-Ae-SwQ"/>
+                        <constraint firstAttribute="height" constant="40" id="zLi-zT-hXB"/>
+                    </constraints>
+                    <color key="tintColor" name="secondary"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="chevron.left" catalog="system"/>
+                    <connections>
+                        <action selector="didTapBack:" destination="-1" eventType="touchUpInside" id="FqV-fR-llf"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="primary"/>
             <constraints>
                 <constraint firstItem="FtM-4G-COm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="2Nm-Vo-GgT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ubs-65-j1Q" secondAttribute="trailing" constant="20" id="8oB-vU-HGt"/>
+                <constraint firstItem="ubs-65-j1Q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AxF-Av-rpy"/>
                 <constraint firstItem="ubs-65-j1Q" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="EMM-Bp-Ghk"/>
+                <constraint firstItem="OYm-rT-jFg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="FGx-5H-EbA"/>
                 <constraint firstItem="FtM-4G-COm" firstAttribute="top" secondItem="ubs-65-j1Q" secondAttribute="bottom" constant="50" id="ILd-Tc-N1j"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FtM-4G-COm" secondAttribute="trailing" constant="24" id="SAY-Rm-KZn"/>
                 <constraint firstItem="FtM-4G-COm" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="YR0-xC-NNY"/>
                 <constraint firstItem="snm-ir-cOc" firstAttribute="top" secondItem="FtM-4G-COm" secondAttribute="bottom" constant="25" id="dTJ-qs-PL8"/>
                 <constraint firstItem="snm-ir-cOc" firstAttribute="centerX" secondItem="FtM-4G-COm" secondAttribute="centerX" id="f5B-65-GOv"/>
-                <constraint firstItem="ubs-65-j1Q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jv0-jI-XgT"/>
-                <constraint firstItem="ubs-65-j1Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="kjc-if-oBG"/>
+                <constraint firstItem="ubs-65-j1Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="p5i-wJ-9Mh"/>
+                <constraint firstItem="OYm-rT-jFg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xDK-pQ-v8a"/>
             </constraints>
-            <point key="canvasLocation" x="-676" y="-25"/>
+            <point key="canvasLocation" x="-124.42748091603053" y="64.788732394366207"/>
         </view>
     </objects>
     <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
         <namedColor name="primary">
-            <color red="0.090000003576278687" green="0.29800000786781311" blue="0.35699999332427979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.086274509803921567" green="0.29411764705882354" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="secondary">
             <color red="0.99599999189376831" green="0.76099997758865356" blue="0.40400001406669617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
