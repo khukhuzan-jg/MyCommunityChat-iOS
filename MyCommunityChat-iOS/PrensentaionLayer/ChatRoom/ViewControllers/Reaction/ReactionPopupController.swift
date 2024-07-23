@@ -45,7 +45,7 @@ class ReactionPopupController: UIViewController {
         return tblview
     }()
     
-    var messageSettingTypes : [MessageSettingType] = [.copyText, .copyMessageLink, .forward, .gotoOriginalMessage, .selectMessgae]
+    var messageSettingTypes : [MessageSettingType] = [.copyText, .pinnedMessage , .copyMessageLink, .forward, .gotoOriginalMessage, .selectMessgae]
     
     var options: [String] = []
     var selectionHandler: ((String) -> Void)?
@@ -167,8 +167,12 @@ extension ReactionPopupController : UITableViewDelegate , UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             forwardMessageHandler?()
-        }else{
+        }
+        else if indexPath.row == 1 {
             pinnedMessageHandler?()
+        }
+        else {
+            
         }
         
     }
