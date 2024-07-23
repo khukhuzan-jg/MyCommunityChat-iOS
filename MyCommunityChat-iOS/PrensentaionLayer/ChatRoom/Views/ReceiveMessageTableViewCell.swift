@@ -80,7 +80,19 @@ class ReceiveMessageTableViewCell: UITableViewCell {
             }
         }
         else {
-            self.lblMessage.text = msgStr
+            let mutableAttributedString = NSMutableAttributedString(string: msgStr)
+            let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+            let matches = detector.matches(in: msgStr, options: [], range: NSRange(location: 0, length: msgStr.utf16.count))
+            
+            for match in matches {
+                guard let range = Range(match.range, in: msgStr) else { continue }
+                let url = msgStr[range]
+                print("Url String  \(url)")
+                
+                let nsRange = NSRange(range, in: msgStr)
+                mutableAttributedString.addAttribute(.foregroundColor, value: UIColor.blue, range: match.range)
+            }
+            self.lblMessage.attributedText = mutableAttributedString
         }
         
         layoutIfNeeded()
