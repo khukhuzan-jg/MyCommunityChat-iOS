@@ -82,25 +82,10 @@ class SendMessageTableViewCell: UITableViewCell {
             for match in matches {
                 guard let range = Range(match.range, in: msgStr) else { continue }
                 var urlStr = msgStr[range]
-                print("Url String  \(urlStr)")
                 
                 self.lblMessage.addRangeGesture(stringRange: String(urlStr)) {
                     print("Tap ::::::: \(urlStr)")
-                    if !urlStr.contains("https://") || !urlStr.contains("http://") {
-                        urlStr = "https://" + urlStr
-                    }
-                    guard let url = URL(string: String(urlStr)) else {
-                            print("invalid url")
-                            return
-                        }
-                        UIApplication.shared.open(url, completionHandler: { success in
-                            if success {
-                                print("opened")
-                            } else {
-                                print("failed")
-                                // showInvalidUrlAlert()
-                            }
-                        })
+                    self.handleUrl(urlString: String(urlStr))
                 }
                 
                 let nsRange = NSRange(range, in: msgStr)
@@ -121,6 +106,25 @@ class SendMessageTableViewCell: UITableViewCell {
     
     @objc func handleRemovePress(_ gesture: UITapGestureRecognizer) {
         reactionLabel.text = ""
+    }
+    
+    private func handleUrl(urlString : String) {
+        var urlStr = urlString
+        if !urlStr.contains("https://") || !urlStr.contains("http://") {
+            urlStr = "https://" + urlStr
+        }
+        guard let url = URL(string: String(urlStr)) else {
+                print("invalid url")
+                return
+            }
+            UIApplication.shared.open(url, completionHandler: { success in
+                if success {
+                    print("opened")
+                } else {
+                    print("failed")
+                    // showInvalidUrlAlert()
+                }
+            })
     }
     
 }

@@ -42,13 +42,15 @@ class SplashController: BaseViewController {
         animationView.contentMode = .scaleAspectFit
         animationView.play { [weak self] (finished) in
             // Animation finished
-            print("Animation Completed")
-            if (self?.userManager.isAlreadyLogin ?? false) {
-                self?.navigateToHomeVC()
-            }
-            else {
-                self?.navigateToLoginVC()
-            }
+            
+            self?.navigateToHomeVC()
+//            print("Animation Completed")
+//            if (self?.userManager.isAlreadyLogin ?? false) {
+//                self?.navigateToHomeVC()
+//            }
+//            else {
+//                self?.navigateToLoginVC()
+//            }
             
         }
     }
