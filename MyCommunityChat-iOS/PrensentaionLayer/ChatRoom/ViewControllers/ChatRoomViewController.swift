@@ -481,7 +481,7 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                 let senderCell = tableView.deque(SendMessageTableViewCell.self)
                 senderCell.setupCellData(message: message, isFilter: isFilter)
                 senderCell.didTapReaction = { [weak self] in
-                    self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
+                    self?.presentReactionPopup(cell: senderCell , message: message , selectedReaction: { [weak self] reaction in
                         senderCell.reactionLabel.text = reaction
                         message.reaction = reaction
                         self?.updateMessage(msg: message)
@@ -515,7 +515,7 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                 }
                 receiverCell.setupCellData(message: message , profile: img)
                 receiverCell.didTapReaction = { [weak self] in
-                    self?.presentReactionPopup(cell: receiverCell, selectedReaction: { [weak self] reaction in
+                    self?.presentReactionPopup(cell: receiverCell , message: message , selectedReaction: { [weak self] reaction in
                         receiverCell.reactionLabel.text = reaction
                         message.reaction = reaction
                         self?.updateMessage(msg: message)
@@ -550,7 +550,7 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                             let senderCell = tableView.deque(SendMessageTableViewCell.self)
                             senderCell.setupCellData(message: message, isFilter: isFilter)
                             senderCell.didTapReaction = { [weak self] in
-                                self?.presentReactionPopup(cell: senderCell, selectedReaction: { [weak self] reaction in
+                                self?.presentReactionPopup(cell: senderCell, message: message, selectedReaction: { [weak self] reaction in
                                     senderCell.reactionLabel.text = reaction
                                     message.reaction = reaction
                                     self?.updateMessage(msg: message)
@@ -584,7 +584,7 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
                             }
                             receiverCell.setupCellData(message: message , profile: img)
                             receiverCell.didTapReaction = { [weak self] in
-                                self?.presentReactionPopup(cell: receiverCell, selectedReaction: { [weak self] reaction in
+                                self?.presentReactionPopup(cell: receiverCell , message: message , selectedReaction: { [weak self] reaction in
                                     receiverCell.reactionLabel.text = reaction
                                     message.reaction = reaction
                                     self?.updateMessage(msg: message)

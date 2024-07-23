@@ -75,7 +75,27 @@ class SendMessageTableViewCell: UITableViewCell {
             }
         }
         else {
-            self.lblMessage.text = msgStr
+            let mutableAttributedString = NSMutableAttributedString(string: msgStr)
+            let detector = try! NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue)
+            let matches = detector.matches(in: msgStr, options: [], range: NSRange(location: 0, length: msgStr.utf16.count))
+            
+            for match in matches {
+                guard let range = Range(match.range, in: msgStr) else { continue }
+                let url = msgStr[range]
+                print("Url String  \(url)")
+                
+                self.lblMessage.addRangeGesture(stringRange: String(url)) {
+                    print("Tap :::::::")
+                    if let url = URL(string: String(url)), UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.openURL(url)
+                    }
+                }
+                
+                let nsRange = NSRange(range, in: msgStr)
+                mutableAttributedString.addAttribute(.foregroundColor, value: UIColor.blue, range: match.range)
+            }
+            self.lblMessage.attributedText = mutableAttributedString
+            
         }
         
         layoutIfNeeded()

@@ -16,6 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
+<<<<<<< Updated upstream
             landmarkName = "handleLongPress(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -112,6 +113,40 @@
             endingLineNumber = "24"
             landmarkName = "transform(_:completion:)"
             landmarkType = "7">
+=======
+            landmarkName = "setupCellData(message:isFilter:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E067E2A2-6A74-4FA5-8B79-CF8B21EAE85A - 1cdc4f8cb0480979"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyCommunityChat_iOS.SendMessageTableViewCell.setupCellData(message: MyCommunityChat_iOS.Message, isFilter: Swift.Bool) -&gt; ()"
+                  moduleName = "MyCommunityChat-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phyokyawswar/Desktop/MyComChat/MyCommunityChat-iOS/MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/Views/SendMessageTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87">
+               </Location>
+               <Location
+                  uuid = "E067E2A2-6A74-4FA5-8B79-CF8B21EAE85A - 34d20d7fc403d7d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in MyCommunityChat_iOS.SendMessageTableViewCell.setupCellData(message: MyCommunityChat_iOS.Message, isFilter: Swift.Bool) -&gt; ()"
+                  moduleName = "MyCommunityChat-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/phyokyawswar/Desktop/MyComChat/MyCommunityChat-iOS/MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/Views/SendMessageTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88">
+               </Location>
+            </Locations>
+>>>>>>> Stashed changes
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

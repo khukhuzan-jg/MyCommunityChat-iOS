@@ -9,8 +9,12 @@ import Foundation
 import UIKit
 
 enum MessageSettingType : String {
+    case copyText = "Copy text"
+    case copyMessageLink = "Copy message link"
     case forward = "Forward"
     case pinnedMessage = "Pin"
+    case gotoOriginalMessage = "Go to original message"
+    case selectMessgae = "Select message"
     
     func getTitle() -> String {
         return self.rawValue
@@ -41,13 +45,14 @@ class ReactionPopupController: UIViewController {
         return tblview
     }()
     
-    var messageSettingTypes : [MessageSettingType] = [.forward,.pinnedMessage]
+    var messageSettingTypes : [MessageSettingType] = [.copyText, .copyMessageLink, .forward, .gotoOriginalMessage, .selectMessgae]
     
     var options: [String] = []
     var selectionHandler: ((String) -> Void)?
     var forwardMessageHandler : (() -> Void)?
     var pinnedMessageHandler : (() -> Void)?
     var isPinned : Bool = false
+    var messageSettingHandler : ((_ messageSettingType : MessageSettingType) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +71,7 @@ class ReactionPopupController: UIViewController {
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.widthAnchor.constraint(equalToConstant: 200),
             // Adjust height as needed
-            containerView.heightAnchor.constraint(equalToConstant: 150)
+            containerView.heightAnchor.constraint(equalToConstant: 300)
         ])
         
         collectionView.delegate = self
@@ -99,7 +104,7 @@ class ReactionPopupController: UIViewController {
     override var preferredContentSize: CGSize {
         get {
             // Adjust as needed
-            return CGSize(width: 200, height: 150)
+            return CGSize(width: 200, height: 300)
         }
         set {
             super.preferredContentSize = newValue
