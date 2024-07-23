@@ -80,7 +80,7 @@ public class LoginController: BaseVC {
     private func bindAuth() {
         showLoading()
         onValidate()
-        let number = "+66\(phoneNumberTextField.text ?? "")"
+        let number = "+95\(phoneNumberTextField.text ?? "")"
         viewModel.transform(number) { [weak self] success in
             DispatchQueue.main.async {
                 self?.hideLoading()
