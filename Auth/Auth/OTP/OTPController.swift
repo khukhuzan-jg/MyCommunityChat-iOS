@@ -20,6 +20,7 @@ class OTPController: BaseVC {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var continueButton: UIButton!
     
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var resendOTPButton: UIButton!
  
     public init(phoneNumber: String) {
@@ -64,6 +65,7 @@ class OTPController: BaseVC {
         setupTextField()
         continueButton |> setMainButtonStyle(isEnabled: false)
         resendOTPButton.isHidden = true
+        loading.isHidden = true
     }
     
     private func setupTextField() {
@@ -91,6 +93,16 @@ class OTPController: BaseVC {
         )
     }
     
+    private func showLoading() {
+        loading.isHidden = false
+        loading.startAnimating()
+    }
+    
+    private func hideLoading() {
+        loading.isHidden = true
+        loading.stopAnimating()
+    }
+    
     @objc func updateTimer() {
         if seconds > 0 {
             seconds -= 1
@@ -113,11 +125,14 @@ class OTPController: BaseVC {
     }
     
     private func bindOTPAuth() {
+        showLoading()
         let smsCode = otpTextField.text ?? ""
         viewModel.transform(smsCode) { [weak self] success in
             if success {
+                self?.hideLoading()
                 self?.navigateToProfile()
             } else {
+                self?.hideLoading()
                 ToastView.error(message: "OTP code is invalid")
             }
         }

@@ -15,6 +15,7 @@
                 <outlet property="codeLabel" destination="zqZ-jp-e7M" id="DYf-qL-Uj9"/>
                 <outlet property="codeView" destination="ndt-O6-QYJ" id="Gyo-vx-Rhx"/>
                 <outlet property="continueButton" destination="huM-9r-DpO" id="0dC-co-mLu"/>
+                <outlet property="loading" destination="ypO-kI-Dai" id="tJx-9x-EKT"/>
                 <outlet property="phoneNumberLabel" destination="qPl-Wx-G2D" id="QkM-00-yvN"/>
                 <outlet property="phoneNumberTextField" destination="g4h-Zx-CIk" id="bIN-1H-3CV"/>
                 <outlet property="phoneNumberView" destination="tJd-qC-c71" id="4ri-4L-Xfz"/>
@@ -105,20 +106,25 @@
                         </button>
                     </subviews>
                 </stackView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ypO-kI-Dai">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.090196078431372548" green="0.29803921568627451" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="ypO-kI-Dai" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="CPZ-Gi-Zks"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DKp-TQ-MSB" secondAttribute="trailing" constant="24" id="EQ6-fv-XPs"/>
                 <constraint firstItem="DKp-TQ-MSB" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="LbV-Mi-Ohf"/>
                 <constraint firstItem="0vi-AM-ex6" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="SR8-Az-eQ7"/>
                 <constraint firstItem="0vi-AM-ex6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="UeT-cD-Q2P"/>
                 <constraint firstItem="0vi-AM-ex6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="awF-Ue-AY5"/>
+                <constraint firstItem="ypO-kI-Dai" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="r8d-Wn-8mN"/>
                 <constraint firstItem="DKp-TQ-MSB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="rzv-SX-510"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0vi-AM-ex6" secondAttribute="trailing" constant="20" id="t1N-lD-63Y"/>
                 <constraint firstItem="DKp-TQ-MSB" firstAttribute="top" secondItem="0vi-AM-ex6" secondAttribute="bottom" constant="50" id="xFS-eS-ybf"/>
             </constraints>
-            <point key="canvasLocation" x="60" y="-39"/>
+            <point key="canvasLocation" x="112" y="-13"/>
         </view>
     </objects>
     <resources>

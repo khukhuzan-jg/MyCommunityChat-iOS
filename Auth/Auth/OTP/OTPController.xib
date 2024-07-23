@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="continueButton" destination="scJ-xA-FL8" id="VhW-SH-9Jt"/>
                 <outlet property="desLabel" destination="rAQ-CV-DWt" id="TY1-Nu-4at"/>
+                <outlet property="loading" destination="GIO-c0-WQ0" id="ID2-ld-TR6"/>
                 <outlet property="otpTextField" destination="ky6-QW-Gvz" id="rH3-HA-Kdo"/>
                 <outlet property="phoneNumberLabel" destination="1dE-6A-tr6" id="Kfh-WD-MS9"/>
                 <outlet property="resendOTPButton" destination="YDt-B6-cx8" id="giq-cp-Zh7"/>
@@ -26,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubs-65-j1Q" customClass="LogoAndTitleView" customModule="Auth" customModuleProvider="target">
-                    <rect key="frame" x="20" y="59.000000000000014" width="353" height="237.33333333333337"/>
+                    <rect key="frame" x="20" y="59.000000000000014" width="353" height="252.33333333333337"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="FtM-4G-COm">
@@ -111,24 +112,29 @@
                         <action selector="didTapBack:" destination="-1" eventType="touchUpInside" id="FqV-fR-llf"/>
                     </connections>
                 </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="GIO-c0-WQ0">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="primary"/>
             <constraints>
                 <constraint firstItem="FtM-4G-COm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="2Nm-Vo-GgT"/>
+                <constraint firstItem="GIO-c0-WQ0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8aE-sH-exo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ubs-65-j1Q" secondAttribute="trailing" constant="20" id="8oB-vU-HGt"/>
                 <constraint firstItem="ubs-65-j1Q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AxF-Av-rpy"/>
                 <constraint firstItem="ubs-65-j1Q" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="EMM-Bp-Ghk"/>
                 <constraint firstItem="OYm-rT-jFg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="FGx-5H-EbA"/>
-                <constraint firstItem="FtM-4G-COm" firstAttribute="top" secondItem="ubs-65-j1Q" secondAttribute="bottom" constant="50" id="ILd-Tc-N1j"/>
+                <constraint firstItem="FtM-4G-COm" firstAttribute="top" secondItem="ubs-65-j1Q" secondAttribute="bottom" constant="35" id="ILd-Tc-N1j"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FtM-4G-COm" secondAttribute="trailing" constant="24" id="SAY-Rm-KZn"/>
                 <constraint firstItem="FtM-4G-COm" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="YR0-xC-NNY"/>
                 <constraint firstItem="snm-ir-cOc" firstAttribute="top" secondItem="FtM-4G-COm" secondAttribute="bottom" constant="25" id="dTJ-qs-PL8"/>
                 <constraint firstItem="snm-ir-cOc" firstAttribute="centerX" secondItem="FtM-4G-COm" secondAttribute="centerX" id="f5B-65-GOv"/>
+                <constraint firstItem="GIO-c0-WQ0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="o1n-fa-4JF"/>
                 <constraint firstItem="ubs-65-j1Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="p5i-wJ-9Mh"/>
                 <constraint firstItem="OYm-rT-jFg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xDK-pQ-v8a"/>
             </constraints>
-            <point key="canvasLocation" x="-124.42748091603053" y="64.788732394366207"/>
+            <point key="canvasLocation" x="-207" y="-8"/>
         </view>
     </objects>
     <resources>

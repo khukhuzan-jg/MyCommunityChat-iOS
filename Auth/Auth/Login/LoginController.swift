@@ -21,6 +21,7 @@ public class LoginController: BaseVC {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var continueButton: UIButton!
     
     public init() {
@@ -53,6 +54,17 @@ public class LoginController: BaseVC {
         continueButton |> setMainButtonStyle(isEnabled: false)
         phoneNumberTextField.delegate = self
         phoneNumberTextField.addTarget(self, action: #selector(onValidate), for: .editingChanged)
+        loading.isHidden = true
+    }
+    
+    private func showLoading() {
+        loading.isHidden = false
+        loading.startAnimating()
+    }
+    
+    private func hideLoading() {
+        loading.isHidden = true
+        loading.stopAnimating()
     }
 
     @objc func onValidate() {
@@ -66,11 +78,15 @@ public class LoginController: BaseVC {
     }
     
     private func bindAuth() {
+        showLoading()
         onValidate()
-        let number = "+95\(phoneNumberTextField.text ?? "")"
+        let number = "+66\(phoneNumberTextField.text ?? "")"
         viewModel.transform(number) { [weak self] success in
-            if success {
-                self?.navigateToOTP(phoneNumber: number)
+            DispatchQueue.main.async {
+                self?.hideLoading()
+                if success {
+                    self?.navigateToOTP(phoneNumber: number)
+                }
             }
         }
     }
