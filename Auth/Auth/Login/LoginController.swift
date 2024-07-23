@@ -86,6 +86,9 @@ public class LoginController: BaseVC {
                 self?.hideLoading()
                 if success {
                     self?.navigateToOTP(phoneNumber: number)
+                } else {
+                    self?.hideLoading()
+                    ToastView.error(message: "You have reached the daily SMS limit.")
                 }
             }
         }
