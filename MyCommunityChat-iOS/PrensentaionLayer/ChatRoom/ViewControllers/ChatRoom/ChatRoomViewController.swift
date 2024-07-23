@@ -10,6 +10,7 @@ import RxSwift
 import iOSPhotoEditor
 import CommonUI
 import CHIPageControl
+import CommonExtension
 
 class ChatRoomViewController: BaseViewController {
     
@@ -76,7 +77,9 @@ class ChatRoomViewController: BaseViewController {
         txtMessage.delegate = self
         
         let angle = CGFloat.pi/2
-            pinPageControll.transform = CGAffineTransform(rotationAngle: angle)
+        pinPageControll.transform = CGAffineTransform(rotationAngle: angle)
+        
+        btnDownArrow.isHidden = true
     }
     
     @objc func addReaction(_ sender: UIMenuItem) {
@@ -100,6 +103,9 @@ class ChatRoomViewController: BaseViewController {
         
         btnCamera.rx.tap.bind { _ in
             print("Tap Camera")
+            self.stickerBGView.isHidden = true
+            self.imageView.isHidden = false
+            self.imageBGView.isHidden = false
             self.showBottomSheet()
         }
         .disposed(by: disposeBag)
@@ -171,9 +177,13 @@ class ChatRoomViewController: BaseViewController {
                 
                 let message = Message(messageText: text, messageImage: self.selectedImageStr, messageType: type, createdAt: "", lastMessage: "", senderId: self.currentUser?.id ?? "" , sticker: self.selectedStickerString , senderName: self.currentUser?.name)
                 self.chatRoomViewModel.sendMessage(message: message)
-                self.txtMessage.text = ""
+                if type == .text {
+                    self.txtMessage.text = ""
+                }
                 self.selectedStickerString = ""
                 self.selectedSticker = UIImage()
+                self.imageBGView.isHidden = true
+                self.stickerBGView.isHidden = true
                 self.bottomViewHeight.constant = 120.0
                 self.btnClose.isHidden = true
             }
@@ -198,7 +208,7 @@ class ChatRoomViewController: BaseViewController {
             
             let reaction = self.messageList.filter({!($0.reaction ?? "").isEmpty})
             if !reaction.isEmpty {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                     self.scrollToBottom()
                 })
             }
@@ -209,7 +219,7 @@ class ChatRoomViewController: BaseViewController {
             }else{
                 self.pinnedMessageList = pinnedMessages
                 
-//                let sortedByDate = self.pinnedMessageList.sorted { ($0.createdAt?.convertToUTCTimestamp())! < ($1.createdAt?.convertToUTCTimestamp())! }
+                //                let sortedByDate = self.pinnedMessageList.sorted { ($0.createdAt?.convertToUTCTimestamp())! < ($1.createdAt?.convertToUTCTimestamp())! }
                 self.pinPageControll.numberOfPages = self.pinnedMessageList.count
                 self.pinPageControll.set(progress: self.pinnedMessageList.count - 1, animated: true)
                 
@@ -244,7 +254,16 @@ class ChatRoomViewController: BaseViewController {
         .disposed(by: disposeBag)
         
         btnSticker.rx.tap.bind { _ in
+            self.imageBGView.isHidden = true
+            self.imageView.image = nil
+            self.selectedImageStr = ""
+            self.btnClose.isHidden = true
             self.isShowStickerView.toggle()
+            if self.isShowStickerView {
+                self.stickerBGView.isHidden = false
+                self.stickerCollectionView.isHidden = false
+                self.stickerCollectionView.reloadData()
+            }
             self.bottomViewHeight.constant = self.isShowStickerView ? 250 : 120
         }
         .disposed(by: disposeBag)
@@ -263,9 +282,9 @@ class ChatRoomViewController: BaseViewController {
     }
     
     func scrollToBottom()  {
-        let point = CGPoint(x: 0, y: self.tblMessage.contentSize.height + self.tblMessage.contentInset.bottom - self.tblMessage.frame.height)
-        if point.y >= 0{
-            self.tblMessage.setContentOffset(point, animated: true)
+        let row = self.tblMessage.numberOfRows(inSection: 0)
+        if row > 1 {
+            self.tblMessage.scrollToBottom(isAnimated: true)
         }
     }
     
@@ -275,7 +294,7 @@ class ChatRoomViewController: BaseViewController {
         self.selectedImageStr = ""
         self.btnClose.isHidden = true
     }
-   
+    
     private func showBottomSheet() {
         let alert = UIAlertController(title: "Choose image", message: "", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
@@ -285,7 +304,11 @@ class ChatRoomViewController: BaseViewController {
             self.chooseImage(sourceType: .photoLibrary)
         }))
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: { _ in
+            self.imageView.isHidden = true
+            self.imageBGView.isHidden = true
+            self.bottomViewHeight.constant = 120
+        }))
         
         self.navigationController?.present(alert, animated: true)
     }
@@ -385,7 +408,7 @@ class ChatRoomViewController: BaseViewController {
             morePopupView.dismiss()
         }
     }
-   
+    
     private func pinnedMessageShow(isHidden : Bool, isPinClick : Bool){
         
         self.pinnedView.isHidden = isHidden
@@ -419,7 +442,7 @@ class ChatRoomViewController: BaseViewController {
                     self.lblPinMessage.text = "Photo"
                     
                     if let imgData = NSData(base64Encoded: lastPinMessage.messageImage ?? "") {
-                       let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
+                        let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
                         self.imgPinThumb.image = img
                         self.imgPinThumb.contentMode = .scaleAspectFill
                     }
@@ -446,7 +469,7 @@ extension ChatRoomViewController : UIImagePickerControllerDelegate, UINavigation
         _ picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]
     ) {
-
+        
         
         self.stickerCollectionView.isHidden = true
         
@@ -511,15 +534,15 @@ extension ChatRoomViewController : UIImagePickerControllerDelegate, UINavigation
     
     // Helper function inserted by Swift 4.2 migrator.
     fileprivate func convertFromUIImagePickerControllerInfoKeyDictionary(_ input: [UIImagePickerController.InfoKey: Any]) -> [String: Any] {
-
+        
         return Dictionary(uniqueKeysWithValues: input.map {key, value in (key.rawValue, value)})
     }
-
+    
     // Helper function inserted by Swift 4.2 migrator.
     fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
         return input.rawValue
     }
-
+    
 }
 
 extension ChatRoomViewController: PhotoEditorDelegate {
@@ -555,7 +578,7 @@ extension ChatRoomViewController : UITextViewDelegate {
             textView.textColor = UIColor.lightGray
         }
     }
-
+    
 }
 
 extension ChatRoomViewController: UISearchControllerDelegate, UISearchBarDelegate {

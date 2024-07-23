@@ -7,146 +7,177 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E067E2A2-6A74-4FA5-8B79-CF8B21EAE85A"
+            uuid = "00818B0B-1046-47B8-BDD8-495C1F53FF6A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/Views/SendMessageTableViewCell.swift"
+            filePath = "MyCommunityChat-iOS/Base/BaseViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-<<<<<<< Updated upstream
-            landmarkName = "handleLongPress(_:)"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "presentReactionPopup(cell:message:selectedReaction:forwardMessage:isPinned:pinnedMessage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4BFC0E2F-E93D-4823-A1BF-82050922ED69"
+            uuid = "AED703E3-E2CE-4ABD-92BC-6B857835784F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Auth/Auth/Login/LoginVM.swift"
+            filePath = "MyCommunityChat-iOS/Base/BaseViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "transform(_:completion:)"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "presentReactionPopup(cell:message:selectedReaction:forwardMessage:isPinned:pinnedMessage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "119B4497-2AB4-4279-9017-567AA001ACF2"
+            uuid = "7E97FAC3-E5E6-4F55-9773-CC50F771DBB3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Domain/Domain/FirebaseAuth/FirebaseAuthManager.swift"
+            filePath = "MyCommunityChat-iOS/Base/BaseViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "startAuth(phoneNumber:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "119B4497-2AB4-4279-9017-567AA001ACF2 - ebf1b663e60532b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 ((Swift.Result&lt;Swift.Bool, Swift.Never&gt;) -&gt; ()) -&gt; () in Domain.FirebaseAuthManager.startAuth(phoneNumber: Swift.String) -&gt; Combine.AnyPublisher&lt;Swift.Bool, Swift.Never&gt;"
-                  moduleName = "Domain"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phyokyawswar/Desktop/MyComChat/MyCommunityChat-iOS/Domain/Domain/FirebaseAuth/FirebaseAuthManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-               <Location
-                  uuid = "119B4497-2AB4-4279-9017-567AA001ACF2 - ebf1b663e60532b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.String&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 ((Swift.Result&lt;Swift.Bool, Swift.Never&gt;) -&gt; ()) -&gt; () in Domain.FirebaseAuthManager.startAuth(phoneNumber: Swift.String) -&gt; Combine.AnyPublisher&lt;Swift.Bool, Swift.Never&gt;"
-                  moduleName = "Domain"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phyokyawswar/Desktop/MyComChat/MyCommunityChat-iOS/Domain/Domain/FirebaseAuth/FirebaseAuthManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1A786F60-F72D-415E-A14E-24AF44AFD587"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Domain/Domain/FirebaseAuth/FirebaseAuthManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "startAuth(phoneNumber:)"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "presentReactionPopup(cell:message:selectedReaction:forwardMessage:isPinned:pinnedMessage:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C7B9F16D-C21A-4C98-B11F-FFF58BB9DD40"
+            uuid = "6603CC09-0344-40CD-AFBF-8F4F4E6E7B48"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Auth/Auth/Login/LoginVM.swift"
+            filePath = "MyCommunityChat-iOS/Base/BaseViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "transform(_:completion:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "presentReactionPopup(cell:message:selectedReaction:forwardMessage:isPinned:pinnedMessage:)"
             landmarkType = "7">
-=======
-            landmarkName = "setupCellData(message:isFilter:)"
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69829002-8877-4C7C-BBE8-873ED6A6EAFE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/Base/BaseViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "presentReactionPopup(cell:message:selectedReaction:forwardMessage:isPinned:pinnedMessage:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E067E2A2-6A74-4FA5-8B79-CF8B21EAE85A - 1cdc4f8cb0480979"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyCommunityChat_iOS.SendMessageTableViewCell.setupCellData(message: MyCommunityChat_iOS.Message, isFilter: Swift.Bool) -&gt; ()"
-                  moduleName = "MyCommunityChat-iOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phyokyawswar/Desktop/MyComChat/MyCommunityChat-iOS/MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/Views/SendMessageTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87">
-               </Location>
-               <Location
-                  uuid = "E067E2A2-6A74-4FA5-8B79-CF8B21EAE85A - 34d20d7fc403d7d0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in MyCommunityChat_iOS.SendMessageTableViewCell.setupCellData(message: MyCommunityChat_iOS.Message, isFilter: Swift.Bool) -&gt; ()"
-                  moduleName = "MyCommunityChat-iOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phyokyawswar/Desktop/MyComChat/MyCommunityChat-iOS/MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/Views/SendMessageTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88">
-               </Location>
-            </Locations>
->>>>>>> Stashed changes
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "675BBAA9-BAC3-4A27-9F6D-2226DD8AF266"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/Base/BaseViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "presentReactionPopup(cell:message:selectedReaction:forwardMessage:isPinned:pinnedMessage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "32E80963-CF2D-4691-AC63-FA025E9AB847"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoom/ChatRoomViewController+TableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "handleReaction(for:message:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "170BE676-217D-4386-9813-5DC3A5F2F018"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoom/ChatRoomViewController+TableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "handleReaction(for:message:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5857742A-21E0-4C0A-BCA8-D928CFEEE4D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoom/ChatRoomViewController+TableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "handleReaction(for:message:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3728D738-3ACA-491D-B951-B9B28873B5AC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoom/ChatRoomViewController+TableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "handleReaction(for:message:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6DC3642F-4822-46CD-95F3-F205BF3D74FE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCommunityChat-iOS/PrensentaionLayer/ChatRoom/ViewControllers/ChatRoom/ChatRoomViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
+            landmarkName = "bindObserver()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

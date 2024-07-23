@@ -155,7 +155,7 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
         message: Message
     ) {
         var message = message
-        presentReactionPopup(cell: cell, selectedReaction: { [weak self] reaction in
+        presentReactionPopup(cell: cell , message: message, selectedReaction: { [weak self] reaction in
             if let cell = cell as? SendMessageTableViewCell {
                 cell.reactionLabel.text = reaction
             } else if let cell = cell as? ReceiveMessageTableViewCell {

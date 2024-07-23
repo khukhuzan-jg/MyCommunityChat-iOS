@@ -45,7 +45,7 @@ class ReactionPopupController: UIViewController {
         return tblview
     }()
     
-    var messageSettingTypes : [MessageSettingType] = [.copyText, .pinnedMessage , .copyMessageLink, .forward, .gotoOriginalMessage, .selectMessgae]
+    var messageSettingTypes : [MessageSettingType] = [.copyText, .pinnedMessage , .forward]
     
     var options: [String] = []
     var selectionHandler: ((String) -> Void)?
@@ -71,7 +71,7 @@ class ReactionPopupController: UIViewController {
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.widthAnchor.constraint(equalToConstant: 200),
             // Adjust height as needed
-            containerView.heightAnchor.constraint(equalToConstant: 300)
+            containerView.heightAnchor.constraint(equalToConstant: 220)
         ])
         
         collectionView.delegate = self
@@ -104,7 +104,7 @@ class ReactionPopupController: UIViewController {
     override var preferredContentSize: CGSize {
         get {
             // Adjust as needed
-            return CGSize(width: 200, height: 300)
+            return CGSize(width: 200, height: 220)
         }
         set {
             super.preferredContentSize = newValue
@@ -165,15 +165,15 @@ extension ReactionPopupController : UITableViewDelegate , UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            forwardMessageHandler?()
-        }
-        else if indexPath.row == 1 {
+        let settingType = self.messageSettingTypes[indexPath.row]
+       
+        if settingType == .pinnedMessage {
             pinnedMessageHandler?()
         }
         else {
-            
+            messageSettingHandler?(settingType)
         }
+  
         
     }
 }
