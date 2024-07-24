@@ -370,23 +370,24 @@ class ChatRoomViewController: BaseViewController {
             action: #selector(self.moreAction)
         )
         
-        var rightBarButtons = [moreBtn, searchBtn]
+        let doneBtn = UIBarButtonItem(
+            title: "Done",
+            style: .plain,
+            target: self,
+            action: #selector(self.doneAction)
+        )
+        
+        var rightBarButtons = [UIBarButtonItem]()
         
         chatRoomViewModel.selectedMessagesBehaviorRelay.bind {
-            let doneBtn = UIBarButtonItem(
-                title: "Done",
-                style: .plain,
-                target: self,
-                action: #selector(self.doneAction)
-            )
+            rightBarButtons.removeAll()
+            self.navigationItem.rightBarButtonItems = nil
+            
             if !$0.isEmpty {
                 rightBarButtons.insert(doneBtn, at: 0)
             }
-            else {
-                if let idx = rightBarButtons.firstIndex(where: {$0 == doneBtn}) {
-                    rightBarButtons.remove(at: idx)
-                }
-            }
+            rightBarButtons.append(moreBtn)
+            rightBarButtons.append(searchBtn)
             self.navigationItem.rightBarButtonItems = rightBarButtons
         }
         .disposed(by: disposeBag)
@@ -401,6 +402,7 @@ class ChatRoomViewController: BaseViewController {
         self.selectedMessageList.removeAll()
         self.chatRoomViewModel.selectedMessagesBehaviorRelay.accept(self.selectedMessageList)
         self.isMessageSelectMode = false
+        self.tblMessage.reloadData()
     }
     
     @objc func searchAction() {
