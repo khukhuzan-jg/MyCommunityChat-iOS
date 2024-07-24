@@ -48,7 +48,7 @@ class ReceiveMessageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setupCellData(message : Message , profile : UIImage) {
+    func setupCellData(message : Message , profile : UIImage , isSelectedMessage : Bool) {
         let msgStr = (message.messageType ?? .text) == .forward ? (message.forwardMessage?["text"] ?? "") : message.messageText ?? ""
         lblForward.text = (message.messageType ?? .text) == .forward ? "Forward Message" : ""
         
@@ -98,6 +98,10 @@ class ReceiveMessageTableViewCell: UITableViewCell {
             }
             self.lblMessage.attributedText = mutableAttributedString
         }
+        
+        self.bgView.borderWidth = isSelectedMessage ? 2 : 0
+        self.bgView.borderColor = isSelectedMessage ? .secondary : .clear
+        
         
         layoutIfNeeded()
         setNeedsLayout()

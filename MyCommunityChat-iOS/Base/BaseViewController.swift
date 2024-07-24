@@ -37,7 +37,7 @@ class BaseViewController : UIViewController {
         
     }
     
-    func presentReactionPopup(cell: UITableViewCell , message : Message? = nil, selectedReaction: @escaping(String) -> Void , forwardMessage : @escaping () -> Void , isPinned : Bool,pinnedMessage : @escaping () -> Void) {
+    func presentReactionPopup(cell: UITableViewCell , message : Message? = nil, selectedReaction: @escaping(String) -> Void , isPinned : Bool,pinnedMessage : @escaping () -> Void , messageSettingHandler : @escaping(MessageSettingType) -> Void) {
         let popupVC = ReactionPopupController()
         // Customize your reaction options
         popupVC.options = ["👍", "❤️", "😂", "😮", "😢", "😡"]
@@ -48,23 +48,7 @@ class BaseViewController : UIViewController {
         
         popupVC.messageSettingHandler = { settingType in
             popupVC.dismissVC()
-            switch settingType {
-            case .copyText:
-                if let msg = message{
-                    if  msg.messageType == .forward {
-                        self.copyText(text: msg.forwardMessage?["text"] ?? "")
-                    }
-                    else {
-                        self.copyText(text: msg.messageText ?? "")
-                    }
-                }
-            case .forward :
-                forwardMessage()
-            case .selectMessgae :
-                self.selectMessages()
-            default :
-                print(settingType.getTitle())
-            }
+            messageSettingHandler(settingType)
             
         }
         
@@ -81,14 +65,11 @@ class BaseViewController : UIViewController {
         self.present(popupVC, animated: true, completion: nil)
     }
     
-    private func copyText(text : String) {
+    func copyText(text : String) {
         // write to clipboard
         UIPasteboard.general.string = text
     }
     
-    func selectMessages() {
-        
-    }
 }
 
 extension BaseViewController: UIPopoverPresentationControllerDelegate {

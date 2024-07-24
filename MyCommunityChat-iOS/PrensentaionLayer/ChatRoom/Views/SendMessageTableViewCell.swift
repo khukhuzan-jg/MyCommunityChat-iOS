@@ -43,7 +43,7 @@ class SendMessageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setupCellData(message : Message, isFilter: Bool) {
+    func setupCellData(message : Message, isFilter: Bool , isselectedMessage : Bool) {
         let msgStr = (message.messageType ?? .text) == .forward ? (message.forwardMessage?["text"] ?? "") : message.messageText ?? ""
         
         lblForward.text = (message.messageType ?? .text) == .forward ? "Forward Message" : ""
@@ -94,6 +94,10 @@ class SendMessageTableViewCell: UITableViewCell {
             self.lblMessage.attributedText = mutableAttributedString
             
         }
+        
+        self.bgView.borderWidth = isselectedMessage ? 2 : 0
+        self.bgView.borderColor = isselectedMessage ? .secondary : .clear
+        
         
         layoutIfNeeded()
         setNeedsLayout()

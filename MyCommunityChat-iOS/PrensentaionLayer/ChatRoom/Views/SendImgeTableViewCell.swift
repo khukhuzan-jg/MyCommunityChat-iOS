@@ -39,7 +39,7 @@ class SendImgeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setupcell(message : Message) {
+    func setupcell(message : Message , isSelectedMessage : Bool) {
         self.reactionLabel.text = message.reaction ?? ""
        
         if let msgType = message.messageType {
@@ -85,6 +85,10 @@ class SendImgeTableViewCell: UITableViewCell {
             }
             
         }
+        
+        self.bgView.borderWidth = isSelectedMessage ? 2 : 0
+        self.bgView.borderColor = isSelectedMessage ? .secondary : .clear
+        
         
         layoutIfNeeded()
         setNeedsLayout()

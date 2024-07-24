@@ -45,7 +45,7 @@ class ReactionPopupController: UIViewController {
         return tblview
     }()
     
-    var messageSettingTypes : [MessageSettingType] = [.copyText, .pinnedMessage , .forward]
+    var messageSettingTypes : [MessageSettingType] = [.copyText, .pinnedMessage , .forward , .selectMessgae]
     
     var options: [String] = []
     var selectionHandler: ((String) -> Void)?
@@ -71,7 +71,7 @@ class ReactionPopupController: UIViewController {
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.widthAnchor.constraint(equalToConstant: 200),
             // Adjust height as needed
-            containerView.heightAnchor.constraint(equalToConstant: 220)
+            containerView.heightAnchor.constraint(equalToConstant: 250)
         ])
         
         collectionView.delegate = self
@@ -104,7 +104,7 @@ class ReactionPopupController: UIViewController {
     override var preferredContentSize: CGSize {
         get {
             // Adjust as needed
-            return CGSize(width: 200, height: 220)
+            return CGSize(width: 200, height: 250)
         }
         set {
             super.preferredContentSize = newValue

@@ -53,6 +53,9 @@ class ChatRoomViewController: BaseViewController {
     
     var reactionScrollIdx = 0
     var pinScrollIdx = 1
+    
+    var isMessageSelectMode = false
+    var selectedMessageList = [Message]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -133,9 +136,17 @@ class ChatRoomViewController: BaseViewController {
                     }
                 }
                 else {
-                    self.scrollToBottom()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                        self.scrollToBottom()
+                    })
                     self.btnDownArrow.isHidden = true
                 }
+            }
+            else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                    self.scrollToBottom()
+                })
+                self.btnDownArrow.isHidden = true
             }
             
         }
@@ -206,12 +217,12 @@ class ChatRoomViewController: BaseViewController {
             self.tblMessage.isHidden = self.messageList.isEmpty
             self.tblMessage.reloadData()
             
-            let reaction = self.messageList.filter({!($0.reaction ?? "").isEmpty})
-            if !reaction.isEmpty {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                    self.scrollToBottom()
-                })
-            }
+//            let reaction = self.messageList.filter({!($0.reaction ?? "").isEmpty})
+//            if !reaction.isEmpty {
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+//                    self.scrollToBottom()
+//                })
+//            }
             
             let pinnedMessages = self.messageList.filter{ $0.isPinned == true }
             if pinnedMessages.isEmpty {
@@ -226,7 +237,9 @@ class ChatRoomViewController: BaseViewController {
                 self.pinnedMessageShow(isHidden: false, isPinClick: false)
             }
             
-            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                self.scrollToBottom()
+            })
         }
         .disposed(by: disposeBag)
         
@@ -356,10 +369,38 @@ class ChatRoomViewController: BaseViewController {
             target: self,
             action: #selector(self.moreAction)
         )
-        navigationItem.rightBarButtonItems = [moreBtn, searchBtn]
+        
+        var rightBarButtons = [moreBtn, searchBtn]
+        
+        chatRoomViewModel.selectedMessagesBehaviorRelay.bind {
+            let doneBtn = UIBarButtonItem(
+                title: "Done",
+                style: .plain,
+                target: self,
+                action: #selector(self.doneAction)
+            )
+            if !$0.isEmpty {
+                rightBarButtons.insert(doneBtn, at: 0)
+            }
+            else {
+                if let idx = rightBarButtons.firstIndex(where: {$0 == doneBtn}) {
+                    rightBarButtons.remove(at: idx)
+                }
+            }
+            self.navigationItem.rightBarButtonItems = rightBarButtons
+        }
+        .disposed(by: disposeBag)
+        
+        
         searchBar.sizeToFit()
         searchBar.delegate = self
         searchBar.becomeFirstResponder()
+    }
+    
+    @objc func doneAction() {
+        self.selectedMessageList.removeAll()
+        self.chatRoomViewModel.selectedMessagesBehaviorRelay.accept(self.selectedMessageList)
+        self.isMessageSelectMode = false
     }
     
     @objc func searchAction() {
