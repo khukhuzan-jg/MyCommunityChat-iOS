@@ -129,9 +129,12 @@ extension HomeViewController : UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let controller = ChatRoomViewController()
-        controller.currentUser = self.currentUser
-        controller.selectedUser = self.userList[indexPath.row]
+//        let controller = ChatRoomViewController()
+//        controller.currentUser = self.currentUser
+//        controller.selectedUser = self.userList[indexPath.row]
+//        self.navigationController?.pushViewController(controller, animated: true)
+        
+        let controller = ImageLayoutViewController()
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }

@@ -75,6 +75,14 @@
 		F086AA1F2C40C3C100442AF4 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F086AA1E2C40C3C100442AF4 /* DataBaseManager.swift */; };
 		F086AA222C40C43F00442AF4 /* NotiDbObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F086AA212C40C43E00442AF4 /* NotiDbObject.swift */; };
 		F086AA242C40C45200442AF4 /* NotiDBRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F086AA232C40C45200442AF4 /* NotiDBRealmObject.swift */; };
+		F0888FE42C51FF2800DD28F0 /* ImageLayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0888FE32C51FF2800DD28F0 /* ImageLayoutViewController.xib */; };
+		F0888FE52C51FF2800DD28F0 /* ImageLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0888FE22C51FF2800DD28F0 /* ImageLayoutViewController.swift */; };
+		F0888FE82C51FF3B00DD28F0 /* ImageLayoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0888FE72C51FF3B00DD28F0 /* ImageLayoutTableViewCell.xib */; };
+		F0888FE92C51FF3B00DD28F0 /* ImageLayoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0888FE62C51FF3B00DD28F0 /* ImageLayoutTableViewCell.swift */; };
+		F0888FEF2C52051200DD28F0 /* ImageLayoutTableViewCell + CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0888FEE2C52051200DD28F0 /* ImageLayoutTableViewCell + CollectionView.swift */; };
+		F0888FF72C53514400DD28F0 /* ImageLayoutCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0888FF42C53514400DD28F0 /* ImageLayoutCollectionViewCell.swift */; };
+		F0888FFE2C538D7D00DD28F0 /* ImageStackLayoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0888FFD2C538D7D00DD28F0 /* ImageStackLayoutTableViewCell.xib */; };
+		F0888FFF2C538D7D00DD28F0 /* ImageStackLayoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0888FFC2C538D7D00DD28F0 /* ImageStackLayoutTableViewCell.swift */; };
 		F0F9D5572C37F67C0061382F /* Auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78671F422C33E94F006E7DD6 /* Auth.framework */; };
 		F0F9D5582C37F67C0061382F /* Auth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78671F422C33E94F006E7DD6 /* Auth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0F9D55A2C37F6A80061382F /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA02C36EB5300A2DD8B /* Domain.framework */; };
@@ -234,6 +242,14 @@
 		F086AA1E2C40C3C100442AF4 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		F086AA212C40C43E00442AF4 /* NotiDbObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiDbObject.swift; sourceTree = "<group>"; };
 		F086AA232C40C45200442AF4 /* NotiDBRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiDBRealmObject.swift; sourceTree = "<group>"; };
+		F0888FE22C51FF2800DD28F0 /* ImageLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLayoutViewController.swift; sourceTree = "<group>"; };
+		F0888FE32C51FF2800DD28F0 /* ImageLayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageLayoutViewController.xib; sourceTree = "<group>"; };
+		F0888FE62C51FF3B00DD28F0 /* ImageLayoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLayoutTableViewCell.swift; sourceTree = "<group>"; };
+		F0888FE72C51FF3B00DD28F0 /* ImageLayoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageLayoutTableViewCell.xib; sourceTree = "<group>"; };
+		F0888FEE2C52051200DD28F0 /* ImageLayoutTableViewCell + CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageLayoutTableViewCell + CollectionView.swift"; sourceTree = "<group>"; };
+		F0888FF42C53514400DD28F0 /* ImageLayoutCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLayoutCollectionViewCell.swift; sourceTree = "<group>"; };
+		F0888FFC2C538D7D00DD28F0 /* ImageStackLayoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStackLayoutTableViewCell.swift; sourceTree = "<group>"; };
+		F0888FFD2C538D7D00DD28F0 /* ImageStackLayoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageStackLayoutTableViewCell.xib; sourceTree = "<group>"; };
 		F0FCC9FF2C3FCE7A002BC1B0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F0FCCA012C3FCE90002BC1B0 /* MorePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorePopupView.swift; sourceTree = "<group>"; };
 		F0FCCA032C3FCE9F002BC1B0 /* MorePopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorePopupView.xib; sourceTree = "<group>"; };
@@ -364,6 +380,7 @@
 		78671FEA2C33F71A006E7DD6 /* PrensentaionLayer */ = {
 			isa = PBXGroup;
 			children = (
+				F0888FE12C51FF1500DD28F0 /* TestImplement */,
 				F07CBE6B2C369D6700A2DD8B /* ChatRoom */,
 				F07CBE752C369D6700A2DD8B /* Home */,
 				78BB8A222C34760900F3BA57 /* Splash */,
@@ -659,6 +676,21 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
+		F0888FE12C51FF1500DD28F0 /* TestImplement */ = {
+			isa = PBXGroup;
+			children = (
+				F0888FE22C51FF2800DD28F0 /* ImageLayoutViewController.swift */,
+				F0888FE32C51FF2800DD28F0 /* ImageLayoutViewController.xib */,
+				F0888FEE2C52051200DD28F0 /* ImageLayoutTableViewCell + CollectionView.swift */,
+				F0888FFC2C538D7D00DD28F0 /* ImageStackLayoutTableViewCell.swift */,
+				F0888FFD2C538D7D00DD28F0 /* ImageStackLayoutTableViewCell.xib */,
+				F0888FE62C51FF3B00DD28F0 /* ImageLayoutTableViewCell.swift */,
+				F0888FE72C51FF3B00DD28F0 /* ImageLayoutTableViewCell.xib */,
+				F0888FF42C53514400DD28F0 /* ImageLayoutCollectionViewCell.swift */,
+			);
+			path = TestImplement;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -794,7 +826,9 @@
 			files = (
 				78671FF52C33FDD8006E7DD6 /* LaunchScreen.storyboard in Resources */,
 				F07CBE7F2C369D6800A2DD8B /* SendImgeTableViewCell.xib in Resources */,
+				F0888FE42C51FF2800DD28F0 /* ImageLayoutViewController.xib in Resources */,
 				F01926A62C466D3400F71D98 /* MessageSettingTableViewCell.xib in Resources */,
+				F0888FFE2C538D7D00DD28F0 /* ImageStackLayoutTableViewCell.xib in Resources */,
 				F07CBED82C37A92E00A2DD8B /* GoogleService-Info.plist in Resources */,
 				F07CBE7B2C369D6800A2DD8B /* ReceiveImageTableViewCell.xib in Resources */,
 				F06C3D152C404F50004F5379 /* DateTimePickerViewController.xib in Resources */,
@@ -813,6 +847,7 @@
 				7867200D2C345F2B006E7DD6 /* RobotoSlab-Light.ttf in Resources */,
 				F0FCCA0B2C402274002BC1B0 /* StickerCollectionViewCell.xib in Resources */,
 				F07CBE782C369D6800A2DD8B /* ChatRoomViewController.xib in Resources */,
+				F0888FE82C51FF3B00DD28F0 /* ImageLayoutTableViewCell.xib in Resources */,
 				7867200B2C345F2B006E7DD6 /* RobotoSlab-Bold.ttf in Resources */,
 				F07CBE812C369D6800A2DD8B /* SendMessageTableViewCell.xib in Resources */,
 				7867200C2C345F2B006E7DD6 /* RobotoSlab-Regular.ttf in Resources */,
@@ -964,6 +999,8 @@
 				F07CBE902C369D8100A2DD8B /* ChatManager.swift in Sources */,
 				F072C58E2C4629470069045A /* ForwardViewModel.swift in Sources */,
 				F07CBE7A2C369D6800A2DD8B /* ReceiveImageTableViewCell.swift in Sources */,
+				F0888FFF2C538D7D00DD28F0 /* ImageStackLayoutTableViewCell.swift in Sources */,
+				F0888FF72C53514400DD28F0 /* ImageLayoutCollectionViewCell.swift in Sources */,
 				F07CBE762C369D6800A2DD8B /* ChatRoomModel.swift in Sources */,
 				F07CBE852C369D6800A2DD8B /* UserTableViewCell.swift in Sources */,
 				F07CBE822C369D6800A2DD8B /* HomeModel.swift in Sources */,
@@ -972,6 +1009,7 @@
 				F0FCCA0C2C402274002BC1B0 /* StickerCollectionViewCell.swift in Sources */,
 				F0FCCA022C3FCE90002BC1B0 /* MorePopupView.swift in Sources */,
 				78F785AE2C4972B300ABCEB9 /* ChatRoomViewController+CollectionView.swift in Sources */,
+				F0888FE52C51FF2800DD28F0 /* ImageLayoutViewController.swift in Sources */,
 				F07CBE8F2C369D8100A2DD8B /* BaseViewModel.swift in Sources */,
 				F06C3D142C404F50004F5379 /* DateTimePickerViewController.swift in Sources */,
 				F072C58A2C4611560069045A /* ForwardViewController.swift in Sources */,
@@ -987,6 +1025,7 @@
 				F07CBEAC2C37274400A2DD8B /* ProfileImageView.swift in Sources */,
 				F07CBE842C369D6800A2DD8B /* HomeViewModel.swift in Sources */,
 				F072C5862C4610A80069045A /* ForwardTableViewCell.swift in Sources */,
+				F0888FE92C51FF3B00DD28F0 /* ImageLayoutTableViewCell.swift in Sources */,
 				F01926A72C466D3400F71D98 /* MessageSettingTableViewCell.swift in Sources */,
 				F07CBE9F2C36E49700A2DD8B /* UserInfoManager.swift in Sources */,
 				78671E9D2C33DEB7006E7DD6 /* AppDelegate.swift in Sources */,
@@ -996,6 +1035,7 @@
 				78AC9E882C3FB8EF001A7B4C /* ReactionCell.swift in Sources */,
 				F0FCCA002C3FCE7A002BC1B0 /* BaseView.swift in Sources */,
 				F07CBE912C369D8100A2DD8B /* StringCosntants.swift in Sources */,
+				F0888FEF2C52051200DD28F0 /* ImageLayoutTableViewCell + CollectionView.swift in Sources */,
 				F07CBE832C369D6800A2DD8B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
