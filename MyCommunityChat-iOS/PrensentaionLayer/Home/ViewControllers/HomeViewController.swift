@@ -19,6 +19,7 @@ class HomeViewController : BaseViewController {
     var userList = [UserData]()
     var currentUser : UserData?
     
+    var refreshControl = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -40,6 +41,7 @@ class HomeViewController : BaseViewController {
                !users.isEmpty {
                 self.userList = users.filter({$0.id != UIDevice.current.identifierForVendor?.uuidString ?? ""})
             }
+            self.refreshControl.endRefreshing()
             self.tblUsers.isHidden = self.userList.isEmpty
             self.lblWelcome.isHidden = !self.userList.isEmpty
             self.tblUsers.reloadData()
@@ -65,6 +67,12 @@ class HomeViewController : BaseViewController {
             
         }
         .disposed(by: disposeBag)
+        
+        refreshControl.rx.controlEvent(.valueChanged)
+            .subscribe { _ in
+                self.homeViewModel.getUserList()
+            }
+            .disposed(by: disposeBag)
     }
     
     override func bindObserver() {
@@ -100,6 +108,7 @@ class HomeViewController : BaseViewController {
     }
     private func setupTableView() {
         tblUsers.register(UINib(nibName: String(describing: UserTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: UserTableViewCell.self))
+        tblUsers.refreshControl = refreshControl
         tblUsers.delegate = self
         tblUsers.dataSource = self
         tblUsers.separatorStyle = .none

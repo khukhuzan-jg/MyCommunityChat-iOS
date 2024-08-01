@@ -77,7 +77,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qgR-Ul-tAf" userLabel="Lbl Reaction">
-                        <rect key="frame" x="310" y="120" width="0.0" height="0.0"/>
+                        <rect key="frame" x="101.33333333333333" y="120" width="0.0" height="0.0"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -87,7 +87,7 @@
                     <constraint firstItem="Ez9-Wv-g9K" firstAttribute="width" relation="lessThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.8" id="AWx-Fw-dKT"/>
                     <constraint firstAttribute="bottom" secondItem="Ez9-Wv-g9K" secondAttribute="bottom" constant="10" id="Idc-2K-Pxg"/>
                     <constraint firstItem="acy-9m-vOO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Sx6-P7-cxD"/>
-                    <constraint firstAttribute="trailing" secondItem="qgR-Ul-tAf" secondAttribute="trailing" constant="10" id="cia-Mi-jdV"/>
+                    <constraint firstItem="qgR-Ul-tAf" firstAttribute="leading" secondItem="ueN-9Z-rsI" secondAttribute="trailing" constant="-10" id="bC0-gD-4j6"/>
                     <constraint firstItem="Ez9-Wv-g9K" firstAttribute="leading" secondItem="acy-9m-vOO" secondAttribute="trailing" constant="10" id="fVo-Im-eJC"/>
                     <constraint firstAttribute="bottom" secondItem="qgR-Ul-tAf" secondAttribute="bottom" id="gQZ-fU-vHk"/>
                     <constraint firstItem="acy-9m-vOO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="k47-lp-Vx4"/>
