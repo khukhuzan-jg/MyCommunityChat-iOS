@@ -68,13 +68,13 @@ class ChatRoomViewModel : BaseViewModel {
     }
     
     private func checkUserCreatedDate()  {
-        let currentUserCreatedDate = (currentUser.value?.createdAt ?? "").toDate(format: .type12) ?? Date()
-        let selectedUserCreatedDate = (selectedUser.value?.createdAt ?? "").toDate(format: .type12) ?? Date()
-        
+//        let currentUserCreatedDate = (currentUser.value?.createdAt ?? "").toDate(format: .type12) ?? Date()
+//        let selectedUserCreatedDate = (selectedUser.value?.createdAt ?? "").toDate(format: .type12) ?? Date()
+//        
         let currentUserId = currentUser.value?.id ?? ""
         let selectedUserId = selectedUser.value?.id ?? ""
         
-        if currentUserCreatedDate < selectedUserCreatedDate {
+        if currentUserId < selectedUserId {
             self.senderId = currentUserId
             self.receiverId = selectedUserId
         }
