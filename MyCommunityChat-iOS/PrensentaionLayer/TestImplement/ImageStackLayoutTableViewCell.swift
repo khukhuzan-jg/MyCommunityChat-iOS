@@ -88,7 +88,10 @@ class ImageStackLayoutTableViewCell: UITableViewCell {
                 imageStack?.heightAnchor.constraint(equalToConstant: size.height).isActive = true
                 
                 xValue = imageStack?.frame.minX ?? 0.0
-                yValue = imageStack?.frame.maxY ?? 0.0
+                yValue = (imageStack?.frame.maxY ?? 0.0) + scaleImg.size.height
+                
+                print("Width ::::::: \(xValue) Height ::::::: \(yValue) After Changed")
+               
             }
 //            else {
 //                imageStack = UIStackView(frame: CGRect(x: xValue, y: yValue, width: size.width, height: size.height))
@@ -105,6 +108,9 @@ class ImageStackLayoutTableViewCell: UITableViewCell {
         }
        
         parentStackView.addArrangedSubview(msgLabel)
+        
+        parentStackView.layoutSubviews()
+        parentStackView.layoutIfNeeded()
         
         self.contentView.layoutSubviews()
         self.contentView.layoutIfNeeded()

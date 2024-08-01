@@ -273,7 +273,8 @@ public extension UIImage {
         let oldWidth = self.size.width
         let scaleFactor = (scaledToWidth / oldWidth) * 0.5
 
-        let newHeight = self.size.height * scaleFactor
+//        let newHeight = self.size.height * scaleFactor
+        let newHeight = 80.0
         let newWidth = oldWidth * scaleFactor
 
         UIGraphicsBeginImageContext(CGSize(width:newWidth, height:newHeight))

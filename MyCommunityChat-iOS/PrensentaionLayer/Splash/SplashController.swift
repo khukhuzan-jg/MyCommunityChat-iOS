@@ -43,14 +43,14 @@ class SplashController: BaseViewController {
         animationView.play { [weak self] (finished) in
             // Animation finished
             
-//            self?.navigateToHomeVC()
-            print("Animation Completed")
-            if (self?.userManager.isAlreadyLogin ?? false) {
-                self?.navigateToHomeVC()
-            }
-            else {
-                self?.navigateToLoginVC()
-            }
+            self?.navigateToHomeVC()
+//            print("Animation Completed")
+//            if (self?.userManager.isAlreadyLogin ?? false) {
+//                self?.navigateToHomeVC()
+//            }
+//            else {
+//                self?.navigateToLoginVC()
+//            }
             
         }
     }
