@@ -186,6 +186,10 @@ class ChatRoomViewController: BaseViewController {
                     type = .text
                 }
                 
+                if type == .text && (text.isEmpty || text == "Enter your message") {
+                    return
+                }
+                
                 let message = Message(messageText: text, messageImage: self.selectedImageStr, messageType: type, createdAt: "", lastMessage: "", senderId: self.currentUser?.id ?? "" , sticker: self.selectedStickerString , senderName: self.currentUser?.name)
                 self.chatRoomViewModel.sendMessage(message: message)
                 if type == .text {

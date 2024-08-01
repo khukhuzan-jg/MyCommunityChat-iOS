@@ -40,7 +40,7 @@ class UserTableViewCell: UITableViewCell {
 //        self.lblMessage.font = .RoboR14
 //        self.lblMessage.textColor = .lastMessage
 //        
-        self.lblTime.text = Date().toString(.type17) 
+        self.lblTime.text = Date().toString(.type17 , timeZone: TimeZone.current.localizedName(for: .standard, locale: .current) ?? "MM") 
         self.lblTime.font = .RoboR12
         self.lblTime.textColor = .lastMessage
     }

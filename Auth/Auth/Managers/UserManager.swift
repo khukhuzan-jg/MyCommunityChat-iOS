@@ -60,7 +60,7 @@ extension UserManager : UserManagerProtocol {
             "userImage" : user.image,
             "userName" : user.name,
             "userPhone" : user.phone,
-            "createdAt" : Date().toString(.type12, timeZone: "MM")
+            "createdAt" : Date().toString(.type12, timeZone: TimeZone.current.localizedName(for: .standard, locale: .current) ?? "MM")
         ]
         
         self.ref.child("Users").child(user.id ?? "").setValue(userInfo)
