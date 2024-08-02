@@ -43,6 +43,8 @@ class ChatRoomViewModel : BaseViewModel {
     
     var isSuccessfullySavedBehaviorRelay = BehaviorRelay(value: false)
     var isActiveSaveButtonBehaviorRelay = BehaviorRelay(value: false)
+    
+    var isUpdateBehaviorRelay = BehaviorRelay(value: false)
     override init() {
         super.init()
     }
@@ -169,6 +171,7 @@ extension ChatRoomViewModel : ChatRoomViewModelProtocol {
     func sendMessage(message: Message) {
         chatManager.sendMessage(senderId: self.senderId, receiverId: self.receiverId, message: message) { message in
             print("Message :::::: \(message.messageText ?? "")")
+            isUpdateBehaviorRelay.accept(false)
             successfullySendMessage.accept(true)
         }
         
@@ -189,6 +192,7 @@ extension ChatRoomViewModel : ChatRoomViewModelProtocol {
     func updateMessage(message: Message) {
         chatManager.updateMessage(senderId: self.senderId, receiverId: self.receiverId, message: message, messageId: message.messageId ?? "") {
             print("Update Done")
+            self.isUpdateBehaviorRelay.accept(true)
             self.getMessage()
         }
     }

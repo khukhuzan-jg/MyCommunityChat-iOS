@@ -252,7 +252,11 @@ class ChatRoomViewController: BaseViewController {
             }
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                self.scrollToBottom()
+                if !self.chatRoomViewModel.isUpdateBehaviorRelay.value {
+                    self.scrollToBottom()
+                    self.btnDownArrow.isHidden = true
+                }
+                
             })
         }
         .disposed(by: disposeBag)
