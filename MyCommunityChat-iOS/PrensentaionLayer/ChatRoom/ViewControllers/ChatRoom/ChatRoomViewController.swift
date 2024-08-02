@@ -187,6 +187,15 @@ class ChatRoomViewController: BaseViewController {
                 }
                 
                 if type == .text && (text.isEmpty || text == "Enter your message") {
+                    
+                    self.selectedImageStr = ""
+                    self.selectedStickerString = ""
+                    self.selectedSticker = UIImage()
+                    self.imageBGView.isHidden = true
+                    self.stickerBGView.isHidden = true
+                    self.bottomViewHeight.constant = 120.0
+                    self.btnClose.isHidden = true
+                    
                     return
                 }
                 
@@ -195,6 +204,7 @@ class ChatRoomViewController: BaseViewController {
                 if type == .text {
                     self.txtMessage.text = ""
                 }
+                self.selectedImageStr = ""
                 self.selectedStickerString = ""
                 self.selectedSticker = UIImage()
                 self.imageBGView.isHidden = true
