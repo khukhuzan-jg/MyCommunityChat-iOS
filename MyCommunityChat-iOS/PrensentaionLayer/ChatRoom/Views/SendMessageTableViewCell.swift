@@ -43,7 +43,7 @@ class SendMessageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setupCellData(message : Message, isFilter: Bool , isselectedMessage : Bool) {
+    func setupCellData(message : Message, isFilter: Bool , isselectedMessage : Bool, searchTerm: String) {
         let msgStr = (message.messageType ?? .text) == .forward ? (message.forwardMessage?["text"] ?? "") : message.messageText ?? ""
         
         lblForward.text = (message.messageType ?? .text) == .forward ? "Forward Message" : ""
@@ -118,17 +118,17 @@ class SendMessageTableViewCell: UITableViewCell {
             urlStr = "https://" + urlStr
         }
         guard let url = URL(string: String(urlStr)) else {
-                print("invalid url")
-                return
+            print("invalid url")
+            return
+        }
+        UIApplication.shared.open(url, completionHandler: { success in
+            if success {
+                print("opened")
+            } else {
+                print("failed")
+                // showInvalidUrlAlert()
             }
-            UIApplication.shared.open(url, completionHandler: { success in
-                if success {
-                    print("opened")
-                } else {
-                    print("failed")
-                    // showInvalidUrlAlert()
-                }
-            })
+        })
     }
     
 }

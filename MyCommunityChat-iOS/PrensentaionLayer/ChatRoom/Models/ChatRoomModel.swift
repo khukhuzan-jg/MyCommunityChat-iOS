@@ -11,6 +11,7 @@ public enum MessageType : String{
     case text
     case image
     case sticker
+    case gif
     case forward
     
     func getValue() -> String {
@@ -27,6 +28,7 @@ public struct Message {
     public var senderId : String?
     public var reaction: String?
     public var sticker : String?
+    public var gif: String?
     public var forwardMessage : [String : String]?
     public var senderName : String?
     public var isPinned : Bool?

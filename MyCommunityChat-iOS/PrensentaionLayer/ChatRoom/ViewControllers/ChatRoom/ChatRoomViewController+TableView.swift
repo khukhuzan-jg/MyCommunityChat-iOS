@@ -105,7 +105,8 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
             cell.setupCellData(
                 message: message,
                 isFilter: isFilter,
-                isselectedMessage: isSelected
+                isselectedMessage: isSelected,
+                searchTerm: searchBar.text ?? ""
             )
             setupMessageActions(
                 for: cell,

@@ -202,6 +202,7 @@ PODS:
   - RxSwiftExt/RxCocoa (6.2.1):
     - RxCocoa (~> 6.0)
     - RxSwiftExt/Core
+  - SwiftGifOrigin (1.7.0)
 
 DEPENDENCIES:
   - CHIPageControl (~> 0.1.3)
@@ -221,6 +222,7 @@ DEPENDENCIES:
   - RealmSwift
   - RxSwift (= 6.5.0)
   - RxSwiftExt (= 6.2.1)
+  - SwiftGifOrigin (~> 1.7.0)
 
 SPEC REPOS:
   trunk:
@@ -258,6 +260,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxSwiftExt
+    - SwiftGifOrigin
 
 SPEC CHECKSUMS:
   CHIPageControl: 76b35c8309d8dd155e869c109cc6ffc0aaa465ff
@@ -294,7 +297,8 @@ SPEC CHECKSUMS:
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   RxSwiftExt: 43aaacb6a4d3c69c55e9d1cf4f79920043d13583
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
 
-PODFILE CHECKSUM: e6a4f08328e42bcaefe4ba8a3478a7bd1ef9ba8e
+PODFILE CHECKSUM: 0a0c1861ff52c716ef63048b124c2460afcc59f6
 
 COCOAPODS: 1.14.3

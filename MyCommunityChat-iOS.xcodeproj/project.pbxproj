@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		782DEDD52C6087AD00D8A5AA /* gif-2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 782DEDD22C6087AD00D8A5AA /* gif-2.gif */; };
+		782DEDD62C6087AD00D8A5AA /* gif-3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 782DEDD32C6087AD00D8A5AA /* gif-3.gif */; };
+		782DEDD72C6087AD00D8A5AA /* gif-1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 782DEDD42C6087AD00D8A5AA /* gif-1.gif */; };
+		782DEDDB2C610D8F00D8A5AA /* gif-6.gif in Resources */ = {isa = PBXBuildFile; fileRef = 782DEDD82C610D8E00D8A5AA /* gif-6.gif */; };
+		782DEDDC2C610D8F00D8A5AA /* gif-4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 782DEDD92C610D8F00D8A5AA /* gif-4.gif */; };
+		782DEDDD2C610D8F00D8A5AA /* gif-5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 782DEDDA2C610D8F00D8A5AA /* gif-5.gif */; };
 		78671E9D2C33DEB7006E7DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671E9C2C33DEB7006E7DD6 /* AppDelegate.swift */; };
 		78671E9F2C33DEB7006E7DD6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671E9E2C33DEB7006E7DD6 /* SceneDelegate.swift */; };
 		78671EA62C33DEB8006E7DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78671EA52C33DEB8006E7DD6 /* Assets.xcassets */; };
@@ -24,13 +30,14 @@
 		7867200D2C345F2B006E7DD6 /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720042C345F2B006E7DD6 /* RobotoSlab-Light.ttf */; };
 		7867200E2C345F2B006E7DD6 /* RobotoSlab-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720052C345F2B006E7DD6 /* RobotoSlab-Black.ttf */; };
 		7867200F2C345F2B006E7DD6 /* RobotoSlab-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 786720062C345F2B006E7DD6 /* RobotoSlab-Medium.ttf */; };
+		786935E52C5E704300B3EA09 /* CustomImageAndGifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786935E42C5E704300B3EA09 /* CustomImageAndGifView.swift */; };
+		786935E72C5E707200B3EA09 /* CustomImageAndGifView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 786935E62C5E707200B3EA09 /* CustomImageAndGifView.xib */; };
 		78AC9E882C3FB8EF001A7B4C /* ReactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AC9E872C3FB8EF001A7B4C /* ReactionCell.swift */; };
 		78AC9E8A2C3FB917001A7B4C /* ReactionPopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AC9E892C3FB917001A7B4C /* ReactionPopupController.swift */; };
 		78BB8A252C34762200F3BA57 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BB8A232C34762200F3BA57 /* SplashController.swift */; };
 		78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A242C34762200F3BA57 /* SplashController.xib */; };
 		78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 78BB8A282C3476BF00F3BA57 /* Animation.json */; };
 		78F785AC2C495FE100ABCEB9 /* ChatRoomViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F785AB2C495FE100ABCEB9 /* ChatRoomViewController+TableView.swift */; };
-		78F785AE2C4972B300ABCEB9 /* ChatRoomViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F785AD2C4972B300ABCEB9 /* ChatRoomViewController+CollectionView.swift */; };
 		81E8055BB82443DB50160639 /* Pods_MyCommunityChat_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6057D1E2203D8783C2A4528 /* Pods_MyCommunityChat_iOSTests.framework */; };
 		A8ED4B085B1121C71C39C6C2 /* Pods_MyCommunityChat_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663FE77F4D97B28E5205CBF1 /* Pods_MyCommunityChat_iOSUITests.framework */; };
 		B571B169F2121B7FCEE7080B /* Pods_MyCommunityChat_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5A0EE4C66FD212F9B9EDA6 /* Pods_MyCommunityChat_iOS.framework */; };
@@ -152,6 +159,12 @@
 		565E49CCF3606F9BA374ECD8 /* Pods-MyCommunityChat-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOSUITests/Pods-MyCommunityChat-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5713A2433D32BAA98B5AB4EB /* Pods-MyCommunityChat-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOS.debug.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		663FE77F4D97B28E5205CBF1 /* Pods_MyCommunityChat_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		782DEDD22C6087AD00D8A5AA /* gif-2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "gif-2.gif"; sourceTree = "<group>"; };
+		782DEDD32C6087AD00D8A5AA /* gif-3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "gif-3.gif"; sourceTree = "<group>"; };
+		782DEDD42C6087AD00D8A5AA /* gif-1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "gif-1.gif"; sourceTree = "<group>"; };
+		782DEDD82C610D8E00D8A5AA /* gif-6.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "gif-6.gif"; sourceTree = "<group>"; };
+		782DEDD92C610D8F00D8A5AA /* gif-4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "gif-4.gif"; sourceTree = "<group>"; };
+		782DEDDA2C610D8F00D8A5AA /* gif-5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "gif-5.gif"; sourceTree = "<group>"; };
 		78671E992C33DEB7006E7DD6 /* MyCommunityChat-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyCommunityChat-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78671E9C2C33DEB7006E7DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78671E9E2C33DEB7006E7DD6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,13 +188,14 @@
 		786720042C345F2B006E7DD6 /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Light.ttf"; sourceTree = "<group>"; };
 		786720052C345F2B006E7DD6 /* RobotoSlab-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Black.ttf"; sourceTree = "<group>"; };
 		786720062C345F2B006E7DD6 /* RobotoSlab-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Medium.ttf"; sourceTree = "<group>"; };
+		786935E42C5E704300B3EA09 /* CustomImageAndGifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageAndGifView.swift; sourceTree = "<group>"; };
+		786935E62C5E707200B3EA09 /* CustomImageAndGifView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomImageAndGifView.xib; sourceTree = "<group>"; };
 		78AC9E872C3FB8EF001A7B4C /* ReactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionCell.swift; sourceTree = "<group>"; };
 		78AC9E892C3FB917001A7B4C /* ReactionPopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionPopupController.swift; sourceTree = "<group>"; };
 		78BB8A232C34762200F3BA57 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		78BB8A242C34762200F3BA57 /* SplashController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashController.xib; sourceTree = "<group>"; };
 		78BB8A282C3476BF00F3BA57 /* Animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
 		78F785AB2C495FE100ABCEB9 /* ChatRoomViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatRoomViewController+TableView.swift"; sourceTree = "<group>"; };
-		78F785AD2C4972B300ABCEB9 /* ChatRoomViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatRoomViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		999216BD89321ADCAC3DDB45 /* Pods-MyCommunityChat-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCommunityChat-iOS.release.xcconfig"; path = "Target Support Files/Pods-MyCommunityChat-iOS/Pods-MyCommunityChat-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		AE5A0EE4C66FD212F9B9EDA6 /* Pods_MyCommunityChat_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6057D1E2203D8783C2A4528 /* Pods_MyCommunityChat_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyCommunityChat_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +298,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		782DEDD12C60879C00D8A5AA /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				782DEDD92C610D8F00D8A5AA /* gif-4.gif */,
+				782DEDDA2C610D8F00D8A5AA /* gif-5.gif */,
+				782DEDD82C610D8E00D8A5AA /* gif-6.gif */,
+				782DEDD42C6087AD00D8A5AA /* gif-1.gif */,
+				782DEDD22C6087AD00D8A5AA /* gif-2.gif */,
+				782DEDD32C6087AD00D8A5AA /* gif-3.gif */,
+			);
+			path = GIF;
+			sourceTree = "<group>";
+		};
 		78671E902C33DEB7006E7DD6 = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +410,7 @@
 		78671FED2C33F86C006E7DD6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				782DEDD12C60879C00D8A5AA /* GIF */,
 				78BB8A272C3476B000F3BA57 /* Animation */,
 				78671FFD2C345F1A006E7DD6 /* Fonts */,
 				78671EA52C33DEB8006E7DD6 /* Assets.xcassets */,
@@ -405,6 +433,15 @@
 				786720002C345F2B006E7DD6 /* RobotoSlab-Thin.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		786935E32C5E701E00B3EA09 /* CustomImageAndGifView */ = {
+			isa = PBXGroup;
+			children = (
+				786935E42C5E704300B3EA09 /* CustomImageAndGifView.swift */,
+				786935E62C5E707200B3EA09 /* CustomImageAndGifView.xib */,
+			);
+			path = CustomImageAndGifView;
 			sourceTree = "<group>";
 		};
 		78BB8A222C34760900F3BA57 /* Splash */ = {
@@ -430,7 +467,6 @@
 				F07CBE5D2C369D6700A2DD8B /* ChatRoomViewController.swift */,
 				F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */,
 				78F785AB2C495FE100ABCEB9 /* ChatRoomViewController+TableView.swift */,
-				78F785AD2C4972B300ABCEB9 /* ChatRoomViewController+CollectionView.swift */,
 			);
 			path = ChatRoom;
 			sourceTree = "<group>";
@@ -534,6 +570,7 @@
 		F07CBE6A2C369D6700A2DD8B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				786935E32C5E701E00B3EA09 /* CustomImageAndGifView */,
 				F07CBE622C369D6700A2DD8B /* ReceiveImageTableViewCell.swift */,
 				F07CBE632C369D6700A2DD8B /* ReceiveImageTableViewCell.xib */,
 				F07CBE642C369D6700A2DD8B /* ReceiveMessageTableViewCell.swift */,
@@ -795,6 +832,7 @@
 				78671FF52C33FDD8006E7DD6 /* LaunchScreen.storyboard in Resources */,
 				F07CBE7F2C369D6800A2DD8B /* SendImgeTableViewCell.xib in Resources */,
 				F01926A62C466D3400F71D98 /* MessageSettingTableViewCell.xib in Resources */,
+				782DEDDB2C610D8F00D8A5AA /* gif-6.gif in Resources */,
 				F07CBED82C37A92E00A2DD8B /* GoogleService-Info.plist in Resources */,
 				F07CBE7B2C369D6800A2DD8B /* ReceiveImageTableViewCell.xib in Resources */,
 				F06C3D152C404F50004F5379 /* DateTimePickerViewController.xib in Resources */,
@@ -806,6 +844,7 @@
 				7867200F2C345F2B006E7DD6 /* RobotoSlab-Medium.ttf in Resources */,
 				786720092C345F2B006E7DD6 /* RobotoSlab-Thin.ttf in Resources */,
 				F07CBE7D2C369D6800A2DD8B /* ReceiveMessageTableViewCell.xib in Resources */,
+				782DEDDC2C610D8F00D8A5AA /* gif-4.gif in Resources */,
 				78671EA62C33DEB8006E7DD6 /* Assets.xcassets in Resources */,
 				F07CBE862C369D6800A2DD8B /* UserTableViewCell.xib in Resources */,
 				786720082C345F2B006E7DD6 /* RobotoSlab-ExtraLight.ttf in Resources */,
@@ -818,9 +857,14 @@
 				7867200C2C345F2B006E7DD6 /* RobotoSlab-Regular.ttf in Resources */,
 				7867200A2C345F2B006E7DD6 /* RobotoSlab-ExtraBold.ttf in Resources */,
 				F0FCCA072C3FD3BC002BC1B0 /* MorePopupTableViewCell.xib in Resources */,
+				782DEDDD2C610D8F00D8A5AA /* gif-5.gif in Resources */,
+				782DEDD62C6087AD00D8A5AA /* gif-3.gif in Resources */,
+				782DEDD72C6087AD00D8A5AA /* gif-1.gif in Resources */,
+				786935E72C5E707200B3EA09 /* CustomImageAndGifView.xib in Resources */,
 				78BB8A262C34762200F3BA57 /* SplashController.xib in Resources */,
 				F072C5892C4611560069045A /* ForwardViewController.xib in Resources */,
 				786720072C345F2B006E7DD6 /* RobotoSlab-SemiBold.ttf in Resources */,
+				782DEDD52C6087AD00D8A5AA /* gif-2.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -970,8 +1014,8 @@
 				78F785AC2C495FE100ABCEB9 /* ChatRoomViewController+TableView.swift in Sources */,
 				F07CBE7E2C369D6800A2DD8B /* SendImgeTableViewCell.swift in Sources */,
 				F0FCCA0C2C402274002BC1B0 /* StickerCollectionViewCell.swift in Sources */,
+				786935E52C5E704300B3EA09 /* CustomImageAndGifView.swift in Sources */,
 				F0FCCA022C3FCE90002BC1B0 /* MorePopupView.swift in Sources */,
-				78F785AE2C4972B300ABCEB9 /* ChatRoomViewController+CollectionView.swift in Sources */,
 				F07CBE8F2C369D8100A2DD8B /* BaseViewModel.swift in Sources */,
 				F06C3D142C404F50004F5379 /* DateTimePickerViewController.swift in Sources */,
 				F072C58A2C4611560069045A /* ForwardViewController.swift in Sources */,

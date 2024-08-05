@@ -63,7 +63,8 @@ extension ForwardViewModel : ForwardViewModelProtocol {
                 "updatedAt" : Date().toString(.type13, timeZone: "MM"),
                 "senderId" : message.senderId ?? "",
                 "reaction" : message.reaction ?? "",
-                "sticker" : message.sticker ?? ""
+                "sticker" : message.sticker ?? "",
+                "gif" : message.gif ?? "",
             ]
         }
         
