@@ -97,11 +97,11 @@ extension UIImage {
     public class func gifImageWithName(_ name: String) -> UIImage? {
         guard let bundleURL = Bundle.main
             .url(forResource: name, withExtension: "gif") else {
-                print("SwiftGif: This image named \"\(name)\" does not exist")
+//                print("SwiftGif: This image named \"\(name)\" does not exist")
                 return nil
         }
         guard let imageData = try? Data(contentsOf: bundleURL) else {
-            print("SwiftGif: Cannot turn image named \"\(name)\" into NSData")
+//            print("SwiftGif: Cannot turn image named \"\(name)\" into NSData")
             return nil
         }
         

@@ -27,7 +27,7 @@ def ui_pods
   pod 'lottie-ios', '4.3.4'
   pod 'iOSPhotoEditor'
   pod 'CHIPageControl', '~> 0.1.3'
-
+  pod 'SwiftGifOrigin', '~> 1.7.0'
 end
 
 def firebase_pods

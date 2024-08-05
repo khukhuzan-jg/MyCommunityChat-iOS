@@ -79,7 +79,7 @@
                 <outlet property="lblForward" destination="Lnt-1G-1vJ" id="2Df-Au-S9m"/>
                 <outlet property="reactionLabel" destination="4UN-Lt-xds" id="njE-Zl-vyr"/>
             </connections>
-            <point key="canvasLocation" x="6" y="-135"/>
+            <point key="canvasLocation" x="209" y="-85"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftGifOrigin
 
 class SendImgeTableViewCell: UITableViewCell {
     @IBOutlet weak var lblForward: UILabel!
@@ -43,7 +44,7 @@ class SendImgeTableViewCell: UITableViewCell {
         self.reactionLabel.text = message.reaction ?? ""
        
         if let msgType = message.messageType {
-            self.bgView.backgroundColor = msgType == .sticker ? .clear : .senderChat
+            self.bgView.backgroundColor = msgType == .text ? .senderChat : .clear
             if msgType == .forward {
                 print("Forward ::::: \(message.forwardMessage)")
                 lblForward.text = "Forward Message"
@@ -76,10 +77,17 @@ class SendImgeTableViewCell: UITableViewCell {
                     }
                 }
                 else {
-                    if let imgData = NSData(base64Encoded: message.sticker ?? "") {
-                       let img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
-                        self.imgSend.image = img
-                        self.imgSend.contentMode = .scaleAspectFit
+                    if let stickerString = message.sticker, let gifString = message.gif {
+                        if msgType == .gif {
+                            self.imgSend.loadGif(name: gifString)
+                            self.imgSend.contentMode = .scaleAspectFit
+                        } else {
+                            if let imgData = Data(base64Encoded: stickerString) {
+                                let img = UIImage(data: imgData)
+                                self.imgSend.image = img
+                                self.imgSend.contentMode = .scaleAspectFit
+                            }
+                        }
                     }
                 }
             }

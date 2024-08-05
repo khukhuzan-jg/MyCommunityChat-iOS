@@ -11,6 +11,7 @@ import iOSPhotoEditor
 import CommonUI
 import CHIPageControl
 import CommonExtension
+import SwiftGifOrigin
 
 class ChatRoomViewController: BaseViewController {
     
@@ -29,10 +30,9 @@ class ChatRoomViewController: BaseViewController {
     @IBOutlet weak var imageBGView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var btnClose: UIButton!
-    @IBOutlet weak var stickerBGView: UIView!
-    @IBOutlet weak var stickerCollectionView: UICollectionView!
     @IBOutlet weak var btnSticker: UIButton!
     @IBOutlet weak var btnDownArrow: UIButton!
+    @IBOutlet weak var customImageAndGifView: CustomImageAndGifView!
     
     let chatRoomViewModel = ChatRoomViewModel.shared
     
@@ -43,33 +43,42 @@ class ChatRoomViewController: BaseViewController {
     var selectedImageStr = String()
     var isShowMorePopup = false
     let morePopupView = MorePopupView()
-    let stickerList : [UIImage] = [.sticker1 , .sticker2 , .sticker3 , .sticker4 , .sticker5 , .sticker6]
     var isShowStickerView = false
     var selectedSticker = UIImage()
     var selectedStickerString = String()
+    var selectedGif = String()
+    var selectedGifString = String()
     var pinnedMessageList = [Message]()
     let searchBar = UISearchBar()
     var isFilter = false
     
     var reactionScrollIdx = 0
     var pinScrollIdx = 1
-    
     var isMessageSelectMode = false
     var selectedMessageList = [Message]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        setupTableView()
-        setNavigationBar()
-        setupCollectionView()
-        bottomViewHeight.constant = 120.0
-        self.btnClose.isHidden = true
-        self.pinnedView.isHidden = true
+        initView()
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        initBinding()
+    }
+    
+    private func initView() {
+        setupTableView()
+        setNavigationBar()
+        bottomViewHeight.constant = 120.0
+        self.btnClose.isHidden = true
+        self.pinnedView.isHidden = true
+        self.customImageAndGifView.isHidden = true
+    }
+    
+    private func initBinding() {
         lblInfo.text = "Let's start our conversation!"
         lblInfo.font = .RoboB15
         lblInfo.textColor = .darkGray
@@ -93,12 +102,9 @@ class ChatRoomViewController: BaseViewController {
     
     override func bindData() {
         super.bindData()
-        
         chatRoomViewModel.currentUser.accept(currentUser)
         chatRoomViewModel.selectedUser.accept(selectedUser)
         chatRoomViewModel.getMessage()
-        
-        
     }
     
     override func bindObserver() {
@@ -106,7 +112,7 @@ class ChatRoomViewController: BaseViewController {
         
         btnCamera.rx.tap.bind { _ in
             print("Tap Camera")
-            self.stickerBGView.isHidden = true
+            self.customImageAndGifView.isHidden = true
             self.imageView.isHidden = false
             self.imageBGView.isHidden = false
             self.showBottomSheet()
@@ -179,6 +185,9 @@ class ChatRoomViewController: BaseViewController {
                 if !self.selectedImageStr.isEmpty {
                     type = .image
                 }
+                else if !self.selectedGifString.isEmpty {
+                    type = .gif
+                }
                 else if !self.selectedStickerString.isEmpty {
                     type = .sticker
                 }
@@ -199,7 +208,17 @@ class ChatRoomViewController: BaseViewController {
                     return
                 }
                 
-                let message = Message(messageText: text, messageImage: self.selectedImageStr, messageType: type, createdAt: "", lastMessage: "", senderId: self.currentUser?.id ?? "" , sticker: self.selectedStickerString , senderName: self.currentUser?.name)
+                let message = Message(
+                    messageText: text,
+                    messageImage: self.selectedImageStr,
+                    messageType: type,
+                    createdAt: "",
+                    lastMessage: "",
+                    senderId: self.currentUser?.id ?? "" ,
+                    sticker: self.selectedStickerString ,
+                    gif: self.selectedGifString,
+                    senderName: self.currentUser?.name
+                )
                 self.chatRoomViewModel.sendMessage(message: message)
                 if type == .text {
                     self.txtMessage.text = ""
@@ -207,8 +226,10 @@ class ChatRoomViewController: BaseViewController {
                 self.selectedImageStr = ""
                 self.selectedStickerString = ""
                 self.selectedSticker = UIImage()
+                self.selectedGifString = ""
+                self.selectedGif = ""
                 self.imageBGView.isHidden = true
-                self.stickerBGView.isHidden = true
+                self.customImageAndGifView.isHidden = true
                 self.bottomViewHeight.constant = 120.0
                 self.btnClose.isHidden = true
             }
@@ -218,7 +239,6 @@ class ChatRoomViewController: BaseViewController {
         chatRoomViewModel.successfullySendMessage.bind { isSuccess in
             if isSuccess {
                 self.chatRoomViewModel.getMessage()
-                //                self.chatRoomViewModel.successfullySendMessage.accept(false)
             }
         }
         .disposed(by: disposeBag)
@@ -231,20 +251,11 @@ class ChatRoomViewController: BaseViewController {
             self.tblMessage.isHidden = self.messageList.isEmpty
             self.tblMessage.reloadData()
             
-//            let reaction = self.messageList.filter({!($0.reaction ?? "").isEmpty})
-//            if !reaction.isEmpty {
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-//                    self.scrollToBottom()
-//                })
-//            }
-            
             let pinnedMessages = self.messageList.filter{ $0.isPinned == true }
             if pinnedMessages.isEmpty {
                 self.pinnedView.isHidden = true
             }else{
                 self.pinnedMessageList = pinnedMessages
-                
-                //                let sortedByDate = self.pinnedMessageList.sorted { ($0.createdAt?.convertToUTCTimestamp())! < ($1.createdAt?.convertToUTCTimestamp())! }
                 self.pinPageControll.numberOfPages = self.pinnedMessageList.count
                 self.pinPageControll.set(progress: self.pinnedMessageList.count - 1, animated: true)
                 
@@ -283,28 +294,40 @@ class ChatRoomViewController: BaseViewController {
             self.morePopupView.dismiss()
         }
         .disposed(by: disposeBag)
-        
+
         btnSticker.rx.tap.bind { _ in
             self.imageBGView.isHidden = true
             self.imageView.image = nil
             self.selectedImageStr = ""
             self.btnClose.isHidden = true
             self.isShowStickerView.toggle()
-            if self.isShowStickerView {
-                self.stickerBGView.isHidden = false
-                self.stickerCollectionView.isHidden = false
-                self.stickerCollectionView.reloadData()
+            UIView.animate(withDuration: 0.3) {
+                if self.isShowStickerView {
+                    self.customImageAndGifView.isHidden = false
+                    self.customImageAndGifView.collectionView.reloadData()
+                } else {
+                    self.customImageAndGifView.isHidden = true
+                }
             }
-            self.bottomViewHeight.constant = self.isShowStickerView ? 250 : 120
         }
         .disposed(by: disposeBag)
         
-        chatRoomViewModel.selectedSticker.bind {
-            self.selectedStickerString = $0.jpegData(compressionQuality: 0.5)?.base64EncodedString() ?? ""
-            self.selectedSticker = $0
-            self.stickerCollectionView.reloadData()
+        chatRoomViewModel.selectedSticker.bind { [weak self] selectedSticker in
+            self?.selectedStickerString = selectedSticker.jpegData(compressionQuality: 0.5)?.base64EncodedString() ?? ""
+            self?.selectedSticker = selectedSticker
+            self?.customImageAndGifView.collectionView.reloadData()
         }
         .disposed(by: disposeBag)
+
+        chatRoomViewModel.selectedGif.bind { [weak self] selectedGif in
+            self?.selectedGifString = selectedGif
+            self?.selectedGif = selectedGif
+            UIView.performWithoutAnimation {
+                self?.customImageAndGifView.collectionView.reloadData()
+            }
+        }
+        .disposed(by: disposeBag)
+        
     }
     
     override func bindViewModel() {
@@ -532,7 +555,7 @@ extension ChatRoomViewController : UIImagePickerControllerDelegate, UINavigation
     ) {
         
         
-        self.stickerCollectionView.isHidden = true
+        self.customImageAndGifView.isHidden = true
         
         // Local variable inserted by Swift 4.2 migrator.
         let info = convertFromUIImagePickerControllerInfoKeyDictionary(info)
@@ -545,9 +568,7 @@ extension ChatRoomViewController : UIImagePickerControllerDelegate, UINavigation
         for i in 0...10 {
             photoEditor.stickers.append(UIImage(named: i.description )!)
         }
-        
-        
-        
+    
         if let image = info[convertFromUIImagePickerControllerInfoKey(UIImagePickerController.InfoKey.editedImage)] as? UIImage {
             
             
@@ -572,12 +593,9 @@ extension ChatRoomViewController : UIImagePickerControllerDelegate, UINavigation
             //photoEditor.video = url
         }
         
-        
         //To hide controls - array of enum control
         //photoEditor.hiddenControls = [.crop, .draw, .share]
         photoEditor.modalPresentationStyle = UIModalPresentationStyle.currentContext //or .overFullScreen for transparency
-        
-        
         
         picker.dismiss(animated: true) {
             self.bottomViewHeight.constant = 250.0
@@ -585,8 +603,6 @@ extension ChatRoomViewController : UIImagePickerControllerDelegate, UINavigation
         DispatchQueue.main.asyncAfter(deadline: DispatchTime(uptimeNanoseconds: UInt64(0.2))) {
             self.present(photoEditor, animated: true, completion: nil)
         }
-        
-        
     }
     
     public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -657,5 +673,20 @@ extension ChatRoomViewController: UISearchControllerDelegate, UISearchBarDelegat
         updateSearchResults(text: searchText)
     }
     
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        // Change search text color
+        if let textField = searchBar.value(forKey: "searchField") as? UITextField {
+            textField.textColor = .white
+        }
+        
+        // Change cancel button color
+        if let cancelButton = searchBar.value(forKey: "cancelButton") as? UIButton {
+            cancelButton.setTitleColor(.white, for: .normal)
+        }
+    }
 }
 

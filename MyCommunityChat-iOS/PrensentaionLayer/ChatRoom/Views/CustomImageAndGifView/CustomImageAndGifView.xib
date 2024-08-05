@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomImageAndGifView" customModule="MyCommunityChat_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="75Q-lK-hrT" id="Lca-AX-SCd"/>
+                <outlet property="gifButton" destination="Tjf-Ll-cpD" id="Dcg-OQ-6Ae"/>
+                <outlet property="stickerButton" destination="8rg-hs-QcM" id="NHj-cF-At5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="445"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCC-jD-ojQ">
+                    <rect key="frame" x="15" y="0.0" width="363" height="360"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="75Q-lK-hrT">
+                            <rect key="frame" x="5" y="5" width="353" height="350"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Igm-o4-qwU">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="75Q-lK-hrT" secondAttribute="bottom" constant="5" id="Fqj-aw-M7y"/>
+                        <constraint firstItem="75Q-lK-hrT" firstAttribute="leading" secondItem="BCC-jD-ojQ" secondAttribute="leading" constant="5" id="RAP-uE-adN"/>
+                        <constraint firstAttribute="trailing" secondItem="75Q-lK-hrT" secondAttribute="trailing" constant="5" id="VSH-cz-fw3"/>
+                        <constraint firstItem="75Q-lK-hrT" firstAttribute="top" secondItem="BCC-jD-ojQ" secondAttribute="top" constant="5" id="quC-Gf-5Af"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IR3-27-Qjc">
+                    <rect key="frame" x="118.66666666666669" y="390" width="156" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rg-hs-QcM">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="30"/>
+                            <color key="backgroundColor" name="senderChatColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="Hbw-n6-b4e"/>
+                                <constraint firstAttribute="width" constant="70" id="ovN-zq-gnO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Sticker"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didTapSticker:" destination="-1" eventType="touchUpInside" id="2ww-tF-IJN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjf-Ll-cpD">
+                            <rect key="frame" x="85.999999999999986" y="0.0" width="70.000000000000014" height="30"/>
+                            <color key="backgroundColor" name="senderChatColor"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="GIF"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="didTapGIF:" destination="-1" eventType="touchUpInside" id="1m9-BP-XLb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Tjf-Ll-cpD" firstAttribute="height" secondItem="8rg-hs-QcM" secondAttribute="height" id="Zvw-56-nJG"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="primary"/>
+            <constraints>
+                <constraint firstItem="IR3-27-Qjc" firstAttribute="top" secondItem="BCC-jD-ojQ" secondAttribute="bottom" constant="30" id="2BN-my-wdY"/>
+                <constraint firstItem="BCC-jD-ojQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="UF6-gG-hca"/>
+                <constraint firstAttribute="trailing" secondItem="BCC-jD-ojQ" secondAttribute="trailing" constant="15" id="bDb-6t-6j0"/>
+                <constraint firstAttribute="bottom" secondItem="IR3-27-Qjc" secondAttribute="bottom" constant="25" id="isP-oE-oRB"/>
+                <constraint firstItem="BCC-jD-ojQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jUi-Qs-rEh"/>
+                <constraint firstItem="IR3-27-Qjc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="nbK-H5-yLa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="2" y="-147"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="primary">
+            <color red="0.086274509803921567" green="0.29411764705882354" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="senderChatColor">
+            <color red="0.69803921568627447" green="0.85490196078431369" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

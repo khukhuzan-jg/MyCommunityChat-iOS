@@ -30,6 +30,7 @@ class ChatRoomViewModel : BaseViewModel {
     var successfullySendMessage = BehaviorRelay<Bool>(value: false)
     var selectedMoreSetting = BehaviorRelay<ChatRoomMoreSetting>(value: .notiUnMute)
     var selectedSticker = BehaviorRelay<UIImage>(value: UIImage())
+    var selectedGif = BehaviorRelay<String>(value: String())
     
     var selectedMessagesBehaviorRelay = BehaviorRelay<[Message]>(value: [])
     
