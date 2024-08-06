@@ -35,6 +35,8 @@ class ChatRoomViewController: BaseViewController {
     @IBOutlet weak var customImageAndGifView: CustomImageAndGifView!
     @IBOutlet weak var segmentBGView: UIView!
     @IBOutlet weak var conversationBGImageView: UIImageView!
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var pinnedViewHeight: NSLayoutConstraint!
     
     let chatRoomViewModel = ChatRoomViewModel.shared
     
@@ -79,6 +81,7 @@ class ChatRoomViewController: BaseViewController {
         self.btnClose.isHidden = true
         self.pinnedView.isHidden = true
         self.customImageAndGifView.isHidden = true
+        self.pinnedViewHeight.constant = 0.0
     }
     
     private func initBinding() {
@@ -101,15 +104,26 @@ class ChatRoomViewController: BaseViewController {
     
     override func setupUI() {
         super.setupUI()
-//        let blurEffect = UIBlurEffect(style:.extraLight)
-//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-//        blurEffectView.frame = segmentBGView.bounds
-//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         segmentBGView.backgroundColor = .white.alpha(0.01)
         segmentBGView.addSubview(segmentView)
         segmentView.translatesAutoresizingMaskIntoConstraints = false
         
         segmentView.anchor(top: segmentBGView.topAnchor, leading: segmentBGView.leadingAnchor, bottom: segmentBGView.bottomAnchor, trailing: segmentBGView.trailingAnchor, padding: .zero)
+        
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapView))
+        tapGesture.numberOfTapsRequired = 1
+        self.tblMessage.addGestureRecognizer(tapGesture)
+        self.txtMessage.addGestureRecognizer(tapGesture)
+        self.bottomView.addGestureRecognizer(tapGesture)
+        
+    }
+    
+    @objc func tapView() {
+        if self.isShowMorePopup {
+            self.isShowMorePopup = false
+            self.showMoreView(isShow: false)
+        }
     }
    
     
@@ -130,6 +144,7 @@ class ChatRoomViewController: BaseViewController {
         super.bindObserver()
         
         btnCamera.rx.tap.bind { _ in
+            self.tapView()
             print("Tap Camera")
             self.customImageAndGifView.isHidden = true
             self.imageView.isHidden = false
@@ -139,6 +154,7 @@ class ChatRoomViewController: BaseViewController {
         .disposed(by: disposeBag)
         
         txtMessage.rx.text.bind {
+            self.tapView()
             if let txt = $0 ,
                !self.selectedStickerString.isEmpty ,
                !self.selectedImageStr.isEmpty {
@@ -148,6 +164,7 @@ class ChatRoomViewController: BaseViewController {
         .disposed(by: disposeBag)
         
         btnDownArrow.rx.tap.bind { _ in
+            self.tapView()
             let reactionMsg = self.messageList.filter({!($0.reaction ?? "").isEmpty})
             if !reactionMsg.isEmpty ,
                self.reactionScrollIdx < reactionMsg.count{
@@ -188,10 +205,12 @@ class ChatRoomViewController: BaseViewController {
                     self.tblMessage.scrollToRow(at: IndexPath(row: idx, section: 0), at: .bottom, animated: true)
                     self.btnDownArrow.isHidden = true
                     self.pinnedMessageShow(isHidden: false, isPinClick: true)
+                    self.pinnedViewHeight.constant = 60.0
                 }
                 else {
                     self.scrollToBottom()
                     self.btnDownArrow.isHidden = true
+                    self.pinnedViewHeight.constant = 0.0
                 }
             }
             
@@ -273,11 +292,12 @@ class ChatRoomViewController: BaseViewController {
             let pinnedMessages = self.messageList.filter{ $0.isPinned == true }
             if pinnedMessages.isEmpty {
                 self.pinnedView.isHidden = true
+                self.pinnedViewHeight.constant = 0.0
             }else{
                 self.pinnedMessageList = pinnedMessages
                 self.pinPageControll.numberOfPages = self.pinnedMessageList.count
                 self.pinPageControll.set(progress: self.pinnedMessageList.count - 1, animated: true)
-                
+                self.pinnedViewHeight.constant = 60.0
                 self.pinnedMessageShow(isHidden: false, isPinClick: false)
             }
             
@@ -315,6 +335,7 @@ class ChatRoomViewController: BaseViewController {
         .disposed(by: disposeBag)
 
         btnSticker.rx.tap.bind { _ in
+            self.tapView()
             self.imageBGView.isHidden = true
             self.imageView.image = nil
             self.selectedImageStr = ""
@@ -637,5 +658,17 @@ extension ChatRoomViewController: UISearchControllerDelegate, UISearchBarDelegat
             cancelButton.setTitleColor(.white, for: .normal)
         }
     }
+}
+
+
+/// uiscrollviewDelegate
+extension ChatRoomViewController : UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if self.isShowMorePopup  {
+            self.isShowMorePopup = false
+            self.showMoreView(isShow: self.isShowMorePopup)
+        }
+    }
+    
 }
 

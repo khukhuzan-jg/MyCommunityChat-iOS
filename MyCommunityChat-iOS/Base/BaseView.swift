@@ -18,11 +18,13 @@ public class BaseView : UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        bindObserver()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupUI()
+        bindObserver()
     }
     
     
@@ -31,6 +33,10 @@ public class BaseView : UIView {
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(view)
+    }
+    
+    func bindObserver() {
+        
     }
     
     func loadViewFromNib() -> UIView! {

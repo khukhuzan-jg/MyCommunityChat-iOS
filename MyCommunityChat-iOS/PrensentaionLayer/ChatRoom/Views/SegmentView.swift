@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 enum SegmentViewType : String {
     case groups = "Groups"
@@ -14,6 +15,11 @@ enum SegmentViewType : String {
     func getTitle() -> String {
         return self.rawValue
     }
+}
+
+protocol SegmentViewDelegate {
+    func didTapGroups()
+    func didTapChannels()
 }
 class SegmentView: BaseView {
 
@@ -52,5 +58,26 @@ class SegmentView: BaseView {
         
         backgroundColor = .clear
         
+    }
+    
+    override func bindObserver() {
+        super.bindObserver()
+        
+        btnGroups.rx.tap.bind { _ in
+            self.setButtonAction(type: .groups)
+        }
+        .disposed(by: disposeBag)
+        
+        btnChannel.rx.tap.bind { _ in
+            self.setButtonAction(type: .channels)
+        }
+        .disposed(by: disposeBag)
+    }
+    
+    private func setButtonAction(type : SegmentViewType) {
+        
+            self.groupView.backgroundColor = type == .groups ? .primary : .clear
+            self.channelView.backgroundColor = type == .channels ? .primary : .clear
+      
     }
 }
