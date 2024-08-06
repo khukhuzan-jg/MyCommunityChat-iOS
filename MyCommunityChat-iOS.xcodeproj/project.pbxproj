@@ -82,6 +82,9 @@
 		F086AA1F2C40C3C100442AF4 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F086AA1E2C40C3C100442AF4 /* DataBaseManager.swift */; };
 		F086AA222C40C43F00442AF4 /* NotiDbObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F086AA212C40C43E00442AF4 /* NotiDbObject.swift */; };
 		F086AA242C40C45200442AF4 /* NotiDBRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F086AA232C40C45200442AF4 /* NotiDBRealmObject.swift */; };
+		F0C36A6B2C61027000FA0463 /* ChatRoomViewController + Extension .swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C36A6A2C61027000FA0463 /* ChatRoomViewController + Extension .swift */; };
+		F0C36A6D2C6103A400FA0463 /* SegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C36A6C2C6103A400FA0463 /* SegmentView.swift */; };
+		F0C36A6F2C6103B000FA0463 /* SegmentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0C36A6E2C6103B000FA0463 /* SegmentView.xib */; };
 		F0F9D5572C37F67C0061382F /* Auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78671F422C33E94F006E7DD6 /* Auth.framework */; };
 		F0F9D5582C37F67C0061382F /* Auth.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 78671F422C33E94F006E7DD6 /* Auth.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F0F9D55A2C37F6A80061382F /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07CBEA02C36EB5300A2DD8B /* Domain.framework */; };
@@ -248,6 +251,9 @@
 		F086AA1E2C40C3C100442AF4 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		F086AA212C40C43E00442AF4 /* NotiDbObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiDbObject.swift; sourceTree = "<group>"; };
 		F086AA232C40C45200442AF4 /* NotiDBRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiDBRealmObject.swift; sourceTree = "<group>"; };
+		F0C36A6A2C61027000FA0463 /* ChatRoomViewController + Extension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatRoomViewController + Extension .swift"; sourceTree = "<group>"; };
+		F0C36A6C2C6103A400FA0463 /* SegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentView.swift; sourceTree = "<group>"; };
+		F0C36A6E2C6103B000FA0463 /* SegmentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentView.xib; sourceTree = "<group>"; };
 		F0FCC9FF2C3FCE7A002BC1B0 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F0FCCA012C3FCE90002BC1B0 /* MorePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorePopupView.swift; sourceTree = "<group>"; };
 		F0FCCA032C3FCE9F002BC1B0 /* MorePopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MorePopupView.xib; sourceTree = "<group>"; };
@@ -467,6 +473,8 @@
 				F07CBE5D2C369D6700A2DD8B /* ChatRoomViewController.swift */,
 				F07CBE5E2C369D6700A2DD8B /* ChatRoomViewController.xib */,
 				78F785AB2C495FE100ABCEB9 /* ChatRoomViewController+TableView.swift */,
+				78F785AD2C4972B300ABCEB9 /* ChatRoomViewController+CollectionView.swift */,
+				F0C36A6A2C61027000FA0463 /* ChatRoomViewController + Extension .swift */,
 			);
 			path = ChatRoom;
 			sourceTree = "<group>";
@@ -590,6 +598,8 @@
 				F072C5842C4610A80069045A /* ForwardTableViewCell.xib */,
 				F01926A42C466D3400F71D98 /* MessageSettingTableViewCell.swift */,
 				F01926A52C466D3400F71D98 /* MessageSettingTableViewCell.xib */,
+				F0C36A6C2C6103A400FA0463 /* SegmentView.swift */,
+				F0C36A6E2C6103B000FA0463 /* SegmentView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -838,6 +848,7 @@
 				F06C3D152C404F50004F5379 /* DateTimePickerViewController.xib in Resources */,
 				78BB8A292C3476BF00F3BA57 /* Animation.json in Resources */,
 				F072C5852C4610A80069045A /* ForwardTableViewCell.xib in Resources */,
+				F0C36A6F2C6103B000FA0463 /* SegmentView.xib in Resources */,
 				F0FCCA042C3FCE9F002BC1B0 /* MorePopupView.xib in Resources */,
 				7867200E2C345F2B006E7DD6 /* RobotoSlab-Black.ttf in Resources */,
 				78671FFC2C345D92006E7DD6 /* Colors.xcassets in Resources */,
@@ -1023,6 +1034,7 @@
 				F07CBE792C369D6800A2DD8B /* ChatRoomViewModel.swift in Sources */,
 				F086AA1F2C40C3C100442AF4 /* DataBaseManager.swift in Sources */,
 				78BB8A252C34762200F3BA57 /* SplashController.swift in Sources */,
+				F0C36A6D2C6103A400FA0463 /* SegmentView.swift in Sources */,
 				F086AA242C40C45200442AF4 /* NotiDBRealmObject.swift in Sources */,
 				F086AA222C40C43F00442AF4 /* NotiDbObject.swift in Sources */,
 				F07CBE772C369D6800A2DD8B /* ChatRoomViewController.swift in Sources */,
@@ -1036,6 +1048,7 @@
 				78671E9D2C33DEB7006E7DD6 /* AppDelegate.swift in Sources */,
 				78671E9F2C33DEB7006E7DD6 /* SceneDelegate.swift in Sources */,
 				78AC9E8A2C3FB917001A7B4C /* ReactionPopupController.swift in Sources */,
+				F0C36A6B2C61027000FA0463 /* ChatRoomViewController + Extension .swift in Sources */,
 				F07CBE802C369D6800A2DD8B /* SendMessageTableViewCell.swift in Sources */,
 				78AC9E882C3FB8EF001A7B4C /* ReactionCell.swift in Sources */,
 				F0FCCA002C3FCE7A002BC1B0 /* BaseView.swift in Sources */,
@@ -1219,7 +1232,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MyCommunityChat-iOS/MyCommunityChat-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = XWPM63M4C4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1260,7 +1273,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MyCommunityChat-iOS/MyCommunityChat-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = XWPM63M4C4;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;

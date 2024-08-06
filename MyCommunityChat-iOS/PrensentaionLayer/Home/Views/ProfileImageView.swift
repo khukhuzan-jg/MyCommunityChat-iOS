@@ -22,7 +22,7 @@ class ProfileView: UIView {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.font = .RoboB16
-        label.textColor = .white
+        label.textColor = .black
         label.textAlignment = .left
         return label
     }()

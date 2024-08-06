@@ -43,29 +43,30 @@ class SplashController: BaseViewController {
         animationView.play { [weak self] (finished) in
             // Animation finished
             
-//            self?.navigateToHomeVC()
-            print("Animation Completed")
-            if (self?.userManager.isAlreadyLogin ?? false) {
-                self?.navigateToHomeVC()
-            }
-            else {
-                self?.navigateToLoginVC()
-            }
-            
+            self?.navigateToHomeVC()
+//            print("Animation Completed")
+//            if (self?.userManager.isAlreadyLogin ?? false) {
+//                self?.navigateToHomeVC()
+//            }
+//            else {
+//                self?.navigateToLoginVC()
+//            }
+//            
         }
     }
     
     private func navigateToHomeVC() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as? HomeViewController
         let homeNav = UINavigationController(rootViewController: vc!)
-        let appearance = UINavigationBarAppearance()
-           appearance.backgroundColor = .primary
-
-           UINavigationBar.appearance().standardAppearance = appearance // for scrolling bg color
-           UINavigationBar.appearance().compactAppearance = appearance // not sure why it's here, but u can remove it and still works
-           UINavigationBar.appearance().scrollEdgeAppearance = appearance // for large title bg color
+//        let appearance = UINavigationBarAppearance()
+//        appearance.backgroundColor = .primary
+////        appearance.backgroundColor = .clear
+//        
+//        UINavigationBar.appearance().standardAppearance = appearance // for scrolling bg color
+//        UINavigationBar.appearance().compactAppearance = appearance // not sure why it's here, but u can remove it and still works
+//        UINavigationBar.appearance().scrollEdgeAppearance = appearance // for large title bg color
         let sceneDelegate = UIApplication.shared.connectedScenes
-                .first!.delegate as! SceneDelegate
+            .first!.delegate as! SceneDelegate
         sceneDelegate.window!.rootViewController = homeNav
         
     }

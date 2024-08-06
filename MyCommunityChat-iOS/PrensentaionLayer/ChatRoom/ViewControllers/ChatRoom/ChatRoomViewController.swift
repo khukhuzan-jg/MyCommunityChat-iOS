@@ -33,6 +33,8 @@ class ChatRoomViewController: BaseViewController {
     @IBOutlet weak var btnSticker: UIButton!
     @IBOutlet weak var btnDownArrow: UIButton!
     @IBOutlet weak var customImageAndGifView: CustomImageAndGifView!
+    @IBOutlet weak var segmentBGView: UIView!
+    @IBOutlet weak var conversationBGImageView: UIImageView!
     
     let chatRoomViewModel = ChatRoomViewModel.shared
     
@@ -58,6 +60,7 @@ class ChatRoomViewController: BaseViewController {
     var selectedMessageList = [Message]()
     
     
+    var segmentView = SegmentView(frame: .zero)
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
@@ -92,7 +95,23 @@ class ChatRoomViewController: BaseViewController {
         pinPageControll.transform = CGAffineTransform(rotationAngle: angle)
         
         btnDownArrow.isHidden = true
+        
+        transparentNavigationBar()
     }
+    
+    override func setupUI() {
+        super.setupUI()
+//        let blurEffect = UIBlurEffect(style:.extraLight)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = segmentBGView.bounds
+//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        segmentBGView.backgroundColor = .white.alpha(0.01)
+        segmentBGView.addSubview(segmentView)
+        segmentView.translatesAutoresizingMaskIntoConstraints = false
+        
+        segmentView.anchor(top: segmentBGView.topAnchor, leading: segmentBGView.leadingAnchor, bottom: segmentBGView.bottomAnchor, trailing: segmentBGView.trailingAnchor, padding: .zero)
+    }
+   
     
     @objc func addReaction(_ sender: UIMenuItem) {
         guard let indexPath = tblMessage.indexPathForSelectedRow else { return }
@@ -201,7 +220,7 @@ class ChatRoomViewController: BaseViewController {
                     self.selectedStickerString = ""
                     self.selectedSticker = UIImage()
                     self.imageBGView.isHidden = true
-                    self.stickerBGView.isHidden = true
+//                    self.stickerBGView.isHidden = true
                     self.bottomViewHeight.constant = 120.0
                     self.btnClose.isHidden = true
                     
@@ -367,77 +386,7 @@ class ChatRoomViewController: BaseViewController {
         self.navigationController?.present(alert, animated: true)
     }
     
-    private func setNavigationBar() {
-        
-        let back = UIBarButtonItem(
-            image: .icBackButton.withRenderingMode(.alwaysOriginal),
-            style: .plain,
-            target: self,
-            action: #selector(self.backAction)
-        )
-        
-        var img : UIImage = .icDemo6
-        if let imgData = NSData(base64Encoded: self.selectedUser?.image ?? "") {
-            img = UIImage(data: Data(referencing: imgData)) ?? UIImage()
-            
-        }
-        
-        // Create a custom profile view
-        let profileView = ProfileView(
-            frame: CGRect(x: 10, y: 0, width: 200, height: 44)
-        )
-        profileView.setupData(
-            image: img,
-            name: self.selectedUser?.name ?? ""
-        )
-        // Wrap it in a UIBarButtonItem
-        let profileBarButtonItem = UIBarButtonItem(customView: profileView)
-        
-        // Set it as the left or right bar button item based on your needs
-        navigationItem.leftBarButtonItems = [back, profileBarButtonItem]
-        
-        let searchBtn = UIBarButtonItem(
-            image: UIImage(
-                systemName: "magnifyingglass"
-            )?.withTintColor(.white, renderingMode: .alwaysOriginal),
-            style: .plain,
-            target: self,
-            action: #selector(searchAction)
-        )
-        let moreBtn = UIBarButtonItem(
-            image: .icMore.withRenderingMode(.alwaysOriginal),
-            style: .plain,
-            target: self,
-            action: #selector(self.moreAction)
-        )
-        
-        let doneBtn = UIBarButtonItem(
-            title: "Done",
-            style: .plain,
-            target: self,
-            action: #selector(self.doneAction)
-        )
-        
-        var rightBarButtons = [UIBarButtonItem]()
-        
-        chatRoomViewModel.selectedMessagesBehaviorRelay.bind {
-            rightBarButtons.removeAll()
-            self.navigationItem.rightBarButtonItems = nil
-            
-            if !$0.isEmpty {
-                rightBarButtons.insert(doneBtn, at: 0)
-            }
-            rightBarButtons.append(moreBtn)
-            rightBarButtons.append(searchBtn)
-            self.navigationItem.rightBarButtonItems = rightBarButtons
-        }
-        .disposed(by: disposeBag)
-        
-        
-        searchBar.sizeToFit()
-        searchBar.delegate = self
-        searchBar.becomeFirstResponder()
-    }
+    
     
     @objc func doneAction() {
         self.selectedMessageList.removeAll()

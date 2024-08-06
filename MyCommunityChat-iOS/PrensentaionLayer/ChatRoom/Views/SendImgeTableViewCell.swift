@@ -32,6 +32,9 @@ class SendImgeTableViewCell: UITableViewCell {
         lblForward.font = .RoboB12
         lblForward.text = ""
         lblForward.textColor = .lightGray
+        
+        self.backgroundColor = .clear
+        self.imgSend.backgroundColor = .clear
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -40,6 +40,8 @@ class ReceiveMessageTableViewCell: UITableViewCell {
         lblForward.text = ""
         lblForward.font = .RoboB12
         lblForward.textColor = .lightGray
+        
+        self.backgroundColor = .clear
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

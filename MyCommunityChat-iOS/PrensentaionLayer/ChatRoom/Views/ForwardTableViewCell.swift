@@ -21,6 +21,7 @@ class ForwardTableViewCell: UITableViewCell {
         imgView.contentMode = .scaleAspectFill
         
         selectionStyle = .none
+        self.backgroundColor = .clear
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

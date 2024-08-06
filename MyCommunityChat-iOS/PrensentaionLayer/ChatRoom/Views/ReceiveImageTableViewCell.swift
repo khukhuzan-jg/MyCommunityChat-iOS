@@ -35,6 +35,10 @@ class ReceiveImageTableViewCell: UITableViewCell {
         lblForwardMessage.text = ""
         lblForwardMessage.font = .RoboB12
         lblForwardMessage.textColor = .lightGray
+        
+        self.backgroundColor = .clear
+        self.imgReceive.backgroundColor = .clear
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

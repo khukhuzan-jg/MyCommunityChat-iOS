@@ -36,7 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           
           // Login your customer with externalId
           // OneSignal.login("EXTERNAL_ID")
-        UINavigationBarAppearance().backgroundColor = .primary
+//        UINavigationBarAppearance().backgroundColor = .primary
+        UINavigationBarAppearance().backgroundColor = .clear
         
         return true
     }
