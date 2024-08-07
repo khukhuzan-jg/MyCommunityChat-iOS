@@ -35,6 +35,8 @@ class SendImgeTableViewCell: UITableViewCell {
         
         self.backgroundColor = .clear
         self.imgSend.backgroundColor = .clear
+        self.bgView.backgroundColor = .clear
+        self.contentView.backgroundColor = .clear
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

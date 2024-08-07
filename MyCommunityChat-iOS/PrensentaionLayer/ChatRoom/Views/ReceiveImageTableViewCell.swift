@@ -38,6 +38,8 @@ class ReceiveImageTableViewCell: UITableViewCell {
         
         self.backgroundColor = .clear
         self.imgReceive.backgroundColor = .clear
+        self.contentView.backgroundColor = .clear
+        self.bgView.backgroundColor = .clear
         
     }
 
@@ -49,7 +51,7 @@ class ReceiveImageTableViewCell: UITableViewCell {
     
     func setupcell(message : Message , profile : UIImage , isSelectedMessage : Bool ) {
         self.reactionLabel.text = message.reaction ?? ""
-       
+        self.imgProfile.image = profile
         if let msgType = message.messageType {
             self.bgView.backgroundColor = msgType == .sticker ? .clear : .primary
             

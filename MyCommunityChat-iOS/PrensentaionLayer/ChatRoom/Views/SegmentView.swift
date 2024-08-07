@@ -53,7 +53,7 @@ class SegmentView: BaseView {
         btnChannel.titleLabel?.font = .RoboB15
         btnChannel.setTitleColor(.black, for: .normal)
         
-        groupView.backgroundColor = .primary
+        groupView.backgroundColor = .secondary
         channelView.backgroundColor = .clear
         
         backgroundColor = .clear
@@ -76,8 +76,8 @@ class SegmentView: BaseView {
     
     private func setButtonAction(type : SegmentViewType) {
         
-            self.groupView.backgroundColor = type == .groups ? .primary : .clear
-            self.channelView.backgroundColor = type == .channels ? .primary : .clear
+            self.groupView.backgroundColor = type == .groups ? .secondary : .clear
+            self.channelView.backgroundColor = type == .channels ? .secondary : .clear
       
     }
 }

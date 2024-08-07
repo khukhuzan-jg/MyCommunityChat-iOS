@@ -72,6 +72,7 @@ class ChatRoomViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         initBinding()
+        transparentNavigationBar()
     }
     
     private func initView() {
@@ -99,7 +100,6 @@ class ChatRoomViewController: BaseViewController {
         
         btnDownArrow.isHidden = true
         
-        transparentNavigationBar()
     }
     
     override func setupUI() {
@@ -454,7 +454,7 @@ class ChatRoomViewController: BaseViewController {
     }
     
     
-    private func showMoreView(isShow : Bool) {
+    func showMoreView(isShow : Bool) {
         if isShow {
             morePopupView.present()
         }

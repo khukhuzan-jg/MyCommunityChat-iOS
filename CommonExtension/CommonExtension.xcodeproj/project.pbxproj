@@ -226,6 +226,8 @@
 			dependencies = (
 			);
 			name = CommonExtension;
+			packageProductDependencies = (
+			);
 			productName = CommonExtension;
 			productReference = 78671F672C33EA07006E7DD6 /* CommonExtension.framework */;
 			productType = "com.apple.product-type.framework";
@@ -254,6 +256,8 @@
 				Base,
 			);
 			mainGroup = 78671F5D2C33EA07006E7DD6;
+			packageReferences = (
+			);
 			productRefGroup = 78671F682C33EA07006E7DD6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

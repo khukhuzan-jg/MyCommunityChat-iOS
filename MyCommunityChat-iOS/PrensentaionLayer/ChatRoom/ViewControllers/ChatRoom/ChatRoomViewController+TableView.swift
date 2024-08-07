@@ -91,6 +91,10 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
             }
         }
         self.chatRoomViewModel.selectedMessagesBehaviorRelay.accept(self.selectedMessageList)
+        if self.isShowMorePopup {
+            self.isShowMorePopup = false
+            self.showMoreView(isShow: self.isShowMorePopup)
+        }
         tableView.reloadData()
     }
 

@@ -20,7 +20,7 @@ extension ChatRoomViewController {
         
         let scrollingAppearance = UINavigationBarAppearance()
         scrollingAppearance.configureWithTransparentBackground()
-        scrollingAppearance.backgroundColor = .white // your view (superview) color
+        scrollingAppearance.backgroundColor = .clear // your view (superview) color
         
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = scrollingAppearance
