@@ -61,13 +61,29 @@ public class UserInfoManager {
 
 extension UserInfoManager : UserInfoManagerProtocol {
     func setLastMessage(user: UserData, message: Message, completion: @escaping (UserData) -> Void) {
+        var messageTxt : String = ""
+        
+        switch message.messageType {
+        case .text :
+            messageTxt = message.messageText ?? ""
+        case .forward :
+            messageTxt = "\(message.senderName ?? "") sorward a message"
+        case .image :
+            messageTxt = "\(message.senderName ?? "") send an image"
+        case .sticker :
+            messageTxt = "\(message.senderName ?? "") send a sticker"
+        case .gif :
+            messageTxt = "\(message.senderName ?? "") send a gif"
+        case .none:
+            messageTxt = ""
+        }
         let userInfo = [
             "userId" : user.id,
             "userImage" : user.image,
             "userName" : user.name,
             "userPhone" : user.phone,
             "createdAt" : user.createdAt,
-            "lastMessage" : message.messageText,
+            "lastMessage" : messageTxt,
             "time" : message.createdAt
         ]
         
@@ -82,8 +98,8 @@ extension UserInfoManager : UserInfoManagerProtocol {
             "userName" : user.name,
             "userPhone" : user.phone,
             "createdAt" : Date().toString(.type12, timeZone: "MM"),
-            "lastMessage" : "",
-            "time" : ""
+            "lastMessage" : user.lastMessage,
+            "time" : user.time
         ]
         
         self.ref.child("Users").child(user.id ?? "").setValue(userInfo)
@@ -104,6 +120,12 @@ extension UserInfoManager : UserInfoManagerProtocol {
                         user.image = childSnapshot.childSnapshot(forPath:"userImage").value as? String
                         user.phone = childSnapshot.childSnapshot(forPath:"userPhone").value as? String
                         user.createdAt = childSnapshot.childSnapshot(forPath: "createdAt").value as? String
+                        
+                        user.lastMessage = childSnapshot.childSnapshot(forPath: "lastMessage").value as? String
+                        
+                        user.time = childSnapshot.childSnapshot(forPath: "time").value as? String
+                        
+                        print("user last message in get user ::::: \(user.lastMessage)")
                         completion(user)
                     }
                     
@@ -123,9 +145,17 @@ extension UserInfoManager : UserInfoManagerProtocol {
                     user.image = childSnapshot.childSnapshot(forPath:"userImage").value as? String
                     user.phone = childSnapshot.childSnapshot(forPath:"userPhone").value as? String
                     user.createdAt = childSnapshot.childSnapshot(forPath: "createdAt").value as? String
+                    
+                    user.lastMessage = childSnapshot.childSnapshot(forPath: "lastMessage").value as? String
+                    
+                    user.time = childSnapshot.childSnapshot(forPath: "time").value as? String
+                    
+                    print("user last message in user list ::::: \(user.lastMessage)")
                     userList.append(user)
+                    
                 }
                 self.userList  = userList
+                
                 completion(userList)
             }
     }

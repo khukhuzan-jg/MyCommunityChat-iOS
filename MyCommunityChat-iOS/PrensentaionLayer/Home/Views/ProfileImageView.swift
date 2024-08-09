@@ -24,6 +24,7 @@ class ProfileView: UIView {
         label.font = .RoboB16
         label.textColor = .black
         label.textAlignment = .left
+        label.numberOfLines = 0
         return label
     }()
     
@@ -44,7 +45,7 @@ class ProfileView: UIView {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         nameLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        nameLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        nameLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 70).isActive = true
     }
     

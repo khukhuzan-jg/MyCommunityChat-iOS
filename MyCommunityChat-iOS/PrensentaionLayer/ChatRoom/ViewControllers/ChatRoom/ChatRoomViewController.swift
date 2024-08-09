@@ -251,7 +251,7 @@ class ChatRoomViewController: BaseViewController {
                     messageText: text,
                     messageImage: self.selectedImageStr,
                     messageType: type,
-                    createdAt: "",
+                    createdAt: Date().toString(.type38 , timeZone: TimeZone.current.localizedName(for: .standard, locale: .current) ?? "MM"),
                     lastMessage: "",
                     senderId: self.currentUser?.id ?? "" ,
                     sticker: self.selectedStickerString ,
@@ -259,6 +259,9 @@ class ChatRoomViewController: BaseViewController {
                     senderName: self.currentUser?.name
                 )
                 self.chatRoomViewModel.sendMessage(message: message)
+                self.chatRoomViewModel.setLatestMessage(user: self.selectedUser, message: message)
+                self.chatRoomViewModel.setLatestMessage(user: self.currentUser, message: message)
+                
                 if type == .text {
                     self.txtMessage.text = ""
                 }

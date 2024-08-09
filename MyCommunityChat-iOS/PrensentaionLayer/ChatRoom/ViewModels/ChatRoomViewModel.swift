@@ -18,6 +18,8 @@ protocol ChatRoomViewModelProtocol {
     func savedNotiSetting(settingType : ChatRoomMoreSetting)
     func getNotiSetting()
     func deleteNotiSetting()
+    
+    func setLatestMessage(user : UserData? , message : Message)
 }
 class ChatRoomViewModel : BaseViewModel {
     static let shared = ChatRoomViewModel()
@@ -195,6 +197,15 @@ extension ChatRoomViewModel : ChatRoomViewModelProtocol {
             print("Update Done")
             self.isUpdateBehaviorRelay.accept(true)
             self.getMessage()
+        }
+    }
+    
+    func setLatestMessage(user : UserData?, message: Message) {
+        guard let usr = user else {
+            return
+        }
+        UserInfoManager.shared.setLastMessage(user: usr, message: message) { user in
+            print("Last message ::::::: \(user.lastMessage)")
         }
     }
 }

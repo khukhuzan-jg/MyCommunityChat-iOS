@@ -118,7 +118,8 @@ class HomeViewController : BaseViewController {
     private func setupLogoutAlert() {
         let alert = UIAlertController(title: "Information", message: "Are you sure to logout?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Logout", style: .destructive, handler: { _ in
-            self.homeViewModel.logoutUser(userId: self.currentUser?.id ?? "")
+//            self.homeViewModel.logoutUser(userId: self.currentUser?.id ?? "")
+            self.homeViewModel.isSuccessfullyLogout.accept(true)
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))

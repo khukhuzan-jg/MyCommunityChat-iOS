@@ -51,7 +51,10 @@ extension HomeViewModel : HomeViewModelProtocol {
     
     func getUserList() {
         userInfoManager.getUserList { users in
-            self.userList.accept(users)
+            let userList = users.sorted(by: {
+                $0.time?.toDate(dateFormat: "dd MMM yyyy hh:mm:ss a") ?? Date() > $1.time?.toDate(dateFormat: "dd MMM yyyy hh:mm:ss a") ?? Date()
+            })
+            self.userList.accept(userList)
         }
     }
     

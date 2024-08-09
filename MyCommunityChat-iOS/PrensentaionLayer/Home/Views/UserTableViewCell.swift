@@ -13,7 +13,7 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var imgUserProfile: UIImageView!
     @IBOutlet weak var lblUserName: UILabel!
     @IBOutlet weak var lblTime: UILabel!
-//    @IBOutlet weak var lblMessage: UILabel!
+    @IBOutlet weak var lblMessage: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,11 +36,13 @@ class UserTableViewCell: UITableViewCell {
         self.lblUserName.font = .RoboR16
         self.lblUserName.textColor = .black
         
-//        self.lblMessage.text = user.lastMessage ?? ""
-//        self.lblMessage.font = .RoboR14
-//        self.lblMessage.textColor = .lastMessage
-//        
-        self.lblTime.text = Date().toString(.type17 , timeZone: TimeZone.current.localizedName(for: .standard, locale: .current) ?? "MM") 
+        self.lblMessage.text = user.lastMessage ?? ""
+        self.lblMessage.font = .RoboR14
+        self.lblMessage.textColor = .lastMessage
+       
+//        self.lblTime.text = Date().toString(.type17 , timeZone: TimeZone.current.localizedName(for: .standard, locale: .current) ?? "MM")
+        let date = user.time?.toDate(dateFormat: "dd MMM yyyy hh:mm:ss a")
+        self.lblTime.text = date?.toString(.type38 , timeZone: TimeZone.current.localizedName(for: .standard, locale: .current) ?? "MM")
         self.lblTime.font = .RoboR12
         self.lblTime.textColor = .lastMessage
     }

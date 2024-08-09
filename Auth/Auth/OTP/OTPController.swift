@@ -130,7 +130,23 @@ class OTPController: BaseVC {
         viewModel.transform(smsCode) { [weak self] success in
             if success {
                 self?.hideLoading()
-                self?.navigateToProfile()
+                UserManager.shared.getUserList { users in
+                    if users.isEmpty {
+                        self?.navigateToProfile()
+                    }
+                    else {
+                        let udid = UIDevice.current.identifierForVendor?.uuidString ?? ""
+                        if let user = users.first(where: {$0.id
+                         ?? "" == udid}) {
+                            let _ = UserManager.shared.savedUser(user: user)
+                            UserManager.shared.completionSaved(true)
+                        }
+                        else {
+                            self?.navigateToProfile()
+                        }
+                    }
+                }
+                
             } else {
                 self?.hideLoading()
                 ToastView.error(message: "OTP code is invalid")

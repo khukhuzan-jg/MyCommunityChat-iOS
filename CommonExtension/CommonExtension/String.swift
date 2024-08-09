@@ -97,6 +97,9 @@ public enum DateFormat: String {
     
     case type37 = "E, d MMM yyyy"
     
+    case type38 = "dd MMM yyyy hh:mm:ss a"
+    
+    
 }
 
 public extension String {

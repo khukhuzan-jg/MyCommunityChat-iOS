@@ -86,10 +86,12 @@ class SendImgeTableViewCell: UITableViewCell {
                         if msgType == .gif {
                             self.imgSend.loadGif(name: gifString)
                             self.imgSend.contentMode = .scaleAspectFit
+                            self.imgSend.backgroundColor = .clear
                         } else {
                             if let imgData = Data(base64Encoded: stickerString) {
                                 let img = UIImage(data: imgData)
                                 self.imgSend.image = img
+                                self.imgSend.backgroundColor = .clear
                                 self.imgSend.contentMode = .scaleAspectFit
                             }
                         }
