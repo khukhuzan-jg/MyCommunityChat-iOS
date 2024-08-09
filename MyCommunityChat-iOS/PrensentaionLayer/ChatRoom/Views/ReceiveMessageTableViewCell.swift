@@ -50,7 +50,7 @@ class ReceiveMessageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setupCellData(message : Message , profile : UIImage , isSelectedMessage : Bool) {
+    func setupCellData(message : Message , profile : UIImage , isSelectedMessage : Bool, isFilter: Bool) {
         let msgStr = (message.messageType ?? .text) == .forward ? (message.forwardMessage?["text"] ?? "") : message.messageText ?? ""
         lblForward.text = (message.messageType ?? .text) == .forward ? "Forward Message" : ""
         
@@ -59,7 +59,7 @@ class ReceiveMessageTableViewCell: UITableViewCell {
         lblTime.textColor = .lightGray
         
         self.lblMessage.font = .RoboR16
-        self.lblMessage.textColor = .white
+        self.lblMessage.textColor = isFilter ?  .secondary : .white
         
         self.imgProfile.image = profile
         
