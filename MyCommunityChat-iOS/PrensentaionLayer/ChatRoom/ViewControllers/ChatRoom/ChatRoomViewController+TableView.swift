@@ -105,8 +105,7 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
             cell.setupCellData(
                 message: message,
                 isFilter: isFilter,
-                isselectedMessage: isSelected,
-                searchTerm: searchBar.text ?? ""
+                isselectedMessage: isSelected
             )
             setupMessageActions(
                 for: cell,
@@ -119,7 +118,8 @@ extension ChatRoomViewController : UITableViewDelegate , UITableViewDataSource {
             cell.setupCellData(
                 message: message,
                 profile: profileImage,
-                isSelectedMessage: isSelected
+                isSelectedMessage: isSelected,
+                isFilter: isFilter
             )
             setupMessageActions(
                 for: cell,

@@ -56,6 +56,7 @@ class ChatRoomViewController: BaseViewController {
     var pinScrollIdx = 1
     var isMessageSelectMode = false
     var selectedMessageList = [Message]()
+    var selectedGifIndex: IndexPath?
     
     
     override func viewDidLoad() {
@@ -306,14 +307,12 @@ class ChatRoomViewController: BaseViewController {
         .disposed(by: disposeBag)
 
         chatRoomViewModel.selectedGif.bind { [weak self] selectedGif in
-            self?.selectedGifString = selectedGif
-            self?.selectedGif = selectedGif
-            UIView.performWithoutAnimation {
-                self?.customImageAndGifView.collectionView.reloadData()
-            }
+            guard let self = self else { return }
+            self.selectedGifString = selectedGif
+            self.selectedGif = selectedGif
+            self.customImageAndGifView.collectionView.reloadData()
         }
         .disposed(by: disposeBag)
-        
     }
     
     override func bindViewModel() {

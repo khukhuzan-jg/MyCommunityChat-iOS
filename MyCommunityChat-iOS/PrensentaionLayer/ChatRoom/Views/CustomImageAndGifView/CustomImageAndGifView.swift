@@ -27,6 +27,8 @@ class CustomImageAndGifView: NibBasedView {
     ]
     var isStickerSelected: Bool = true
     let chatRoomViewModel = ChatRoomViewModel.shared
+    var selectedGifIndex: IndexPath?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -60,7 +62,9 @@ class CustomImageAndGifView: NibBasedView {
                 self?.gifButton.backgroundColor = .senderChat
             }
         }
-        collectionView.reloadData()
+        // Reload only the visible cells
+        let visibleIndexPaths = collectionView.indexPathsForVisibleItems
+        collectionView.reloadItems(at: visibleIndexPaths)
     }
     
     @IBAction
