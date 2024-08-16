@@ -136,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				78671FEB2C33F7D3006E7DD6 /* AppConfig */,
-				78671FEA2C33F71A006E7DD6 /* PrensentaionLayer */,
 				78671FE82C33F6EB006E7DD6 /* AppDelegate */,
 				78671EA02C33DEB7006E7DD6 /* ViewController.swift */,
 				78671FE92C33F6FA006E7DD6 /* Storyboards */,
@@ -178,13 +177,6 @@
 				78671FF42C33FDD8006E7DD6 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		78671FEA2C33F71A006E7DD6 /* PrensentaionLayer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PrensentaionLayer;
 			sourceTree = "<group>";
 		};
 		78671FEB2C33F7D3006E7DD6 /* AppConfig */ = {
