@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>BASE_URL</key>
-	<string>https://</string>
+	<string>https://dev</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>com.mycomm.uat</key>
+			<key>com.mycomm.dev</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>

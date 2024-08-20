@@ -26,6 +26,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7852A5E12C7482AD00AD1F6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7852A5E22C7482BF00AD1F6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		78671F1A2C33E914006E7DD6 = {
 			isa = PBXGroup;
 			children = (
@@ -45,6 +59,8 @@
 		78671F262C33E914006E7DD6 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				7852A5E22C7482BF00AD1F6C /* Resources */,
+				7852A5E12C7482AD00AD1F6C /* Views */,
 				78671F272C33E914006E7DD6 /* Auth.h */,
 			);
 			path = Auth;
