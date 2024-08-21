@@ -24,13 +24,6 @@ def ui_pods
   pod 'Kingfisher', '6.3.0'
 end
 
-def firebase_pods
-  pod 'Firebase/Core'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Storage'
-  pod 'Firebase/Messaging'
-end
-
 def iqkeyboardmanager_pod
   pod 'IQKeyboardManagerSwift', '6.5.6'
 end
@@ -38,14 +31,12 @@ end
 target 'Domain' do
   project 'Domain/Domain.project'
   networking_pods
-  firebase_pods
 end
 
 target 'MyCommunityChat-iOS' do
    project 'MyCommunityChat-iOS'
    rx_pods
    networking_pods
-   firebase_pods
    iqkeyboardmanager_pod
 end
 

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FE1DE31D91C32501251AE9687CDC2E0F"
-               BuildableName = "FirebaseCoreExtension.framework"
-               BlueprintName = "FirebaseCoreExtension"
+               BlueprintIdentifier = "0A8C943EF5CB0B747A82882C5D3ECF93"
+               BuildableName = "ReachabilitySwift.bundle"
+               BlueprintName = "ReachabilitySwift-ReachabilitySwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
