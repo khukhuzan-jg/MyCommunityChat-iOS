@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		785B55CD2C75A63D00B0D1F9 /* MuktaMahee-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 785B55C62C75A63C00B0D1F9 /* MuktaMahee-ExtraBold.ttf */; };
+		785B55CE2C75A63D00B0D1F9 /* MuktaMahee-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 785B55C72C75A63C00B0D1F9 /* MuktaMahee-Bold.ttf */; };
+		785B55CF2C75A63D00B0D1F9 /* MuktaMahee-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 785B55C82C75A63D00B0D1F9 /* MuktaMahee-Light.ttf */; };
+		785B55D02C75A63D00B0D1F9 /* MuktaMahee-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 785B55C92C75A63D00B0D1F9 /* MuktaMahee-Regular.ttf */; };
+		785B55D12C75A63D00B0D1F9 /* MuktaMahee-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 785B55CA2C75A63D00B0D1F9 /* MuktaMahee-Medium.ttf */; };
+		785B55D22C75A63D00B0D1F9 /* MuktaMahee-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 785B55CB2C75A63D00B0D1F9 /* MuktaMahee-SemiBold.ttf */; };
+		785B55D32C75A63D00B0D1F9 /* MuktaMahee-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 785B55CC2C75A63D00B0D1F9 /* MuktaMahee-ExtraLight.ttf */; };
+		785B55D62C75A6BF00B0D1F9 /* FontFamily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785B55D52C75A6BF00B0D1F9 /* FontFamily.swift */; };
+		785B55D82C75A7D600B0D1F9 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785B55D72C75A7D600B0D1F9 /* Icons.xcassets */; };
+		785B55DB2C75A95300B0D1F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 785B55DA2C75A95300B0D1F9 /* Images.xcassets */; };
 		78671FD12C33EB81006E7DD6 /* CommonUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 78671FD02C33EB81006E7DD6 /* CommonUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78671FE12C33EB9E006E7DD6 /* NibBasedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671FD72C33EB9E006E7DD6 /* NibBasedCollectionViewCell.swift */; };
 		78671FE22C33EB9E006E7DD6 /* NibBasedCollectionViewReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78671FD82C33EB9E006E7DD6 /* NibBasedCollectionViewReusableView.swift */; };
@@ -18,6 +28,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		785B55C62C75A63C00B0D1F9 /* MuktaMahee-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuktaMahee-ExtraBold.ttf"; sourceTree = "<group>"; };
+		785B55C72C75A63C00B0D1F9 /* MuktaMahee-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuktaMahee-Bold.ttf"; sourceTree = "<group>"; };
+		785B55C82C75A63D00B0D1F9 /* MuktaMahee-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuktaMahee-Light.ttf"; sourceTree = "<group>"; };
+		785B55C92C75A63D00B0D1F9 /* MuktaMahee-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuktaMahee-Regular.ttf"; sourceTree = "<group>"; };
+		785B55CA2C75A63D00B0D1F9 /* MuktaMahee-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuktaMahee-Medium.ttf"; sourceTree = "<group>"; };
+		785B55CB2C75A63D00B0D1F9 /* MuktaMahee-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuktaMahee-SemiBold.ttf"; sourceTree = "<group>"; };
+		785B55CC2C75A63D00B0D1F9 /* MuktaMahee-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MuktaMahee-ExtraLight.ttf"; sourceTree = "<group>"; };
+		785B55D52C75A6BF00B0D1F9 /* FontFamily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontFamily.swift; sourceTree = "<group>"; };
+		785B55D72C75A7D600B0D1F9 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		785B55DA2C75A95300B0D1F9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		78671FCD2C33EB81006E7DD6 /* CommonUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78671FD02C33EB81006E7DD6 /* CommonUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUI.h; sourceTree = "<group>"; };
 		78671FD72C33EB9E006E7DD6 /* NibBasedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibBasedCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -40,6 +60,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		785B55C42C75A61C00B0D1F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				785B55C52C75A62300B0D1F9 /* Fonts */,
+				785B55D72C75A7D600B0D1F9 /* Icons.xcassets */,
+				785B55DA2C75A95300B0D1F9 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		785B55C52C75A62300B0D1F9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				785B55C72C75A63C00B0D1F9 /* MuktaMahee-Bold.ttf */,
+				785B55C62C75A63C00B0D1F9 /* MuktaMahee-ExtraBold.ttf */,
+				785B55CC2C75A63D00B0D1F9 /* MuktaMahee-ExtraLight.ttf */,
+				785B55C82C75A63D00B0D1F9 /* MuktaMahee-Light.ttf */,
+				785B55CA2C75A63D00B0D1F9 /* MuktaMahee-Medium.ttf */,
+				785B55C92C75A63D00B0D1F9 /* MuktaMahee-Regular.ttf */,
+				785B55CB2C75A63D00B0D1F9 /* MuktaMahee-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		785B55D42C75A6B200B0D1F9 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				785B55D52C75A6BF00B0D1F9 /* FontFamily.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		78671FC32C33EB81006E7DD6 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +111,8 @@
 		78671FCF2C33EB81006E7DD6 /* CommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				785B55D42C75A6B200B0D1F9 /* Others */,
+				785B55C42C75A61C00B0D1F9 /* Resources */,
 				78671FE02C33EB9E006E7DD6 /* nib-loadable-view */,
 				78671FD02C33EB81006E7DD6 /* CommonUI.h */,
 			);
@@ -164,6 +218,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				785B55DB2C75A95300B0D1F9 /* Images.xcassets in Resources */,
+				785B55CD2C75A63D00B0D1F9 /* MuktaMahee-ExtraBold.ttf in Resources */,
+				785B55D12C75A63D00B0D1F9 /* MuktaMahee-Medium.ttf in Resources */,
+				785B55CF2C75A63D00B0D1F9 /* MuktaMahee-Light.ttf in Resources */,
+				785B55CE2C75A63D00B0D1F9 /* MuktaMahee-Bold.ttf in Resources */,
+				785B55D02C75A63D00B0D1F9 /* MuktaMahee-Regular.ttf in Resources */,
+				785B55D32C75A63D00B0D1F9 /* MuktaMahee-ExtraLight.ttf in Resources */,
+				785B55D82C75A7D600B0D1F9 /* Icons.xcassets in Resources */,
+				785B55D22C75A63D00B0D1F9 /* MuktaMahee-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +241,7 @@
 				78671FE22C33EB9E006E7DD6 /* NibBasedCollectionViewReusableView.swift in Sources */,
 				78671FE62C33EB9E006E7DD6 /* NibBasedView.swift in Sources */,
 				78671FE72C33EB9E006E7DD6 /* NibLoadableViewProtocol.swift in Sources */,
+				785B55D62C75A6BF00B0D1F9 /* FontFamily.swift in Sources */,
 				78671FE32C33EB9E006E7DD6 /* NibBasedTableViewCell.swift in Sources */,
 				78671FE12C33EB9E006E7DD6 /* NibBasedCollectionViewCell.swift in Sources */,
 				78671FE52C33EB9E006E7DD6 /* NibBasedControl.swift in Sources */,
